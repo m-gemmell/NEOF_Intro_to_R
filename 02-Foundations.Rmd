@@ -1,0 +1,294 @@
+# (PART\*) Foundations & Objects {.unnumbered}
+
+# Foundations of R
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/foundational.png", auto_pdf = TRUE)
+``` 
+
+This section will cover the foundations of R. Understanding these concepts is fundamental to becoming an R user. The section will start with __operators__, these include `+`, `-`, `*`, and `/`, they allow us to use R like a calculator. Then we will look at __variables__. __Variables__ allow us to save the output from commands so we can use it in future commands. 
+
+A lot of the power of R comes from the vast array of __functions__ it contains. We will therefore look at some useful __functions__ to see how they work. Additionally, we'll look at how to interact with directories in R.
+
+The section will end showing you some ways to use RStudio and the __script editor__.
+
+## Operators
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/calculator.png", auto_pdf = TRUE)
+``` 
+
+__Operators__ are symbols in R that allow you to carry out many common tasks. The 3 main types of __operators__ in R are arithmetic, logical, and bitwise. We will ignore logical and bitwise and have a look at some arithmetic __operators__. 
+
+The four most commonly used arithmetic __operators__ are:
+
+- `+` : Addition
+- `-` : Minus
+- `/` : Divide
+- `*` : Multiply
+
+Run the following commands in your RStudio __console__.
+
+__Note:__ Each line below represents one command. Once a command is typed out press enter to run the command.
+
+__Note:__ The amount of space between the integers/numbers and an operator does not matter. It is a matter of preference and clarity.
+
+```{r eval=FALSE}
+2+2
+7-7
+10/5
+3*3
+6+2+4
+8-1-3
+``` 
+
+R follows the BODMAS rules (Brackets, Orders (powers/roots), Division, Multiplication, Addition, Subtraction). Try out the following commands to demonstrate the usefulness of brackets.
+
+```{r eval=FALSE}
+3 + 2 * 2/5
+((3+2) * 2) / 5
+3 - 2*4 + 1
+(3-2) * (4+1)
+3 * 3/2 * 2 - 1
+(3*3) / ((2*2) - 1)
+``` 
+
+When entering commands via the __console__ the results/output is printed to the screen (ignore the [1] at the moment). However, this is no better than a normal calculator currently. R is a lot more powerful as we shall see.
+
+## Variables
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/boxes.png", auto_pdf = TRUE)
+``` 
+
+The output/result of a command can be saved as a __variable__. Below is the format for creating a __variable__ in R (don't type this into R).
+
+```{r eval=FALSE}
+variable_name <- variable_object
+``` 
+
+There are 3 parts to the above:
+
+- The __variable name__ (`variable_name`). This is the name of the __variable__ and is what will be used to refer to the __variable__ in future commands. This name can be almost anything. There are some rules on what can be in a name:
+    - Must start with a letter.
+    - Cannot contain spaces.
+    - Cannot start with a number.
+    - Cannot share the same name as a command or function in R.
+    - They are case sensitive. The __variable__ name `BB` is different to the __variable__ name `bb` which is different again to `bB`. I find it easiest to keep __variable names__ in lower case.
+- `<-` is called the assignment __operator__. It assigns the __variable object__ to the __variable name__. 
+    - Tip you can press 'ALT'+ '-' after a __variable name__ as a shortcut for the assignment __operator__.
+- The __variable object__ (`variable_object`). This can be many different objects including the output/results from commands, strings/words, numbers, and many other R data types.
+
+A __variable__ can be thought of as a box. The __variable object__ is held in the box but it can be replaced with any other object. The __variable name__ can then be thought as the label on the box so you can tell which box is which.
+
+Type the below commands into the RStudio __console__.
+
+__Note.__ Remember the amount of spaces between __operators__ and __integers__ does not matter. I encourage you to experiment with this spacing so you find what is best for you in terms of ease and clarity.
+
+```{r eval=FALSE}
+bakers_dozen <- 13
+kilobyte <- 1024
+I <- 1
+II <- I + 1
+V <- 7 - II
+X <- (II / I) * V
+L <- X * V
+``` 
+
+In the above commands the __variables__ are not printed out to the screen, this is as it should be. The __variables__ are appearing in the __environment__ pane (Top right). This is very convenient to see what variables are currently in the __environment__ and to see what they contain. 
+
+To print the contents of a __variable__ to screen you can type the __variable name__ into the __console__ and press enter. This will print the __variable object__ to the screen. This is not needed for small __variable objects__, for which you can look at the __environment__ pane, but is useful for larger __variable objects__.
+
+## Functions
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/function.png", auto_pdf = TRUE)
+``` 
+R __Functions__ allow the user to carry out a specific task. R has many inbuilt __functions__ but you can also create your own. Currently we will look at in built functions.
+
+The basic layout of a __function__ is:
+
+```{r eval=FALSE}
+function_name(objects, options)
+``` 
+
+There are 3 main parts to the above:
+
+- The __function name__ (`function_name`)
+- The __object/s__ to provide to the __function__. 
+    - This can be numbers, strings, __variables__ we have created etc. 
+    - Most __functions__ require at least one __object__. 
+    - Some __functions__ can take multiple objects, if multiple __objects__ are provided they must be separated by `,`.
+- __Function__ options (`options`). Options can be provided to some __functions__ to alter the way they will work. 
+    - Some __functions__ don't have options.
+    - Most options have default modes. If the options is not specified the default mode will be used.
+    - Like __objects__, when using multiple options they must be separated by `,`.
+
+Try running the below commands in your Rstudio __console__.
+
+```{r eval=FALSE}
+ceiling(3.5)
+floor(3.5)
+sqrt(9)
+round(3.5555, digits = 2)
+round(3.5555, digits = 3)
+round(3.5555, digits = 0)
+two <- sqrt(4)
+``` 
+
+The help page of __functions__ can be accessed in 2 main ways:
+
+- Click on the __function name__ so your cursor is in it and press __F1__.
+- Type `?` followed by the __function name__. Example below:
+
+```{r eval=FALSE}
+?ceiling
+``` 
+
+## Directories
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/directories.png", auto_pdf = TRUE)
+``` 
+It is important to know what directory you are working in and how to change to different directories.
+
+### Commands
+Below are commands you can run in the RStudio __console__ or __script editor__ (use of script editor will be taught soon).
+
+- Determine what directory you are currently in:
+```{r eval=FALSE}
+getwd()
+``` 
+
+- Set working directory. The path of the directory must be in quotes like below. If you do run the below command make sure the path exists in your computer, as I am the sure the example below will not. 
+```{r eval=FALSE}
+setwd("/path/of/directory")
+``` 
+
+- List the files in the current directory:
+```{r eval=FALSE}
+list.files()
+``` 
+
+### RStudio Interface
+The RStudio interface can also be used to carry out the above tasks.
+
+To see what the current working directory is, you can look at the top bar of the __console window__. The below shows I am in the __"F:/R/CE/CE_R_for_Everyone"__ directory. 
+
+```{r, fig.align = 'center',out.width= '80%', echo=FALSE }
+knitr::include_graphics(path = "figures/current_wd.png", auto_pdf = TRUE)
+``` 
+
+There are two main ways to set your working directory.
+
+1. Via the tool bar:
+    1. Click __"Session"__
+    2. Go to the __"Set Working Directory"__ drop down section
+    3. Click __"Choose Directory.."__
+    4. Use the pop-up browser to choose a directory
+
+2. Via the __MISC window__ (bottom right)
+    1. Click the __Files pane__
+    2. Navigate to the directory you would like to set as the working directory
+    3. On the __MISC toolbar__ click __"More"__
+    4. On the drop down click __"Set As Working Directory"__
+    
+To show the current working directory in the __Files__ pane click the arrow on the top bar of the __console window__. You can then see what files and directories are in your working directory via the __Files__ pane in the __MISC__ window.
+
+```{r, fig.align = 'center',out.width= '80%', echo=FALSE }
+knitr::include_graphics(path = "figures/see_files.png", auto_pdf = TRUE)
+``` 
+
+With this information create a directory you will use for this course. This can be done outside of Rstudio or you can use the __Files pane__ in the __MISC window__. Once this is created set your working directory to it. With that done we can go onto the next section.
+
+## Script editor
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/editor.png", auto_pdf = TRUE)
+``` 
+You can quickly type and run code using the __console window__. However, to fully utilise Rstudio we will instead use the __script editor__ in the __source window__. This allows us to reuse and edit code easier and it allows us to save our code so we can come back to it.
+
+If you cannot see your __script editor__, click the multi window button on the top of the __source window__ or __console window__.
+```{r, fig.align = 'center',out.width= '80%', echo=FALSE }
+knitr::include_graphics(path = "figures/script_editor_expand.png", auto_pdf = TRUE)
+``` 
+
+Type the below into the __script editor__ and press __"enter"__.
+```{r eval=FALSE}
+2 + 2
+``` 
+
+Pressing enter goes to a new line without running the command, just like other text editors (word, emails etc.).
+
+On the new line type the below:
+
+```{r eval=FALSE}
+4 - 1
+``` 
+
+### Running commands
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/command.png", auto_pdf = TRUE)
+``` 
+
+You can run a command that is in the script editor by one of the two following ways:
+
+- Via cursor:
+    - Move the cursor to the line you would like to run.
+    - Press __"Ctrl" + "enter"__ ( __"cmd"__ + __"enter"__ for Mac)
+- Highlighting:
+    - Highlight the parts you would like and press __"Ctrl" + "enter"__ ( __"cmd"__ + __"enter"__ for Mac)
+    - You can highlight a part of a line, a whole line, and even multiple lines.
+
+Run the commands you currently have in your __script editor__.
+
+The __script editor__ is unaffected with only the cursor moving if you used the cursor method. What is actually happening is that your commands are being copied to the __console window__ and are being run there.
+
+I would encourage to primarily use the script editor to write your code. It is brilliant for editing, reusing, and documenting your code.
+
+
+### Annotations
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/hashtag.png", auto_pdf = TRUE)
+``` 
+
+Annotations can be added to your code in the __script editor__. If a line starts with a `#` it will not be run as a command, this line is then an annotation. This is extremely useful to leave information for your future self. It is much harder to go back to old code and figure out what it does if it is just code.
+
+Be a mate, annotate.
+
+Edit the contents of your __script editor__ so it looks like the below. Then run all the lines.
+
+__Tip__: If you have selected the __script editor__ you can use __"Ctrl"__ + __"a"__ to highlight all.
+
+```{r eval=FALSE}
+#Command 1
+2 + 2
+#Command 2
+4 - 1
+``` 
+
+### Saving scripts
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/r_save.png", auto_pdf = TRUE)
+``` 
+
+Finally, one of the best aspects of using the __script editor__ is that you can save your scripts. I use this so I can have scripts for specific projects and template scripts for certain tasks I routinely carry out.
+
+- To save a script you can click the floppy disk on the toolbar of the __source window__. 
+- To save as, go to the RStudio toolbar and click __"File"__ > __"Save As..."__.
+
+### Open a saved script
+You can open a previously saved script in 2 main ways:
+
+
+- Via the __Files pane__ in the __MISC window__
+    - Navigate to the directory with the script (you do not need to set the working directory to this directory)
+    - Click the name of the script you would like to open
+- Via the Rstudio toolbar
+    - Click __"File"__
+    - Click __"Open file"__
+    - With the popup browser navigate to the location of the script and open it
+
+### New script
+You can have multiple scripts open at one time and switch between these scripts with the tabs at the top of the __script editor window__.
+
+To create and open a new script, click on the button on the RStudio toolbar shown below and select __"R script"__.
+
+```{r, fig.align = 'center',out.width= '80%', echo=FALSE }
+knitr::include_graphics(path = "figures/new_script_button.png", auto_pdf = TRUE)
+``` 
+

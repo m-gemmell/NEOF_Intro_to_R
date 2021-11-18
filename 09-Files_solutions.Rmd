@@ -1,0 +1,72 @@
+# Files solutions
+
+Before looking at these solutions keep in mind that there are many different ways to do the same thing in R. Therefore if your scripts are different than the ones below it does not mean they are wrong. As long as they produce the intended output they are correct.
+
+## Bats solution
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/bat.png", auto_pdf = TRUE)
+```
+
+Read in the file as a __data frame__:
+```{r eval=FALSE}
+bat_df <- read.csv("Chapter_8_files/bat_roosts.csv", row.names = 1, check.names = FALSE)
+```
+
+Add a row with column totals:
+```{r eval=FALSE}
+bat_df["UK",] <- colSums(bat_df) 
+```
+
+Add a column with row totals:
+```{r eval=FALSE}
+bat_df$All_Bat_Species <- rowSums(bat_df) 
+```
+
+Create transposed __data frame__:
+```{r eval=FALSE}
+bat_t_df <- as.data.frame(t(bat_df)) 
+```
+
+__Write__ file:
+```{r eval=FALSE}
+write.table(bat_t_df, file = "Chapter_8_files/bat_roosts_t.csv", sep = ",", quote = FALSE, col.names = NA)
+```
+
+## UK retail solution
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/UKPounds.png", auto_pdf = TRUE)
+``` 
+
+Read in file:
+```{r eval=FALSE}
+uk_retail_df <- read.csv("Chapter_8_files/UK_retail.txt", sep = "\t", row.names = 1, check.names = FALSE)
+```
+
+Create 2020 __data frame__:
+Read in file:
+```{r eval=FALSE}
+#Can index to get the desired columns
+uk_retail_2020_df <- uk_retail_df[29:37,]
+#Alternatively the tail() function can be used
+#It is like head() but will get lowest rows
+uk_retail_2020_df <- tail(uk_retail_df, n = 9)
+```
+
+Print food index phrases:
+```{r eval=FALSE}
+paste("The Food retail index for", row.names(uk_retail_2020_df),
+      "was", uk_retail_2020_df$Food, 
+      sep = " ")
+```
+
+Total and mean rows:
+```{r eval=FALSE}
+uk_retail_2020_df["Total",] <- colSums(uk_retail_2020_df)
+uk_retail_2020_df["Average",] <- colMeans(head(uk_retail_2020_df, n = 9))
+```
+
+Write out file:
+```{r eval=FALSE}
+write.table(uk_retail_2020_df, "Chapter_8_files/UK_retail_2020.tsv", 
+            sep = "\t", col.names = NA, quote = FALSE)
+```

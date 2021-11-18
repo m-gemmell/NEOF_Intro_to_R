@@ -1,0 +1,17 @@
+Syllabus (not required for single, one-off activities):
+
+Week 1: Introduction to R and RStudio
+
+Week 2: R objects (Classes and Data Structures)
+
+Week 3: Using files with R and subsetting data
+
+Week 4: Handy R tips and tricks
+
+Week 5: Visualisation with R part 1 (Line graphs and histograms)
+
+Week 6: Visualisation with R part 2 (Scatterplots and boxplots)
+
+Week 7: Basic statistics with R
+
+Week 8: Loops, ifs, and functions

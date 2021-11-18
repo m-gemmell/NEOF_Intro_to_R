@@ -1,0 +1,90 @@
+# (APPENDIX) Appendix {.unnumbered}
+
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/internet.png", auto_pdf = TRUE)
+```
+
+# Workshop files {#workshopfiles}
+
+## Chapter 7 files
+
+-   [Liverpool_beaches.csv](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Liverpool_beaches.csv)
+-   [Clothing_stores.txt](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Clothing_stores.txt)
+-   [Census_2011_L\_postcodes_counts.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Census_2011_L_postcodes_counts.csv)
+
+## Chapter 8 files
+
+-   [bat_roosts.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/bat_roosts.csv)
+-   [UK_retail.txt](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/UK_retail.txt)
+
+## Chapter 10-11 files
+
+-   [tea_consumption.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/tea_consumption.csv)
+-   [english_speaking_population_of_countries.txt](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/english_speaking_population_of_countries.txt)
+
+## Chapter 13-16 files
+
+-   [animal_sizes.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/animal_sizes.csv)
+-   [penguin.txt](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/penguin.txt)
+
+## Chapter 17-19
+
+-   [Fish.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Fish.csv)
+-   [world_happiness_report_2016.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/world_happiness_report_2016.csv)
+
+## Chapter 20-21
+
+-   [student_grades_group_A.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/student_grades_group_A.tsv)
+-   [student_grades_group_B.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/student_grades_group_B.tsv)
+-   [student_grades_group_C.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/student_grades_group_C.tsv)
+-   [student_grades_group_D.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/student_grades_group_D.tsv)
+-   [student_grades_group_E.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/student_grades_group_E.tsv)
+
+# Workshop slides & videos
+
+1.  Intro and foundations: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_1_intro_and_foundations.pdf) & [video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%201_Intro_and_foundations.mkv)
+2.  Classes and data structures: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_2_classess_and_data_structures.pdf) & [video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%202_classes_and_data_structures.mkv)
+3.  Files and subsetting: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_3_files_sand_subsetting_data.pdf) & [video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%203_files_and_subsetting_data.mkv)
+4.  Handy tips and tricks: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_4_handy_tips_and_tricks.pdf) & [video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%204_handy_tips_and_tricks.mkv)
+5.  Plots part 1: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_5_plots_1.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%205_Plots_part_1.mkv)
+6.  Plots part 2: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_6_plots_2.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%206_Plots_part_2.mkv)
+7.  Basic stats: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_7_basic_stats.pdf) & video
+8.  Basic programming: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_8_basic_programming.pdf) & video
+
+# R user groups and forums
+
+-   <https://jumpingrivers.github.io/meetingsR/r-user-groups.html#europe>
+-   <https://www.r-consortium.org/blog/2019/09/09/r-community-explorer-r-user-groups>
+-   <https://r-dir.com/community/forums.html>
+
+# Base R books and links
+
+**Quick-R**: <https://www.statmethods.net/index.html>
+
+**R Cookbook**: <https://rc2e.com/>
+
+# R cheat sheets
+
+<https://rstudio.com/resources/cheatsheets/>
+
+# Advanced R topics
+
+**R packages**: <https://r-pkgs.org/>
+
+**Efficient R Programming**: <https://csgillespie.github.io/efficientR/>
+
+**R for Data Science**: <https://r4ds.had.co.nz/>
+
+**R Graphics Cookbook**: <https://r-graphics.org/>
+
+**Fundamentals of Data Visualization**: <https://clauswilke.com/dataviz/>
+
+**R BOOKDOWN** (used to make this book): <https://bookdown.org/>
+
+**Hands-On Programming with R**: <https://rstudio-education.github.io/hopr/>
+
+**Efficient R programming**: <https://csgillespie.github.io/efficientR/>
+
+# Datasets
+
+I got a lot of my datasets from Kaggle: <https://www.kaggle.com/>

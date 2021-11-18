@@ -1,0 +1,38 @@
+# R objects exercises
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/beach.png", auto_pdf = TRUE)
+``` 
+For this exercise simply produce the following tables as __data frames__ in R. Please carry this out in your __"Exercises.R"__ script and remember about code sections and annotations.
+
+Tip: You can either write completely new code or reuse and alter previous code. 
+
+## df
+
+__Note__: The top row is the column names and the left-most column is the row names.
+
+```{r echo = FALSE, results = 'df'}
+library("knitr")
+One <- c(2,4,6)
+Three <- c(6,12,18)
+Five <- c(10,20,30)
+row_names <- c("Two", "Four", "Six")
+df <- data.frame(One,Three,Five)
+row.names(df) <- row_names
+kable(df)
+```
+
+## beach_df_2
+
+__Note__: The top row is the column names and the left-most column is the row names.
+
+```{r echo = FALSE, results = 'nut_df_2'}
+library("knitr")
+Crab <- c(10,1,1,4)
+Oystercatcher <- c(5,6,4,4)
+Sandpiper <- c(1,1,2,3)
+Starfish <- c(3,3,7,4)
+row_names_2 <- c("Formby","West Kirby","Crosby","New Brighton")
+beach_df_2 <- data.frame(Crab,Oystercatcher,Sandpiper,Starfish)
+row.names(beach_df_2) <- row_names_2
+kable(beach_df_2)
+```
