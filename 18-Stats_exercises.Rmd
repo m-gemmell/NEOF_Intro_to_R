@@ -112,7 +112,7 @@ boxplot(`Happiness Score`~Region, data = happy_df,
 )
 ```
 
-7. Save the above as a jpeg called "Region_happiness_boxplots.jpg" with a width of 1500 pixels and a height of 750 pixels.
+7. Save the above as a jpeg called "Region_happiness_boxplots.jpg" with a width of 1600 pixels and a height of 750 pixels.
 
 8. Last task! Carry out t-tests on the following comparisons for Happiness Score and determine if the means are significantly different.
     + West Europe and North America

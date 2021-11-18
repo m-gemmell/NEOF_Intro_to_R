@@ -9,7 +9,7 @@ This week we'll learn how to carry out some basic stats. This will involve linea
 
 Create and use the directory "Chapter_17-18" as the working directory for this chapter. Additionally create a new script called "Stats.R" for this chapter.
 
-Before we continue just a reminder about annotations and code sections.
+Before we continue just a reminder about [annotations](#annotations) and [code sections](#codesections).
 
 ## Linear regression
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
@@ -17,7 +17,9 @@ knitr::include_graphics(path = "figures/linear_regression.png", auto_pdf = TRUE)
 ``` 
 Linear regression is a method to model the relationship between two __numeric vectors__. Ultimately we want to produce the predictive equation:
 
-- _y = mx + c_
+$$
+y = mx + c
+$$
 
 Where _m_ is equal to the gradient and _c_ is equal to the intercept. With this we can predict the value of _y_ if we know the value of _x_ and vice versa.
 

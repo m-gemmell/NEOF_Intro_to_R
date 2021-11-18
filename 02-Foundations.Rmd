@@ -196,7 +196,7 @@ knitr::include_graphics(path = "figures/see_files.png", auto_pdf = TRUE)
 
 With this information create a directory you will use for this course. This can be done outside of Rstudio or you can use the __Files pane__ in the __MISC window__. Once this is created set your working directory to it. With that done we can go onto the next section.
 
-## Script editor
+## Script editor{#scripteditor}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/editor.png", auto_pdf = TRUE)
 ``` 
@@ -241,7 +241,7 @@ The __script editor__ is unaffected with only the cursor moving if you used the 
 I would encourage to primarily use the script editor to write your code. It is brilliant for editing, reusing, and documenting your code.
 
 
-### Annotations
+### Annotations{#annotations}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/hashtag.png", auto_pdf = TRUE)
 ``` 

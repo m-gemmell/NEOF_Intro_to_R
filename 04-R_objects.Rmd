@@ -9,7 +9,7 @@ In Chapter 2 we learnt how to create a __variable__. This consisted of assigning
 
 The rest of today's plan is to learn about __classes__ and __data structures__.
 
-## Code sections
+## Code sections{#codesections}
 Today, and for the rest of the course, you will use code sections in your R scripts to separate sections in this book.
 
 First set your working directory to the course directory, create a script, and save it as __"2-Objects.R"__.

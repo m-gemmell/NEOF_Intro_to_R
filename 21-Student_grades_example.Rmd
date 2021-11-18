@@ -298,7 +298,7 @@ student_grades_df$writing_grade <-
   grade_score(student_grades_df$writing_scaled_score)
 ```
 
-That is he last edit we will do to our __data frame__ so lets __save__ it.
+That is the last edit we will do to our __data frame__ so lets __save__ it.
 ```{r eval=FALSE}
 save(student_grades_df, file = "student_grades_df")
 ```
