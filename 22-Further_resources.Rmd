@@ -48,8 +48,8 @@ knitr::include_graphics(path = "figures/internet.png", auto_pdf = TRUE)
 4.  Handy tips and tricks: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_4_handy_tips_and_tricks.pdf) & [video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%204_handy_tips_and_tricks.mkv)
 5.  Plots part 1: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_5_plots_1.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%205_Plots_part_1.mkv)
 6.  Plots part 2: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_6_plots_2.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%206_Plots_part_2.mkv)
-7.  Basic stats: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_7_basic_stats.pdf) & video
-8.  Basic programming: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_8_basic_programming.pdf) & video
+7.  Basic stats: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_7_basic_stats.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%207_Basic_statistics.mkv)
+8.  Basic programming: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_8_basic_programming.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%208_Basic_programming.mkv)
 
 # R user groups and forums
 
