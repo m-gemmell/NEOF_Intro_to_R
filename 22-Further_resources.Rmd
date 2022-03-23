@@ -10,42 +10,73 @@ knitr::include_graphics(path = "figures/internet.png", auto_pdf = TRUE)
 
 ```{r, echo=FALSE, warning=FALSE, }
 library("vembedr")
-embed_youtube("https://youtu.be/mr5B4-6kcyU")
+embed_url("https://www.youtube.com/watch?v=mr5B4-6kcyU")
 ```
-
-![](https://youtu.be/mr5B4-6kcyU)
 
 [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_1_intro_and_foundations.pdf) &
 
-[video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%201_Intro_and_foundations.mkv)
-
 ## Classes and data structures
 
-[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_2_classess_and_data_structures.pdf) & [video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%202_classes_and_data_structures.mkv)
+```{r, echo=FALSE, warning=FALSE, }
+library("vembedr")
+embed_url("https://www.youtube.com/watch?v=BiN_DQxizgA")
+```
+
+[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_2_classess_and_data_structures.pdf)
 
 ## Files and subsetting
 
-[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_3_files_sand_subsetting_data.pdf) & [video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%203_files_and_subsetting_data.mkv)
+```{r, echo=FALSE, warning=FALSE, }
+library("vembedr")
+embed_url("https://www.youtube.com/watch?v=_hg7afEI5sU")
+```
+
+[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_3_files_sand_subsetting_data.pdf)
 
 ## Handy tips and tricks
 
-[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_4_handy_tips_and_tricks.pdf) & [video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%204_handy_tips_and_tricks.mkv)
+```{r, echo=FALSE, warning=FALSE, }
+library("vembedr")
+embed_url("https://www.youtube.com/watch?v=nv_lOsY_TTY")
+```
+
+[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_4_handy_tips_and_tricks.pdf)
 
 ## Plots part 1
 
-[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_5_plots_1.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%205_Plots_part_1.mkv)
+```{r, echo=FALSE, warning=FALSE, }
+library("vembedr")
+embed_url("https://www.youtube.com/watch?v=4UrVC1saNKE")
+```
+
+[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_5_plots_1.pdf)
 
 ## Plots part 2
 
-[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_6_plots_2.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%206_Plots_part_2.mkv)
+```{r, echo=FALSE, warning=FALSE, }
+library("vembedr")
+embed_url("https://www.youtube.com/watch?v=Yhh_sQYOx7E")
+```
+
+[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_6_plots_2.pdf)
 
 ## Basic stats
 
-[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_7_basic_stats.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%207_Basic_statistics.mkv)
+```{r, echo=FALSE, warning=FALSE, }
+library("vembedr")
+embed_url("https://www.youtube.com/watch?v=Ff2_sfQvf3c")
+```
+
+[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_7_basic_stats.pdf)
 
 ## Basic programming
 
-[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_8_basic_programming.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%208_Basic_programming.mkv)
+```{r, echo=FALSE, warning=FALSE, }
+library("vembedr")
+embed_url("https://www.youtube.com/watch?v=O6F2N12VhjU")
+```
+
+[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_8_basic_programming.pdf)
 
 # Workshop files {#workshopfiles}
 
