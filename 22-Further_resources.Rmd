@@ -4,6 +4,49 @@
 knitr::include_graphics(path = "figures/internet.png", auto_pdf = TRUE)
 ```
 
+# Workshop slides & videos
+
+## Intro and foundations
+
+```{r, echo=FALSE, warning=FALSE, }
+library("vembedr")
+embed_youtube("https://youtu.be/mr5B4-6kcyU")
+```
+
+![](https://youtu.be/mr5B4-6kcyU)
+
+[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_1_intro_and_foundations.pdf) &
+
+[video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%201_Intro_and_foundations.mkv)
+
+## Classes and data structures
+
+[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_2_classess_and_data_structures.pdf) & [video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%202_classes_and_data_structures.mkv)
+
+## Files and subsetting
+
+[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_3_files_sand_subsetting_data.pdf) & [video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%203_files_and_subsetting_data.mkv)
+
+## Handy tips and tricks
+
+[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_4_handy_tips_and_tricks.pdf) & [video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%204_handy_tips_and_tricks.mkv)
+
+## Plots part 1
+
+[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_5_plots_1.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%205_Plots_part_1.mkv)
+
+## Plots part 2
+
+[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_6_plots_2.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%206_Plots_part_2.mkv)
+
+## Basic stats
+
+[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_7_basic_stats.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%207_Basic_statistics.mkv)
+
+## Basic programming
+
+[Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_8_basic_programming.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%208_Basic_programming.mkv)
+
 # Workshop files {#workshopfiles}
 
 ## Chapter 7 files
@@ -39,17 +82,6 @@ knitr::include_graphics(path = "figures/internet.png", auto_pdf = TRUE)
 -   [student_grades_group_C.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/student_grades_group_C.tsv)
 -   [student_grades_group_D.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/student_grades_group_D.tsv)
 -   [student_grades_group_E.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/student_grades_group_E.tsv)
-
-# Workshop slides & videos
-
-1.  Intro and foundations: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_1_intro_and_foundations.pdf) & [video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%201_Intro_and_foundations.mkv)
-2.  Classes and data structures: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_2_classess_and_data_structures.pdf) & [video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%202_classes_and_data_structures.mkv)
-3.  Files and subsetting: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_3_files_sand_subsetting_data.pdf) & [video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%203_files_and_subsetting_data.mkv)
-4.  Handy tips and tricks: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_4_handy_tips_and_tricks.pdf) & [video](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%204_handy_tips_and_tricks.mkv)
-5.  Plots part 1: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_5_plots_1.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%205_Plots_part_1.mkv)
-6.  Plots part 2: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_6_plots_2.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%206_Plots_part_2.mkv)
-7.  Basic stats: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_7_basic_stats.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%207_Basic_statistics.mkv)
-8.  Basic programming: [Slides](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/slides/Intro_to_R_8_basic_programming.pdf) & [video](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/slides_and_videos/videos/NEOF_R_recording%208_Basic_programming.mkv)
 
 # R user groups and forums
 
