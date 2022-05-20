@@ -8,7 +8,7 @@ Please use your "Exercises.R" script for this exercise and the main workshop dir
 
 For convenience the code to load the Penguin __data frame__ directory will be:
 ```{r eval=TRUE}
-penguin_df <- read.csv("Chapter_13-16/penguin.txt", 
+penguin_df <- read.csv("Chapter_13-16/penguin.tsv", 
                       check.names = FALSE,
                       stringsAsFactors = TRUE,
                       sep = "\t"

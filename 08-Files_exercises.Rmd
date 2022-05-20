@@ -3,7 +3,7 @@ This exercise will look at two files. You will be assigned tasks requiring you t
 
 Use your __"Exercises.R"__ file, ensuring you are using code sections to separate the different exercises. Additionally, set your working directory to your main workshop directory.
 
-Create a new directory called "Chapter_8_files" within your main workshop directory to download the files [bat_roosts.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/bat_roosts.csv) & [UK_retail.txt](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/UK_retail.txt).
+Create a new directory called "Chapter_8_files" within your main workshop directory to download the files [bat_roosts.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/bat_roosts.csv) & [UK_retail.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/UK_retail.tsv).
 
 As the files we are going to __read__ are in a different directory to our working directory we will have to specify the directory along with the file names. For example, to read in the "Liverpool_beaches.csv" file from the main directory you could use the  following command.
 
@@ -42,11 +42,11 @@ Now that you have carried that out, can you answer the following questions?
 knitr::include_graphics(path = "figures/UKPounds.png", auto_pdf = TRUE)
 ``` 
 
-Next we have a file ([UK_retail.txt](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/UK_retail.txt)) containing UK retail information for each month from September 2017 to September 2020. The values are seasonally adjusted volume sales. The data comes from: https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/september2020.
+Next we have a file ([UK_retail.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/UK_retail.tsv)) containing UK retail information for each month from September 2017 to September 2020. The values are seasonally adjusted volume sales. The data comes from: https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/september2020.
 
 Carry out the below tasks:
 
-1. __Read__ in the file "UK_retail.txt" as a __data frame__ __variable__ called "uk_retail_df". Ensure the row names contain the YearMonth info (2017SEP, 2017OCT, etc.).
+1. __Read__ in the file "UK_retail.tsv" as a __data frame__ __variable__ called "uk_retail_df". Ensure the row names contain the YearMonth info (2017SEP, 2017OCT, etc.).
 2. Create a __data frame__ called "uk_retail_2020_df" containing the rows for 2020 from "uk_retail_df". 
 3. For each month in 2020 print out the phrase "The Food retail index for \<YearMonth> was \<Food>". For example the first phrase will be "The Food retail index for 2020JAN was 101.9". This can be done with one line of code using the `paste()` function.
 4. Make a total row and an average (mean) row for "uk_retail_2020_df". Ensure you are not including the total in the mean.

@@ -203,7 +203,7 @@ Before we continue, the tab key is the key above the "CAPS" key and left of the 
 The first way to tab complete is to tab complete file names. First you will need to download the following files into your “Chapter_10-11” directory.
 
 - [tea_consumption.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/tea_consumption.csv)
-- [english_speaking_population_of_countries.txt](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/english_speaking_population_of_countries.txt)
+- [english_speaking_population_of_countries.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/english_speaking_population_of_countries.tsv)
 
 Next you will run the command that is below. However, when your cursor is in the double quotes first press tab. This will hopefully show a dropdown of selections. There are two ways to then get to your choice:
 
@@ -220,7 +220,7 @@ You may notice that we only provided the file name and the `check.names=FALSE` f
 
 Let us __read__ in another file using tab complete to autofill the file name again. 
 ```{r eval=FALSE}
-english_df <- read.csv("english_speaking_population_of_countries.txt", 
+english_df <- read.csv("english_speaking_population_of_countries.tsv", 
                    sep = "\t", 
                    row.names = 1,
                    check.names = FALSE)

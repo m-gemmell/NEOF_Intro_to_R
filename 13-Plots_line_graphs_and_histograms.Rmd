@@ -91,7 +91,7 @@ knitr::include_graphics(path = "figures/RStudio_plot_pane_arrows.png", auto_pdf 
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/line_graph.png", auto_pdf = TRUE)
 ```
-Line graphs are perfect for showing change over time. Knowing this we'll go back to a data set we have touched before, the file "UK_retail.txt" from Chapter 8. This file showed the success of four different retail sectors in the UK from September 2017 to September 2020.
+Line graphs are perfect for showing change over time. Knowing this we'll go back to a data set we have touched before, the file "UK_retail.tsv" from Chapter 8. This file showed the success of four different retail sectors in the UK from September 2017 to September 2020.
 
 ### Read in data
 First step is to __read__ in the data from the "Chapter_8_files" directory. Once the __data frame__ is created we will remove all non 2020 information.
@@ -99,7 +99,7 @@ First step is to __read__ in the data from the "Chapter_8_files" directory. Once
 __Note__: The `../` below represents going up one directory. I.e. going up from your current working directory ("Chapter_13-16") to the main directory so it can be directed to "Chapter_8_files".
 
 ```{r eval=FALSE}
-retail_df <- read.csv("../Chapter_8_files/UK_retail.txt", sep = "\t", row.names = 1, check.names = FALSE)
+retail_df <- read.csv("../Chapter_8_files/UK_retail.tsv", sep = "\t", row.names = 1, check.names = FALSE)
 retail_df <- retail_df[29:37,]
 ```
 

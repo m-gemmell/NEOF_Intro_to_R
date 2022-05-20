@@ -40,18 +40,18 @@ The row names are empty and the beach names are in the first column. Let us fix 
 liv_beaches_df <- read.csv("Liverpool_beaches.csv", row.names = 1)
 ```
 
-We now know how to __read__ in a csv file with `read.csv`, now let us __read__ in the tab separated file, [Clothing_stores.txt](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Clothing_stores.txt), with `read.csv`. As before first download the files into your "Chapter_7" directory and look at the file contents before __reading__ them in. It contains the sales figures of fictional clothing stores through the seasons.
+We now know how to __read__ in a csv file with `read.csv`, now let us __read__ in the tab separated file, [Clothing_stores.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Clothing_stores.tsv), with `read.csv`. As before first download the files into your "Chapter_7" directory and look at the file contents before __reading__ them in. It contains the sales figures of fictional clothing stores through the seasons.
 
 Now use `read.csv()` to __read__ in the file. We'll set `row.names = 1` again but we will also include the option `sep = "\t"`. This option specifies the columns are separated (sep) by tabs (`"\t"`).
 
 ```{r eval=FALSE}
-clothing_df <- read.csv("Clothing_stores.txt", row.names = 1, sep = "\t")
+clothing_df <- read.csv("Clothing_stores.tsv", row.names = 1, sep = "\t")
 ```
 
 Look at the resulting __data frame__ and you will notice the column names have been changed by R. This is annoying but thankfully there is an easy fix. __Read__ in the data again with the inclusion of the parameter `check.names = FALSE`. This will stop the function `read.csv()` from 'checking' and 'fixing' the column names. I always use this option.
 
 ```{r eval=FALSE}
-clothing_df <- read.csv("Clothing_stores.txt", row.names = 1, 
+clothing_df <- read.csv("Clothing_stores.tsv", row.names = 1, 
                         sep = "\t", check.names = FALSE)
 ```
 
@@ -347,7 +347,7 @@ Have a look at the file contents with RStudio.
 Let us do it one more time with the clothing store info. First let us __read__ in the file again in case you do not have it. Then we will create a total sales column and finally transpose the __data frame__:
 ```{r eval=FALSE}
 #Read in
-clothing_df <- read.csv("Clothing_stores.txt", row.names = 1, 
+clothing_df <- read.csv("Clothing_stores.tsv", row.names = 1, 
                         sep = "\t", check.names = FALSE)
 #Create total column
 #We are referring to a column name with spaces

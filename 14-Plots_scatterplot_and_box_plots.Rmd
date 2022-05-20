@@ -242,11 +242,11 @@ https://allisonhorst.github.io/palmerpenguins/
 
 This data contains information on individual penguins that were gathered from Palmer Station LTER. 
 
-First download the [penguin.txt](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/penguin.txt) file into your "Chapter_13-16" directory.
+First download the [penguin.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/penguin.tsv) file into your "Chapter_13-16" directory.
 
 As you expect the next step is to __read__ in the file. This time the file is a tsv (tab separated file) with no row names. We will ensure that columns containing strings are converted to __factors__.
 ```{r eval=FALSE}
-penguin_df <- read.csv("penguin.txt", 
+penguin_df <- read.csv("penguin.tsv", 
                       check.names = FALSE,
                       stringsAsFactors = TRUE,
                       sep = "\t"
