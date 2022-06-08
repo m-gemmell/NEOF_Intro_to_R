@@ -292,3 +292,56 @@ To create and open a new script, click on the button on the RStudio toolbar show
 knitr::include_graphics(path = "figures/new_script_button.png", auto_pdf = TRUE)
 ``` 
 
+## Foundations recap
+
+Choose the correct option to complete the below sentences:
+
+```{r, echo = FALSE, eval=TRUE}
+opts_p <- c(
+   "Hashtags",
+   "Variables",
+   answer = "Operators"
+)
+```
+
+__Q1__: ________ are symbols that allow you to carry out common R tasks such as addition and multiplication. `r longmcq(opts_p)`
+
+```{r, echo = FALSE, eval=TRUE}
+opts_p <- c(
+   answer = "`<-`",
+   "`==`",
+   "`>=`"
+)
+```
+
+__Q2__: The assignment operator is: ________ `r longmcq(opts_p)`
+
+```{r, echo = FALSE, eval=TRUE}
+opts_p <- c(
+   answer = "Annotations",
+   "Commands",
+   "Functions"
+)
+```
+
+__Q3__: Hash tags (`#`) can be used to create human readable ________ `r longmcq(opts_p)`
+
+```{r, echo = FALSE, eval=TRUE}
+opts_p <- c(
+   "Annotation",
+   answer = "Function",
+   "Object"
+)
+```
+
+__Q4__: `sqrt` is a R ________ `r longmcq(opts_p)`
+
+```{r, echo = FALSE, eval=TRUE}
+opts_p <- c(
+   "Annotations",
+   "Operators",
+   answer = "Object"
+)
+```
+
+__Q5__: ________ can be assigned as R Variables `r longmcq(opts_p)`

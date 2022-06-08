@@ -1,5 +1,7 @@
 bookdown::gitbook:
-  css: style.css
+  css:
+  - style.css
+  - www/webex.css
   split_by: rmd
   config:
     toc:
@@ -9,6 +11,9 @@ bookdown::gitbook:
         <li><a>Intro to R</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    sharing: null
-    download: null
-    edit: null
+    sharing: ~
+    download: ~
+    edit: ~
+  includes:
+    after_body: www/webex.js
+  md_extensions: -smart

@@ -1,5 +1,6 @@
-book_filename: "NEOF Intro to R"
+book_filename: NEOF Intro to R
 language:
   ui:
-    chapter_name: "Chapter "
-delete_merged_file: true
+    chapter_name: 'Chapter '
+delete_merged_file: yes
+before_chapter_script: scripts/webex.R
