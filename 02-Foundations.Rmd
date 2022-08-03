@@ -297,51 +297,34 @@ knitr::include_graphics(path = "figures/new_script_button.png", auto_pdf = TRUE)
 Choose the correct option to complete the below sentences:
 
 ```{r, echo = FALSE, eval=TRUE}
-opts_p <- c(
-   "Hashtags",
-   "Variables",
-   answer = "Operators"
-)
+opts_p <- c( "Annotations", "Variables", answer = "Operators")
 ```
+1. ________ are symbols that allow you to carry out common R tasks such as addition and multiplication. `r longmcq(opts_p)`
 
-__Q1__: ________ are symbols that allow you to carry out common R tasks such as addition and multiplication. `r longmcq(opts_p)`
+```{r, echo = FALSE, eval=TRUE}
+opts_p <- c(answer = "Annotations", "Objects", "Operators")
+```
+2. Hash tags (`#`) can be used to create human readable ________ `r longmcq(opts_p)`
+
+```{r, echo = FALSE, eval=TRUE}
+opts_p <- c("Annotations", answer="Objects", "Operators")
+```
+3. ________ can be assigned as R Variables `r longmcq(opts_p)`
+
 
 ```{r, echo = FALSE, eval=TRUE}
 opts_p <- c(
-   answer = "`<-`",
-   "`==`",
-   "`>=`"
+   answer = "`<-`", "`==`", "`>=`"
 )
 ```
-
-__Q2__: The assignment operator is: ________ `r longmcq(opts_p)`
+4. The assignment operator is: ________ `r longmcq(opts_p)`
 
 ```{r, echo = FALSE, eval=TRUE}
-opts_p <- c(
-   answer = "Annotations",
-   "Commands",
-   "Functions"
-)
+opts_p <- c("Console", answer = "Function","Objects")
 ```
-
-__Q3__: Hash tags (`#`) can be used to create human readable ________ `r longmcq(opts_p)`
+5. `sqrt` is a R ________ `r longmcq(opts_p)`
 
 ```{r, echo = FALSE, eval=TRUE}
-opts_p <- c(
-   "Annotation",
-   answer = "Function",
-   "Object"
-)
+opts_p <- c(answer="Console", "Function","Object")
 ```
-
-__Q4__: `sqrt` is a R ________ `r longmcq(opts_p)`
-
-```{r, echo = FALSE, eval=TRUE}
-opts_p <- c(
-   "Annotations",
-   "Operators",
-   answer = "Object"
-)
-```
-
-__Q5__: ________ can be assigned as R Variables `r longmcq(opts_p)`
+5. YOu can run commands in the ________ `r longmcq(opts_p)`
