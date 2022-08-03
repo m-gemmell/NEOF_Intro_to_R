@@ -1,4 +1,4 @@
-# R objects exercises
+# R objects exercises {#robjectexercises}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/beach.png", auto_pdf = TRUE)
 ``` 

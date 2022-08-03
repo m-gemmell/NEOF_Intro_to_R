@@ -83,7 +83,7 @@ embed_url("https://www.youtube.com/watch?v=O6F2N12VhjU")
 ## Chapter 7 files
 
 -   [Liverpool_beaches.csv](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Liverpool_beaches.csv)
--   [Clothing_stores.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Clothing_stores.tsv)
+- [Global_eco_footprint.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Global_eco_footprint.tsv)
 -   [Census_2011_L\_postcodes_counts.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Census_2011_L_postcodes_counts.csv)
 
 ## Chapter 8 files

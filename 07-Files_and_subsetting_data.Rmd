@@ -14,7 +14,15 @@ In chapter 4 we created __data frames__ with R __functions__. This was useful to
 
 You can get your data into R by having R __read__ your file.
 
-Prior to using a file you will need to acquire it. Make a directory/folder called "Chapter_7" within your main directory/folder for this workshop. Download the file [Liverpool_beaches.csv](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Liverpool_beaches.csv) into "Chapter_7". Next set your working directory to this new directory ([Directories](#directories)). You will stay here for this chapter.
+### Directory and file setup
+
+Prior to using a file you will need to acquire it. 
+
+- Make a directory/folder called "Chapter_7" within your main directory/folder for this workshop. 
+- Download the file [Liverpool_beaches.csv](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Liverpool_beaches.csv) into "Chapter_7". 
+- Set your working directory to this new directory ([Directories](#directories)). You will stay here for this chapter.
+
+### Viewing the file
 
 The next task to carry out is to __read__ in the file "Liverpool_beaches.csv" . Before __reading__ in the file we can check the contents of the file. This can be carried out by opening it with notepad (or similar text tool) or viewing the file with RStudio. 
 
@@ -24,11 +32,13 @@ To view the file with RStudio:
 - Click on the file name and then click "View File"
 - This will open a tab in the __Source window__ matching the file name
 
-You will notice that the values are separated by commas as this is a "comma separated value" (.csv) file. Additionally, this is the same data as the "beach_df_2" __data frame__ you created in the chapter 5 exercises.
+You will notice that the values are separated by commas as this is a "comma separated value" (.csv) file. Additionally, this is the same data as the "beach_df_2" __data frame__ you created in the [chapter 5 exercises](#robjectexercises).
 
 __Note__: Create a new R script file called __"3-Files_and_subsetting.r"__ for this chapter's scripts.
 
-There are various __functions__ to __read__ in files into R. My favourite that I find most consistent is `read.csv()`. Use this function to __read__ in the file "Liverpool_beaches.csv":
+### read.csv
+
+There are various __functions__ to __read__ in files into R. My favourite is `read.csv()`. Use this function to __read__ in the file "Liverpool_beaches.csv":
 ```{r eval=FALSE}
 liv_beaches_df <- read.csv("Liverpool_beaches.csv")
 ```
@@ -40,20 +50,34 @@ The row names are empty and the beach names are in the first column. Let us fix 
 liv_beaches_df <- read.csv("Liverpool_beaches.csv", row.names = 1)
 ```
 
-We now know how to __read__ in a csv file with `read.csv`, now let us __read__ in the tab separated file, [Clothing_stores.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Clothing_stores.tsv), with `read.csv`. As before first download the files into your "Chapter_7" directory and look at the file contents before __reading__ them in. It contains the sales figures of fictional clothing stores through the seasons.
+We now know how to __read__ in a csv file with `read.csv`. 
 
-Now use `read.csv()` to __read__ in the file. We'll set `row.names = 1` again but we will also include the option `sep = "\t"`. This option specifies the columns are separated (sep) by tabs (`"\t"`).
+### TSV files
+
+For our next task we will __read__ a tab separated file. 
+
+Download [Global_eco_footprint.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Global_eco_footprint.tsv) into your "Chapter_7". This file contains The ecological footprint measures the ecological assets that a given population requires to produce the natural resources it consumes.
+
+`r hide("More info on Global_eco_footprint.tsv")`
+More info can be found in the following link: https://www.kaggle.com/datasets/footprintnetwork/ecological-footprint.
+`r unhide()`
+
+Now use `read.csv()` to __read__ in the file. We'll set `row.names = 1` again but we will also include the option `sep = "\t"`. This option specifies the columns are separated (`sep`) by tabs (`"\t"`).
 
 ```{r eval=FALSE}
-clothing_df <- read.csv("Clothing_stores.tsv", row.names = 1, sep = "\t")
+global_eco_footprint <- read.csv("Global_eco_footprint.tsv", 
+                        row.names = 1, sep = "\t")
 ```
 
 Look at the resulting __data frame__ and you will notice the column names have been changed by R. This is annoying but thankfully there is an easy fix. __Read__ in the data again with the inclusion of the parameter `check.names = FALSE`. This will stop the function `read.csv()` from 'checking' and 'fixing' the column names. I always use this option.
 
 ```{r eval=FALSE}
-clothing_df <- read.csv("Clothing_stores.tsv", row.names = 1, 
-                        sep = "\t", check.names = FALSE)
+global_eco_footprint <- read.csv("Global_eco_footprint.tsv", 
+                                 row.names = 1, sep = "\t", 
+                                 check.names = FALSE)
 ```
+
+### Excel files and R
 
 You may want to open excel files with R. Normally to do this I open the file in excel and save it as a .csv or a tab separated file and __read__ this into R. Alternatively there are R packages that can directly __read__ in excel files. If this is something you would like to do you can look at the following package:
 
