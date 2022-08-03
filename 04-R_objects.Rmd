@@ -372,4 +372,71 @@ row.names(beach_df) <- c("Formby","West Kirby","Crosby")
 
 Now look at your "beach_df" __data frame__ to see the difference.
 
-That is quite a lot to go through so let us reinforce it all with exercise!
+## Objects MCQs
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble_purple.png", auto_pdf = TRUE)
+``` 
+
+Attempt the below MCQs.
+
+```{r, echo = FALSE}
+opts_p <- c(answer="Numeric", "Logical","String")
+```
+1. What __class__ are numbers normally stored in? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Numeric","Logical",answer="String")
+```
+2. What __class__ is text normally stored in? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Numeric",answer="Logical","String")
+```
+3. What __class__ has the value of TRUE or FALSE? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Scalar", "Vector", answer="Data frame")
+```
+4. Which __data structure__ is 2-dimensional and heterogeneous (can contain multiple __classes__)? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Scalar", answer="Vector", "Data frame")
+```
+5. Which __data structure__ is 1-dimensional and homogeneous (can only contain 1 __class__)? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="Scalar", "Vector", "Data frame")
+```
+6. Which __data structure__ consists of only one value? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`c()`", answer="`class()`", "`paste()`")
+```
+7. Which __function__ can show the __class__ of an R __object__? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`c()`", "`class()`", answer="`paste()`")
+```
+8. Which __function__ can be used to combine __strings__? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="`c()`", "`class()`", "`paste()`")
+```
+9. Which __function__ can be used to create a __vector__? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="`<`", "`!=`", "`>=`")
+```
+10. Which __logical operator__ means "less than"? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`<`", answer="`!=`", "`>=`")
+```
+11. Which __logical operator__ means "not equal to"? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`<`", "`!=`", answer="`>=`")
+```
+12. Which __logical operator__ means "greater than or equal to"? `r longmcq(opts_p)`
+
+There was quite a lot to go through in this chapter, so let us reinforce it all with exercise!

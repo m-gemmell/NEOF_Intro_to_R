@@ -292,7 +292,10 @@ To create and open a new script, click on the button on the RStudio toolbar show
 knitr::include_graphics(path = "figures/new_script_button.png", auto_pdf = TRUE)
 ``` 
 
-## Foundations recap
+## Foundations MCQs
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble_black.png", auto_pdf = TRUE)
+``` 
 
 Choose the correct option to complete the below sentences:
 
@@ -310,7 +313,6 @@ opts_p <- c(answer = "Annotations", "Objects", "Operators")
 opts_p <- c("Annotations", answer="Objects", "Operators")
 ```
 3. ________ can be assigned as R Variables `r longmcq(opts_p)`
-
 
 ```{r, echo = FALSE, eval=TRUE}
 opts_p <- c(

@@ -11,7 +11,7 @@ The first task is to add the below text annotation to the top of your current sc
 # Foundations ####
 ```
 
-Now save the file as __"1-Foundations.R"__ within the course directory.
+Now save the file as __"1-Foundations.R"__ within your course directory.
 
 For the next part you will need to create a new script and save it as __"Exercises.R"__.
 
@@ -25,7 +25,7 @@ The `####` creates a code section, these will be explained in a later week. You 
 
 The next step is the most tedious, unfortunately tedious repetition is one of the best ways to learn.
 
-Please fill in the __"Exercises.R"__ script with the commands from the __operators__ and __variables__ section from Chapter 2. Additionally, add in annotations so you can easily tell which sections the commands come from and brief lines on their purposes.
+Please fill in the __"Exercises.R"__ script with the commands from the [__operators__](#operators) and [__variables__](#variables) section from Chapter 2. Additionally, add in [annotations](#annotations) so you can easily tell which sections the commands come from and brief lines on their purposes.
 
 Annotations require a balance of enough info but not too much info, you don't always need a line of annotation for each line of code. However, with some complex code sometimes you will need multiple lines of annotation for one line of code. It is all about how much annotation you and possibly others will need for the code at hand. Knowing this requires experience.
 
