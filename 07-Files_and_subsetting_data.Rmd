@@ -23,6 +23,9 @@ Prior to using a file you will need to acquire it.
 - Set your working directory to this new directory ([Directories](#directories)). You will stay here for this chapter.
 
 ### Viewing the file
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/view.png", auto_pdf = TRUE)
+```
 
 The next task to carry out is to __read__ in the file "Liverpool_beaches.csv" . Before __reading__ in the file we can check the contents of the file. This can be carried out by opening it with notepad (or similar text tool) or viewing the file with RStudio. 
 
@@ -36,7 +39,10 @@ You will notice that the values are separated by commas as this is a "comma sepa
 
 __Note__: Create a new R script file called __"3-Files_and_subsetting.r"__ for this chapter's scripts.
 
-### read.csv
+### read.csv()
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/csv_file.png", auto_pdf = TRUE)
+```
 
 There are various __functions__ to __read__ in files into R. My favourite is `read.csv()`. Use this function to __read__ in the file "Liverpool_beaches.csv":
 ```{r eval=FALSE}
@@ -53,6 +59,9 @@ liv_beaches_df <- read.csv("Liverpool_beaches.csv", row.names = 1)
 We now know how to __read__ in a csv file with `read.csv`. 
 
 ### TSV files
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/footprint.png", auto_pdf = TRUE)
+```
 
 For our next task we will __read__ a tab separated file. 
 
@@ -72,12 +81,15 @@ global_eco_footprint <- read.csv("Global_eco_footprint.tsv",
 Look at the resulting __data frame__ and you will notice the column names have been changed by R. This is annoying but thankfully there is an easy fix. __Read__ in the data again with the inclusion of the parameter `check.names = FALSE`. This will stop the function `read.csv()` from 'checking' and 'fixing' the column names. I always use this option.
 
 ```{r eval=FALSE}
-global_eco_footprint <- read.csv("Global_eco_footprint.tsv", 
+global_eco_footprint_df <- read.csv("Global_eco_footprint.tsv", 
                                  row.names = 1, sep = "\t", 
                                  check.names = FALSE)
 ```
 
 ### Excel files and R
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/readxl.png", auto_pdf = TRUE)
+```
 
 You may want to open excel files with R. Normally to do this I open the file in excel and save it as a .csv or a tab separated file and __read__ this into R. Alternatively there are R packages that can directly __read__ in excel files. If this is something you would like to do you can look at the following package:
 
@@ -215,111 +227,116 @@ __Data frames__ can be subset similar to __vectors__. As with __vectors__ you ca
 
 Square brackets must be provided indexes for rows and for columns. The structure for this is `df[row,column]`. It is very useful to remember that R always wants rows first then columns second.
 
-To practice subsetting __data frames__ with square brackets we will __read__ in a new file called - [Census_2011_L_postcodes_counts.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Census_2011_L_postcodes_counts.csv). This contains UK 2011 census information on total residents for postcodes that start with the letter L. Data can be found:
+To practice subsetting __data frames__ with square brackets we will __read__ in a new file called - [parks.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/parks.csv). This contains the number of different species of various groups (Bird, Mammal, etc.) in US national parks. Data can be found:
 
-https://www.nomisweb.co.uk/census/2011/postcode_headcounts_and_household_estimates
+https://www.kaggle.com/datasets/nationalparkservice/park-biodiversity
 
 ```{r eval=FALSE}
-L_2011_census_df <- read.csv("Census_2011_L_postcodes_counts.csv", check.names = FALSE,
+#Read in the file
+parks_df <- read.csv("parks_biodiveristy.csv", check.names = FALSE,
                              row.names = 1)
+#View the resulting object
+parks_df
+#View its column names
+colnames(parks_df)
 ```
 
 Now for some subset commands:
 ```{r eval=FALSE}
 #Scalar from the 1st row and 1st column
-L_2011_census_df[1,1]
+parks_df[1,1]
 #Row names and column names can be used for indexing
 #Scalar from the row called L10 1LD and the column called Area
-L_2011_census_df["L10 1LD","Area"]
+parks_df["YOSE","Amphibian"]
 #More examples
-L_2011_census_df[1:10,2]
-L_2011_census_df[1:10,"District"]
-L_2011_census_df[3,2:4]
-L_2011_census_df["L10 1LD",2]
-L_2011_census_df[1:10,"Total"]
-L_2011_census_df[c(1,3,5,6),c("Total","Occupied_Households")]
+parks_df[1:10,2]
+parks_df[1:10,"State"]
+parks_df[3,2:4]
+parks_df["SAGU",2]
+parks_df[1:10,"Bird"]
+parks_df[c(1,3,5,6),c("Bird","Fish")]
 ```
 
 Depending on how you subset a __data frame__ you may get a __scalar__, __vector__, or __data frame__. Below describes which you will get based on the subsetting.
 
 - __Scalar__: 
     - Indexing to get a single value by choosing one row and one column.
-    - E.g. `L_2011_census_df[1,1]`
+    - E.g. `parks_df[1,1]`
 - __Vector__:
     - Indexing so you get multiple values from one column. This occurs as each column is in essence a __vector__.
-    - E.g. `L_2011_census_df[1:10,2]`
+    - E.g. `parks_df[1:10,2]`
 - __Data frame__:
     - Indexing so you get multiple values from a row or multiple rows. Subsetting a __data frame__ like this provides you a __data frame__.
-    - E.g. `L_2011_census_df[3,2:4]` or `L_2011_census_df[3:4,2:4]`
+    - E.g. `parks_df[3,2:4]` or `parks_df[3:4,2:4]`
 
 A quick __function__ to subset a __data frame__ is `head()`. By default it will return the first 6 rows.
 ```{r eval=FALSE}
 #Return first 6 rows
-head(L_2011_census_df)
+head(parks_df)
 #Return first 10 rows
-head(L_2011_census_df, 10)
+head(parks_df, 10)
 ```
 
 The __data frame__ is quite large. We will therefore use the `head()` __function__ and the __assignment operator__ to make the __data frame__ smaller for further examples.
 
 ```{r eval=FALSE}
-L_2011_census_df <- head(L_2011_census_df, 20)
+parks_df <- head(parks_df, 20)
 ```
 
 To return all the rows of the specified columns you can leave the part before the comma empty. Similarly you can leave the part after the comma empty to return all of the columns of the specified rows. Leave both sides empty and you will get the entire __data frame__.
 
 ```{r eval=FALSE}
-L_2011_census_df[,]
-L_2011_census_df[,2]
-L_2011_census_df[3,]
-L_2011_census_df[,"District"]
-L_2011_census_df[2:4,]
+parks_df[,]
+parks_df[,2]
+parks_df[3,]
+parks_df[,"State"]
+parks_df[2:4,]
 ```
 
 The sign `$` allows you to indicate which column you would like from the __data frame__. This is done like so:
 ```{r eval=FALSE}
-L_2011_census_df$Area
-L_2011_census_df$District
-L_2011_census_df$Total
+parks_df$State
+parks_df$Amphibian
+parks_df$Fish
 ```
 
 You will notice that the above commands return __vectors__. We can therefore subset these __vectors__ with `[]`:
 ```{r eval=FALSE}
-L_2011_census_df$Area[2]
-L_2011_census_df$District[2]
-L_2011_census_df$Total[4:7]
+parks_df$State[2]
+parks_df$Amphibian[2]
+parks_df$Fish[4:7]
 ```
 
 Below are a selection of useful __functions__ that can be used on __vectors__.
 ```{r eval=FALSE}
 #Sum the values of a numeric vector
-sum(L_2011_census_df$Total)
+sum(parks_df$Mammal)
 #Mean of the values of a numeric vector
-mean(L_2011_census_df$Total)
+mean(parks_df$Mammal)
 ```
 
 The above __functions__ are useful but limiting if you are working with __data frames__. Thankfully there are also many __functions__ used specifically for __data frames__ (they can also be used for matrices).
 ```{r eval=FALSE}
 #Sum numeric columns
-colSums(L_2011_census_df[,3:6])
+colSums(parks_df[,3:6])
 #Sum numeric rows
-rowSums(L_2011_census_df[,4:5])
+rowSums(parks_df[,4:5])
 #Mean of numeric columns
-colMeans(L_2011_census_df[,3:6])
+colMeans(parks_df[,3:6])
 #Mean of numeric rows
-rowMeans(L_2011_census_df[,4:5])
+rowMeans(parks_df[,4:5])
 #Summary information for each column
 #This works for string and numeric columns with different outputs
-summary(L_2011_census_df)
+summary(parks_df)
 ```
 
 Try out some of the above commands with the entire __data frame__. Do they give an error? Is so, why?
 
 Before we learn how to __write__ data to a file I will introduce one more __data frame__ associated __function__. `t()` which stands for transpose:
 ```{r eval=FALSE}
-L_2011_census_df[3:5]
-t(L_2011_census_df[,3:5])
-summary(t(L_2011_census_df[,3:5]))
+parks_df[3:5]
+t(parks_df[,3:5])
+summary(t(parks_df[,3:5]))
 ```
 
 Try the above commands without subsetting the __data frame__. What is happening and why?
@@ -329,66 +346,97 @@ Try the above commands without subsetting the __data frame__. What is happening 
 knitr::include_graphics(path = "figures/R_writing.png", auto_pdf = TRUE)
 ``` 
 
-Before we __write__ data to a file we will create a new __data frame__ from "L_2011_census_df". 
+Before we __write__ data to a file we will create a new __data frame__ from "parks_df". 
 
 First I like to create a new __variable__ from our old __variable__ if there are many steps. This means if we make a mistake we can go back and recreate the new __variable__.
 ```{r eval=FALSE}
-L_2011_census_t_df <- L_2011_census_df
+parks_t_df <- parks_df
 ```
 
-Next step we will create a new column called "Average_per_occupied_households".
+Next step we will create a new column called "Total_species".
 
 __NOTE__: I am including many ways to subset columns as reminders. Normally I wouldn't have so many different ways in one command.
 
 __NOTE__: We are using "_" instead of spaces as R doesn't particularly like spaces in column names. We will see how to use spaces later.
+
 ```{r eval=FALSE}
-L_2011_census_t_df$Average_per_occupied_households <- 
-  L_2011_census_t_df[,3] / L_2011_census_t_df[,"Occupied_Households"]
+parks_t_df$Total_species <- rowSums(parks_df[,3:8])
 ```
 
-Have a look at the current __data frame__. You may notice an `Inf` value. This appears as when you divide a number by 0 in R you will get `Inf`. I am not sure how a Post code has 174 residents and 0 Occupied households but it doesn't matter for us.
-
-The final step before writing is to transpose the __data frame__ leaving out the Area and District columns:
+The final step before writing is to transpose the __data frame__ leaving out the Park name and State columns:
 ```{r eval=FALSE}
 #Transpose dataframe
-L_2011_census_t_df <- t(L_2011_census_t_df[,3:7])
+parks_t_df <- t(parks_t_df[,3:8])
 #Check structure
-str(L_2011_census_t_df)
+str(parks_t_df)
 #It is not a dataframe
 #Let us therefore convert it to a data frame
-L_2011_census_t_df <- as.data.frame(L_2011_census_t_df)
+parks_t_df <- as.data.frame(parks_t_df)
 #Structure check
-str(L_2011_census_t_df)
+str(parks_t_df)
 ```
 
-After all that let us __write__ the __data frame__ to a file called "Census_info_2011.csv". When __reading__ from a file I prefer `read.csv()`, however when writing to a file I prefer `write.table()`. With this __function__ we will include the option `sep=","` to have commas as the column separators. We will also include the option `col.names=NA` to create an empty space above the row names. If this was not included then the first column name would be above the row names.
+After all that let us __write__ the __data frame__ to a file called "Park_species_info.csv". When __reading__ from a file I prefer `read.csv()`, however when writing to a file I prefer `write.table()`. With this __function__ we will include the option `sep=","` to have commas as the column separators. We will also include the option `col.names=NA` to create an empty space above the row names. If this was not included then the first column name would be above the row names.
 ```{r eval=FALSE}
-write.table(L_2011_census_t_df, file = "Census_info_2011.csv", sep = ",", col.names=NA)
+write.table(parks_t_df, file = "Park_species_info.csv", sep = ",", col.names=NA)
 ```
 
 Have a look at the file contents with RStudio.
 
-Let us do it one more time with the clothing store info. First let us __read__ in the file again in case you do not have it. Then we will create a total sales column and finally transpose the __data frame__:
+Let us do it one more time with the Global ecological footprint info. First let us __read__ in the file again in case you do not have it. Then we will create a total sales column and finally transpose the __data frame__:
 ```{r eval=FALSE}
 #Read in
-clothing_df <- read.csv("Clothing_stores.tsv", row.names = 1, 
-                        sep = "\t", check.names = FALSE)
-#Create total column
-#We are referring to a column name with spaces
-#Therefore we must surround the name with `
-#The button for ` is left of the 1 key and below the esc key
-clothing_df$`Total sales` <- rowSums(clothing_df)
+global_eco_footprint_df <- read.csv("Global_eco_footprint.tsv", 
+                                 row.names = 1, sep = "\t", 
+                                 check.names = FALSE)
 #Transpose ensuring output is a data frame
-clothing_t_df <- as.data.frame(t(clothing_df))
+global_eco_footprint_t_df <- as.data.frame(t(global_eco_footprint_df))
 ```
 
 __Write__ the __data frame__ to a tab delimited file (.tsv). This time we will make it so the row and column names are not surrounded by quotes:
 ```{r eval=FALSE}
-write.table(clothing_t_df, 
-            "Clothing_stores_transposed.tsv", 
+write.table(global_eco_footprint_t_df, 
+            "Global_eco_footprint_transposed.tsv", 
             sep = "\t",  
             col.names=NA, 
             quote = FALSE)
 ```
 
 With the fundamentals of __reading__, subsetting __data frames__, and writing covered it is time to carry out some exercises.
+
+## Files & subsetting MCQs
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble_blue.png", auto_pdf = TRUE)
+``` 
+
+Attempt the below MCQs.
+
+```{r, echo = FALSE}
+opts_p <- c("__`read.csv()`__", "__`write.table()`__", answer="__`t()`__")
+```
+1. Which function can be used to transpose a data frame?  `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`read.csv()`__", "__`write.table()`__", "__`t()`__")
+```
+2. Which function can be used to import the contents of a file into a R object? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`read.csv()`__", answer="__`write.table()`__", "__`t()`__")
+```
+3. Which function can be used to export the contents of an R object into a file?  `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c('__`sep="\\t"`__', answer='__`sep=","`__', "__`check.names=FALSE`__")
+```
+4. For `read.csv()` or `write.table()` which option allows you to read/write comma separated files? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c('__`sep="\\t"`__', '__`sep=","`__', answer="__`check.names=FALSE`__")
+```
+5. For `read.csv()` which option allows you to read in the data without causing unwanted changes in the text of the column names? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer='__`sep="\\t"`__', '__`sep=","`__', "__`check.names=FALSE`__")
+```
+6. For `read.csv()` or `write.table()` which option allows you to read/write tab separated files `r longmcq(opts_p)`
