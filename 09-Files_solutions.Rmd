@@ -39,7 +39,8 @@ knitr::include_graphics(path = "figures/UKPounds.png", auto_pdf = TRUE)
 
 Read in file:
 ```{r eval=FALSE}
-uk_retail_df <- read.csv("Chapter_8_files/UK_retail.tsv", sep = "\t", row.names = 1, check.names = FALSE)
+uk_retail_df <- read.csv("Chapter_8_files/UK_retail.tsv", 
+                         sep = "\t", row.names = 1, check.names = FALSE)
 ```
 
 Create 2020 __data frame__:

@@ -219,15 +219,15 @@ divis_7_vec <- single_digit_vec[(single_digit_vec %% 7) == 0]
 ```
 
 ### Data frames
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/envelope.png", auto_pdf = TRUE)
+```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
+knitr::include_graphics(path = "figures/biodiversity.png", auto_pdf = TRUE)
 ``` 
 
 __Data frames__ can be subset similar to __vectors__. As with __vectors__ you can use `[]`. Additionally, `$` can be used to subset __data frames__.
 
 Square brackets must be provided indexes for rows and for columns. The structure for this is `df[row,column]`. It is very useful to remember that R always wants rows first then columns second.
 
-To practice subsetting __data frames__ with square brackets we will __read__ in a new file called - [parks.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/parks.csv). This contains the number of different species of various groups (Bird, Mammal, etc.) in US national parks. Data can be found:
+To practice subsetting __data frames__ with square brackets we will __read__ in a new file called - [parks_biodiveristy.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/parks_biodiveristy.csv). This contains the number of different species of various groups (Bird, Mammal, etc.) in US national parks. Data can be found:
 
 https://www.kaggle.com/datasets/nationalparkservice/park-biodiversity
 

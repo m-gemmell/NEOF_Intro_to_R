@@ -37,12 +37,18 @@ Now that you have carried that out, can you answer the following questions?
 2. Which Bat species has the highest number of roosts across the UK?
 3. Which Bat species has the lowest number of roosts across the UK?
 
-## UK retail
+## Honey bee colonies
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/UKPounds.png", auto_pdf = TRUE)
 ``` 
 
-Next we have a file ([UK_retail.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/UK_retail.tsv)) containing UK retail information for each month from September 2017 to September 2020. The values are seasonally adjusted volume sales. The data comes from: https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/september2020.
+Next we have a file ([honey_bee.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/honey_bee.tsv)) 
+
+#NEEDS chaning
+#CHECK ./dataset_editing/Honey_bee_colonies directory
+
+
+containing UK retail information for each month from September 2017 to September 2020. The values are seasonally adjusted volume sales. The data comes from: https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/september2020.
 
 Carry out the below tasks:
 
