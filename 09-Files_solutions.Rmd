@@ -4,7 +4,7 @@ Before looking at these solutions keep in mind that there are many different way
 
 ## Bats solution
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/bat.png", auto_pdf = TRUE)
+knitr::include_graphics(path = "figures/bat_solution.png", auto_pdf = TRUE)
 ```
 
 Read in the file as a __data frame__:
@@ -29,45 +29,94 @@ bat_t_df <- as.data.frame(t(bat_df))
 
 __Write__ file:
 ```{r eval=FALSE}
-write.table(bat_t_df, file = "Chapter_8_files/bat_roosts_t.csv", sep = ",", quote = FALSE, col.names = NA)
+write.table(bat_t_df, file = "Chapter_8_files/bat_roosts_t.csv", 
+            sep = ",", quote = FALSE, col.names = NA)
 ```
 
-## UK retail solution
+`r hide("Commands to help with the MCQs")`
+You can figure out the MCQs by viewing the data frame.
+However, you can also figure them out with R code.
+Below are commands to get the answers for the MCQs. 
+I will let you decipher them yourself.
+```{r eval=FALSE}
+#Question 1: Which region has no roosts?
+col_names_logical_vec <- bat_t_df["All_Bat_Species",] == 0
+colnames(bat_t_df)[col_names_logical_vec]
+#Question 2: Which region has the largest amount of _Myotis brandtii_ roosts?
+species <- "Myotis brandtii"
+df_wo_total_species_and_uk <- bat_t_df[1:(nrow(bat_t_df)-1),1:(ncol(bat_t_df)-1)]
+max_colonies <- max(df_wo_total_species_and_uk[species,])
+col_names_logical_vec <- df_wo_total_species_and_uk[species,] == max_colonies
+colnames(df_wo_total_species_and_uk)[col_names_logical_vec]
+#Question 3: Which Bat species has the highest number of roosts across the UK?
+max_uk <- max(bat_t_df[1:(nrow(bat_t_df)-1),"UK"])
+row_names_logical_vec <- bat_t_df$UK == max_uk
+row.names(bat_t_df)[row_names_logical_vec]
+#Question 4: Which Bat species has the lowest number of roosts across the UK?
+min_uk <- min(bat_t_df[1:(nrow(bat_t_df)-1),"UK"])
+row_names_logical_vec <- bat_t_df$UK == min_uk
+row.names(bat_t_df)[row_names_logical_vec]
+```
+`r unhide()`
+
+## Honey bee colonies
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/UKPounds.png", auto_pdf = TRUE)
+knitr::include_graphics(path = "figures/beehive_solution.png", auto_pdf = TRUE)
 ``` 
 
 Read in file:
 ```{r eval=FALSE}
-uk_retail_df <- read.csv("Chapter_8_files/UK_retail.tsv", 
+bee_colonies_df <- read.csv("Chapter_8_files/honey_bee.tsv", 
                          sep = "\t", row.names = 1, check.names = FALSE)
 ```
 
-Create 2020 __data frame__:
+Create 2017 & 2018 __data frame__:
 Read in file:
 ```{r eval=FALSE}
 #Can index to get the desired columns
-uk_retail_2020_df <- uk_retail_df[29:37,]
+bee_colonies_2017_2018_df <- bee_colonies_df[9:16,]
 #Alternatively the tail() function can be used
 #It is like head() but will get lowest rows
-uk_retail_2020_df <- tail(uk_retail_df, n = 9)
+bee_colonies_2017_2018_df <- tail(bee_colonies_df, n = 8)
 ```
 
-Print food index phrases:
+Print Minnesota colony numbers:
 ```{r eval=FALSE}
-paste("The Food retail index for", row.names(uk_retail_2020_df),
-      "was", uk_retail_2020_df$Food, 
+paste("The number of colonies in Minnesota for", row.names(bee_colonies_2017_2018_df),
+      "was", bee_colonies_2017_2018_df$Minnesota, 
       sep = " ")
 ```
 
-Total and mean rows:
+Mean row:
 ```{r eval=FALSE}
-uk_retail_2020_df["Total",] <- colSums(uk_retail_2020_df)
-uk_retail_2020_df["Average",] <- colMeans(head(uk_retail_2020_df, n = 9))
+bee_colonies_2017_2018_df["Average",] <- colMeans(bee_colonies_2017_2018_df)
 ```
 
 Write out file:
 ```{r eval=FALSE}
-write.table(uk_retail_2020_df, "Chapter_8_files/UK_retail_2020.tsv", 
+write.table(bee_colonies_2017_2018_df, "Chapter_8_files/bee_colonies_2017_2018.tsv", 
             sep = "\t", col.names = NA, quote = FALSE)
 ```
+
+`r hide("Commands to help with the MCQs")`
+You can figure out the MCQs by viewing the data frame.
+However, you can also figure them out with R code.
+Below are commands to get the answers for the MCQs. 
+I will let you decipher them yourself.
+```{r eval=FALSE}
+#Question 1: Which state has the lowest average?
+min_average <- min(bee_colonies_2017_2018_df["Average",])
+states <- colnames(bee_colonies_2017_2018_df)
+min_average_state <- states[bee_colonies_2017_2018_df["Average",] == min_average]
+min_average_state
+#Question 2: Which state has the highest minimum value of colonies?
+bee_summary <- summary(bee_colonies_2017_2018_df[1:8,])
+bee_summary
+#Question 3: Which state had 20,000 colonies in Q3 of 2018 (2018-Q3)?
+n <- 20000
+column_logical_vec <- bee_colonies_2017_2018_df["2018-Q3",] == n
+column_logical_vec
+colnames(bee_colonies_2017_2018_df)[column_logical_vec]
+```
+`r unhide()`
+

@@ -31,37 +31,64 @@ For this file carry out the below tasks:
 5. Create a transposed __data frame__ of "bat_df" called "bat_t_df".
 6. __Write__ the __data frame__ "bat_t_df" to a comma separated file called "bat_roosts_t.csv". Ensure there are no quotes surrounding the row or column names.
 
-Now that you have carried that out, can you answer the following questions?
+Now that you have carried that out, attempt following MCQs using the "bat_t_df" object.
 
-1. Which region has no roosts?
-2. Which Bat species has the highest number of roosts across the UK?
-3. Which Bat species has the lowest number of roosts across the UK?
+```{r, echo = FALSE}
+opts_p <- c(answer="Channel Islands", "North West", "Wales")
+```
+1. Which region has no roosts? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Channel Islands", answer="North West", "Wales")
+```
+2. Which region has the largest amount of _Myotis brandtii_ roosts (excluding UK)? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Pipistrellus nathusii", answer="Pipistrellus pygmaeus", "Rhinolophus hipposideros")
+```
+3. Which Bat species has the highest number of roosts across the UK? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="Pipistrellus nathusii", "Pipistrellus pygmaeus", "Rhinolophus hipposideros")
+```
+4. Which Bat species has the lowest number of roosts across the UK? `r longmcq(opts_p)`
 
 ## Honey bee colonies
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/UKPounds.png", auto_pdf = TRUE)
+knitr::include_graphics(path = "figures/beehive.png", auto_pdf = TRUE)
 ``` 
 
-Next we have a file ([honey_bee.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/honey_bee.tsv)) 
+Next we have a file ([honey_bee.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/honey_bee.tsv)) that contains information on the number of Honey Bee colonies in 4 different states. It is temporal data containing information on the 4 quarters for the years 2015-2018.
 
-#NEEDS chaning
-#CHECK ./dataset_editing/Honey_bee_colonies directory
-
-
-containing UK retail information for each month from September 2017 to September 2020. The values are seasonally adjusted volume sales. The data comes from: https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/september2020.
+For more details and even more data please see the following link: https://www.kaggle.com/datasets/kyleahmurphy/nass-honey-bee-20152021
 
 Carry out the below tasks:
 
-1. __Read__ in the file "UK_retail.tsv" as a __data frame__ __variable__ called "uk_retail_df". Ensure the row names contain the YearMonth info (2017SEP, 2017OCT, etc.).
-2. Create a __data frame__ called "uk_retail_2020_df" containing the rows for 2020 from "uk_retail_df". 
-3. For each month in 2020 print out the phrase "The Food retail index for \<YearMonth> was \<Food>". For example the first phrase will be "The Food retail index for 2020JAN was 101.9". This can be done with one line of code using the `paste()` function.
-4. Make a total row and an average (mean) row for "uk_retail_2020_df". Ensure you are not including the total in the mean.
-5. Finally write out the __data frame__ "uk_retail_2020_df" as a tab separated file called "UK_retail_2020.tsv".
+1. __Read__ in the file "honey_bee.tsv" as a __data frame__ __variable__ called "bee_colonies_df". Ensure the row names contain the Year info (2015-Q1, 2015-Q2, etc.).
+2. Create a __data frame__ called "bee_colonies_2017_2018_df" containing the rows for 2017 & 2018 from "bee_colonies_df". 
+3. For each month in 2017 & 2018 print out the phrase "The number of colonies in Minnesota for \<Year> was \<Value>.
+    * For example the first phrase will be "The number of colonies in Minnesota for 2017-Q1 was 27000".
+    * This can be done with one line of code using the `paste()` function.
+4. Make an average (mean) row for "bee_colonies_2017_2018_df".
+5. Finally write out the __data frame__ "bee_colonies_2017_2018_df" as a tab separated file called "bee_colonies_2017_2018.tsv".
 
-Now that you have carried that out, can you answer the following questions?
+Now that you have carried that out, attempt the following questions based on the "bee_colonies_2017_2018_df" object.
 
-1. Which retail sectors have a lower average than their February 2020 value?
-2. Which retail sector was the highest for 2020?
-3. Which sector was the most stable?
+```{r, echo = FALSE}
+opts_p <- c("Montana", answer="New Mexico", "Pennsylvania")
+```
+1. Which state has the lowest average? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="Minnesota", "New Mexico", "Pennsylvania")
+```
+2. Which state has the highest minimum value of colonies? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Montana", "New Mexico", answer="Pennsylvania")
+```
+3. Which state had 20,000 colonies in Q3 of 2018 (2018-Q3)? `r longmcq(opts_p)`
+
+__Tip__: If you use the `summary()`, ensure you do not include the "Average" row.
 
 Great! Have a look at the solutions and ask any questions you would like.

@@ -43,6 +43,6 @@ paste("The number of colonies in Minnesota for", row.names(bee_colonies_2017_201
 #Do not include total row
 bee_colonies_2017_2018_df["Average",] <- colMeans(bee_colonies_2017_2018_df)
 #
-write.table(uk_retail_2020_df, "Chapter_8_files/UK_retail_2020.tsv", 
+write.table(bee_colonies_2017_2018_df, "Chapter_8_files/bee_colonies_2017_2018.tsv", 
             sep = "\t", col.names = NA, quote = FALSE)
 
