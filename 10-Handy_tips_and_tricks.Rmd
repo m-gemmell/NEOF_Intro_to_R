@@ -399,4 +399,12 @@ Below are a few:
 
 There are a lot more shortcuts. If you want to see the full list go to "Tools" on the RStudio toolbar and then select "Keyboard Shortcuts Help"
 
+## Handy tips & tricks MCQs
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble_blue.png", auto_pdf = TRUE)
+``` 
+
+Attempt the below MCQs.
+
+
 Now time for exercises!
