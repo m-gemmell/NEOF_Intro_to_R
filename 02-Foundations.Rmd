@@ -329,4 +329,4 @@ opts_p <- c("Console", answer = "Function","Objects")
 ```{r, echo = FALSE, eval=TRUE}
 opts_p <- c(answer="Console", "Function","Object")
 ```
-5. YOu can run commands in the ________ `r longmcq(opts_p)`
+5. You can run commands in the ________ `r longmcq(opts_p)`

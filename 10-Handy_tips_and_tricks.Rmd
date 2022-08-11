@@ -416,7 +416,6 @@ opts_p <- c(answer="Camel case", "Period separated", "Snake case")
 ```
 2. Which __variable__ naming convention uses upper case to denote new words? `r longmcq(opts_p)`
 
-
 ```{r, echo = FALSE}
 opts_p <- c("`seq()`", answer='Sweep', "`rep()`")
 ```
@@ -446,8 +445,5 @@ opts_p <- c("`gsub()`", "`is.na()`", answer="Tab")
 opts_p <- c(answer="`gsub()`", "`is.na()`", "Tab")
 ```
 8. Which __function__ can be used to replace patterns? `r longmcq(opts_p)`
-
-
-
 
 Now time for exercises!
