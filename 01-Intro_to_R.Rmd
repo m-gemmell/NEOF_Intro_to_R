@@ -21,6 +21,16 @@ knitr::write_bib(c(
 ), 'packages.bib')
 ```
 
+```{r, echo=FALSE}
+#This book uses ionicons icons using the icons package
+#https://github.com/mitchelloharawild/icons
+#To set this up on your rstudio use the following commands
+# install.packages("remotes")
+#remotes::install_github("mitchelloharawild/icons")
+#icons::download_fontawesome()
+#download_ionicons()
+```
+
 ```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
 knitr::include_graphics(path = "figures/NEOF.png", auto_pdf = TRUE)
 ``` 

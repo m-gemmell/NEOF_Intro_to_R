@@ -44,8 +44,9 @@ tea_df_subset$kg <- round(x = tea_df_subset$kg, digits = 1)
 
 Last step is to print out the statement. We will use `paste0()` which is exactly like `paste()` but the `sep =` option is set to `""`.
 ```{r eval=FALSE}
-paste0(tea_df_subset$Country, " is the number ", tea_df_subset$Rank,
-       " consumer of tea. It consumes ", tea_df_subset$kg, "kg of tea annually per capita.")
+paste0(tea_df_subset$Country, " is the number ", 
+       tea_df_subset$Rank, " consumer of tea. It consumes ", 
+       tea_df_subset$kg, "kg of tea annually per capita.")
 ```
 
 ## English speakers across the world solution

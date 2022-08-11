@@ -6,9 +6,9 @@ knitr::include_graphics(path = "figures/magic.png", auto_pdf = TRUE)
 
 Welcome to Chapter 10! This chapter will include coding to reinforce what you have learnt up to this point. There will also be plenty of new handy __functions__ and some more concepts to learn.
 
-For this chapter create directory called "Chapter_10-11" in your main directory and set it as the working directory. Then create a script called "4-Handy_tips.R". Remember to use annotations (`#`) and code sections (`####`)!
+For this chapter create a directory called "Chapter_10-11" in your main directory and set it as the working directory. Then create a script called "4-Handy_tips.R". Remember to use annotations (`#`) and code sections (`####`)!
 
-However, I'll first introduce you to some R conventions and then some useful abilities of RStudio.
+I'll first introduce you to some R conventions and then some useful abilities of RStudio.
 
 ## R conventions
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
@@ -18,7 +18,7 @@ knitr::include_graphics(path = "figures/rules.png", auto_pdf = TRUE)
 R conventions are style guides. You do not need to follow them but they are intended to help make code easier to read. There are lots of different suggestions for different parts of R code. Here we will only look at conventions for __object/variable names__ and wide vs long code formatting.
 
 ### Variable names
-__Variable names__ have certain rules that must be followed. We covered these in chapter 2 but below is a reminder:
+__Variable names__ have certain rules that must be followed. We covered these in [chapter 2](#foundations) but below is a reminder:
 
 - Must start with a letter.
 - Cannot contain spaces.
@@ -121,7 +121,7 @@ Have a look through the "General", "Code", and "Appearance" sections. The other 
 
 Feel free to click on options in the "Appearance" section to see what they do. If you do not like your choices you can click the "Cancel" button to negate your recent choices and close the window. If you want to save your changes you can click the "Apply" button.
 
-Also change the following for later.
+Change the following for later.
 
 1. Go to Global options.
 2. Click on the "Code" section on the left.
@@ -321,7 +321,7 @@ There are a lot of NA values. Looking at the values in the __data frame__ try to
 1. Some countries have zero population of English first speakers and some countries have zero population of people who speak English as an additional language.
 2. Some countries are missing data on the number of first and additional speakers, e.g.. Ukraine.
 
-We will fix these issues one by one. First let us change all NAs to the number 0. The below method requires a lot of R knowledge to understand. I admit I do not fully understand it and I googled to find the answer. In this case the important part is that it works and it is a very short command.
+We will fix these issues one by one. First let us change all NAs to the number 0.
 ```{r eval=FALSE}
 english_df[is.na(english_df)] <- 0
 ```
@@ -405,6 +405,49 @@ knitr::include_graphics(path = "figures/question_bubble_blue.png", auto_pdf = TR
 ``` 
 
 Attempt the below MCQs.
+
+```{r, echo = FALSE}
+opts_p <- c("Camel case", "Period separated", answer="Snake case")
+```
+1. Which __variable__ naming convention uses underscores to separate words? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="Camel case", "Period separated", "Snake case")
+```
+2. Which __variable__ naming convention uses upper case to denote new words? `r longmcq(opts_p)`
+
+
+```{r, echo = FALSE}
+opts_p <- c("`seq()`", answer='Sweep', "`rep()`")
+```
+3. Which button can you use to clear the text from your console or environment? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`seq()`", 'Sweep', answer="`rep()`")
+```
+4. Which __function__ allows you replicate an __object__? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="`seq()`", answer='Sweep', "`rep()`")
+```
+5. Which __function__ can be used to create a numeric sequence? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`gsub()`", answer="`is.na()`", "Tab")
+```
+6. Which __function__ is useful for changing NAs to 0s? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`gsub()`", "`is.na()`", answer="Tab")
+```
+7. Which key can be used to auto-complete file and __function__ names?  `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="`gsub()`", "`is.na()`", "Tab")
+```
+8. Which __function__ can be used to replace patterns? `r longmcq(opts_p)`
+
+
 
 
 Now time for exercises!

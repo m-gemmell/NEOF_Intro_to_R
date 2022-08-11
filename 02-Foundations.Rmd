@@ -1,6 +1,6 @@
 # (PART\*) Foundations & Objects {.unnumbered}
 
-# Foundations of R
+# Foundations of R {#foundations}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/foundational.png", auto_pdf = TRUE)
 ``` 
