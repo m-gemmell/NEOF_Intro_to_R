@@ -89,7 +89,7 @@ embed_url("https://www.youtube.com/watch?v=O6F2N12VhjU")
 ## Chapter 8 files
 
 -   [bat_roosts.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/bat_roosts.csv)
--   [UK_retail.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/UK_retail.tsv)
+-   [honey_bee.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/honey_bee.tsv)
 
 ## Chapter 10-11 files
 
