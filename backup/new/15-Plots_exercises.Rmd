@@ -1,0 +1,98 @@
+# Plots exercises
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/penguin.png", auto_pdf = TRUE)
+``` 
+These exercises will primarily use the "penguin_df" from the theory and practice session.
+
+Please use your "Exercises.R" script for this exercise and the main workshop directory as the working directory. Ensure you are using annotations and code sections to keep the contents clear and separated.
+
+For convenience the code to load the Penguin __data frame__ directory will be:
+```{r eval=TRUE}
+penguin_df <- read.csv("Chapter_13-16/penguin.tsv", 
+                      check.names = FALSE,
+                      stringsAsFactors = TRUE,
+                      sep = "\t"
+                      )
+```
+
+Your plots might not look exactly the same. As long as your plot contains the same data it is good. If you ar enot sure if your plot is correct, feel fre to look at the solutions to look at my code.
+
+## Line graph
+First we will ignore "penguin_df".
+
+Create the below plot. You will need to create the __vectors__ yourself.
+```{r eval=TRUE, echo=FALSE}
+plot(x = rep(1:10, 2), 
+     y = seq(from = 0.5, to = 10, by = 0.5),
+     col = "red",
+     main = 'A line graph with "red" as the colour',
+     type = "l")
+```
+
+__Tip__: The x and y labels may help you figure out the commands to create the __vectors__.
+
+## Histogram
+From the "penguin_df" create the below plot:
+
+__Note__: The colour of the bars are "blue".
+```{r eval=TRUE, echo=FALSE}
+#Create data frame with only the Penguins from Torgersen
+penguins_torgensen_df <- penguin_df[penguin_df$island == "Torgersen",]
+#Create a column with body mass in kilograms
+penguins_torgensen_df$body_mass_kg <- 
+  penguins_torgensen_df$body_mass_g / 1000
+#Plot the histogram
+hist(penguins_torgensen_df$body_mass_kg,
+     main = "Histogram of the body mass of Penguins from Torgersen Island",
+     xlab = "Body mass in kilograms",
+     ylab = "frequency",
+     col = "blue")
+```
+
+## Scatterplot
+From the "penguin_df" create the below plot:
+
+__Note__: You can check what numbers refer to what shape for `pch =` at: http://www.sthda.com/english/wiki/r-plot-pch-symbols-the-different-point-shapes-available-in-r
+```{r eval=TRUE, echo=FALSE}
+#Create data frame with only the Penguins from 2009
+penguin_2009_df <- penguin_df[penguin_df$year == "2009",]
+#Produce plot
+plot(x = penguin_2009_df$bill_length_mm,
+     y = penguin_2009_df$bill_depth_mm,
+     col = as.numeric(penguin_2009_df$species),
+     main = "Penguin bills vs depth in 2009",
+     xlab = "Bill length (mm)",
+     ylab = "Bill depth (mm)",
+     pch = 15)
+#Create legend
+legend(x = "bottomleft", 
+       col = 1:nlevels(penguin_2009_df$species),
+       legend = levels(penguin_2009_df$species),
+       pch = 15)
+```
+
+Before you continue save this plot. Details below:
+
+- Save the file as a png called "Penguins_2009_bill_depth_vs_length_scatterplot.png"
+- Save the plot with a width and height of 250 and resolution of 150
+
+## Boxplot
+From the "penguin_df" create the below plot:
+
+__Note__: Make sure the x axis is in the same order as below.
+```{r eval=TRUE, echo=FALSE, fig.width= 12}
+#Produce boxplot
+boxplot(flipper_length_mm~sex*species,
+        data = penguin_df,
+        col = c("yellow","green"),
+        main = "Flipper length of different species",
+        xlab = "Species and sex of Penguin",
+        ylab = "Flipper length (mm)"
+)
+```
+
+For the last task, save this plot. Details below:
+
+- Save the file as a jpg called "Penguins_species_and_flipper_length_boxplot.jpg" in "Chapter_13-16".
+- Save the plot with a width of 300, height of 250, and resolution of 150
+

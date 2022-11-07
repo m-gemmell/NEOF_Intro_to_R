@@ -1,0 +1,442 @@
+# R objects
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/RObjects.png", auto_pdf = TRUE)
+``` 
+In Chapter 2 we learnt how to create a __variable__. This consisted of assigning (`<-`) an __object__ a name. In this chapter we will learn about __R objects__. There are two major R terminologies to learn to fully understand __R objects__.
+
+- __Class__: An __R object__ will have a specific class. The __class__ determines what the __object__ is. It could be numbers, text, or other types of __classes__.
+- __Data structure__: This determines the structure of an __R object__.
+
+The rest of today's plan is to learn about __classes__ and __data structures__.
+
+## Code sections{#codesections}
+Today, and for the rest of the course, you will use code sections in your R scripts to separate sections in this book.
+
+First set your working directory to your course directory, create a script, and save it as __"2-Objects.R"__.
+
+Next create a code section at the top of this script called __"Classes"__.
+
+In other words have the below at the top of your script:
+
+```{r eval=FALSE}
+# Classes ####
+```
+
+## Classes
+There are six basic __classes__ in R (Also known as the __atomic classes__). 
+
+The four we will learn are:
+
+- __Integer__
+- __Double__
+- __String__
+- __Logical__
+
+There are also the classes __complex__ and __raw__.
+
+### Numeric
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/numbers.png", auto_pdf = TRUE)
+``` 
+
+__Numeric__ __classes__ come in two types, __integer__ and __double__. __Integers__ and __doubles__ are almost identical. However, __doubles__ contain decimal point information whilst __integers__ do not. 
+
+Most of the time you will only need to know if your data is __numeric__ and you will not need to worry about __doubles__ or __integers__. The exception being if you are working with decimals and your decimals are not showing up. This probably means that your __object__ has the __integer class__.
+
+Type and run the following, using the provided annotation to understand what the commands are doing.
+
+__Note:__ Remember you can copy and paste old script.
+
+Use the __function__ `class()` to show the __class__ of an R __object__:
+```{r eval=FALSE}
+#Numeric
+#Class of 2
+class(2)
+#class of 3.14
+class(3.14)
+#class of 6
+class(6)
+```
+
+Create a __variable__ with the __name__ "pie"" containing the __numeric__ 3.14:
+```{r eval=FALSE}
+#Creating a variable using the assignment operator
+pie <- 3.14
+```
+
+Use the __functions__ `as.numeric()`, `as.integer()`, and `as.double()` to print the __variable__ as a __numeric__, as an __integer__, and as a __double__:
+```{r eval=FALSE}
+#Printing out previously made variable as numeric, integer, and double
+as.numeric(pie)
+as.integer(pie)
+as.double(pie)
+```
+
+You can put a __function__ as the __variable__ within a __function__. 
+
+Below we will first check the __class__ of the __object__ within the "pie" __variable__. You will note that the __functions__ we used previously did not permanently change the __variable's object__. We can only change a __variable__ if we use the __assignment operator__.
+
+Then we will check the __class__ of the __object__ as it is altered by the various `as.` __functions__. 
+
+```{r eval=FALSE}
+#Checking the class of our variable
+class(pie)
+class(as.numeric(pie))
+class(as.integer(pie))
+class(as.double(pie))
+```
+
+__Note:__ Remember to ask for help if you need it!
+
+On a side note, R comes with some inbuilt variables such as pi:
+```{r eval=FALSE}
+#The R pi is equal to 3.141593
+pi
+#assign pi to 3.14
+pi <- 3.14
+#print out pi to see you have changed the variable's object
+pi
+#in this case if you want the original R pi object back, we can remove the one we made
+rm(pi)
+```
+
+Have you been annotating your scripts?
+
+### Logical
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/logical.png", auto_pdf = TRUE)
+``` 
+__Logical__ values can be __TRUE__ or __FALSE__. 
+
+They are primarily used when comparing objects.
+
+Run the below commands to output __Logical__ values using the various __logical operators__.
+
+Note: when `!` is used in __operators__ it means "not". When used, `!` always goes at the front of the operator.
+
+```{r eval=FALSE}
+#Logical
+# 2 less than 4 
+2 < 4
+# 2 greater than 4
+2 > 4
+# 2 less than or equal to 4
+2 <= 4
+# 2 greater than or equal to 4
+2 >= 4
+# 2 equal to 4
+2 == 4
+# 2 not not equal to 4
+2 != 4
+```
+
+It is probably not immediately obvious how useful __logicals__ are, but you'll see their usefulness later in the course.
+
+### String
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/string_bubble.png", auto_pdf = TRUE)
+``` 
+__Strings__ are text and can be modified in R in ways you would normally want to modify text. They are called __strings__ as they are strings of characters. __Strings__ are flanked by quote marks. Double quotes (`""`) are preferred but single quotes can also be used (`''`).
+
+Type and run the below examples to get some practice with __strings__.
+
+A __string object__ can consist of a string containing one __character__:
+```{r eval=FALSE}
+#String
+one_character_string <- "A"
+one_character_string
+```
+
+A __string object__ can consist of a string containing multiple __characters__:
+```{r eval=FALSE}
+word_string <- "alphabet"
+word_string
+```
+
+A __string__ can contain all the different characters and any number of them. The only exception is that if you try to put a double quote in your string it will cause an issue.
+```{r eval=FALSE}
+long_string <- "Strings can be long and contain more than letters. \\.("
+long_string
+```
+
+A __string__ doesn't need letters, it can consist of only numbers. Note the terms __string__ and __character__ can be used interchangeably.
+```{r eval=FALSE}
+number_string <- "1066"
+number_string
+class(number_string)
+```
+
+You can convert a __numeric__ to a __string/character__.
+```{r eval=FALSE}
+number <- 1066
+numeric_to_string <- as.character(number)
+numeric_to_string
+class(numeric_to_string)
+```
+
+An appropriate __string__ can be converted to a __numeric__. This is useful as mathematical __operators__ will not work with __strings__.
+```{r eval=FALSE}
+#will get an error as strings and maths don't mix
+"6" - 3
+#will work as maths and numerics work
+as.numeric("6") - 4
+#Below will not work as only strings containing numbers can be converted to numeric
+as.numeric("not_a_number_12")
+```
+
+You can use certain __logical operators__ to compare __strings__ though:
+```{r eval=FALSE}
+"character" == "character"
+"1066" != "character"
+"numeric" == "string"
+```
+
+The __paste() function__ is very useful to combine two or more __strings__ into one.
+```{r eval=FALSE}
+paste("The following is a string:", long_string) 
+paste(number_string, "and the", word_string)
+#By default paste will put a space (sep = " ") between each string you provide
+#You can use the sep option to specify your own
+paste("However", " this is separated by a comma", sep = ",")
+#Or you can make it so there is no separator
+paste("no separator",numeric_to_string, sep = "")
+#Alternatively you can use paste0()
+#Where there is no separator by default (sep ="")
+paste0("no separator",numeric_to_string)
+```
+
+## Code section continued
+After all that you will have some nice code and annotations in your script editor for the __Classes__ code section.
+
+Making a code section is not very useful until you have multiple code sections. To show this create a new code section at the bottom of your script called __"Data structures"__. This new code section will be used for the next section.
+
+```{r eval=FALSE}
+# Data structures ####
+```
+
+With the new code section created we can now see why code sections are so useful. Go to the text that denotes the first code section (__"Classes"__). Look between the numbers on the left that signify the line number, and the text. You will see an arrow pointing downwards. You can click that arrow and it will collapse the code section. Click the arrow, now pointing right, and it will expand the code section. This is super useful so you can hide code sections in your script that you don't currently need to look at.
+
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/R_code_section_collapse.png", auto_pdf = TRUE)
+``` 
+
+With the __"Classes"__ code section collapsed let us continue to the next section. There will be less annotations in this book as I expect you will make your own now.
+
+## Data structures
+
+__Data structures__ describe how data is structured in an __object__. We will go into 3 main types of __data structures__.
+
+- __Scalar__
+- __Vectors__ & __Lists__
+- __Matrices__ & __Data frames__
+
+### Scalar
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/Rscalar.png", auto_pdf = TRUE)
+``` 
+A __scalar__ consists of one value in an object. This can be one __string__, one __numeric__, one __logical__ etc. We have only been working with __scalars__ thus far but this is about to change. 
+
+### Vectors & Lists
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/Rvector.png", auto_pdf = TRUE)
+``` 
+
+A __R object__ can hold multiple values. Many __data__ structures can do this with the simplest being a __vector__.
+
+A __vector__ can be created with the `c()` __function__. This function will combine the provided objects into a single __vector__ or __list__.
+
+__Vectors__ and __lists__ are both 1-dimensional __data structures__. __Vectors__ can only contain one __class__ (homogeneous) whilst __lists__ can contain multiple (heterogeneous). There is more to __lists__ but we will not go into them.
+
+Run the following commands to produce __variables__ which contain __vectors__.
+
+```{r eval=FALSE}
+number_vec <- c(1,2,4,8,16)
+number_vec
+number_series_vec <- 1:6
+number_series_vec
+animals <- c("Whale","Seal","Hedgehog","Mouse","Owl","Squirrel","Vole","Shrew")
+animals
+```
+
+Elements of a __vector__ can be accessed through their indices:
+
+```{r eval=FALSE}
+birds <- animals[5]
+birds
+aquatic <- animals[1:2]
+aquatic
+rodents <- animals[c(4,6,7)]
+rodents
+mammals <- animals[-5]
+mammals
+```
+
+You can use __operators__ and __functions__ on a __vector__. When you do each __scalar__ within the __vector__ will be acted upon.
+```{r eval=FALSE}
+number_vec - 1
+number_vec * 2
+log(number_vec)
+length(rodents)
+```
+
+Some __functions__ are specifically used for __vectors__:
+```{r eval=FALSE}
+mean(number_vec)
+summary(number_vec)
+```
+
+We can also test the values within __vectors__:
+```{r eval=FALSE}
+aquatic == "Whale"
+number_vec > 4
+number_vec[number_vec > 4]
+```
+
+The `paste()` __function__ can be used to paste __string scalars__ to other __string scalars__ or to __string vectors__:
+```{r eval=FALSE}
+paste("Animals", animals)
+bird_or_mammal <- c("mammal","mammal","mammal","mammal","bird","mammal","mammal","mammal")
+paste(animals, bird_or_mammal, sep = ":")
+paste(animals, " is a ", bird_or_mammal, sep = "")
+```
+
+### Data frames & Matrices
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/Rmatrix.png", auto_pdf = TRUE)
+``` 
+
+__Data frames__ & __matrices__ are 2-dimensional data structures as they have rows and columns.
+
+A __matrix__ only contains 1 __class__ (homogeneous). A __data frame__ can contain multiple __classes__ (heterogeneous), but each column can only contain one __class__. 
+
+Most of the time __data frames__ and __matrices__ can be treated the same. Because of this I generally use __data frames__ and so we will focus on them.
+
+R comes with a set of pre-loaded data. If you are interested you can use the __function__ `data()` to see the full list.
+
+We will have a quick look at the dataset "mtcars". This is a __data frame__ containing information on various cars. To look at the __data frame__ in the __console window__ run the below.
+
+```{r eval=FALSE}
+mtcars
+```
+
+To get a better look save the __data frame__ as a __variable__.
+The above shows the info in the __console window__. However we can have a better look at it in RStudio if we save it as a variable in our __environment__ and then click the variable on the __Environment pane__ of the __"environment and history"__ __window__.
+
+```{r eval=FALSE}
+cars_info <- mtcars
+```
+
+Now the __variable__ will be listed in your __Environment pane__ in the __"environment and history" window__ . Click on the name "cars_info" in the __Environment pane__. A tab in your __script editor__ will open so you can have a good look at the contents of the __data frame__.
+
+When you are ready, close the "cars_info" tab and remove the __variable__ with the below command.
+
+```{r eval=FALSE}
+rm(cars_info)
+```
+
+Now it is time to create our own __data frame__.
+
+First we will create three __variables__ containing __vectors__. These will be our three columns.
+
+```{r eval=FALSE}
+Crab <- c(10,1,1)
+Oystercatcher <- c(5,6,4)
+Starfish <- c(3,3,7)
+```
+
+Now let us create the __data frame__.
+
+```{r eval=FALSE}
+#Using the function data.frame to create a data frame
+beach_df <- data.frame(Crab,Oystercatcher,Starfish)
+```
+
+Look at the __variable__ "beach_df" (it is useful to use "df" in __variable names__ to signify it is a __data frame__) and you will see that each __vector__ has become a column. The __variable names__ have become the column names (this is why we used capital letters in the __variable names__).
+
+You can think of __data frames__ in three different ways:
+
+- A list of columns
+- A list of rows
+- A table
+
+Look at the column and row names with two new __functions__.
+```{r eval=FALSE}
+colnames(beach_df)
+row.names(beach_df)
+```
+
+We can use the __function__ `row.names()` and the __assignment operator__ to change the row names to something more useful.
+```{r eval=FALSE}
+row.names(beach_df) <- c("Formby","West Kirby","Crosby")
+```
+
+Now look at your "beach_df" __data frame__ to see the difference.
+
+## Objects MCQs
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble_purple.png", auto_pdf = TRUE)
+``` 
+
+Attempt the below MCQs.
+
+```{r, echo = FALSE}
+opts_p <- c(answer="Numeric", "Logical","String")
+```
+1. What __class__ are numbers normally stored in? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Numeric","Logical",answer="String")
+```
+2. What __class__ is text normally stored in? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Numeric",answer="Logical","String")
+```
+3. What __class__ has the value of TRUE or FALSE? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Scalar", "Vector", answer="Data frame")
+```
+4. Which __data structure__ is 2-dimensional and heterogeneous (can contain multiple __classes__)? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Scalar", answer="Vector", "Data frame")
+```
+5. Which __data structure__ is 1-dimensional and homogeneous (can only contain 1 __class__)? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="Scalar", "Vector", "Data frame")
+```
+6. Which __data structure__ consists of only one value? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`c()`", answer="`class()`", "`paste()`")
+```
+7. Which __function__ can show the __class__ of an R __object__? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`c()`", "`class()`", answer="`paste()`")
+```
+8. Which __function__ can be used to combine __strings__? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="`c()`", "`class()`", "`paste()`")
+```
+9. Which __function__ can be used to create a __vector__? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="`<`", "`!=`", "`>=`")
+```
+10. Which __logical operator__ means "less than"? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`<`", answer="`!=`", "`>=`")
+```
+11. Which __logical operator__ means "not equal to"? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`<`", "`!=`", answer="`>=`")
+```
+12. Which __logical operator__ means "greater than or equal to"? `r longmcq(opts_p)`
+
+There was quite a lot to go through in this chapter, so let us reinforce it all with exercise!

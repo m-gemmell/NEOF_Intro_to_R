@@ -46,7 +46,7 @@ The data we will be using will contain the following information:
 - Group, In this case are they Mammals or Reptiles
 - Biom, are they aquatic, semiaquatic, or terrestrial
 
-First download the [animal_sizes.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/animal_sizes.csv) file into your "Chapter_13-16" directory.
+First download the [animal_sizes.csv](https://neof-workshops.github.io/NEOF_web_pages/R_j4c0xh/downloads/animal_sizes.csv) file into your "Chapter_13-16" directory.
 
 Next, __read__ the data into R. We have included a new option: `stringsAsFactors = TRUE`. This is important for plotting and will be explained more later.
 
@@ -242,7 +242,7 @@ https://allisonhorst.github.io/palmerpenguins/
 
 This data contains information on individual penguins that were gathered from Palmer Station LTER. 
 
-First download the [penguin.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/penguin.tsv) file into your "Chapter_13-16" directory.
+First download the [penguin.tsv](https://neof-workshops.github.io/NEOF_web_pages/R_j4c0xh/downloads/penguin.tsv) file into your "Chapter_13-16" directory.
 
 As you expect the next step is to __read__ in the file. This time the file is a tsv (tab separated file) with no row names. We will ensure that columns containing strings are converted to __factors__.
 ```{r eval=FALSE}

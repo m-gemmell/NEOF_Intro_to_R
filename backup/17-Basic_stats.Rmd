@@ -27,7 +27,7 @@ Where _m_ is equal to the gradient and _c_ is equal to the intercept. With this 
 ```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
 knitr::include_graphics(path = "figures/bream.png", auto_pdf = TRUE)
 ``` 
-Before getting to the analysis we need to read in the data. For this chapter we will be looking at the file [Fish.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Fish.csv) which contains information of 7 common fish species sold in Fish markets (Source: https://www.kaggle.com/aungpyaeap/fish-market).
+Before getting to the analysis we need to read in the data. For this chapter we will be looking at the file [Fish.csv](https://neof-workshops.github.io/NEOF_web_pages/R_j4c0xh/downloads/Fish.csv) which contains information of 7 common fish species sold in Fish markets (Source: https://www.kaggle.com/aungpyaeap/fish-market).
 
 The columns for the data are:
 
