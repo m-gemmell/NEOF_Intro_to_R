@@ -1,0 +1,308 @@
+# (PART\*) Stats & Programming {.unnumbered}
+
+# Basic stats
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/basic_stats.png", auto_pdf = TRUE)
+``` 
+
+This week we'll learn how to carry out some basic stats. This will involve linear regressions and some t-tests.
+
+Create and use the directory "Chapter_17-18" as the working directory for this chapter. Additionally create a new script called "Stats.R" for this chapter.
+
+Before we continue just a reminder about [annotations](#annotations) and [code sections](#codesections).
+
+## Linear regression
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/linear_regression.png", auto_pdf = TRUE)
+``` 
+Linear regression is a method to model the relationship between two __numeric vectors__. Ultimately we want to produce the predictive equation:
+
+$$
+y = mx + c
+$$
+
+Where _m_ is equal to the gradient and _c_ is equal to the intercept. With this we can predict the value of _y_ if we know the value of _x_ and vice versa.
+
+### Fish market dataset
+```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
+knitr::include_graphics(path = "figures/bream.png", auto_pdf = TRUE)
+``` 
+Before getting to the analysis we need to read in the data. For this chapter we will be looking at the file [Fish.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Fish.csv) which contains information of 7 common fish species sold in Fish markets (Source: https://www.kaggle.com/aungpyaeap/fish-market).
+
+The columns for the data are:
+
+- __Species__: Species of fish ("Bream", "Roach", "Whitefish",
+"Parkki", "Perch", "Pike", and "Smelt").
+- __Weight__: Weight of the fish in grams.
+- __Length1__: Vertical length of the fish in centimetres.
+- __Length2__: Diagonal length of the fish in centimetres.
+- __Length3__: Cross length of the fish in centimetres.
+- __Height__: Height of the fish in centimetres.
+- __Width__: Diagonal width of the fish in centimetres.
+
+The dataset is primarily interested in predicting the weight of a fish based on its length, height, or width.
+
+First step is to __read__ in the data:
+```{r eval=FALSE}
+fish_df <- read.csv("Fish.csv", check.names = FALSE)
+```
+
+Have a look at the __data frame__ and you'll see it looks pretty good with no `NA` values.
+
+For now we only want to look at the information for the species Bream. Let's create a "bream_df":
+```{r eval=FALSE}
+#Create the data frame
+bream_df <- fish_df[fish_df$Species == "Bream",]
+#Check how many rows it has
+nrow(bream_df)
+```
+
+We are left with 35 data points which should be plenty for our linear regression.
+
+### Scatterplot
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/Scatterplot_2.png", auto_pdf = TRUE)
+``` 
+Before we carry out the linear regression we'll create a scatterplot of the two __vectors__ we want to compare. For the first instance we will compare __Height__ to __Length1__ (vertical length).
+
+In fact before we do, let's change the column name "Length1" to "v_length" so it is a bit more intuitive for us. Whilst we are at it we'll change the other length column names.
+```{r eval=FALSE}
+colnames(bream_df)[3:5] <- c("v_length", "d_length", "c_length")
+```
+
+Time to quickly plot "v_length" (x) against "Weight" (y):
+```{r eval=FALSE}
+plot(x = bream_df$v_length, y = bream_df$Weight)
+```
+
+Super! That looks like a decently linear plot with a positive trend. We will therefore fit the linear model.
+
+### Linear model
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/lm.png", auto_pdf = TRUE)
+``` 
+We can fit a linear model with the __function__ `lm()`. We simply provide the column names as a formula ( `y_column_name ~ x_column_name` ) similar to the `boxplot()` __function__.
+
+```{r eval=FALSE}
+fit <- lm(Weight~v_length, data=bream_df)
+```
+
+We can now add the linear model as a line to our plot with the __function__ `abline()`
+```{r eval=FALSE}
+abline(fit)
+```
+
+With the line added we also want to add the linear equation to the plot. To do this we need to check the contents of the "fit" __variable__ first so we know what to add.
+```{r eval=FALSE}
+fit
+```
+
+You'll see the following two sections:
+
+- `Call:` Shows the __function__ with options you ran to create "fit"
+- `Coefficients:`: This contains 2 parts
+    - `(Intercept)`: This is the intercept value of the linear model (_c_)
+    - `v_length`: This is the gradient values (_m_)
+
+Our next step is to create a __string scalar__ containing the linear equation. To do this we can extract the coefficients from the "fit" __object__ like below:
+```{r eval=FALSE}
+m <- fit$coefficients[2]
+c <- fit$coefficients[1]
+```
+
+If you print out "m" and "c" to the console you'll notice they have a different number of decimal places than when displayed through printing "fit". We will therefore change these to 2 decimal places with the `round()` __function__:
+```{r eval=FALSE}
+m <- round(m, digits = 2)
+c <- round(c, digits = 2)
+```
+
+Now to use the `paste0()` __function__ to create our linear equation as a __string scalar__:
+```{r eval=FALSE}
+linear_equation <- paste0("y = ", m , "x + ", c)
+```
+
+Finally we will recreate our plot, add the abline, and then add the linear equation. We will add the linear equation with the __function__ `text()`:
+```{r eval=FALSE}
+plot(x = bream_df$v_length, y = bream_df$Weight)
+abline(fit)
+text(x = 30, y = 800, labels = linear_equation)
+```
+
+The `text()` options `x = ` and `y =` normally require a bit of trial and error to set it in a nice location. This can be a bit fiddly but is made much easier by making the label smaller (e.g. making the numbers have a smaller amount of decimal places).
+
+## t-test
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/scale.png", auto_pdf = TRUE)
+```
+A t-test can be used to determine if there is a significant difference between the means of two groups.
+
+In this example we will compare the weights of the fish Bream, Parkki, and Roach. Therefore let's subset our __data frame__ so we have three __data frames__, one for each species.
+
+We already have a "bream_df" so we only need to make one for Parkki and one for Roach. Before we do we'll change the column names for "fish_df" like we did for "bream_df"
+```{r eval=FALSE}
+colnames(fish_df)[3:5] <- c("v_length", "d_length", "c_length")
+parkki_df <- fish_df[fish_df$Species == "Parkki",]
+roach_df <- fish_df[fish_df$Species == "Roach",]
+```
+
+### Boxplot
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/boxplot.png", auto_pdf = TRUE)
+```
+Before carrying out a t-test it can be useful to visualise the difference between groups with a boxplot.
+
+Before we do this we need to combine the three __data frames__ into one. This can be done by binding the rows with `rbind()`. This will combine two provided __data frames__ which contain the same number of columns with the same column names.
+```{r eval=FALSE}
+#Combine bream_df and parkki_df
+fish_subset_df <- rbind(bream_df, parkki_df)
+#Now rbind roach_df to our new df
+fish_subset_df <- rbind(fish_subset_df, roach_df)
+```
+
+There is also `cbind` to combine __data frames__ by columns. In this case the __data frames__ need to have the same number of rows with the same order and names.
+
+Time for a boxplot!
+```{r eval=FALSE}
+boxplot(Weight~Species, data = fish_subset_df)
+```
+
+We can clearly see that the weights of Parkki and Roach are very similar to each other but very different to Bream's weight.
+
+### t-test comparison
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/five_percent.png", auto_pdf = TRUE)
+```
+Let us see if what we see visually is also visible statistically.
+
+We can carry out a t-test with the __function__ `t.test()`. Simply provide the __function__ with the two __numerical vectors__ you would like to compare.
+```{r eval=FALSE}
+bream_parkki_ttest <- t.test(bream_df$Weight, parkki_df$Weight)
+bream_roach_ttest <- t.test(bream_df$Weight, roach_df$Weight)
+parkki_roach_ttest <- t.test(parkki_df$Weight, roach_df$Weight)
+```
+
+Print the resulting __variables__ to the console and you will see a lot of information. I am sure all these values can say a lot about the data but we are only interested in the p-values.
+
+In this case we can say the means between the two groups tested are significantly different if the p-value is less than 0.05 (1 in 20).
+
+It can be a bit annoying to have to look through the `t.test()` output for each result so we'll create a __vector__ to contain the p-values for comparisons against Bream.
+```{r eval=FALSE}
+fish_species_weight_ttests <- c(
+  bream_parkki_ttest$p.value,
+  bream_roach_ttest$p.value
+)
+```
+
+This is pretty useful but we can't immediately see which comparison each t-test is equal to. Thankfully just like __data frames__ have row and column names, __vectors__ can have names for each element.
+```{r eval=FALSE}
+#Add the vector names
+names(fish_species_weight_ttests) <- 
+  c("bream_vs_parkki","bream_vs_roach")
+#Look at the vector with the added names
+fish_species_weight_ttests
+```
+
+We can then index the __vector__ through the names.
+```{r eval=FALSE}
+#Access the p-value of Bream against Roach
+fish_species_weight_ttests["bream_vs_roach"]
+#Add the p-value of Parkki against Roach
+fish_species_weight_ttests["parkki_vs_roach"] <- 
+  parkki_roach_ttest$p.value
+```
+
+With our nice __vector__ of p-values we can quickly see where the p-value is less than 0.05 (i.e. the means are significantly different) and where it is higher (i.e. the means aren't significantly different).
+```{r eval=FALSE}
+fish_species_weight_ttests < 0.05
+```
+
+Do these p-values match what you saw in the boxplot?
+
+## Some more useful functions
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/r_toolbox.png", auto_pdf = TRUE)
+```
+
+### Summary
+The __function__ `summary()` can give you some quick summary information for each column of a __data frame__.
+
+```{r eval=FALSE}
+summary(fish_df)
+```
+
+This gives you some nice information for your numerical columns:
+
+- `Min.`: The minimum number
+- `1st Qu.`: The 25th quartile
+- `Median`: The median (Middle sorted number)
+- `Mean`: The average
+- `3rd Qu.`: The 75th quartile
+- `Max.`: The maximum number 
+
+You will notice the information given for the "Species" column is not very informative as it is a __character__ column. However, this would be a lot more descriptive if it was a __factor__.
+
+Therefore we'll change the "Species" column to a __factor__ and run `summary()` again.
+```{r eval=FALSE}
+fish_df$Species <- as.factor(fish_df$Species)
+summary(fish_df)
+```
+
+Now `summary()` shows how many instances of each species is present in the __data frame__.
+
+For future cases it may better to use `stringsAsFactors = TRUE` with the `read.csv()` __function__ when we first read in the file.
+
+### Table
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/table_ikea.png", auto_pdf = TRUE)
+```
+The `table()` __function__ will provide a __vector__ containing the number of instances for each __level__ in a __factor__. This is pretty much what `summary()` did to a __factor__.
+
+However, unlike `summary()` it will also do this for __characters__ and __numerics__.
+
+__Note__: Remember to use the __"Help"__ pane if you are not sure what a __function__ does.
+```{r eval=FALSE}
+#Table command for columns from fish_df
+table(fish_df$Species)
+table(as.character(fish_df$Species))
+table(fish_df$Height)
+table(floor(fish_df$Height))
+table(as.integer(fish_df$Height))
+#Run table on various numeric vectors
+table(1:10)
+table(1:100 * 0)
+table(1:100 %% 2)
+table(seq(from = 0, to = 50, by = 0.5) %% 7.5)
+table(c(1:9,1:8,1:7,1:6,1:5,1:4,1:3,1:2,1))
+#Table will run on logicals too
+table(1:100 > 50)
+table(c("a","a","b","c") == "a")
+#Create a vector of 20 random numbers between 0 and 10
+random_num_vec <- sample(0:10, size = 20, replace = TRUE )
+#table
+table(random_num_vec)
+#Create a character vector randomly containing 1-10 of the strings
+#"Book", "TV", and "Film" each
+random_char_vec <- c(
+  rep("Book", sample(1:10, size = 1)),
+  rep("TV", sample(1:10, size = 1)),
+  rep("Film", sample(1:10, size = 1))
+)
+#Now for table()
+table(random_char_vec)
+#Can create a quick bar plot with the output from table()
+barplot(table(random_char_vec))
+```
+
+A few more __functions__ were introduced above. I will let you explore them yourself or you can ask me verbally.
+
+## Further resources
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/resources.png", auto_pdf = TRUE)
+```
+Below are some further resources you can check that will help if you want to do some other plots and figures.
+
+__Quick-R__: https://www.statmethods.net/index.html
+
+__R Cookbook__: https://rc2e.com/
+
+

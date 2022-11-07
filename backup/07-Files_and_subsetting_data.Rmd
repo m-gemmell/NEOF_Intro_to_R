@@ -19,7 +19,7 @@ You can get your data into R by having R __read__ your file.
 Prior to using a file you will need to acquire it. 
 
 - Make a directory/folder called "Chapter_7" within your main directory/folder for this workshop. 
-- Download the file [Liverpool_beaches.csv](https://m-gemmell.github.io/NEOF_web_pages/R_j4c0xh/downloads/Liverpool_beaches.csv) into "Chapter_7". 
+- Download the file [Liverpool_beaches.csv](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Liverpool_beaches.csv) into "Chapter_7". 
 - Set your working directory to this new directory ([Directories](#directories)). You will stay here for this chapter.
 
 ### Viewing the file

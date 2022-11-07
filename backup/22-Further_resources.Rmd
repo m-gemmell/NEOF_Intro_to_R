@@ -82,7 +82,7 @@ embed_url("https://www.youtube.com/watch?v=O6F2N12VhjU")
 
 ## Chapter 7 files
 
-- [Liverpool_beaches.csv](https://m-gemmell.github.io/NEOF_web_pages/R_j4c0xh/downloads/Liverpool_beaches.csv)
+- [Liverpool_beaches.csv](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Liverpool_beaches.csv)
 - [Global_eco_footprint.tsv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/Global_eco_footprint.tsv)
 - [parks_biodiveristy.csv](https://cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Intro_to_R/data/parks_biodiveristy.csv)
 

@@ -1,0 +1,62 @@
+--- 
+title: "R primer for omics"
+author: "Matthew R. Gemmell"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+favicon: figures/NEOF_favicon.png
+description: NEOF book for the R primer for omics workshop
+cover-image: "figures/NEOF.png"
+---
+
+```{r cite-packages, include = FALSE}
+# automatically create a bib database for R packages
+# add any packages you want to cite here
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'webexercises'
+), 'packages.bib')
+```
+
+```{r, echo=FALSE}
+#This book uses ionicons icons using the icons package
+#https://github.com/mitchelloharawild/icons
+#To set this up on your rstudio use the following commands
+# install.packages("remotes")
+#remotes::install_github("mitchelloharawild/icons")
+#icons::download_fontawesome()
+#download_ionicons()
+```
+
+```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
+knitr::include_graphics(path = "figures/NEOF.png", auto_pdf = TRUE)
+``` 
+
+# (PART\*) Start {-}
+# Introduction
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/R.png", auto_pdf = TRUE)
+``` 
+
+This course will teach you the fundamentals of R, an essential skill for some of our future courses. The first day will focus on the basics of R with foundations and objects. In day 2 we will look at how to read in files and write out files from R. Additionally, you will get further practice on the previous materials whilst learning some handy tips and tricks.
+
+There are extra materials you can attempt after the workshop. These will allow you to apply your R skills to create plots and carry out some statistics. The plots section includes creating line graphs, histograms, scatterplots, and boxplots. The statistiscs section will cover carrying out some basic statistics, don't worry it won't be a statistics lesson. Finally, the last section will introduce some harder coding where you'll learn to make loops, use ifs, and create R functions.
+
+These materials will involve theory, practice, exercises, and solutions:
+
+- The theory will explain R concepts and terminology. R terminology can be quite confusing but it is important to learn as it makes asking questions online a lot easier.
+- Practice will involve code to run whilst reading through the theory. This will allow you to see the output of R and hopefully help you understand how R works.
+- Multiple choice questions (MCQs): These will be used as recap questions at the end of chapters to help solidify the knowledge you are gaining.
+- Exercises will give you a task to carry out based on the knowledge and skills you learned from the theory and practise.
+- Solutions for the exercise are after the exercise. Please try the exercise before looking at the solutions, however make sure you read the solutions even if you completed the exercise successfully as there is extra information in these sections.
+ 
+Commands are in the following font and colour and should be run in RStudio (These should not be copied into R from this document): 
+
+```{r eval=FALSE}
+This is a command 
+``` 
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
