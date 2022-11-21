@@ -98,6 +98,7 @@ pi <- 3.14
 pi
 #in this case if you want the original R pi object back, we can remove the one we made
 rm(pi)
+pi
 ```
 
 Have you been annotating your scripts?
@@ -126,7 +127,7 @@ Note: when `!` is used in __operators__ it means "not". When used, `!` always go
 2 >= 4
 # 2 equal to 4
 2 == 4
-# 2 not not equal to 4
+# 2 not equal to 4
 2 != 4
 ```
 
@@ -319,8 +320,7 @@ We will have a quick look at the dataset "mtcars". This is a __data frame__ cont
 mtcars
 ```
 
-To get a better look save the __data frame__ as a __variable__.
-The above shows the info in the __console window__. However we can have a better look at it in RStudio if we save it as a variable in our __environment__ and then click the variable on the __Environment pane__ of the __"environment and history"__ __window__.
+The above shows the info in the __console window__. However we can have a better look at it in RStudio if we save it as a __variable__ in our __environment__ and then click the __variable__ name on the __Environment pane__ of the __"environment and history"__ __window__.
 
 ```{r eval=FALSE}
 cars_info <- mtcars

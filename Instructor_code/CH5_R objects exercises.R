@@ -1,0 +1,39 @@
+## df solution
+### Step 1
+#Create __vectors__ for columns and row names:
+One <- c(2,4,6)
+Three <- c(6,12,18)
+Five <- c(10,20,30)
+row_names <- c("Two", "Four", "Six")
+
+### Step 2a
+#Create the __data frame__ from vectors:
+df <- data.frame(One,Three,Five)
+#Add row names:
+row.names(df) <- row_names
+
+### Step 2b
+#Alternatively you can define the row names in the 
+#data.frame()` `function` as an option:
+df <- data.frame(One,Three,Five, row.names = row_names)
+
+
+## beach_df_2 solution
+### Step 1
+#Create __vectors__ for columns and row names:
+Crab <- c(10,1,1,4)
+Oystercatcher <- c(5,6,4,4)
+Sandpiper <- c(1,1,2,3)
+Starfish <- c(3,3,7,4)
+row_names_2 <- c("Formby","West Kirby","Crosby","New Brighton")
+
+### Step 2a
+#Create the __data frame__ from __vectors__:
+beach_df_2 <- data.frame(Crab,Oystercatcher,Sandpiper,Starfish)
+#Add row names:
+row.names(beach_df_2) <- row_names_2
+
+### Step 2b
+#Alternatively you can define the row names in the `data.frame()` 
+#__function__ as an option:
+beach_df_2 <- data.frame(Crab,Oystercatcher,Sandpiper,Starfish, row.names = row_names_2)

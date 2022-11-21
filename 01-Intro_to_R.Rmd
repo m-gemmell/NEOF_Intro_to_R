@@ -28,7 +28,7 @@ knitr::write_bib(c(
 # install.packages("remotes")
 #remotes::install_github("mitchelloharawild/icons")
 #icons::download_fontawesome()
-#download_ionicons()
+#icons::download_ionicons()
 ```
 
 ```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
