@@ -185,7 +185,7 @@ There are two main ways to set your working directory.
 2. Via the __MISC window__ (bottom right)
     1. Click the __Files pane__
     2. Navigate to the directory you would like to set as the working directory
-    3. On the __MISC toolbar__ click __"More"__
+    3. On the __MISC toolbar__ click on the cog icon (It may say __"More"__ beside it).
     4. On the drop down click __"Set As Working Directory"__
     
 To show the current working directory in the __Files__ pane click the arrow on the top bar of the __console window__. You can then see what files and directories are in your working directory via the __Files__ pane in the __MISC__ window.
