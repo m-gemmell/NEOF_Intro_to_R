@@ -65,6 +65,8 @@ numeric_to_string <- as.character(number)
 numeric_to_string
 class(numeric_to_string)
 
+"She said \"Hello\""
+
 #will get an error as strings and maths don't mix
 "6" - 3
 #will work as maths and numerics work

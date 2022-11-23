@@ -45,3 +45,7 @@ list.files()
 #Command 2
 4 - 1
 
+
+# Diretcories
+getwd()
+setwd("D:/Git/NEOF_Intro_to_R/Instructor_code")list.files()
