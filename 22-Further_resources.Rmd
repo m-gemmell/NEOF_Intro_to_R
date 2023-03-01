@@ -8,73 +8,73 @@ knitr::include_graphics(path = "figures/internet.png", auto_pdf = TRUE)
 
 ## Intro and foundations
 
-```{r, echo=FALSE, warning=FALSE, }
-library("vembedr")
-embed_url("https://www.youtube.com/watch?v=mr5B4-6kcyU")
-```
+<div class="container">
+<iframe src="https://www.youtube.com/embed/mr5B4-6kcyU" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
 
-[Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_1_intro_and_foundations.pdf) &
+[Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_1_intro_and_foundations.pdf)
 
 ## Classes and data structures
 
-```{r, echo=FALSE, warning=FALSE, }
-library("vembedr")
-embed_url("https://www.youtube.com/watch?v=BiN_DQxizgA")
-```
+<div class="container">
+<iframe src="https://www.youtube.com/embed/BiN_DQxizgA" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
 
 [Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_2_classess_and_data_structures.pdf)
 
 ## Files and subsetting
 
-```{r, echo=FALSE, warning=FALSE, }
-library("vembedr")
-embed_url("https://www.youtube.com/watch?v=_hg7afEI5sU")
-```
+<div class="container">
+<iframe src="https://www.youtube.com/embed/_hg7afEI5sU" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
 
 [Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_3_files_sand_subsetting_data.pdf)
 
 ## Handy tips and tricks
 
-```{r, echo=FALSE, warning=FALSE, }
-library("vembedr")
-embed_url("https://www.youtube.com/watch?v=nv_lOsY_TTY")
-```
+<div class="container">
+<iframe src="https://www.youtube.com/embed/nv_lOsY_TTY" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
 
 [Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_4_handy_tips_and_tricks.pdf)
 
 ## Plots part 1
 
-```{r, echo=FALSE, warning=FALSE, }
-library("vembedr")
-embed_url("https://www.youtube.com/watch?v=4UrVC1saNKE")
-```
+<div class="container">
+<iframe src="https://www.youtube.com/embed/4UrVC1saNKE" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
 
 [Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_5_plots_1.pdf)
 
 ## Plots part 2
 
-```{r, echo=FALSE, warning=FALSE, }
-library("vembedr")
-embed_url("https://www.youtube.com/watch?v=Yhh_sQYOx7E")
-```
+<div class="container">
+<iframe src="https://www.youtube.com/embed/Yhh_sQYOx7E" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
 
 [Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_6_plots_2.pdf)
 
 ## Basic stats
 
-```{r, echo=FALSE, warning=FALSE, }
-library("vembedr")
-embed_url("https://www.youtube.com/watch?v=Ff2_sfQvf3c")
-```
+<div class="container">
+<iframe src="https://www.youtube.com/embed/Ff2_sfQvf3c" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
 
 [Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_7_basic_stats.pdf)
 
 ## Basic programming
 
-```{r, echo=FALSE, warning=FALSE, }
-library("vembedr")
-embed_url("https://www.youtube.com/watch?v=O6F2N12VhjU")
-```
+<div class="container">
+<iframe src="https://www.youtube.com/embed/O6F2N12VhjU" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
 
 [Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_8_basic_programming.pdf)
 
