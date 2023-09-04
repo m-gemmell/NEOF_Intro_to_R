@@ -1,4 +1,4 @@
-# Basic programming
+# Basic programming {#basicprogramming}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/programming.png", auto_pdf = TRUE)
 ``` 

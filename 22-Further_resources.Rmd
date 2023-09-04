@@ -4,7 +4,7 @@
 knitr::include_graphics(path = "figures/internet.png", auto_pdf = TRUE)
 ```
 
-# Workshop slides & videos
+# Workshop slides & videos {#appendix}
 
 ## Intro and foundations
 

@@ -59,4 +59,42 @@ Commands are in the following font and colour and should be run in RStudio (Thes
 This is a command 
 ``` 
 
+## Table of contents {-}
+
+```{r, echo=FALSE, align="centre"}
+#Create 2 column dataframe
+column_1 <- c(
+  '[**Foundations**](#foundations)', 
+ '[![](figures/foundational.png){height="150"}](#foundations)',
+   '[**Files & subsetting data**](#filesubsettingchap)', 
+ '[![](figures/R_df.png){height="150"}](#filesubsettingchap)',
+   '[**Histograms & line graphs**](#histsandlineschap)', 
+ '[![](figures/palette.png){height="150"}](#histsandlineschap)',
+   '[**Basic stats**](#basicstats)', 
+ '[![](figures/basic_stats.png){height="150"}](#basicstats)',
+   '[**Appendix**](#appendix)', 
+ '[![](figures/internet.png){height="150"}](#appendix)'
+)
+column_2 <- c(
+  '[**R objects**](#robjectschap)', 
+ '[![](figures/RObjects.png){height="150"}](#robjectschap)',
+   '[**Handy tips & tricks**](#tipsandtrickschap)', 
+ '[![](figures/magic.png){height="150"}](#tipsandtrickschap)',
+   '[**Scatter plots & box plots**](#scatterandboxchap)', 
+ '[![](figures/large_brush.png){height="150"}](#scatterandboxchap)',
+   '[**Basic programming**](#basicprogramming)', 
+ '[![](figures/programming.png){height="150"}](#basicprogramming)',
+ "",""
+)
+table_df <- data.frame(column_1, column_2)
+#Kable and kableextra libraries
+library(knitr)
+library(kableExtra)
+#Create table
+#ALign both column in centre (align = "cc")
+table_df %>%
+  kbl(align= "cc", col.names = NULL) %>%
+  kable_styling(position = "center")
+```
+
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

@@ -1,6 +1,6 @@
 # (PART\*) Stats & Programming {.unnumbered}
 
-# Basic stats
+# Basic stats {#basicstats}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/basic_stats.png", auto_pdf = TRUE)
 ``` 

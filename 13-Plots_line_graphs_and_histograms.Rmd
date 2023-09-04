@@ -1,6 +1,6 @@
 # (PART\*) Plots {.unnumbered}
 
-# Histograms and Line graphs
+# Histograms and Line graphs {#histsandlineschap}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/palette.png", auto_pdf = TRUE)
 ```

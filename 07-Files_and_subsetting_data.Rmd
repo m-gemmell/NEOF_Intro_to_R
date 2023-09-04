@@ -1,6 +1,6 @@
 # (PART\*) Files, Subsetting, & Tips {.unnumbered}
 
-# Files and subsetting data
+# Files and subsetting data {#filesubsettingchap}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/R_df.png", auto_pdf = TRUE)
 ``` 

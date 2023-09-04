@@ -1,4 +1,4 @@
-# Scatter plots and Box plots
+# Scatter plots and Box plots {#scatterandboxchap}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/large_brush.png", auto_pdf = TRUE)
 ```
