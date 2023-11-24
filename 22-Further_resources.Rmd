@@ -4,6 +4,12 @@
 knitr::include_graphics(path = "figures/internet.png", auto_pdf = TRUE)
 ```
 
+# Bookdown
+
+If you would like to download the book html file you can find the zipped directory below:
+
+[Bookdown](https://neof-workshops.github.io/R_j4c0xh/downloads/intro_to_R.zip)
+
 # Workshop slides & videos {#appendix}
 
 ## Intro and foundations
@@ -13,7 +19,7 @@ knitr::include_graphics(path = "figures/internet.png", auto_pdf = TRUE)
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-[Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_1_intro_and_foundations.pdf)
+[Slides](https://docs.google.com/presentation/d/1nd1kl1vXD7QPIRDXQG7QSu515ThCnuLvh-oH42HPs7M/edit?usp=sharing)
 
 ## Classes and data structures
 
@@ -22,7 +28,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-[Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_2_classess_and_data_structures.pdf)
+[Slides](https://docs.google.com/presentation/d/1J80PSOcy3Uusn_U0NzvSTSFZqZXBf_0tz9bCSGumSSI/edit?usp=sharing)
 
 ## Files and subsetting
 
@@ -31,7 +37,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-[Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_3_files_sand_subsetting_data.pdf)
+[Slides](https://docs.google.com/presentation/d/1ePF3t1cO4Ui_5l8giooZWQuPEL-L4h7047bGCV_oQgg/edit?usp=sharing)
 
 ## Handy tips and tricks
 
@@ -40,7 +46,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-[Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_4_handy_tips_and_tricks.pdf)
+[Slides](https://docs.google.com/presentation/d/1zO2o39UaeV9o0BbOP-kKZFgku4WfEKia_z2U4-8yJmw/edit?usp=sharing)
 
 ## Plots part 1
 
@@ -49,7 +55,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-[Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_5_plots_1.pdf)
+[Slides](https://docs.google.com/presentation/d/1LVAZGos0san43kJbY-VM9jwyUtWthhMhsysNZUgeVpA/edit?usp=sharing)
 
 ## Plots part 2
 
@@ -58,7 +64,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-[Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_6_plots_2.pdf)
+[Slides](https://docs.google.com/presentation/d/1fDHpFeiP7pckCdOV_WO7yMEfGkL0Yzcu1FDdw6afxWM/edit?usp=sharing)
 
 ## Basic stats
 
@@ -67,7 +73,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-[Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_7_basic_stats.pdf)
+[Slides](https://docs.google.com/presentation/d/1Gp3v5xGCi0mnJa5lRr7akV0kFOiachaZv7B_9dT4MbI/edit?usp=sharing)
 
 ## Basic programming
 
@@ -76,7 +82,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
-[Slides](https://neof-workshops.github.io/R_j4c0xh/downloads/Intro_to_R_8_basic_programming.pdf)
+[Slides](https://docs.google.com/presentation/d/16b6K8nQEsdTkioMyVFLb0s7jLrG83KtycTSJ5t4_PqQ/edit?usp=sharing)
 
 # Workshop files {#workshopfiles}
 
