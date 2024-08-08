@@ -3,7 +3,7 @@ This exercise will look at two files. You will be assigned tasks requiring you t
 
 Use your __"Exercises.R"__ file, ensuring you are using code sections to separate the different exercises. Additionally, set your working directory to your main workshop directory.
 
-Create a new directory called "Chapter_8_files" within your main workshop directory to download the files [bat_roosts.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/bat_roosts.csv) & [UK_retail.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/UK_retail.tsv).
+Create a new directory called "Chapter_8_files" within your main workshop directory to download the files [bat_roosts.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/bat_roosts.csv) & [honey_bee.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/honey_bee.tsv).
 
 As the files we are going to __read__ are in a different directory to our working directory we will have to specify the directory along with the file names. For example, to read in the "Liverpool_beaches.csv" file from the main directory you could use the  following command.
 
@@ -14,9 +14,9 @@ liv_beaches_df <- read.csv("Chapter_7/Liverpool_beaches.csv", row.names = 1)
 Ensure you also __write__ any output to "Chapter_8_files".
 
 ## Bats
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/bat.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/bat.png){style="width:200px; border-radius:5px; background:white"}
+</center>
 
 First we will look at the file [bat_roosts.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/bat_roosts.csv). This contains information on the max number of roosts for different Bat species in different UK regions. 
 
@@ -31,7 +31,7 @@ For this file carry out the below tasks:
 5. Create a transposed __data frame__ of "bat_df" called "bat_t_df".
 6. __Write__ the __data frame__ "bat_t_df" to a comma separated file called "bat_roosts_t.csv". Ensure there are no quotes surrounding the row or column names.
 
-Now that you have carried that out, attempt following MCQs using the "bat_t_df" object.
+After you have carried the above tasks, attempt the following MCQs using the "bat_t_df" object.
 
 ```{r, echo = FALSE}
 opts_p <- c(answer="Channel Islands", "North West", "Wales")
@@ -54,11 +54,11 @@ opts_p <- c(answer="Pipistrellus nathusii", "Pipistrellus pygmaeus", "Rhinolophu
 4. Which Bat species has the lowest number of roosts across the UK? `r longmcq(opts_p)`
 
 ## Honey bee colonies
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/beehive.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/beehive.png){style="width:200px; border-radius:5px; background:white"}
+</center>
 
-Next we have a file ([honey_bee.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/honey_bee.tsv)) that contains information on the number of Honey Bee colonies in 4 different states. It is temporal data containing information on the 4 quarters for the years 2015-2018.
+Next we have a file ([honey_bee.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/honey_bee.tsv)) that contains information on the number of Honey Bee colonies in 4 different USA states. It is temporal data containing information on the 4 quarters for the years 2015-2018.
 
 For more details and even more data please see the following link: https://www.kaggle.com/datasets/kyleahmurphy/nass-honey-bee-20152021
 

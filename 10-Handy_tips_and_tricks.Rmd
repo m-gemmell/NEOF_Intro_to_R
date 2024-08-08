@@ -1,8 +1,8 @@
 # Handy tips & tricks {#tipsandtrickschap}
 
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/magic.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/magic.png){style="width:200px; border-radius:15px; background:white"}
+</center>
 
 Welcome to Chapter 10! This chapter will include coding to reinforce what you have learnt up to this point. There will also be plenty of new handy __functions__ and some more concepts to learn.
 
@@ -11,9 +11,9 @@ For this chapter create a directory called "Chapter_10-11" in your main director
 I'll first introduce you to some R conventions and then some useful abilities of RStudio.
 
 ## R conventions
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/rules.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/rules.png){style="width:200px"}
+</center>
 
 R conventions are style guides. You do not need to follow them but they are intended to help make code easier to read. There are lots of different suggestions for different parts of R code. Here we will only look at conventions for __object/variable names__ and wide vs long code formatting.
 
@@ -29,9 +29,10 @@ __Variable names__ have certain rules that must be followed. We covered these in
 On top of these rules there are a few naming styles that are recommended. It is very good to choose one naming style and stick with it always. Below are three commonly used naming conventions for R. Look through them and choose your favourite to use.
 
 #### Snake case
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/snake_case.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/snake_case.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
 Snake case is my preferred naming convention due to my background. It consists of using lower case letters with underscores (`_`) between words. Numbers can also be used. Below are some examples of names in snake case.
 
 ```{r eval=FALSE}
@@ -44,10 +45,11 @@ this_is_snake_case
 ``` 
 
 #### Period separated
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/period_separated.png", auto_pdf = TRUE)
-```
-Period separated is almost identical to snake case. Just swap the underscores (`_`) with periods (`.`). Below are some examples of names in period separated.
+<center>
+![](figures/period_separated.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
+Period separated is almost identical to snake case. Just swap the underscores (`_`) with periods (`.`). Below are some examples of names in the period separated style.
 
 ```{r eval=FALSE}
 one
@@ -59,9 +61,10 @@ this.is.period.separated
 ``` 
 
 #### Camel case
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/camelCase.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/camelCase.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
 Camel case has no symbols to separate words. Instead after the first word every word starts with an upper case. Below are some examples of names in Camel Case. 
 
 ```{r eval=FALSE}
@@ -102,20 +105,21 @@ beach_df_2 <- data.frame(Crab = c(10,1,1,4),
 
 Hopefully you will agree with me that the long coding is a lot easier and quicker to read.
 
-If you are interested in more about R style guide I would recommend looking at the following resource: https://style.tidyverse.org/
+If you are interested in more about R style guides I would recommend looking at the following resource: https://style.tidyverse.org/
 
 ## RStudio
 RStudio has many useful features which we have not covered. Let us remedy this and cover a few.
 
 ### Global options
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/global.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/global.png){style="width:200px"}
+</center>
 
 To get to the RStudio Global Options click "Tools" in the RStudio Toolbar, then from the drop down menu click "Global Options.." . You should see something similar to the below:
-```{r, fig.align = 'center',out.width= '75%', echo=FALSE }
-knitr::include_graphics(path = "figures/RStudio_global_options.png", auto_pdf = TRUE)
-```
+
+<center>
+![](figures/RStudio_global_options.png){style="width:750px; border-radius:5px"}
+</center>
 
 Have a look through the "General", "Code", and "Appearance" sections. The other sections are more advanced and I would suggest you ignore them currently.
 
@@ -130,30 +134,35 @@ Change the following for later.
 5. Click "Apply" at the bottom followed by "OK".
 
 This will be useful for tab completion which we will cover shortly.
-```{r, fig.align = 'center',out.width= '75%', echo=FALSE }
-knitr::include_graphics(path = "figures/RStudio_manual_tab.png", auto_pdf = TRUE)
-```
+
+<center>
+![](figures/RStudio_manual_tab.png){style="width:750px; border-radius:5px"}
+</center>
 
 ### Sweep buttons
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/sweep.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/sweep.png){style="width:200px"}
+</center>
+
 Sweep buttons allow you to sweep away items you no longer want in RStudio. There are two main sweep buttons, one for the __Console window__ and one for the __Environment pane__.
 
 The sweep button for the __console window__ will clear all the text in the __console pane__. This is useful if you have filled the __console__ with lots of commands and __data frames__. This sweep button will not actually affect any of your work so do not be afraid to use it. The location of the sweep button is shown below.
-```{r, fig.align = 'center',out.width= '60%', echo=FALSE }
-knitr::include_graphics(path = "figures/RStudio_console_sweep.png", auto_pdf = TRUE)
-```
+
+<center>
+![](figures/RStudio_console_sweep.png){style="width:600px; border-radius:5px"}
+</center>
 
 The sweep button for the __Environment pane__ is a bit more dangerous. This sweep button will clear all the objects from your environment. This will remove all the __variables__ you have created. This is not too bad if you have been using the __script editor__ to do your work as you can rerun all your commands to refill your environment. The location of the sweep button is shown below.
-```{r, fig.align = 'center',out.width= '60%', echo=FALSE }
-knitr::include_graphics(path = "figures/RStudio_env_sweep.png", auto_pdf = TRUE)
-```
+
+<center>
+![](figures/RStudio_env_sweep.png){style="width:600px; border-radius:5px"}
+</center>
 
 ## Multiplication table
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/multiplication.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/multiplication.png){style="width:200px"}
+</center>
+
 Hopefully you'll find the above useful. We will learn some new __functions__ but before that let us create a quick __data frame__. You are going to make a multiplication table. The __data frame__ will be a 10 by 10 table with numbers one to ten as the row names and the column names. The value in each cell/index will be equal to the row name number multiplied by the column name number.
 
 Before looking at the code below can you think of a way to do this?
@@ -193,9 +202,10 @@ row.names(multiplication_df)[7:8] <- c("seven","eight")
 ```
 
 ## Tab complete
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/tab.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/tab.png){style="width:200px; border-radius:15px; background:white; border:white solid"}
+</center>
+
 Tab completion is a very useful method when coding in any language. It takes some practice to get used to but it increases the speed of coding and drastically reduces typos. 
 
 Before we continue, the tab key is the key above the "CAPS" key and left of the 'q' key. If you would like a demonstration of tab completion please ask!
@@ -209,8 +219,6 @@ Next you will run the command that is below. However, when your cursor is in the
 
 1. Use the up and down arrow keys to move to the file name you want and then press enter to have the file name be autofilled.
 2. Start typing your file name till it is the top choice of the drop down menu. You can then press enter to autofill the file name.
-
-In this case tab complete should only show "tea_consumption.csv" as it is the only file in your working directory.
 
 ```{r eval=FALSE}
 tea_df <- read.csv("tea_consumption.csv", check.names=FALSE)
@@ -244,9 +252,10 @@ Data from above files:
 - https://en.wikipedia.org/wiki/List_of_countries_by_English-speaking_population
 
 ## Tea
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/tea.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/tea.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
 We will have a quick look at the "tea_df". This data shows the annual consumption of tea per capita with a rank based on the highest to lowest consumers.
 
 Unfortunately the third column has the annual per capita consumption in kilograms (KG) and pounds (LB) with the two values separated by a "_". Thankfully we can use the __function__ `gsub()` to fix this. 
@@ -311,9 +320,10 @@ If you are interested in more regular expressions I would recommend looking at t
 - https://raw.githubusercontent.com/rstudio/cheatsheets/main/regex.pdf
 
 ## English speakers across the world
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/language.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/language.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
 Now we will do some processing of the "english_df" __data frame__. This shows the various number of english speakers with info on the number of those who have English as a first language and those who have it as an additional language. View the __data frame__ to see its contents.
 
 There are a lot of NA values. Looking at the values in the __data frame__ try to figure out the two reasons that these NA values are present. Once you have had a thought you can have a look at the below two reasons.
@@ -361,9 +371,10 @@ We will come back to the __data frames__ "tea_df" and "english_complete_datasets
 
 
 ## Identical
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/identikeys.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/identikeys.png){style="width:200px"}
+</center>
+
 I touched on the `identical()` __function__ above to compare the two resulting __data frames__. `identical()` will compare two objects and if the objects are exactly identical it will print TRUE. If they are not exactly identical it will print FALSE. The function can be given __scalars__, __vectors__, __data frames__ etc. Below are some examples
 ```{r eval=FALSE}
 identical(1,1)
@@ -383,14 +394,15 @@ identical(english_df,tea_df)
 ```
 
 ## Shortcuts
-```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
-knitr::include_graphics(path = "figures/keyboard.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/keyboard.png){style="width:300px"}
+</center>
+
 RStudio has many keyboard shortcuts for the __Script editor__. Some of these are common shortcuts used for other software and some are unique to RStudio. 
 
 Below are a few:
 
-- "Ctrl + a" : This will highlight all text in a __Script editor__ that your cursor is in. This is useful to run all your code by highlighting it all and then pressing "Ctrl + enter". Be careful though as if you starting typing when all the text is highlighted it will delete it all.
+- "Ctrl + a" : This will highlight all text in a __Script editor__ that your cursor is in. This is useful to run all your code by highlighting it all and then pressing "Ctrl + enter". Be careful though as if you start typing when all the text is highlighted it will delete it all.
 - "Ctrl + z" : This will undo your last typing action. You can undo your actions till the last time you saved your script. Very useful if you accidentally delete some text.
 - "Ctrl + c" : Copy highlighted text.
 - "Ctrl + p" : Paste text.
@@ -400,9 +412,9 @@ Below are a few:
 There are a lot more shortcuts. If you want to see the full list go to "Tools" on the RStudio toolbar and then select "Keyboard Shortcuts Help"
 
 ## Handy tips & tricks MCQs
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble_blue.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/question_bubble_blue.png){style="width:200px"}
+</center>
 
 Attempt the below MCQs.
 

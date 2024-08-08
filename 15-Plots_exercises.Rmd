@@ -1,7 +1,8 @@
 # Plots exercises
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/penguin.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/penguin.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
 These exercises will primarily use the "penguin_df" from the theory and practice session.
 
 Please use your "Exercises.R" script for this exercise and the main workshop directory as the working directory. Ensure you are using annotations and code sections to keep the contents clear and separated.
@@ -15,7 +16,7 @@ penguin_df <- read.csv("Chapter_13-16/penguin.tsv",
                       )
 ```
 
-Your plots might not look exactly the same. As long as your plot contains the same data it is good. If you ar enot sure if your plot is correct, feel fre to look at the solutions to look at my code.
+Your plots might not look exactly the same. As long as your plot contains the same data it is good. If you are not sure if your plot is correct, feel free to look at the solutions to look at my code.
 
 ## Line graph
 First we will ignore "penguin_df".

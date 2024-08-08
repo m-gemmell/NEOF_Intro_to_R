@@ -1,7 +1,7 @@
 # Foundations of R exercises
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/kettle_bell.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/kettle_bell.png){style="width:200px"}
+</center>
 
 This will be the simplest of the exercises but will be a good opportunity to reinforce what you have learnt. In fact there is no solution section for this as it is unneeded.
 
@@ -21,7 +21,7 @@ On the first line of this script type the following annotation:
 # Exercise 1 ####
 ```
 
-The `####` creates a code section, these will be explained in a later week. You could also use `----` or `====` at the end of an annotation to create a code section.
+The `####` creates a code section, these will be explained in a later chapter. You could also use `----` or `====` at the end of an annotation to create a code section.
 
 The next step is the most tedious, unfortunately tedious repetition is one of the best ways to learn.
 

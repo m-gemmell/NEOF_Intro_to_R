@@ -1,12 +1,13 @@
 # Handy Solutions
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/answers.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/answers.png){style="width:200px"}
+</center>
 
 ## Tea solution
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/tea.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/tea.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
 First ensure you have the "tea_df" loaded (remember your working directory will need to be in the correct location first). Also it needs to be preprocessed with the `gsub()` function.
 ```{r eval=FALSE}
 tea_df <- read.csv("Chapter_10-11/tea_consumption.csv", check.names=FALSE)
@@ -50,9 +51,9 @@ paste0(tea_df_subset$Country, " is the number ",
 ```
 
 ## English speakers across the world solution
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/language.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/language.png){style="width:200px"}
+</center>
 
 First make sure the __data frame__ is created. Remember to set your working directory to where the file is.
 ```{r eval=FALSE}
@@ -98,7 +99,6 @@ english_100mil_df["Total","Fraction of population that are English speakers"] <-
   english_100mil_df["Total","Total English speakers"] /
   english_100mil_df["Total","Eligible population"]
 ```
-
 
 __Write__ the data as a file
 ```{r eval=FALSE}

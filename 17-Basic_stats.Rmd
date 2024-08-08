@@ -1,20 +1,21 @@
 # (PART\*) Stats & Programming {.unnumbered}
 
 # Basic stats {#basicstats}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/basic_stats.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/basic_stats.png){style="width:200px"}
+</center>
 
-This week we'll learn how to carry out some basic stats. This will involve linear regressions and some t-tests.
+In this chpater we'll learn how to carry out some basic stats. This will involve linear regressions and some t-tests.
 
 Create and use the directory "Chapter_17-18" as the working directory for this chapter. Additionally create a new script called "Stats.R" for this chapter.
 
 Before we continue just a reminder about [annotations](#annotations) and [code sections](#codesections).
 
 ## Linear regression
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/linear_regression.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/linear_regression.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
 Linear regression is a method to model the relationship between two __numeric vectors__. Ultimately we want to produce the predictive equation:
 
 $$
@@ -24,9 +25,10 @@ $$
 Where _m_ is equal to the gradient and _c_ is equal to the intercept. With this we can predict the value of _y_ if we know the value of _x_ and vice versa.
 
 ### Fish market dataset
-```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
-knitr::include_graphics(path = "figures/bream.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/bream.png){style="width:300px"}
+</center>
+
 Before getting to the analysis we need to read in the data. For this chapter we will be looking at the file [Fish.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/Fish.csv) which contains information of 7 common fish species sold in Fish markets (Source: https://www.kaggle.com/aungpyaeap/fish-market).
 
 The columns for the data are:
@@ -60,9 +62,10 @@ nrow(bream_df)
 We are left with 35 data points which should be plenty for our linear regression.
 
 ### Scatterplot
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/Scatterplot_2.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/Scatterplot_2.png){style="width:200px; background:white; border-radius:5px"}
+</center>
+
 Before we carry out the linear regression we'll create a scatterplot of the two __vectors__ we want to compare. For the first instance we will compare __Height__ to __Length1__ (vertical length).
 
 In fact before we do, let's change the column name "Length1" to "v_length" so it is a bit more intuitive for us. Whilst we are at it we'll change the other length column names.
@@ -78,9 +81,10 @@ plot(x = bream_df$v_length, y = bream_df$Weight)
 Super! That looks like a decently linear plot with a positive trend. We will therefore fit the linear model.
 
 ### Linear model
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/lm.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/lm.png){style="width:200px"}
+</center>
+
 We can fit a linear model with the __function__ `lm()`. We simply provide the column names as a formula ( `y_column_name ~ x_column_name` ) similar to the `boxplot()` __function__.
 
 ```{r eval=FALSE}
@@ -131,9 +135,10 @@ text(x = 30, y = 800, labels = linear_equation)
 The `text()` options `x = ` and `y =` normally require a bit of trial and error to set it in a nice location. This can be a bit fiddly but is made much easier by making the label smaller (e.g. making the numbers have a smaller amount of decimal places).
 
 ## t-test
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/scale.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/scale.png){style="width:200px"}
+</center>
+
 A t-test can be used to determine if there is a significant difference between the means of two groups.
 
 In this example we will compare the weights of the fish Bream, Parkki, and Roach. Therefore let's subset our __data frame__ so we have three __data frames__, one for each species.
@@ -146,9 +151,10 @@ roach_df <- fish_df[fish_df$Species == "Roach",]
 ```
 
 ### Boxplot
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/boxplot.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/boxplot.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
 Before carrying out a t-test it can be useful to visualise the difference between groups with a boxplot.
 
 Before we do this we need to combine the three __data frames__ into one. This can be done by binding the rows with `rbind()`. This will combine two provided __data frames__ which contain the same number of columns with the same column names.
@@ -169,9 +175,10 @@ boxplot(Weight~Species, data = fish_subset_df)
 We can clearly see that the weights of Parkki and Roach are very similar to each other but very different to Bream's weight.
 
 ### t-test comparison
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/five_percent.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/five_percent.png){style="width:200px"}
+</center>
+
 Let us see if what we see visually is also visible statistically.
 
 We can carry out a t-test with the __function__ `t.test()`. Simply provide the __function__ with the two __numerical vectors__ you would like to compare.
@@ -219,9 +226,9 @@ fish_species_weight_ttests < 0.05
 Do these p-values match what you saw in the boxplot?
 
 ## Some more useful functions
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/r_toolbox.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/r_toolbox.png){style="width:200px; background:white; border-radius:15px"}
+</center>
 
 ### Summary
 The __function__ `summary()` can give you some quick summary information for each column of a __data frame__.
@@ -252,9 +259,10 @@ Now `summary()` shows how many instances of each species is present in the __dat
 For future cases it may better to use `stringsAsFactors = TRUE` with the `read.csv()` __function__ when we first read in the file.
 
 ### Table
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/table_ikea.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/table_ikea.png){style="width:200px"}
+</center>
+
 The `table()` __function__ will provide a __vector__ containing the number of instances for each __level__ in a __factor__. This is pretty much what `summary()` did to a __factor__.
 
 However, unlike `summary()` it will also do this for __characters__ and __numerics__.
@@ -296,9 +304,10 @@ barplot(table(random_char_vec))
 A few more __functions__ were introduced above. I will let you explore them yourself or you can ask me verbally.
 
 ## Further resources
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/resources.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/resources.png){style="width:200px"}
+</center>
+
 Below are some further resources you can check that will help if you want to do some other plots and figures.
 
 __Quick-R__: https://www.statmethods.net/index.html

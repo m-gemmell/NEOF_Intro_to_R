@@ -3,9 +3,9 @@
 Before looking at these solutions keep in mind that there are many different ways to do the same thing in R. Therefore if your scripts are different than the ones below it does not mean they are wrong. As long as they produce the intended output they are correct.
 
 ## Bats solution
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/bat_solution.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/bat_solution.png){style="width:200px; border-radius:5px; background:white"}
+</center>
 
 Read in the file as a __data frame__:
 ```{r eval=FALSE}
@@ -42,7 +42,7 @@ I will let you decipher them yourself.
 #Question 1: Which region has no roosts?
 col_names_logical_vec <- bat_t_df["All_Bat_Species",] == 0
 colnames(bat_t_df)[col_names_logical_vec]
-#Question 2: Which region has the largest amount of _Myotis brandtii_ roosts?
+#Question 2: Which region has the largest amount of Myotis brandtii roosts?
 species <- "Myotis brandtii"
 df_wo_total_species_and_uk <- bat_t_df[1:(nrow(bat_t_df)-1),1:(ncol(bat_t_df)-1)]
 max_colonies <- max(df_wo_total_species_and_uk[species,])
@@ -60,9 +60,9 @@ row.names(bat_t_df)[row_names_logical_vec]
 `r unhide()`
 
 ## Honey bee colonies
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/beehive_solution.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/beehive_solution.png){style="width:200px; border-radius:5px; background:white"}
+</center>
 
 Read in file:
 ```{r eval=FALSE}

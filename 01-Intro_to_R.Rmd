@@ -39,15 +39,15 @@ knitr::write_bib(c(
 #icons::download_ionicons()
 ```
 
-```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
-knitr::include_graphics(path = "figures/NEOF.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/neof_rounded_corners.png){style="width:300px"}
+</center>
 
 # (PART\*) Start {-}
 # Introduction
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/R.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/R.png){style="width:200px; border-radius:15px; background:white"}
+</center>
 
 This course will teach you the fundamentals of R, an essential skill for some of our future courses. The first day will focus on the basics of R with foundations and objects. In day 2 we will look at how to read in files and write out files from R. Additionally, you will get further practice on the previous materials whilst learning some handy tips and tricks.
 

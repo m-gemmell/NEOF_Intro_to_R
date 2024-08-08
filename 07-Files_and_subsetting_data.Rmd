@@ -1,14 +1,14 @@
 # (PART\*) Files, Subsetting, & Tips {.unnumbered}
 
 # Files and subsetting data {#filesubsettingchap}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/R_df.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/R_df.png){style="width:200px"}
+</center>
 
 ## Reading from a file
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/r_read.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/r_read.png){style="width:400px; background:white; border-radius:15px"}
+</center>
 
 In chapter 4 we created __data frames__ with R __functions__. This was useful to help understand how __data frames__ work in R. However, in real life you will most likely not do this very often. Instead you will have data files you need to analyse with R.
 
@@ -23,15 +23,15 @@ Prior to using a file you will need to acquire it.
 - Set your working directory to this new directory ([Directories](#directories)). You will stay here for this chapter.
 
 ### Viewing the file
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/view.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/view.png){style="width:200px; background:white; border-radius:15px"}
+</center>
 
 The next task to carry out is to __read__ in the file "Liverpool_beaches.csv" . Before __reading__ in the file we can check the contents of the file. This can be carried out by opening it with notepad (or similar text tool) or viewing the file with RStudio. 
 
 To view the file with RStudio:
 
-- Use the __Files pane__ of the __MISC window__ to navigate to the directory containing the file.
+- Use the __Files pane__ of the __MISC window__ to navigate to the directory containing the file
 - Click on the file name and then click "View File"
 - This will open a tab in the __Source window__ matching the file name
 
@@ -40,9 +40,9 @@ You will notice that the values are separated by commas as this is a "comma sepa
 __Note__: Create a new R script file called __"3-Files_and_subsetting.r"__ for this chapter's scripts.
 
 ### read.csv()
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/csv_file.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/csv_file.png){style="width:200px; background:white; border-radius:15px"}
+</center>
 
 There are various __functions__ to __read__ in files into R. My favourite is `read.csv()`. Use this function to __read__ in the file "Liverpool_beaches.csv":
 ```{r eval=FALSE}
@@ -51,7 +51,7 @@ liv_beaches_df <- read.csv("Liverpool_beaches.csv")
 
 Have a look at the newly created __data frame__. Is it how you would like it?
 
-The row names are empty and the beach names are in the first column. Let us fix this and make it so the beach names are the row names. This can be carried out by including the option `row.names = 1` to specify the 1st column will be the row names:
+The row names are empty and the beach names are in the first column. We'll fix this so the beach names are the row names. This can be carried out by including the option `row.names = 1` to specify the 1st column will be the row names:
 ```{r eval=FALSE}
 liv_beaches_df <- read.csv("Liverpool_beaches.csv", row.names = 1)
 ```
@@ -59,19 +59,19 @@ liv_beaches_df <- read.csv("Liverpool_beaches.csv", row.names = 1)
 We now know how to __read__ in a csv file with `read.csv`. 
 
 ### TSV files
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/footprint.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/footprint.png){style="width:200px; background:white; border-radius:15px"}
+</center>
 
 For our next task we will __read__ a tab separated file. 
 
-Download [Global_eco_footprint.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/Global_eco_footprint.tsv) into your "Chapter_7". This file contains The ecological footprint measures the ecological assets that a given population requires to produce the natural resources it consumes.
+Download [Global_eco_footprint.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/Global_eco_footprint.tsv) into your "Chapter_7". This file contains the 2016 global ecological footprint information. The ecological footprint measures the ecological assets that a given population requires to produce the natural resources it consumes.
 
 `r hide("More info on Global_eco_footprint.tsv")`
 More info can be found in the following link: https://www.kaggle.com/datasets/footprintnetwork/ecological-footprint.
 `r unhide()`
 
-Now use `read.csv()` to __read__ in the file. We'll set `row.names = 1` again but we will also include the option `sep = "\t"`. This option specifies the columns are separated (`sep`) by tabs (`"\t"`).
+Use `read.csv()` to __read__ in the file. We'll set the option `row.names = 1` again but also include the option `sep = "\t"`. This option specifies the columns are separated (`sep`) by tabs (`"\t"`).
 
 ```{r eval=FALSE}
 global_eco_footprint <- read.csv("Global_eco_footprint.tsv", 
@@ -87,9 +87,9 @@ global_eco_footprint_df <- read.csv("Global_eco_footprint.tsv",
 ```
 
 ### Excel files and R
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/readxl.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/readxl.png){style="width:200px"}
+</center>
 
 You may want to open excel files with R. Normally to do this I open the file in excel and save it as a .csv or a tab separated file and __read__ this into R. Alternatively there are R packages that can directly __read__ in excel files. If this is something you would like to do you can look at the following package:
 
@@ -98,16 +98,16 @@ https://readxl.tidyverse.org/
 An important note is that __reading__ in a file into R will not change the file. You are creating a new R __object__. Modifying this __object__ will not alter the original file. Later in the materials we will look into how to create new files or overwrite files by __writing__.
 
 ## Subsetting data
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/R_subset.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/R_subset.png){style="width:200px"}
+</center>
 
 R allows you to specify specific points in __R objects__. This is one of the primary reasons R is so useful and flexible. With good use of __assignment operators__ this allows for the subsetting of __variables__.
 
 ### Vectors
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/R_square_bracket.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/R_square_bracket.png){style="width:200px; background:white; border-radius:15px"}
+</center>
 
 We will start with __vectors__. Before carrying out and subsetting let us create some new __vectors__. We will use a new __function__ to create these, `seq()`.
 
@@ -219,15 +219,15 @@ divis_7_vec <- single_digit_vec[(single_digit_vec %% 7) == 0]
 ```
 
 ### Data frames
-```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
-knitr::include_graphics(path = "figures/biodiversity.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/biodiversity.png){style="width:200px; background:white; border-radius:15px"}
+</center>
 
 __Data frames__ can be subset similar to __vectors__. As with __vectors__ you can use `[]`. Additionally, `$` can be used to subset __data frames__.
 
 Square brackets must be provided indexes for rows and for columns. The structure for this is `df[row,column]`. It is very useful to remember that R always wants rows first then columns second.
 
-To practice subsetting __data frames__ with square brackets we will __read__ in a new file called - [parks_biodiveristy.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/parks_biodiveristy.csv). This contains the number of different species of various groups (Bird, Mammal, etc.) in US national parks. Data can be found:
+To practice subsetting __data frames__ with square brackets we will __read__ in a new file called [parks_biodiveristy.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/parks_biodiveristy.csv). This contains the number of different species of various groups (Bird, Mammal, etc.) in US national parks. Data can be found:
 
 https://www.kaggle.com/datasets/nationalparkservice/park-biodiversity
 
@@ -246,7 +246,7 @@ Now for some subset commands:
 #Scalar from the 1st row and 1st column
 parks_df[1,1]
 #Row names and column names can be used for indexing
-#Scalar from the row called L10 1LD and the column called Area
+#Scalar from the row called YOSE and the column called Amphibian
 parks_df["YOSE","Amphibian"]
 #More examples
 parks_df[1:10,2]
@@ -342,9 +342,9 @@ summary(t(parks_df[,3:5]))
 Try the above commands without subsetting the __data frame__. What is happening and why?
 
 ## Writing to a file
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/R_writing.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/R_writing.png){style="width:200px; background:white; border-radius:15px"}
+</center>
 
 Before we __write__ data to a file we will create a new __data frame__ from "parks_df". 
 
@@ -383,7 +383,7 @@ write.table(parks_t_df, file = "Park_species_info.csv", sep = ",", col.names=NA)
 
 Have a look at the file contents with RStudio.
 
-Let us do it one more time with the Global ecological footprint info. First let us __read__ in the file again in case you do not have it. Then we will create a total sales column and finally transpose the __data frame__:
+Let's do it one more time with the Global ecological footprint info. First __read__ in the file again in case you do not have it. Then create a total sales column and then finally transpose the __data frame__:
 ```{r eval=FALSE}
 #Read in
 global_eco_footprint_df <- read.csv("Global_eco_footprint.tsv", 
@@ -405,9 +405,9 @@ write.table(global_eco_footprint_t_df,
 With the fundamentals of __reading__, subsetting __data frames__, and writing covered it is time to carry out some exercises.
 
 ## Files & subsetting MCQs
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble_blue.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/question_bubble_blue.png){style="width:200px"}
+</center>
 
 Attempt the below MCQs.
 

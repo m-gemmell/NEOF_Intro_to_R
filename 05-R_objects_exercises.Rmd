@@ -1,8 +1,9 @@
 # R objects exercises {#robjectexercises}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/beach.png", auto_pdf = TRUE)
-``` 
-For this exercise simply produce the following tables as __data frames__ in R. Please carry this out in your __"Exercises.R"__ script and remember about code sections and annotations.
+<center>
+![](figures/beach.png){style="width:200px"}
+</center>
+
+For this exercise produce the following tables as __data frames__ in R. Please carry this out in your __"Exercises.R"__ script and remember about code sections and annotations.
 
 Tip: You can either write completely new code or reuse and alter previous code. 
 

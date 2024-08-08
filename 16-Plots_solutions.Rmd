@@ -1,7 +1,7 @@
 # Plots solutions
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/penguin_solutions.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/penguin_solutions.png){style="width:200px; background:white; border-radius:15px"}
+</center>
 
 ## Line graph solution
 Below is the code and the plot:

@@ -1,7 +1,7 @@
 # Handy exercises
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/exercises.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/exercises.png){style="width:200px"}
+</center>
 
 There has been a lot covered this session so these exercises will hopefully be straightforward.
 
@@ -10,9 +10,9 @@ Please set the working directory to your main workshop directory and use your "E
 Additionally __read__ in and __write__ out files to "Chapter_10-11" .
 
 ## Tea exercise
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/tea.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/tea.png){style="width:200px; background:white; border-radius:15px"}
+</center>
 
 The first task you will carry out is printing out information from "tea_df". Below is an example statement for the country Turkey:
 
@@ -23,9 +23,10 @@ Print out this statement for the countries Ireland, United Kingdom, France, and 
 __Tip__: You will require the __functions__ `paste()` and `round()` from day 1.
 
 ## English speakers across the world exercise
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/language.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/language.png){style="width:200px"}
+</center>
+
 The last exercise is to create the following table as a __data frame__ called "english_100mil_df". Use the "english_complete_datasets_df" __data frame__ as a start.
 
 ```{r echo = FALSE, results = 'MSc_winter_term_df'}
@@ -63,9 +64,10 @@ When you have created yours check it with the above one. Is your value for the "
 Once you have created the __data frame__ __write__ it out as a comma separated file with the function `write.table()` called "English_top_7_populated_countries.csv". Have the row and column names surrounded by quotes in your file. Make sure there is an empty value above your row names.
 
 ## Extra exercise
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/multiplication.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/multiplication.png){style="width:200px"}
+</center>
+
 If you still have time this session and you do not have any questions please attempt the following task:
 
 Create a multiplication table like the one in the practice from today. However have the row and column names equal one to twelve.

@@ -1,9 +1,9 @@
 # (PART\*) Foundations & Objects {.unnumbered}
 
 # Foundations of R {#foundations}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/foundational.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/foundational.png){style="width:200px"}
+</center>
 
 This section will cover the foundations of R. Understanding these concepts is fundamental to becoming an R user. The section will start with __operators__, these include `+`, `-`, `*`, and `/`, they allow us to use R like a calculator. Then we will look at __variables__. __Variables__ allow us to save the output from commands so we can use it in future commands. 
 
@@ -12,9 +12,9 @@ A lot of the power of R comes from the vast array of __functions__ it contains. 
 The section will end showing you some ways to use RStudio and the __script editor__.
 
 ## Operators
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/calculator.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/calculator.png){style="width:200px; border-radius:15px"}
+</center>
 
 __Operators__ are symbols in R that allow you to carry out many common tasks. The 3 main types of __operators__ in R are arithmetic, logical, and bitwise. We will ignore logical and bitwise and have a look at some arithmetic __operators__. 
 
@@ -54,9 +54,9 @@ R follows the BODMAS rules (Brackets, Orders (powers/roots), Division, Multiplic
 When entering commands via the __console__ the results/output is printed to the screen (ignore the [1] at the moment). However, this is no better than a normal calculator currently. R is a lot more powerful as we shall see.
 
 ## Variables
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/boxes.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/boxes.png){style="width:200px"}
+</center>
 
 The output/result of a command can be saved as a __variable__. Below is the format for creating a __variable__ in R (don't type this into R).
 
@@ -97,10 +97,11 @@ In the above commands the __variables__ are not printed out to the screen, this 
 To print the contents of a __variable__ to screen you can type the __variable name__ into the __console__ and press enter. This will print the __variable object__ to the screen. This is not needed for small __variable objects__, for which you can look at the __environment__ pane, but is useful for larger __variable objects__.
 
 ## Functions
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/function.png", auto_pdf = TRUE)
-``` 
-R __Functions__ allow the user to carry out a specific task. R has many inbuilt __functions__ but you can also create your own. Currently we will look at in built functions.
+<center>
+![](figures/function.png){style="width:200px; background: white; border-radius:15px"}
+</center>
+
+R __Functions__ allow the user to carry out specific tasks. R has many inbuilt __functions__ but you can also create your own. Currently we will look at inbuilt functions.
 
 The basic layout of a __function__ is:
 
@@ -142,9 +143,10 @@ The help page of __functions__ can be accessed in 2 main ways:
 ``` 
 
 ## Directories
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/directories.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/directories.png){style="width:200px; background: white; border-radius:15px"}
+</center>
+
 It is important to know what directory you are working in and how to change to different directories.
 
 ### Commands
@@ -170,9 +172,9 @@ The RStudio interface can also be used to carry out the above tasks.
 
 To see what the current working directory is, you can look at the top bar of the __console window__. The below shows I am in the __"F:/R/CE/CE_R_for_Everyone"__ directory. 
 
-```{r, fig.align = 'center',out.width= '80%', echo=FALSE }
-knitr::include_graphics(path = "figures/current_wd.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/current_wd.png){style="width:800px; border-radius:5px"}
+</center>
 
 There are two main ways to set your working directory.
 
@@ -190,22 +192,24 @@ There are two main ways to set your working directory.
     
 To show the current working directory in the __Files__ pane click the arrow on the top bar of the __console window__. You can then see what files and directories are in your working directory via the __Files__ pane in the __MISC__ window.
 
-```{r, fig.align = 'center',out.width= '80%', echo=FALSE }
-knitr::include_graphics(path = "figures/see_files.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/see_files.png){style="width:800px; border-radius:5px"}
+</center>
 
 With this information create a directory you will use for this course. This can be done outside of Rstudio or you can use the __Files pane__ in the __MISC window__. Once this is created set your working directory to it. With that done we can go onto the next section.
 
 ## Script editor{#scripteditor}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/editor.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/editor.png){style="width:200px"}
+</center>
+
 You can quickly type and run code using the __console window__. However, to fully utilise Rstudio we will instead use the __script editor__ in the __source window__. This allows us to reuse and edit code easier and it allows us to save our code so we can come back to it.
 
 If you cannot see your __script editor__, click the multi window button on the top of the __source window__ or __console window__.
-```{r, fig.align = 'center',out.width= '80%', echo=FALSE }
-knitr::include_graphics(path = "figures/script_editor_expand.png", auto_pdf = TRUE)
-``` 
+
+<center>
+![](figures/script_editor_expand.png){style="width:800px; border-radius:5px"}
+</center>
 
 Type the below into the __script editor__ and press __"enter"__.
 ```{r eval=FALSE}
@@ -221,9 +225,9 @@ On the new line type the below:
 ``` 
 
 ### Running commands
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/command.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/command.png){style="width:200px"}
+</center>
 
 You can run a command that is in the script editor by one of the two following ways:
 
@@ -242,9 +246,9 @@ I would encourage to primarily use the script editor to write your code. It is b
 
 
 ### Annotations{#annotations}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/hashtag.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/hashtag.png){style="width:200px; border-radius:15px; background:white"}
+</center>
 
 Annotations can be added to your code in the __script editor__. If a line starts with a `#` it will not be run as a command, this line is then an annotation. This is extremely useful to leave information for your future self. It is much harder to go back to old code and figure out what it does if it is just code.
 
@@ -262,9 +266,9 @@ __Tip__: If you have selected the __script editor__ you can use __"Ctrl"__ + __"
 ``` 
 
 ### Saving scripts
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/r_save.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/r_save.png){style="width:200px"}
+</center>
 
 Finally, one of the best aspects of using the __script editor__ is that you can save your scripts. I use this so I can have scripts for specific projects and template scripts for certain tasks I routinely carry out.
 
@@ -288,14 +292,14 @@ You can have multiple scripts open at one time and switch between these scripts 
 
 To create and open a new script, click on the button on the RStudio toolbar shown below and select __"R script"__.
 
-```{r, fig.align = 'center',out.width= '80%', echo=FALSE }
-knitr::include_graphics(path = "figures/new_script_button.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/new_script_button.png){style="width:800px"}
+</center>
 
 ## Foundations MCQs
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble_black.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/question_bubble_black.png){style="width:200px; border-radius:15px; background:white"}
+</center>
 
 Choose the correct option to complete the below sentences:
 

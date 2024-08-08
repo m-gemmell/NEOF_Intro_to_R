@@ -1,7 +1,7 @@
 # R objects solutions
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/week2_solutions.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/week2_solutions.png){style="width:200px"}
+</center>
 
 ## df solution
 ### Step 1

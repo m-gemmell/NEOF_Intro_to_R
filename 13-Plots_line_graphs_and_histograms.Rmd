@@ -1,18 +1,19 @@
 # (PART\*) Plots {.unnumbered}
 
 # Histograms and Line graphs {#histsandlineschap}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/palette.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/palette.png){style="width:200px"}
+</center>
 
 In this chapter we will learn how to create two different types of plots; Histograms and Line graphs. I have chosen these two types of plots first as they are relatively straightforward to create.
 
 Create and use the directory "Chapter_13-16" as the working directory for this chapter. Additionally create a new script called "Histograms_n_line_graphs.R" for this chapter.
 
 ## Histogram
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/histogram.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/histogram.png){style="width:200px"}
+</center>
+
 A histogram consists of bars showing the frequency of variables present in numbered ranges (bins). This allows you to see an approximate distribution of numerical data.
 
 We are starting with histograms as the __function__ `hist()`, which creates a histogram, only requires one __vector__. 
@@ -24,7 +25,7 @@ numeric_vec <- 1:40
 hist(numeric_vec)
 ``` 
 
-You will notice that the histogram is not very interesting. There are 8 bars all of equal size. This is because we plotted the numbers from 1-40 so numbers 1-5 are counted in the first bar/bin, 6-10 in the second bar/bin and so forth. To get a more interesting histogram we will create a more interesting __vector__.
+You will notice that the histogram is not very interesting. There are 8 bars all of equal size. This is because we plotted the numbers 1-40 so numbers 1-5 are counted in the first bar/bin, 6-10 in the second bar/bin and so forth. To get a more interesting histogram we will create a more interesting __vector__.
 
 Histograms are good to see the numerical distribution of data. In this case we are going to look at the number of cities (with greater than 300,000 population) in EU countries (https://en.Wikipedia.org/wiki/List_of_cities_in_the_European_Union_by_population_within_city_limits).
 
@@ -83,18 +84,19 @@ Looking at the plot most countries seem to have a ratio of 2-6 million citizens 
 
 Before we go onto line graphs I'll show you how to look at your previous plots. In the __Plots pane__ of the __MISC window__ there are two arrows on the top left. You can use these to go backwards and forwards between the plots you have created since you opened RStudio. Give it a go!
 
-```{r, fig.align = 'center',out.width= '40%', echo=FALSE }
-knitr::include_graphics(path = "figures/RStudio_plot_pane_arrows.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/RStudio_plot_pane_arrows.png){style="width:400px; border-radius:5px"}
+</center>
 
 ## Line graphs
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/line_graph.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/line_graph.png){style="width:200px"}
+</center>
+
 Line graphs are perfect for showing change over time. Knowing this we'll go back to a data set we have touched before, the file "honey_bee.tsv" from Chapter 8. This file showed the number of Honey Bee colonies in various US states from 2015-2018.
 
 ### Read in data
-First step is to __read__ in the data from the "Chapter_8_files" directory. Once the __data frame__ is created we will remove all non 2017 & 2018 information.
+The first step is to __read__ in the data from the "Chapter_8_files" directory. Once the __data frame__ is created we will remove all non 2017 & 2018 information.
 
 __Note__: The `../` below represents going up one directory. I.e. going up from your current working directory ("Chapter_13-16") to the main directory so it can be directed to "Chapter_8_files".
 
@@ -141,7 +143,7 @@ lines(y = bee_colonies_df$Pennsylvania, x = bee_colonies_df$time_point)
 We have created the line graph with all the states However all the data is not visible.
 
 ### Axis limits
-To fix this we need to make sure all the data is within the graph. When the `plot()` __function__ was run it created the y limits based on Minnesota which has a minimum and maximum value of 136000 and 27000. Unfortunately the other some other states barely fit in this range.
+To fix this we need to make sure all the data is within the graph. When the `plot()` __function__ was run it created the y limits based on Minnesota which has a minimum and maximum value of 136000 and 27000. Unfortunately some of the other states barely fit in this range.
 
 To prevent this issue we can use the `plot()` option of `ylim = `. This option is provided with a __vector__ of 2 numbers. The first number is where the y axis will start. The second number is where the y axis will end.
 
@@ -176,7 +178,7 @@ Great! That is much better. We can now see that two lines fall after time_point 
 Numbers on the x axis are not ideal in this case. We will therefore use the `axis()` function to set our own x axis labels. We will use the following options for this:
 
 - `1`: The first option to `axis()` indicates the location of the axis labels. `1` indicates they will be located on the x axis (below).
-- `at = bee_colonies_df$time_point`: This indicates where the points tic marks will be drawn.
+- `at = bee_colonies_df$time_point`: This indicates where the points tick marks will be drawn.
 - `labels = row.names(bee_colonies_df)`: A character __vector__ for the labels to be placed at the tick marks.
 
 For more info for `axis()` run the command `?axis` to see its help page.
