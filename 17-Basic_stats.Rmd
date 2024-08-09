@@ -179,9 +179,9 @@ We can clearly see that the weights of Parkki and Roach are very similar to each
 ![](figures/five_percent.png){style="width:200px"}
 </center>
 
-Let us see if what we see visually is also visible statistically.
+Will statistical analysis backup our visual findings?
 
-We can carry out a t-test with the __function__ `t.test()`. Simply provide the __function__ with the two __numerical vectors__ you would like to compare.
+We can carry out a t-test with the __function__ `t.test()`. For this we need to provide the __function__ with the two __numerical vectors__ we'd like to compare.
 ```{r eval=FALSE}
 bream_parkki_ttest <- t.test(bream_df$Weight, parkki_df$Weight)
 bream_roach_ttest <- t.test(bream_df$Weight, roach_df$Weight)

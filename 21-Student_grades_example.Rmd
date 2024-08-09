@@ -1,13 +1,14 @@
 # Student grades example
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/grades.png", auto_pdf = TRUE)
-``` 
-In this section we are going to go through analysing datasets of students grades. 
+<center>
+![](figures/grades.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
+In this section we are going to go through analysing datasets of student grades. 
 
 ## The student grades data
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/data.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/data.png){style="width:200px"}
+</center>
 
 Download the five following files into your directory "Chapter_20-21".
 
@@ -32,21 +33,23 @@ The files each contain the columns:
 Source of data: https://www.kaggle.com/spscientist/students-performance-in-exams
 
 ## Analysis script
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/hashtag2.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/hashtag2.png){style="width:200px"}
+</center>
+
 Before carrying on I would suggest to set your working directory into the directory "Chapter_20-21".
 
 Now create a new R Script and save it as "student_grades.R" in the "Chapter_20-21" directory. It is useful to have your scripts close to their relevant data.
 
 Ensure you use annotations and code sections to keep your script organised and tidy.
 
-One extra tip: I normally like to keep a `setwd()` command at the top of my R Scripts so the script will set itself to the correct working directory. I just copy the relevant command from the __console__.
+One extra tip: I normally like to keep a `setwd()` command at the top of my R Scripts so the script will set itself to the correct working directory. I copy the relevant command from the __console__ after I set the working directory via the RSudio interface.
 
 ## Reading in and preprocessing the data
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/r_read.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/r_read.png){style="width:200px; border-radius:15px; background:white"}
+</center>
+
 We are going to first read in the data and carry out some changes to it. First we'll carry this out on just the group A data.
 
 Read in the group A TSV (tab separated value) file:
@@ -144,9 +147,10 @@ group_e_df <- read_and_preprocess("student_grades_group_E.tsv")
 ```
 
 ## Combining the data frames
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/combine.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/combine.png){style="width:200px"}
+</center>
+
 A lot of the time we have multiple files but we want all the data to be in one __data frame__.
 
 The first step is to create a __list__ containing our __data frames__. A __list__ is just like a __vector__ except it can hold heterogeneous data (multiple classes) whilst a __vector__ can only contain homogeneous data (one class).
@@ -193,9 +197,9 @@ student_grades_df$group <- factor(student_grades_df$group)
 ```
 
 ## Saving the data frame
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/r_save.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/r_save.png){style="width:200px"}
+</center>
 
 You can write the new __data frame__ to a text file. This is good if you want to use the file outside of R. 
 
@@ -219,12 +223,13 @@ load("student_grades_df")
 Saving your R __objects__ acts as very good checkpoints after code that takes a long time to run.
 
 ## Scaling & Grading
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/letter_grades.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/letter_grades.png){style="width:200px; border-radius:15px; background:white"}
+</center>
+
 We currently have the base scores (%) for the students but not their letter grade (A,B,C, or F in this case).
 
-Before we provide the grades we are go to scale each student's results. There are complicated ways to do this but we will get the mean score for each topic (math, writing, and reading). For each score below the mean we will minus 5 and for each score above will will add 5. Scores equal to the mean will not be affected.
+Before we provide the grades we are going to scale each student's results. There are complicated ways to do this but we will get the mean score for each topic (math, writing, and reading). For each score below the mean we will minus 5 and for each score above will will add 5. Scores equal to the mean will not be affected.
 ```{r eval=FALSE}
 #Create function to scale score vector
 scale_score <- function(score_vec){
@@ -304,9 +309,10 @@ save(student_grades_df, file = "student_grades_df")
 ```
 
 ## Some quick plots
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/bar_chart.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/bar_chart.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
 Below are some quick plots with their code.
 ```{r echo=FALSE, eval=TRUE}
 load("student_grades_df")
@@ -367,9 +373,10 @@ boxplot(
 I think that is plenty of coding for today and for this course. Thank you very much!
 
 ## Tips for creating your own loops and functions
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/tip_box.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/tip_box.png){style="width:200px; background:white; border-radius:10px"}
+</center>
+
 Before you go here are some quick tips.
 
 - Create the code outside the __loop/function__ to begin with.

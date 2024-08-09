@@ -1,9 +1,10 @@
 # Stats solutions
 
 ## World happiness report solutions
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/world_happiness_solutions.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/world_happiness_solutions.png){style="width:200px"}
+</center>
+
 1. Read in the file
 ```{r eval=TRUE}
 happy_df <- read.csv("Chapter_17-18/world_happiness_report_2016.csv", 
@@ -85,7 +86,7 @@ dev.off()
 - Which variable (Economy or Family) has higher values?
     + __Economy__
 - If the value of Economy was 2.1 what would be the predictive value of Family according to the linear model equation?
-    + __(0.4328*2.1) + 0.3808 = 1.28968__
+    + (0.4328*2.1) + 0.3808 = 1.28968
 - Which region appears to have the highest values for Economy and for Family?
     + __Western Europe__
 

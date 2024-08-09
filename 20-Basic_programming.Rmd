@@ -1,15 +1,17 @@
 # Basic programming {#basicprogramming}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/programming.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/programming.png){style="width:200px"}
+</center>
+
 In this chapter we will be look at some basic programming with R. This will involve __loops__, __if__ statements, and creating your own __functions__.
 
 Create and use the directory "Chapter_20-21" as the working directory for this chapter. Additionally create a new script called "Programming.R" for this chapter.
 
 ## Recycle rule
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/recycle.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/recycle.png){style="width:200px"}
+</center>
+
 When two __objects__ of different lengths act upon each other the smaller __object__ will be recycled so each element in the larger __object__ is acted upon.
 
 We will demonstrate this with the below example. Run the command below and then read the explanation.
@@ -33,9 +35,9 @@ large_vec <- 1:9
 small_vec * large_vec
 ```
 
-```{r, fig.align = 'center',out.width= '80%', echo=FALSE }
-knitr::include_graphics(path = "figures/recycle_rule_example_1.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/recycle_rule_example_1.png){style="width:600px; border-radius:5px"}
+</center>
 
 Depending on the length of the large __vector__ the __elements__ of the smaller __vector__ may be recycled an uneven amount of times. For example:
 
@@ -74,9 +76,9 @@ paste0(recyclable_materials, " can be recycled at ", recycle_centres)
 ```
 
 ## Loops
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/loop.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/loop.png){style="width:200px"}
+</center>
 
 With __loops__ we can carry out the same commands and __functions__ on multiple __elements__ within a 1 dimensional __object__ (__vector__ or __list__) without having to type it out multiple times.
 
@@ -244,9 +246,10 @@ i
 ```
 
 ## If statements
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/flow_chart.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/flow_chart.png){style="width:200px; border-radius:15px; background:white"}
+</center>
+
 __If statements__ allow for different commands to be carried out depending on __if__ a condition is met. 
 
 This can be thought of like a flow chart where you go one way if you answer yes and another if you answer no. Example:
@@ -291,9 +294,10 @@ for (i in 0:9) {
 ```
 
 ##  Functions
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/custon_function.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/custon_function.png){style="width:200px; background:white; border-radius:100px"}
+</center>
+
 Throughout this course we have used many __functions__. However, you may want a __function__ that does not exist. In this case you can create your own.
 
 The format to create your own __function__ is:

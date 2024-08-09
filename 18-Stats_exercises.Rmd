@@ -3,9 +3,9 @@
 Please use your "Exercises.R" script for this exercise and the main workshop directory as the working directory. Ensure you are using annotations and code sections to keep the contents clear and separated.
 
 ## World happiness report
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/world_happiness.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/world_happiness.png){style="width:200px"}
+</center>
 
 ### Data
 For this exercise we will be looking at the World Happiness Report for 2016. This report is a survey of the state of global happiness.
