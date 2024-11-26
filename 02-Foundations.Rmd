@@ -157,7 +157,7 @@ Below are commands you can run in the RStudio __console__ or __script editor__ (
 getwd()
 ``` 
 
-- Set working directory. The path of the directory must be in quotes like below. If you do run the below command make sure the path exists in your computer, as I am the sure the example below will not. 
+- Set working directory. The path of the directory must be in quotes like below. If you do run the below command make sure the path exists in your computer, as I am sure the example below will not. 
 ```{r eval=FALSE}
 setwd("/path/of/directory")
 ``` 
@@ -187,7 +187,7 @@ There are two main ways to set your working directory.
 2. Via the __MISC window__ (bottom right)
     1. Click the __Files pane__
     2. Navigate to the directory you would like to set as the working directory
-    3. On the __MISC toolbar__ click on the cog icon (It may say __"More"__ beside it).
+    3. On the __MISC toolbar__ click on the cog icon (It may say __"More"__ beside it)
     4. On the drop down click __"Set As Working Directory"__
     
 To show the current working directory in the __Files__ pane click the arrow on the top bar of the __console window__. You can then see what files and directories are in your working directory via the __Files__ pane in the __MISC__ window.
@@ -203,7 +203,7 @@ With this information create a directory you will use for this course. This can 
 ![](figures/editor.png){style="width:200px"}
 </center>
 
-You can quickly type and run code using the __console window__. However, to fully utilise Rstudio we will instead use the __script editor__ in the __source window__. This allows us to reuse and edit code easier and it allows us to save our code so we can come back to it.
+You can quickly type and run code using the __console window__. However, to fully utilise Rstudio we will instead use the __script editor__ in the __source window__. This allows us to reuse and edit code easier, and to save our code so we can come back to it.
 
 If you cannot see your __script editor__, click the multi window button on the top of the __source window__ or __console window__.
 

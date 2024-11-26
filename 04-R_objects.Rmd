@@ -59,7 +59,7 @@ class(3.14)
 class(6)
 ```
 
-Create a __variable__ with the __name__ "pie"" containing the __numeric__ 3.14:
+Create a __variable__ with the __name__ "pie" containing the __numeric__ 3.14:
 ```{r eval=FALSE}
 #Creating a variable using the assignment operator
 pie <- 3.14
@@ -307,7 +307,7 @@ paste(animals, " is a ", bird_or_mammal, sep = "")
 
 ### Data frames & Matrices
 <center>
-![](figures/Rmatrix.png){style="width:200px"}
+![](figures/Rmatrix.png){style="width:200px; background:white; border-radius:15px"}
 </center>
 
 __Data frames__ & __matrices__ are 2-dimensional data structures as they have rows and columns.
