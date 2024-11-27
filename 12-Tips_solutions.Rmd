@@ -57,10 +57,11 @@ paste0(tea_df_subset$Country, " is the number ",
 
 First make sure the __data frame__ is created. Remember to set your working directory to where the file is.
 ```{r eval=FALSE}
-english_df <- read.csv("Chapter_10-11/english_speaking_population_of_countries.tsv", 
-                   sep = "\t", 
-                   row.names = 1,
-                   check.names = FALSE)
+english_df <- read.csv(
+  "Chapter_10-11/english_speaking_population_of_countries.tsv", 
+  sep = "\t", 
+  row.names = 1,
+  check.names = FALSE)
 english_df[is.na(english_df)] <- 0
 english_complete_datasets_df <- 
   english_df[

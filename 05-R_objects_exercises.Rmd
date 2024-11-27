@@ -1,6 +1,6 @@
 # R objects exercises {#robjectexercises}
 <center>
-![](figures/beach.png){style="width:200px"}
+![](figures/beach.png){style="width:200px; background:white; border-radius:15px"}
 </center>
 
 For this exercise produce the following tables as __data frames__ in R. Please carry this out in your __"Exercises.R"__ script and remember about code sections and annotations.

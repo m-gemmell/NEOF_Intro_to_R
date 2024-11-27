@@ -1,6 +1,6 @@
 # R objects solutions
 <center>
-![](figures/week2_solutions.png){style="width:200px"}
+![](figures/week2_solutions.png){style="width:200px; background:white; border-radius:15px"}
 </center>
 
 ## df solution

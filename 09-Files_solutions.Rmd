@@ -9,7 +9,8 @@ Before looking at these solutions keep in mind that there are many different way
 
 Read in the file as a __data frame__:
 ```{r eval=FALSE}
-bat_df <- read.csv("Chapter_8_files/bat_roosts.csv", row.names = 1, check.names = FALSE)
+bat_df <- read.csv("Chapter_8_files/bat_roosts.csv", 
+                   row.names = 1, check.names = FALSE)
 ```
 
 Add a row with column totals:
@@ -44,7 +45,8 @@ col_names_logical_vec <- bat_t_df["All_Bat_Species",] == 0
 colnames(bat_t_df)[col_names_logical_vec]
 #Question 2: Which region has the largest amount of Myotis brandtii roosts?
 species <- "Myotis brandtii"
-df_wo_total_species_and_uk <- bat_t_df[1:(nrow(bat_t_df)-1),1:(ncol(bat_t_df)-1)]
+df_wo_total_species_and_uk <- bat_t_df[
+  1:(nrow(bat_t_df)-1),1:(ncol(bat_t_df)-1)]
 max_colonies <- max(df_wo_total_species_and_uk[species,])
 col_names_logical_vec <- df_wo_total_species_and_uk[species,] == max_colonies
 colnames(df_wo_total_species_and_uk)[col_names_logical_vec]
@@ -82,7 +84,8 @@ bee_colonies_2017_2018_df <- tail(bee_colonies_df, n = 8)
 
 Print Minnesota colony numbers:
 ```{r eval=FALSE}
-paste("The number of colonies in Minnesota for", row.names(bee_colonies_2017_2018_df),
+paste("The number of colonies in Minnesota for", 
+      row.names(bee_colonies_2017_2018_df),
       "was", bee_colonies_2017_2018_df$Minnesota, 
       sep = " ")
 ```
@@ -94,7 +97,8 @@ bee_colonies_2017_2018_df["Average",] <- colMeans(bee_colonies_2017_2018_df)
 
 Write out file:
 ```{r eval=FALSE}
-write.table(bee_colonies_2017_2018_df, "Chapter_8_files/bee_colonies_2017_2018.tsv", 
+write.table(bee_colonies_2017_2018_df, 
+            "Chapter_8_files/bee_colonies_2017_2018.tsv", 
             sep = "\t", col.names = NA, quote = FALSE)
 ```
 
@@ -107,7 +111,8 @@ I will let you decipher them yourself.
 #Question 1: Which state has the lowest average?
 min_average <- min(bee_colonies_2017_2018_df["Average",])
 states <- colnames(bee_colonies_2017_2018_df)
-min_average_state <- states[bee_colonies_2017_2018_df["Average",] == min_average]
+min_average_state <- states[
+  bee_colonies_2017_2018_df["Average",] == min_average]
 min_average_state
 #Question 2: Which state has the highest minimum value of colonies?
 bee_summary <- summary(bee_colonies_2017_2018_df[1:8,])

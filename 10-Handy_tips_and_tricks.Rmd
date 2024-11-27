@@ -100,7 +100,8 @@ beach_df_2 <- data.frame(Crab = c(10,1,1,4),
                          Oystercatcher = c(5,6,4,4),
                          Sandpiper = c(1,1,2,3),
                          Starfish = c(3,3,7,4), 
-                         row.names = c("Formby","West Kirby","Crosby","New Brighton"))
+                         row.names = c("Formby","West Kirby",
+                                       "Crosby","New Brighton"))
 ```
 
 Hopefully you will agree with me that the long coding is a lot easier and quicker to read.
@@ -280,7 +281,8 @@ letter_vec <- gsub(pattern = "A", replacement = "a", letter_vec)
 #Vector with unwanted info after "_"
 extra_info_vec <- c("A_some","B_nada","C_stuff","D_nill")
 #Replace the _ and everything after it with nothing
-#We signify this with ".*" which means any character (.) repeated zero or more times (*)
+#We signify this with ".*" 
+#This means any character (.) repeated zero or more times (*)
 gsub(pattern = "_.*", replacement = "", extra_info_vec)
 
 #What if we use gsub() with numerics?
@@ -329,7 +331,7 @@ Now we will do some processing of the "english_df" __data frame__. This shows th
 There are a lot of NA values. Looking at the values in the __data frame__ try to figure out the two reasons that these NA values are present. Once you have had a thought you can have a look at the below two reasons.
 
 1. Some countries have zero population of English first speakers and some countries have zero population of people who speak English as an additional language.
-2. Some countries are missing data on the number of first and additional speakers, e.g.. Ukraine.
+2. Some countries are missing data on the number of first and additional speakers, e.g. Ukraine.
 
 We will fix these issues one by one. First let us change all NAs to the number 0.
 ```{r eval=FALSE}
@@ -343,7 +345,8 @@ We have changed all NAs. However, some of the rows in the 3rd and 4th column don
 english_total_vec <- english_df[,3] + english_df[,"As an additional language"]
 #Compare the column of total english speakers against the vector we created above
 #This will create a logical vector (TRUE or FALSE)
-english_total_logical_vec <- english_df$`Total English speakers` == english_total_vec
+english_total_logical_vec <- 
+  english_df$`Total English speakers` == english_total_vec
 #Now create a new data frame by indexing the english_df rows by the logical vector
 #This will mean all TRUE rows will be kept and all FALSE rows will not be kept
 english_complete_datasets_df <- english_df[english_total_logical_vec,]

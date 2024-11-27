@@ -120,6 +120,8 @@ long_seq <- seq(from = 10, to = 300, by = 10)
 
 Grand! Now let us subset the __vectors__ with square brackets `[]`.
 
+#### Foundational vector subsetting {-}
+
 __Vectors__ are one-dimensional, we therefore provide the square brackets with one number or one range of numbers. The number/s we provide in the square brackets are  the index.
 
 Try out indexing/subsetting the __vectors__.
@@ -144,6 +146,8 @@ odd_seq[2/1]
 long_seq[(1:10)*2]
 ```
 
+#### Subsetting and NAs {-}
+
 The __vectors__ even_seq and odd_seq have the indexes 1,2,3,4, and 5 as they each contain 5 __scalars__. What if we try to use a higher number to index than is available?
 ```{r eval=FALSE}
 even_seq[6]
@@ -166,6 +170,8 @@ mean(c(1,2,3,4,5,NA))
 mean(even_seq[2:7])
 ```
 
+#### Inverted subsetting {-}
+
 Above we subsetted __vectors__ by specifying which indexes we want. We can also specify which indexes we don't want:
 
 ```{r eval=FALSE}
@@ -173,6 +179,8 @@ even_seq[-2]
 odd_seq[-3:-5]
 long_seq[c(-1,-2,-6)]
 ```
+
+#### Subsetting with `rep()` {-}
 
 The `rep()` __function__ will replicate a __scalar/vector__ a specified amount of times. We will use this __function__ to overwrite our previously created __variables__ with longer versions:
 ```{r eval=FALSE}
@@ -185,6 +193,8 @@ odd_seq <- rep(x = odd_seq, 4)
 long_seq <- rep(x = long_seq, 3)
 ```
 
+#### Logical subsetting {-}
+
 __Logical__ __operators__ can be used as indexes to subset __vectors__. Having a logical expression (i.e. 1 > 2) as the index will cause all TRUE positions to be included and all FALSE positions to be excluded.
 
 __Tip__: If it is difficult to deduce what the below commands are doing you can run the part in the square brackets by itself. Remember if you highlight code in the __script editor__ it will only run that part, excluding unhighlighted parts of script in the same line.
@@ -195,6 +205,8 @@ even_seq[even_seq  > 2]
 odd_seq[odd_seq <= 1 ]
 long_seq <- long_seq[long_seq < 50]
 ```
+
+#### Modulus (`%%`) {-}
 
 We will quickly look at a new __operator__, `%%`. This is the modulus __operator__, it divides two numbers and gives the remainder of the division.
 
@@ -227,6 +239,8 @@ __Data frames__ can be subset similar to __vectors__. As with __vectors__ you ca
 
 Square brackets must be provided indexes for rows and for columns. The structure for this is `df[row,column]`. It is very useful to remember that R always wants rows first then columns second.
 
+#### Read in Parks biodiversity data frame {-}
+
 To practice subsetting __data frames__ with square brackets we will __read__ in a new file called [parks_biodiveristy.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/parks_biodiveristy.csv). This contains the number of different species of various groups (Bird, Mammal, etc.) in US national parks. Data can be found:
 
 https://www.kaggle.com/datasets/nationalparkservice/park-biodiversity
@@ -240,6 +254,8 @@ parks_df
 #View its column names
 colnames(parks_df)
 ```
+
+#### Foundation data frame subsetting {-}
 
 Now for some subset commands:
 ```{r eval=FALSE}
@@ -257,6 +273,8 @@ parks_df[1:10,"Bird"]
 parks_df[c(1,3,5,6),c("Bird","Fish")]
 ```
 
+#### Subsetted object {-}
+
 Depending on how you subset a __data frame__ you may get a __scalar__, __vector__, or __data frame__. Below describes which you will get based on the subsetting.
 
 - __Scalar__: 
@@ -266,8 +284,10 @@ Depending on how you subset a __data frame__ you may get a __scalar__, __vector_
     - Indexing so you get multiple values from one column. This occurs as each column is in essence a __vector__.
     - E.g. `parks_df[1:10,2]`
 - __Data frame__:
-    - Indexing so you get multiple values from a row or multiple rows. Subsetting a __data frame__ like this provides you a __data frame__.
+    - Indexing so you get multiple values from a row or multiple rows. Subsetting a __data frame__ like this provides you with a __data frame__.
     - E.g. `parks_df[3,2:4]` or `parks_df[3:4,2:4]`
+
+#### `head()` {-}
 
 A quick __function__ to subset a __data frame__ is `head()`. By default it will return the first 6 rows.
 ```{r eval=FALSE}
@@ -283,6 +303,8 @@ The __data frame__ is quite large. We will therefore use the `head()` __function
 parks_df <- head(parks_df, 20)
 ```
 
+#### Subset all rows or columns {-}
+
 To return all the rows of the specified columns you can leave the part before the comma empty. Similarly you can leave the part after the comma empty to return all of the columns of the specified rows. Leave both sides empty and you will get the entire __data frame__.
 
 ```{r eval=FALSE}
@@ -292,6 +314,8 @@ parks_df[3,]
 parks_df[,"State"]
 parks_df[2:4,]
 ```
+
+#### Subsetting columns with `$` {-}
 
 The sign `$` allows you to indicate which column you would like from the __data frame__. This is done like so:
 ```{r eval=FALSE}
@@ -307,6 +331,8 @@ parks_df$Amphibian[2]
 parks_df$Fish[4:7]
 ```
 
+#### Vector functions {-}
+
 Below are a selection of useful __functions__ that can be used on __vectors__.
 ```{r eval=FALSE}
 #Sum the values of a numeric vector
@@ -314,6 +340,8 @@ sum(parks_df$Mammal)
 #Mean of the values of a numeric vector
 mean(parks_df$Mammal)
 ```
+
+#### Data frame functions {-}
 
 The above __functions__ are useful but limiting if you are working with __data frames__. Thankfully there are also many __functions__ used specifically for __data frames__ (they can also be used for matrices).
 ```{r eval=FALSE}
@@ -332,6 +360,8 @@ summary(parks_df)
 
 Try out some of the above commands with the entire __data frame__. Do they give an error? Is so, why?
 
+#### Transpose with `t()` {-}
+
 Before we learn how to __write__ data to a file I will introduce one more __data frame__ associated __function__. `t()` which stands for transpose:
 ```{r eval=FALSE}
 parks_df[3:5]
@@ -340,6 +370,10 @@ summary(t(parks_df[,3:5]))
 ```
 
 Try the above commands without subsetting the __data frame__. What is happening and why?
+
+`r hide("Answer")`
+You cannot transpose a whole __data frame__ which has columns of different classes. Columns must be homogeneous (one class) and trying to transpose a data frame with heterogeneous classes breaks this. 
+`r unhide()`
 
 ## Writing to a file
 <center>
@@ -355,9 +389,9 @@ parks_t_df <- parks_df
 
 Next step we will create a new column called "Total_species".
 
-__NOTE__: I am including many ways to subset columns as reminders. Normally I wouldn't have so many different ways in one command.
+__Note__: I am including many ways to subset columns as reminders. Normally I wouldn't have so many different ways in one command.
 
-__NOTE__: We are using "_" instead of spaces as R doesn't particularly like spaces in column names. We will see how to use spaces later.
+__Note__: We are using "_" instead of spaces as R doesn't particularly like spaces in column names. We will see how to use spaces later.
 
 ```{r eval=FALSE}
 parks_t_df$Total_species <- rowSums(parks_df[,3:8])
@@ -383,7 +417,7 @@ write.table(parks_t_df, file = "Park_species_info.csv", sep = ",", col.names=NA)
 
 Have a look at the file contents with RStudio.
 
-Let's do it one more time with the Global ecological footprint info. First __read__ in the file again in case you do not have it. Then create a total sales column and then finally transpose the __data frame__:
+Let's do it one more time with the Global ecological footprint info. First __read__ in the file again in case you do not have it. Then transpose the __data frame__ and ensure the resulting object is a __data frame__:
 ```{r eval=FALSE}
 #Read in
 global_eco_footprint_df <- read.csv("Global_eco_footprint.tsv", 
@@ -402,7 +436,7 @@ write.table(global_eco_footprint_t_df,
             quote = FALSE)
 ```
 
-With the fundamentals of __reading__, subsetting __data frames__, and writing covered it is time to carry out some exercises.
+With the fundamentals of __reading__, subsetting __data frames__, and __writing__ covered it is time to carry out some exercises.
 
 ## Files & subsetting MCQs
 <center>
