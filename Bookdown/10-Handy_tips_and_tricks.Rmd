@@ -1,3 +1,5 @@
+# (PART\*) Tips & tricks {.unnumbered}
+
 # Handy tips & tricks {#tipsandtrickschap}
 
 <center>

@@ -1,13 +1,13 @@
-# (PART\*) Foundations & Objects {.unnumbered}
+# (PART\*) Foundations {.unnumbered}
 
 # Foundations of R {#foundations}
 <center>
-![](figures/foundational.png){style="width:200px"}
+![](figures/foundational.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
 </center>
 
-This section will cover the foundations of R. Understanding these concepts is fundamental to becoming an R user. The section will start with __operators__, these include `+`, `-`, `*`, and `/`, they allow us to use R like a calculator. Then we will look at __variables__. __Variables__ allow us to save the output from commands so we can use it in future commands. 
+This section will cover the foundations of R. Understanding these concepts is fundamental to becoming an R user. The section will start with <u id='operator_tooltip'>__operators__</u>, these include `+`, `-`, `*`, and `/`, they allow us to use R like a calculator. Then we will look at <u id='variable_tooltip'>__variables__</u>. <u id='variable_tooltip'>__Variables__</u> allow us to save the output from commands so we can use it in future commands. 
 
-A lot of the power of R comes from the vast array of __functions__ it contains. We will therefore look at some useful __functions__ to see how they work. Additionally, we'll look at how to interact with directories in R.
+A lot of the power of R comes from the vast array of <u id='function_tooltip'>__functions__</u> it contains. We will therefore look at some useful <u id='function_tooltip'>__functions__</u> to see how they work. Additionally, we'll look at how to interact with directories in R.
 
 The section will end showing you some ways to use RStudio and the __script editor__.
 
@@ -16,9 +16,9 @@ The section will end showing you some ways to use RStudio and the __script edito
 ![](figures/calculator.png){style="width:200px; border-radius:15px"}
 </center>
 
-__Operators__ are symbols in R that allow you to carry out many common tasks. The 3 main types of __operators__ in R are arithmetic, logical, and bitwise. We will ignore logical and bitwise and have a look at some arithmetic __operators__. 
+<u id='operator_tooltip'>__Operators__</u> are symbols in R that allow you to carry out many common tasks. The 3 main types of <u id='operator_tooltip'>__operators__</u> in R are arithmetic, logical, and bitwise. We will ignore logical and bitwise and have a look at some arithmetic <u id='operator_tooltip'>__operators__</u>. 
 
-The four most commonly used arithmetic __operators__ are:
+The four most commonly used arithmetic <u id='operator_tooltip'>__operators__</u> are:
 
 - `+` : Addition
 - `-` : Minus
@@ -29,7 +29,7 @@ Run the following commands in your RStudio __console__.
 
 __Note:__ Each line below represents one command. Once a command is typed out press enter to run the command.
 
-__Note:__ The amount of space between the integers/numbers and an operator does not matter. It is a matter of preference and clarity.
+__Note:__ The amount of space between the integers/numbers and an <u id='operator_tooltip'>__operator__</u> does not matter. It is a matter of preference and clarity.
 
 ```{r eval=FALSE}
 2+2
@@ -58,7 +58,7 @@ When entering commands via the __console__ the results/output is printed to the 
 ![](figures/boxes.png){style="width:200px"}
 </center>
 
-The output/result of a command can be saved as a __variable__. Below is the format for creating a __variable__ in R (don't type this into R).
+The output/result of a command can be saved as a <u id='variable_tooltip'>__variable__</u>. Below is the format for creating a <u id='variable_tooltip'>__variable__</u> in R (don't type this into R).
 
 ```{r eval=FALSE}
 variable_name <- variable_object
@@ -66,21 +66,21 @@ variable_name <- variable_object
 
 There are 3 parts to the above:
 
-- The __variable name__ (`variable_name`). This is the name of the __variable__ and is what will be used to refer to the __variable__ in future commands. This name can be almost anything. There are some rules on what can be in a name:
+- The __<u id='variable_tooltip'>variable</u> name__ (`variable_name`). This is the name of the <u id='variable_tooltip'>__variable__</u> and is what will be used to refer to the <u id='variable_tooltip'>__variable__</u> in future commands. This name can be almost anything. There are some rules on what can be in a name:
     - Must start with a letter.
     - Cannot contain spaces.
     - Cannot start with a number.
-    - Cannot share the same name as a command or function in R.
-    - They are case sensitive. The __variable__ name `BB` is different to the __variable__ name `bb` which is different again to `bB`. I find it easiest to keep __variable names__ in lower case.
-- `<-` is called the assignment __operator__. It assigns the __variable object__ to the __variable name__. 
-    - Tip you can press 'ALT'+ '-' after a __variable name__ as a shortcut for the assignment __operator__.
-- The __variable object__ (`variable_object`). This can be many different objects including the output/results from commands, strings/words, numbers, and many other R data types.
+    - Cannot share the same name as a command or <u id='function_tooltip'>__function__</u> in R.
+    - They are case sensitive. The <u id='variable_tooltip'>__variable__</u> name `BB` is different to the <u id='variable_tooltip'>__variable__</u> name `bb` which is different again to `bB`. I find it easiest to keep __<u id='variable_tooltip'>variable</u> names__ in lower case.
+- `<-` is called the assignment <u id='operator_tooltip'>__operator__</u>. It assigns the __<u id='variable_tooltip'>variable</u> object__ to the __<u id='variable_tooltip'>variable</u> name__. 
+    - Tip you can press 'ALT'+ '-' after a __<u id='variable_tooltip'>variable</u> name__ as a shortcut for the assignment <u id='operator_tooltip'>__operator__</u>.
+- The __<u id='variable_tooltip'>variable</u> object__ (`variable_object`). This can be many different objects including the output/results from commands, strings/words, numbers, and many other R data types.
 
-A __variable__ can be thought of as a box. The __variable object__ is held in the box but it can be replaced with any other object. The __variable name__ can then be thought as the label on the box so you can tell which box is which.
+A __<u id='variable_tooltip'>variable</u>__ can be thought of as a box. The __<u id='variable_tooltip'>variable</u> object__ is held in the box but it can be replaced with any other object. The __<u id='variable_tooltip'>variable</u> name__ can then be thought as the label on the box so you can tell which box is which.
 
 Type the below commands into the RStudio __console__.
 
-__Note.__ Remember the amount of spaces between __operators__ and __integers__ does not matter. I encourage you to experiment with this spacing so you find what is best for you in terms of ease and clarity.
+__Note.__ Remember the amount of spaces between <u id='operator_tooltip'>__operators__</u> and __integers__ does not matter. I encourage you to experiment with this spacing so you find what is best for you in terms of ease and clarity.
 
 ```{r eval=FALSE}
 bakers_dozen <- 13
@@ -92,18 +92,18 @@ X <- (II / I) * V
 L <- X * V
 ``` 
 
-In the above commands the __variables__ are not printed out to the screen, this is as it should be. The __variables__ are appearing in the __environment__ pane (Top right). This is very convenient to see what variables are currently in the __environment__ and to see what they contain. 
+In the above commands the <u id='variable_tooltip'>__variables__</u> are not printed out to the screen, this is as it should be. The <u id='variable_tooltip'>__variables__</u> are appearing in the __environment__ pane (Top right). This is very convenient to see what variables are currently in the __environment__ and to see what they contain. 
 
-To print the contents of a __variable__ to screen you can type the __variable name__ into the __console__ and press enter. This will print the __variable object__ to the screen. This is not needed for small __variable objects__, for which you can look at the __environment__ pane, but is useful for larger __variable objects__.
+To print the contents of a <u id='variable_tooltip'>__variable__</u> to screen you can type the __<u id='variable_tooltip'>variable</u> name__ into the __console__ and press enter. This will print the __<u id='variable_tooltip'>variable</u> object__ to the screen. This is not needed for small __<u id='variable_tooltip'>variable</u> objects__, for which you can look at the __environment__ pane, but is useful for larger __<u id='variable_tooltip'>__variable__</u> objects__.
 
 ## Functions
 <center>
 ![](figures/function.png){style="width:200px; background: white; border-radius:15px"}
 </center>
 
-R __Functions__ allow the user to carry out specific tasks. R has many inbuilt __functions__ but you can also create your own. Currently we will look at inbuilt functions.
+R <u id='function_tooltip'>__Functions__</u> allow the user to carry out specific tasks. R has many inbuilt <u id='function_tooltip'>__functions__</u> but you can also create your own. Currently we will look at inbuilt <u id='function_tooltip'>__functions__</u>.
 
-The basic layout of a __function__ is:
+The basic layout of a <u id='function_tooltip'>__function__</u> is:
 
 ```{r eval=FALSE}
 function_name(objects, options)
@@ -111,13 +111,13 @@ function_name(objects, options)
 
 There are 3 main parts to the above:
 
-- The __function name__ (`function_name`)
-- The __object/s__ to provide to the __function__. 
-    - This can be numbers, strings, __variables__ we have created etc. 
-    - Most __functions__ require at least one __object__. 
-    - Some __functions__ can take multiple objects, if multiple __objects__ are provided they must be separated by `,`.
-- __Function__ options (`options`). Options can be provided to some __functions__ to alter the way they will work. 
-    - Some __functions__ don't have options.
+- The __<u id='function_tooltip'>function</u> name__ (`function_name`)
+- The __object/s__ to provide to the <u id='function_tooltip'>__function__</u>. 
+    - This can be numbers, strings, <u id='variable_tooltip'>__variables__</u> we have created etc. 
+    - Most <u id='function_tooltip'>__functions__</u> require at least one __object__. 
+    - Some <u id='function_tooltip'>__functions__</u> can take multiple objects, if multiple __objects__ are provided they must be separated by `,`.
+- <u id='function_tooltip'>__Function__</u> options (`options`). Options can be provided to some <u id='function_tooltip'>__functions__</u> to alter the way they will work. 
+    - Some <u id='function_tooltip'>__functions__</u> don't have options.
     - Most options have default modes. If the options is not specified the default mode will be used.
     - Like __objects__, when using multiple options they must be separated by `,`.
 
@@ -133,10 +133,10 @@ round(3.5555, digits = 0)
 two <- sqrt(4)
 ``` 
 
-The help page of __functions__ can be accessed in 2 main ways:
+The help page of <u id='function_tooltip'>__functions__</u> can be accessed in 2 main ways:
 
-- Click on the __function name__ so your cursor is in it and press __F1__.
-- Type `?` followed by the __function name__. Example below:
+- Click on the __<u id='function_tooltip'>function</u> name__ so your cursor is in it and press __F1__.
+- Type `?` followed by the __<u id='function_tooltip'>function</u> name__. Example below:
 
 ```{r eval=FALSE}
 ?ceiling
@@ -301,7 +301,9 @@ To create and open a new script, click on the button on the RStudio toolbar show
 ![](figures/question_bubble_black.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
-Choose the correct option to complete the below sentences:
+Splendid! This chapter covered the foundations of R including operators, variables, and functions.
+
+Try choosing the correct option in the below sentences to recap what you have learnt.
 
 ```{r, echo = FALSE, eval=TRUE}
 opts_p <- c( "Annotations", "Variables", answer = "Operators")
@@ -334,3 +336,16 @@ opts_p <- c("Console", answer = "Function","Objects")
 opts_p <- c(answer="Console", "Function","Object")
 ```
 5. You can run commands in the ________ `r longmcq(opts_p)`
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+```

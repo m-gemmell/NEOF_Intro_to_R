@@ -1,0 +1,28 @@
+# Files exercises
+<center>
+![](figures/files.png){style="width:200px; background: white; border-radius:5px"}
+</center>
+
+This next 2 chapters each cover an exercise looking at a different file. The exercises are comprised of challenges requiring you to __read__ and __write__ files as well as index <u id='data_frame_tooltip'>__data frames__</u>.
+
+Use your __"Exercises.R"__ file, ensuring you are using code sections to separate the different exercises and challenges Additionally, set your working directory to your main workshop directory.
+
+Create a new directory called "Chapter_8_files" within your main workshop directory to download the files:
+
+- [bat_roosts.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/bat_roosts.csv) 
+- [honey_bee.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/honey_bee.tsv)
+
+As the files we are going to __read__ are in a different directory to our working directory we will have to specify the directory along with the file names. For example, to read in the "Liverpool_beaches.csv" file from the main directory you could use the  following command.
+
+```{r eval=FALSE}
+liv_beaches_df <- read.csv("Chapter_7/Liverpool_beaches.csv", row.names = 1)
+```
+
+Ensure you also __write__ any output to "Chapter_8_files".
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+```

@@ -3,7 +3,11 @@
 ![](figures/beach.png){style="width:200px; background:white; border-radius:15px"}
 </center>
 
-For this exercise produce the following tables as __data frames__ in R. Please carry this out in your __"Exercises.R"__ script and remember about code sections and annotations.
+For this exercise produce the following tables as <u id='data_frame_tooltip'>__data frame__</u> in R. Please carry this out in your __"Exercises.R"__ script and remember about code sections and annotations.
+
+Solutions are in the expandable boxes. 
+Try your best to solve each challenge but use the solutions for help if you would like. 
+Even if your method works it can be good to check the solution as there are many ways to do the same thing in python.
 
 Tip: You can either write completely new code or reuse and alter previous code. 
 
@@ -22,6 +26,31 @@ row.names(df) <- row_names
 kable(df)
 ```
 
+`r hide("df solution")`
+#### Step 1 {-}
+Create __vectors__ for columns and row names:
+```{r eval=FALSE}
+One <- c(2,4,6)
+Three <- c(6,12,18)
+Five <- c(10,20,30)
+row_names <- c("Two", "Four", "Six")
+```
+#### Step 2a {-}
+Create the __data frame__ from vectors:
+```{r eval=FALSE}
+df <- data.frame(One,Three,Five)
+```
+Add row names:
+```{r eval=FALSE}
+row.names(df) <- row_names
+```
+#### Step 2b{-}
+Alternatively you can define the row names in the `data.frame()` `function` as an option:
+```{r eval=FALSE}
+df <- data.frame(One,Three,Five, row.names = row_names)
+```
+`r unhide()`
+
 ## beach_df_2
 
 __Note__: The top row is the column names and the left-most column is the row names.
@@ -36,4 +65,38 @@ row_names_2 <- c("Formby","West Kirby","Crosby","New Brighton")
 beach_df_2 <- data.frame(Crab,Oystercatcher,Sandpiper,Starfish)
 row.names(beach_df_2) <- row_names_2
 kable(beach_df_2)
+```
+
+`r hide("beach_df_2 solution")`
+#### Step 1 {-}
+Create __vectors__ for columns and row names:
+```{r eval=FALSE}
+Crab <- c(10,1,1,4)
+Oystercatcher <- c(5,6,4,4)
+Sandpiper <- c(1,1,2,3)
+Starfish <- c(3,3,7,4)
+row_names_2 <- c("Formby","West Kirby","Crosby","New Brighton")
+```
+#### Step 2a {-}
+Create the __data frame__ from __vectors__:
+```{r eval=FALSE}
+beach_df_2 <- data.frame(Crab,Oystercatcher,Sandpiper,Starfish)
+```
+Add row names:
+```{r eval=FALSE}
+row.names(beach_df_2) <- row_names_2
+```
+#### Step 2b {-}
+Alternatively you can define the row names in the `data.frame()` __function__ as an option:
+```{r eval=FALSE}
+beach_df_2 <- data.frame(Crab,Oystercatcher,Sandpiper,Starfish, row.names = row_names_2)
+```
+`r unhide()`
+
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
 ```

@@ -40,7 +40,7 @@ knitr::write_bib(c(
 ```
 
 <center>
-![](figures/neof_rounded_corners.png){style="width:300px"}
+![](figures/NEOF_rounded_corners.png){style="width:300px"}
 </center>
 
 # (PART\*) Start {-}
@@ -49,9 +49,33 @@ knitr::write_bib(c(
 ![](figures/R.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
-This course will teach you the fundamentals of R, an essential skill for some of our future courses. The first day will focus on the basics of R with foundations and objects. In day 2 we will look at how to read in files and write out files from R. Additionally, you will get further practice on the previous materials whilst learning some handy tips and tricks.
+This course will teach you the fundamentals of R, an essential skill for some of our future courses. 
+The first day will focus on the basics of R with foundations and objects and covers chapters 1-6. 
+In day 2 we will cover chapters 7-12.
+We will look at how to read in files and write out files from R. 
+Additionally, you will get further practice on the previous materials whilst learning some handy tips and tricks.
 
-There are extra materials you can attempt after the workshop. These will allow you to apply your R skills to create plots and carry out some statistics. The plots section includes creating line graphs, histograms, scatterplots, and boxplots. The statistiscs section will cover carrying out some basic statistics, don't worry it won't be a statistics lesson. Finally, the last section will introduce some harder coding where you'll learn to make loops, use ifs, and create R functions.
+## Learning outcome {-}
+
+At the end of the course learners will be able to:
+
+- Create, edit, run, and save R scripts with RStudio.
+- Understand and use fundamental R concepts including operators, annotations, variables, and functions.
+- Utilise a variety of R functions.
+- Explain the difference between the R classes; Integer, Double, String, and logical.
+- Utilise the different R structures; Scalars, Vectors, and Data frames.
+- Read in data from files to R and write out data from R to files.
+- Subset and manipulate R vectors and data frames with indexing.
+
+## Extra materials {-}
+
+There are extra materials you can attempt after the workshop (chapters 13-21). 
+These will allow you to apply your R skills to create plots and carry out some statistics. 
+The plots section includes creating line graphs, histograms, scatterplots, and boxplots. 
+The statistics section will cover carrying out some basic statistics, don't worry it won't be a statistics lesson. 
+Finally, the last section will introduce some harder coding where you'll learn to make loops, use ifs, and create R functions.
+
+## Material contents {-}
 
 These materials will involve theory, practice, exercises, and solutions:
 
