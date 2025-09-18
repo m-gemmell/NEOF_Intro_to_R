@@ -1,4 +1,4 @@
-# (PART\*) Stats & Programming {.unnumbered}
+# (PART\*) Stats {.unnumbered}
 
 # Basic stats {#basicstats}
 <center>

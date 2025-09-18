@@ -16,7 +16,11 @@ penguin_df <- read.csv("Chapter_13-16/penguin.tsv",
                       )
 ```
 
-Your plots might not look exactly the same. As long as your plot contains the same data it is good. If you are not sure if your plot is correct, feel free to look at the solutions to look at my code.
+Your plots might not look exactly the same. As long as your plot contains the same data it is good.
+
+Solutions are in the expandable boxes. 
+Try your best to solve each challenge but use the solutions for help if you would like. 
+Even if your method works it can be good to check the solution as there are many ways to do the same thing in R.
 
 ## Line graph
 First we will ignore "penguin_df".
@@ -31,6 +35,17 @@ plot(x = rep(1:10, 2),
 ```
 
 __Tip__: The x and y labels may help you figure out the commands to create the __vectors__.
+
+`r hide("Line graph solution")`
+```{r eval=FALSE}
+#Produce the plot with vectors created inside the function
+plot(x = rep(1:10, 2), 
+     y = seq(from = 0.5, to = 10, by = 0.5),
+     col = "red",
+     main = 'A line graph with "red" as the colour',
+     type = "l")
+```
+`r unhide()`
 
 ## Histogram
 From the "penguin_df" create the below plot:
@@ -49,6 +64,22 @@ hist(penguins_torgensen_df$body_mass_kg,
      ylab = "frequency",
      col = "blue")
 ```
+
+`r hide("Histogram solution")`
+```{r eval=FALSE}
+#Create data frame with only the Penguins from Torgersen
+penguins_torgensen_df <- penguin_df[penguin_df$island == "Torgersen",]
+#Create a column with body mass in kilograms
+penguins_torgensen_df$body_mass_kg <- 
+  penguins_torgensen_df$body_mass_g / 1000
+#Plot the histogram
+hist(penguins_torgensen_df$body_mass_kg,
+     main = "Histogram of the body mass of Penguins from Torgersen Island",
+     xlab = "Body mass in kilograms",
+     ylab = "frequency",
+     col = "blue")
+```
+`r unhide()`
 
 ## Scatterplot
 From the "penguin_df" create the below plot:
@@ -77,6 +108,31 @@ Before you continue save this plot. Details below:
 - Save the file as a png called "Penguins_2009_bill_depth_vs_length_scatterplot.png"
 - Save the plot with a width and height of 250 and resolution of 150
 
+`r hide("Scatterplot solution")`
+```{r eval=FALSE}
+#Create data frame with only the Penguins from 2009
+penguin_2009_df <- penguin_df[penguin_df$year == "2009",]
+#Start png function
+png(filename = "Chapter_13-16/Penguins_2009_bill_depth_vs_length_scatterplot.png",
+    units = "mm", height = 250, width = 250, res = 150 )
+#Produce plot
+plot(x = penguin_2009_df$bill_length_mm,
+     y = penguin_2009_df$bill_depth_mm,
+     col = as.numeric(penguin_2009_df$species),
+     main = "Penguin bills vs depth in 2009",
+     xlab = "Bill length (mm)",
+     ylab = "Bill depth (mm)",
+     pch = 15)
+#Create legend
+legend(x = "bottomleft", 
+       col = 1:nlevels(penguin_2009_df$species),
+       legend = levels(penguin_2009_df$species),
+       pch = 15)
+#Save file
+dev.off()
+```
+`r unhide()`
+
 ## Boxplot
 From the "penguin_df" create the below plot:
 
@@ -97,3 +153,20 @@ For the last task, save this plot. Details below:
 - Save the file as a jpg called "Penguins_species_and_flipper_length_boxplot.jpg" in "Chapter_13-16".
 - Save the plot with a width of 300, height of 250, and resolution of 150
 
+`r hide("Line graph solution")`
+```{r eval=FALSE}
+#Start png function
+jpeg(filename = "Chapter_13-16/Penguins_species_and_flipper_length_boxplot.jpg",
+    units = "mm", height = 250, width = 300, res = 150 )
+#Produce boxplot
+boxplot(flipper_length_mm~sex*species,
+        data = penguin_df,
+        col = c("yellow","green"),
+        main = "Flipper length of different species",
+        xlab = "Species and sex of Penguin",
+        ylab = "Flipper length (mm)"
+)
+#Save file
+dev.off()
+```
+`r unhide()`

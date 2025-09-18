@@ -1,17 +1,26 @@
 # Honey bee colonies exercise
 <center>
-![](figures/beehive.png){style="width:200px; border-radius:5px; background:white; border: white 5px solid"}
+![](figures/bee_1.png){style="width:200px"}
 </center>
 
-Next we have a file ([honey_bee.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/honey_bee.tsv)) that contains information on the number of Honey Bee colonies in 4 different USA states. It is temporal data containing information on the 4 quarters for the years 2015-2018.
+Next we have a file ([honey_bee.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/honey_bee.tsv)) that contains information on the number of Honey Bee colonies in 4 different USA states. 
+It is temporal data containing information on the 4 quarters for the years 2015-2018.
 
 For more details and even more data please see the following link: https://www.kaggle.com/datasets/kyleahmurphy/nass-honey-bee-20152021
+
+Solutions are in the expandable boxes. 
+Try your best to solve each challenge but use the solutions for help if you would like. 
+Even if your method works it can be good to check the solution as there are many ways to do the same thing in R
 
 ## Honey bee colony challenges
 
 ### Honey bee colony challenge 1 {-}
+<center>
+![](figures/bee_2.png){style="width:150px"}
+</center>
 
-__Read__ in the file "honey_bee.tsv" as a __data frame__ __variable__ called "bee_colonies_df". Ensure the row names contain the Year info (2015-Q1, 2015-Q2, etc.).
+__Read__ in the file "honey_bee.tsv" as a <u id='data_frame_tooltip'>__data frame__</u> <u id='variable_tooltip'>__variable__</u> called "bee_colonies_df". 
+Ensure the row names contain the Year info (2015-Q1, 2015-Q2, etc.).
 
 `r hide("Bees task 1 solution")`
 Read in file:
@@ -22,8 +31,11 @@ bee_colonies_df <- read.csv("Chapter_8_files/honey_bee.tsv",
 `r unhide()`
 
 ### Honey bee colony challenge 2 {-}
+<center>
+![](figures/bee_3.png){style="width:150px"}
+</center>
 
-Create a __data frame__ called "bee_colonies_2017_2018_df" containing the rows for 2017 & 2018 from "bee_colonies_df". 
+Create a <u id='data_frame_tooltip'>__data frame__</u> called "bee_colonies_2017_2018_df" containing the rows for 2017 & 2018 from "bee_colonies_df". 
 
 `r hide("Bees task 2 solution")`
 Create 2017 & 2018 __data frame__:
@@ -38,11 +50,14 @@ bee_colonies_2017_2018_df <- tail(bee_colonies_df, n = 8)
 `r unhide()`
 
 ### Honey bee colony challenge 3 {-}
+<center>
+![](figures/bee_4.png){style="width:200px"}
+</center>
 
 For each month in 2017 & 2018 print out the phrase "The number of colonies in Minnesota for \<Year> was \<Value>.
 
 - For example, the first phrase will be "The number of colonies in Minnesota for 2017-Q1 was 27000".
-- This can be done with one line of code using the `paste()` function.
+- This can be done with one line of code using the `paste()` <u id='function_tooltip'>function</u>.
 
 `r hide("Bees task 3 solution")`
 ```{r eval=FALSE}
@@ -54,6 +69,9 @@ paste("The number of colonies in Minnesota for",
 `r unhide()`
 
 ### Honey bee colony challenge 4 {-}
+<center>
+![](figures/bee_5.png){style="width:150px"}
+</center>
 
 Make an average (mean) row for "bee_colonies_2017_2018_df".
 
@@ -65,8 +83,11 @@ bee_colonies_2017_2018_df["Average",] <- colMeans(bee_colonies_2017_2018_df)
 `r unhide()`
 
 ### Honey bee colony challenge 5 {-}
+<center>
+![](figures/bee_6.png){style="width:200px"}
+</center>
 
-Finally write out the __data frame__ "bee_colonies_2017_2018_df" as a tab separated file called "bee_colonies_2017_2018.tsv".
+Finally write out the <u id='data_frame_tooltip'>__data frame__</u> "bee_colonies_2017_2018_df" as a tab separated file called "bee_colonies_2017_2018.tsv".
 
 `r hide("Bees task 5 solution")`
 Write out file:
@@ -115,9 +136,13 @@ states <- colnames(bee_colonies_2017_2018_df)
 min_average_state <- states[
   bee_colonies_2017_2018_df["Average",] == min_average]
 min_average_state
+```
+```{r eval=FALSE}
 #Question 2: Which state has the highest minimum value of colonies?
 bee_summary <- summary(bee_colonies_2017_2018_df[1:8,])
 bee_summary
+```
+```{r eval=FALSE}
 #Question 3: Which state had 20,000 colonies in Q3 of 2018 (2018-Q3)?
 n <- 20000
 column_logical_vec <- bee_colonies_2017_2018_df["2018-Q3",] == n
@@ -126,4 +151,15 @@ colnames(bee_colonies_2017_2018_df)[column_logical_vec]
 ```
 `r unhide()`
 
-Great!
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+```

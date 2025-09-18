@@ -3,9 +3,14 @@
 ![](figures/bat_1.png){style="width:200px"}
 </center>
 
-First we will look at the file [bat_roosts.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/bat_roosts.csv). This contains information on the max number of roosts for different Bat species in different UK regions. 
+First we will look at the file [bat_roosts.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/bat_roosts.csv). 
+This contains information on the max number of roosts for different Bat species in different UK regions. 
 
 The data is from: "Bat Conservation Trust 2020. Roost Count peak counts summary data". Available from https://www.bats.org.uk/our-work/national-bat-monitoring-programme/reports/nbmp-annual-report
+
+Solutions are in the expandable boxes. 
+Try your best to solve each challenge but use the solutions for help if you would like. 
+Even if your method works it can be good to check the solution as there are many ways to do the same thing in R
 
 ## Bat roost challenges
 
@@ -14,7 +19,8 @@ The data is from: "Bat Conservation Trust 2020. Roost Count peak counts summary 
 ![](figures/bat_2.png){style="width:100px"}
 </center>
 
-__Read__ in the file "bat_roosts.csv" as a __data frame__ __variable__ called "bat_df". Ensure the row names contain the Regions (Channel Islands, East Midlands, etc.).
+__Read__ in the file "bat_roosts.csv" as a <u id='data_frame_tooltip'>__data frame__</u> <u id='variable_tooltip'>__variable__</u> called "bat_df". 
+Ensure the row names contain the Regions (Channel Islands, East Midlands, etc.).
 
 `r hide("Bat roost 1 solution")`
 Read in the file as a __data frame__:
@@ -29,7 +35,7 @@ bat_df <- read.csv("Chapter_8_files/bat_roosts.csv",
 ![](figures/bat_3.png){style="width:100px"}
 </center>
 
-Inspect the __variable__ and ensure there are only numerics within the __data frame__ with all strings only being in column and row names.
+Inspect the <u id='variable_tooltip'>__variable__</u> and ensure there are only numerics within the <u id='data_frame_tooltip'>__data frame__</u> with all <u id='string_tooltip'>strings</u> only being in column and row names.
 
 ### Bat roost challenge 3 {-}
 <center>
@@ -65,7 +71,7 @@ bat_df$All_Bat_Species <- rowSums(bat_df)
 ![](figures/bat_6.png){style="width:100px"}
 </center>
 
-Create a transposed __data frame__ of "bat_df" called "bat_t_df".
+Create a transposed <u id='data_frame_tooltip'>__data frame__</u> of "bat_df" called "bat_t_df".
 
 `r hide("Bat roost 5 solution")`
 Create transposed __data frame__:
@@ -79,7 +85,8 @@ bat_t_df <- as.data.frame(t(bat_df))
 ![](figures/bat_7.png){style="width:100px"}
 </center>
 
-__Write__ the __data frame__ "bat_t_df" to a comma separated file called "bat_roosts_t.csv". Ensure there are no quotes surrounding the row or column names.
+__Write__ the <u id='data_frame_tooltip'>__data frame__</u> "bat_t_df" to a comma separated file called "bat_roosts_t.csv". 
+Ensure there are no quotes surrounding the row or column names.
 
 `r hide("Bat roost 6 solution")`
 __Write__ file:
@@ -91,11 +98,11 @@ write.table(bat_t_df, file = "Chapter_8_files/bat_roosts_t.csv",
 
 ## Bat roost MCQs
 <center>
-![](figures/question_bubble_purple.png){style="width:200px"}
+![](figures/question_bubble_purple.png){style="width:150px"}
 </center>
 
 
-Fantastic! I hope those challenges were engaging and improved your experience working with files and data frames.
+Fantastic! I hope those challenges were engaging and improved your experience working with files and <u id='data_frame_tooltip'>data frames</u>.
 
 Attempt the following MCQs using your final "bat_t_df" object.
 
@@ -151,3 +158,13 @@ row_names_logical_vec <- bat_t_df$UK == min_uk
 row.names(bat_t_df)[row_names_logical_vec]
 ```
 `r unhide()`
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+```

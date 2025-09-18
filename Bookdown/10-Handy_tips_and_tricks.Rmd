@@ -6,9 +6,12 @@
 ![](figures/magic.png){style="width:200px; border-radius:15px; background:white"}
 </center>
 
-Welcome to Chapter 10! This chapter will include coding to reinforce what you have learnt up to this point. There will also be plenty of new handy __functions__ and some more concepts to learn.
+Welcome to Chapter 10! This chapter will include coding to reinforce what you have learnt up to this point. 
+There will also be plenty of new handy <u id='function_tooltip'>__functions__</u> and some more concepts to learn.
 
-For this chapter create a directory called "Chapter_10-11" in your main directory and set it as the working directory. Then create a script called "4-Handy_tips.R". Remember to use annotations (`#`) and code sections (`####`)!
+For this chapter create a directory called "Chapter_10-11" in your main directory and set it as the working directory. 
+Then create a script called "4-Handy_tips.R". 
+Remember to use annotations (`#`) and code sections (`####`)!
 
 I'll first introduce you to some R conventions and then some useful abilities of RStudio.
 
@@ -17,20 +20,24 @@ I'll first introduce you to some R conventions and then some useful abilities of
 ![](figures/rules.png){style="width:200px"}
 </center>
 
-R conventions are style guides. You do not need to follow them but they are intended to help make code easier to read. There are lots of different suggestions for different parts of R code. Here we will only look at conventions for __object/variable names__ and wide vs long code formatting.
+R conventions are style guides. You do not need to follow them but they are intended to help make code easier to read. There are lots of different suggestions for different parts of R code. Here we will only look at conventions for __object/<u id='variable_tooltip'>variable</u> names__ and wide vs long code formatting.
 
 ### Variable names
-__Variable names__ have certain rules that must be followed. We covered these in [chapter 2](#foundations) but below is a reminder:
+__<u id='variable_tooltip'>Variable</u> names__ have certain rules that must be followed. 
+We covered these in [chapter 2](#foundations) but below is a reminder:
 
 - Must start with a letter.
 - Cannot contain spaces.
 - Cannot start with a number.
-- Cannot share the same name as a command or function in R.
-- They are case sensitive. The __variable__ name `BB` is different to the __variable__ name `bb` which is different again to `bB`.
+- Cannot share the same name as a command or <u id='function_tooltip'>function</u> in R.
+- They are case sensitive. The <u id='variable_tooltip'>__variable__</u> name `BB` is different to the <u id='variable_tooltip'>__variable__</u> name `bb` which is different again to `bB`.
 
-On top of these rules there are a few naming styles that are recommended. It is very good to choose one naming style and stick with it always. Below are three commonly used naming conventions for R. Look through them and choose your favourite to use.
+On top of these rules there are a few naming styles that are recommended. 
+It is very good to choose one naming style and stick with it always. 
+Below are three commonly used naming conventions for R. 
+Look through them and choose your favourite to use.
 
-#### Snake case
+#### Snake case {-}
 <center>
 ![](figures/snake_case.png){style="width:200px; background:white; border-radius:15px"}
 </center>
@@ -46,12 +53,12 @@ three_four_five_2_vec
 this_is_snake_case
 ``` 
 
-#### Period separated
+#### Period separated {-}
 <center>
 ![](figures/period_separated.png){style="width:200px; background:white; border-radius:15px"}
 </center>
 
-Period separated is almost identical to snake case. Just swap the underscores (`_`) with periods (`.`). Below are some examples of names in the period separated style.
+Period separated is almost identical to snake case. All you need to do is swap the underscores (`_`) with periods (`.`). Below are some examples of names in the period separated style.
 
 ```{r eval=FALSE}
 one
@@ -62,7 +69,7 @@ three.four.five.2.vec
 this.is.period.separated
 ``` 
 
-#### Camel case
+#### Camel case {-}
 <center>
 ![](figures/camelCase.png){style="width:200px; background:white; border-radius:15px"}
 </center>
@@ -78,11 +85,13 @@ threeFourFive2Vec
 thisIsCamelCase
 ``` 
 
-There are exceptions when you will want to break your preferred naming style. One such example is when you are creating __vectors__ to be used as columns for a __data frame__.
+There are exceptions when you will want to break your preferred naming style. 
+One such example is when you are creating <u id='vector_tooltip'>__vectors__</u> to be used as columns for a <u id='data_frame_tooltip'>__data frame__</u>.
 
-#### Wide vs Long coding
+### Wide vs Long coding
 
-If a command/__function__ is only on one line then you were using __wide__ coding. This is good with short commands and __functions__ but is not very suitable for longer commands. Below are examples of long commands over one line each.
+If your command/<u id='function_tooltip'>__function__</u> is only on one line then you were using __wide__ coding. 
+This is good with short commands and <u id='function_tooltip'>__functions__</u> but is not very suitable for longer commands. Below are examples of long commands over one line each.
 ```{r eval=FALSE}
 #Create a data frame called df
 df <- data.frame(one = c(2,4,6), three = c(6,12,18), five = c(10,20,30), row.names = c("Two", "Four", "Six"))
@@ -149,13 +158,20 @@ This will be useful for tab completion which we will cover shortly.
 
 Sweep buttons allow you to sweep away items you no longer want in RStudio. There are two main sweep buttons, one for the __Console window__ and one for the __Environment pane__.
 
-The sweep button for the __console window__ will clear all the text in the __console pane__. This is useful if you have filled the __console__ with lots of commands and __data frames__. This sweep button will not actually affect any of your work so do not be afraid to use it. The location of the sweep button is shown below.
+The sweep button for the __console window__ will clear all the text in the __console pane__. 
+This is useful if you have filled the __console__ with lots of commands and <u id='data_frame_tooltip'>__data frames__</u>. 
+This sweep button will not actually affect any of your work so do not be afraid to use it. 
+The location of the sweep button is shown below.
 
 <center>
 ![](figures/RStudio_console_sweep.png){style="width:600px; border-radius:5px"}
 </center>
 
-The sweep button for the __Environment pane__ is a bit more dangerous. This sweep button will clear all the objects from your environment. This will remove all the __variables__ you have created. This is not too bad if you have been using the __script editor__ to do your work as you can rerun all your commands to refill your environment. The location of the sweep button is shown below.
+The sweep button for the __Environment pane__ is a bit more dangerous. 
+This sweep button will clear all the objects from your environment. 
+This will remove all the <u id='variable_tooltip'>__variables__</u> you have created. 
+This is not too bad if you have been using the __script editor__ to do your work as you can rerun all your commands to refill your environment. 
+The location of the sweep button is shown below.
 
 <center>
 ![](figures/RStudio_env_sweep.png){style="width:600px; border-radius:5px"}
@@ -166,13 +182,20 @@ The sweep button for the __Environment pane__ is a bit more dangerous. This swee
 ![](figures/multiplication.png){style="width:200px"}
 </center>
 
-Hopefully you'll find the above useful. We will learn some new __functions__ but before that let us create a quick __data frame__. You are going to make a multiplication table. The __data frame__ will be a 10 by 10 table with numbers one to ten as the row names and the column names. The value in each cell/index will be equal to the row name number multiplied by the column name number.
+Hopefully you'll find the above useful. We will learn some new <u id='function_tooltip'>__functions__</u> but before that let us create a quick <u id='data_frame_tooltip'>__data frame__</u>. 
+You are going to make a multiplication table. 
+The <u id='data_frame_tooltip'>__data frame__</u> will be a 10 by 10 table with numbers one to ten as the row names and the column names. 
+The value in each cell/index will be equal to the row name number multiplied by the column name number.
 
 Before looking at the code below can you think of a way to do this?
 
-The code below shows a method to create this __data frame__. I have tried to show you a variety of methods to create the __vectors__ below for demonstration purposes. Look at each command and make sure you understand how they work before continuing. In real life I would use one of these methods rather than many different methods.
+The code below shows a method to create this <u id='data_frame_tooltip'>__data frame__</u>. 
+I have tried to show you a variety of methods to create the <u id='vector_tooltip'>__vectors__</u> below for demonstration purposes. 
+Look at each command and make sure you understand how they work before continuing. 
+In real life I would use one of these methods rather than many different methods.
 
-__Tip__: If you double click a word/name in the __script editor__ it will highlight it. You can then start typing to replace the highlighted word.
+__Tip__: If you double click a word/name in the __script editor__ it will highlight it. 
+You can then start typing to replace the highlighted word.
 
 ```{r eval=FALSE}
 #Vectors that will become columns
@@ -196,7 +219,9 @@ multiplication_df <- data.frame(one, two, three,
                                 row.names = row_names)
 ```
 
-Have a look at the resulting __data frame__. You may have noticed that two of the row names and one of the column names is incorrect. We'll use the __functions__ `colnames()`and `row.names()` along with indexes and assignment to change these.
+Have a look at the resulting <u id='data_frame_tooltip'>__data frame__</u>. 
+You may have noticed that two of the row names and one of the column names is incorrect. 
+We'll use the <u id='function_tooltip'>__functions__</u> `colnames()`and `row.names()` along with indexes and assignment to change these.
 ```{r eval=FALSE}
 #Change the 8th column name ("ate") to "eight"
 colnames(multiplication_df)[8] <- "eight"
@@ -206,28 +231,38 @@ row.names(multiplication_df)[7:8] <- c("seven","eight")
 
 ## Tab complete
 <center>
-![](figures/tab.png){style="width:200px; border-radius:15px; background:white; border:white solid"}
+![](figures/tab.png){style="width:200px; border-radius:15px; background:white; border:5px white solid"}
 </center>
 
-Tab completion is a very useful method when coding in any language. It takes some practice to get used to but it increases the speed of coding and drastically reduces typos. 
+Tab completion is a very useful method when coding in any language. 
+It takes some practice to get used to but it increases the speed of coding and drastically reduces typos. 
 
-Before we continue, the tab key is the key above the "CAPS" key and left of the 'q' key. If you would like a demonstration of tab completion please ask!
+Before we continue, the tab key is the key above the "CAPS" key and left of the 'q' key. 
+If you would like a demonstration of tab completion please ask!
 
-The first way to tab complete is to tab complete file names. First you will need to download the following files into your “Chapter_10-11” directory.
+The first way to tab complete is to tab complete file names. 
+First you will need to download the following files into your “Chapter_10-11” directory.
 
 - [tea_consumption.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/tea_consumption.csv)
 - [english_speaking_population_of_countries.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/english_speaking_population_of_countries.tsv)
 
-Next you will run the command that is below. However, when your cursor is in the double quotes first press tab. This will hopefully show a dropdown of selections. There are two ways to then get to your choice:
+Next you will run the command that is below. However, when your cursor is in the double quotes first press tab. 
+This will hopefully show a dropdown of selections. 
+There are two ways to then get to your choice:
 
 1. Use the up and down arrow keys to move to the file name you want and then press enter to have the file name be autofilled.
-2. Start typing your file name till it is the top choice of the drop down menu. You can then press enter to autofill the file name.
+2. Start typing your file name till it is the top choice of the drop down menu. 
+You can then press enter to autofill the file name.
 
 ```{r eval=FALSE}
 tea_df <- read.csv("tea_consumption.csv", check.names=FALSE)
 ```
 
-You may notice that we only provided the file name and the `check.names=FALSE` for the `read.csv()` __function__. This is because of the format of the input file. In this case we do not want any of the input columns converted into row names. Additionally, the file was comma separated and the default separator to be used for `read.csv()` is commas. We will come back to this __data frame__ so either keep the __variable__ in your __environment__ or keep the __read__ code handy.
+You may notice that we only provided the file name and the `check.names=FALSE` for the `read.csv()` <u id='function_tooltip'>__function__</u>. 
+This is because of the format of the input file. 
+In this case we do not want any of the input columns converted into row names. 
+Additionally, the file was comma separated and the default separator to be used for `read.csv()` is commas. 
+We will come back to this <u id='data_frame_tooltip'>__data frame__</u> so either keep the <u id='variable_tooltip'>__variable__</u> in your __environment__ or keep the __read__ code handy.
 
 Let us __read__ in another file using tab complete to autofill the file name again. 
 ```{r eval=FALSE}
@@ -239,11 +274,13 @@ english_df <- read.csv("english_speaking_population_of_countries.tsv",
 
 Great!
 
-The second way to use tab completion is to autofill __variable__ names, __function__ names and options. To autofill a __variable__ or __function__ name you can start typing the name then press tab to get the dropdown menu. 
+The second way to use tab completion is to autofill <u id='variable_tooltip'>__variable__</u> names, <u id='function_tooltip'>__function__</u> names and options. 
+To autofill a <u id='variable_tooltip'>__variable__</u> or <u id='function_tooltip'>__function__</u> name you can start typing the name then press tab to get the dropdown menu. 
 
-Whilst in the `()` of a __function__ you can press tab to get a drop down menu of the option choices and press enter on the highlighted choice to autofill it. 
+Whilst in the `()` of a <u id='function_tooltip'>__function__</u> you can press tab to get a drop down menu of the option choices and press enter on the highlighted choice to autofill it. 
 
-This only works if the name currently exists. I.e. you cannot autofill a __variable name__ if the __variable__ is not in your __environment__.
+This only works if the name currently exists. 
+I.e. you cannot autofill a __<u id='variable_tooltip'>variable</u> name__ if the <u id='variable_tooltip'>__variable__</u> is not in your __environment__.
 
 Continue using tab complete for the rest of the course. Practice makes perfect.
 
@@ -251,7 +288,7 @@ If you really don't like it you don't have to use it.
 
 Data from above files:
 
-- https://en.wikipedia.org/wiki/List_of_countries_by_tea_consumption_per_capita
+- https://worldpopulationreview.com/country-rankings/tea-consumption-by-country
 - https://en.wikipedia.org/wiki/List_of_countries_by_English-speaking_population
 
 ## Tea
@@ -259,14 +296,16 @@ Data from above files:
 ![](figures/tea.png){style="width:200px; background:white; border-radius:15px"}
 </center>
 
-We will have a quick look at the "tea_df". This data shows the annual consumption of tea per capita with a rank based on the highest to lowest consumers.
+We will have a quick look at the "tea_df". 
+This data shows the annual consumption of tea per capita with a rank based on the highest to lowest consumers.
 
-Unfortunately the third column has the annual per capita consumption in kilograms (KG) and pounds (LB) with the two values separated by a "_". Thankfully we can use the __function__ `gsub()` to fix this. 
+Unfortunately the third column has the annual per capita consumption in kilograms (KG) and pounds (LB) with the two values separated by a "_". 
+Thankfully we can use the <u id='function_tooltip'>__function__</u> `gsub()` to fix this. 
 
 `gsub()` will look for a specified pattern and replace it with a specified replacement.
-`gsub()` is only to be used for __strings__.
+`gsub()` is only to be used for <u id='string_tooltip'>__strings__</u>.
 
-Before fixing our __data frame__ I'll show you some examples of `gsub()`.
+Before fixing our <u id='data_frame_tooltip'>__data frame__</u> I'll show you some examples of `gsub()`.
 ```{r eval=FALSE}
 #Scalar string with mistake
 sentence <- "The number 8 is spelt ate"
@@ -292,9 +331,13 @@ gsub(pattern = 5, replacement = 2, 1:20)
 #The output will be strings!
 ```
 
-`.` and `*` are regular expressions. There are many regular expressions but we will only use `.*` to represent "all strings". The best part about this is we can put the `.*` after a specific character to replace the specific character and everything after it. Alternatively we can put the `.*` before a specific character to replace the specific character and everything before it.
+`.` and `*` are regular expressions. 
+There are many regular expressions but we will only use `.*` to represent "all strings". 
+The best part about this is we can put the `.*` after a specific character to replace the specific character and everything after it. 
+Alternatively we can put the `.*` before a specific character to replace the specific character and everything before it.
 
-Let us carry this out with the "tea_df" so it will hopefully make more sense. We are going to do this so we can make a kilogram column and a pound column.
+Let us carry this out with the "tea_df" so it will hopefully make more sense. 
+We are going to do this so we can make a kilogram column and a pound column.
 
 __Note__: Make sure you have the "tea_df" in your environment before proceeding.
 ```{r eval=FALSE}
@@ -328,9 +371,13 @@ If you are interested in more regular expressions I would recommend looking at t
 ![](figures/language.png){style="width:200px; background:white; border-radius:15px"}
 </center>
 
-Now we will do some processing of the "english_df" __data frame__. This shows the various number of english speakers with info on the number of those who have English as a first language and those who have it as an additional language. View the __data frame__ to see its contents.
+Now we will do some processing of the "english_df" <u id='data_frame_tooltip'>__data frame__</u>. 
+This shows the various number of english speakers with info on the number of those who have English as a first language and those who have it as an additional language. 
+View the <u id='data_frame_tooltip'>__data frame__</u> to see its contents.
 
-There are a lot of NA values. Looking at the values in the __data frame__ try to figure out the two reasons that these NA values are present. Once you have had a thought you can have a look at the below two reasons.
+There are a lot of NA values. 
+Looking at the values in the <u id='data_frame_tooltip'>__data frame__</u> try to figure out the two reasons that these NA values are present. 
+Once you have had a thought you can have a look at the below two reasons.
 
 1. Some countries have zero population of English first speakers and some countries have zero population of people who speak English as an additional language.
 2. Some countries are missing data on the number of first and additional speakers, e.g. Ukraine.
@@ -340,7 +387,9 @@ We will fix these issues one by one. First let us change all NAs to the number 0
 english_df[is.na(english_df)] <- 0
 ```
 
-We have changed all NAs. However, some of the rows in the 3rd and 4th column don't equal the 2nd column. We'll now remove these rows as they have missing data and we don't want that here.
+We have changed all NAs. 
+However, some of the rows in the 3rd and 4th column don't equal the 2nd column. 
+We'll now remove these rows as they have missing data and we don't want that here.
 ```{r eval=FALSE}
 #1st method with multiple lines for clarity
 #Create a vector of first language + additional language
@@ -372,7 +421,8 @@ I would use the one command method but the multi line method is just as valid. I
 2. Your code is well annotated. This will help with the first step and it will help your future self and others who will read your code.
 3. You can read and understand your own code (annotation helps). There is little point in code you cannot read. You will most likely need to debug code you write (I know I do). Write code in a way that you know you will be able to read. If this means doing little parts over multiple lines then do it that way.
 
-We will come back to the __data frames__ "tea_df" and "english_complete_datasets_df" for the exercises. But let us go onto 2 more topics.
+We will come back to the <u id='data_frame_tooltip'>__data frames__</u> "tea_df" and "english_complete_datasets_df" for the exercises. 
+But let us go onto 2 more topics.
 
 
 ## Identical
@@ -380,7 +430,10 @@ We will come back to the __data frames__ "tea_df" and "english_complete_datasets
 ![](figures/identikeys.png){style="width:200px"}
 </center>
 
-I touched on the `identical()` __function__ above to compare the two resulting __data frames__. `identical()` will compare two objects and if the objects are exactly identical it will print TRUE. If they are not exactly identical it will print FALSE. The function can be given __scalars__, __vectors__, __data frames__ etc. Below are some examples
+I touched on the `identical()` <u id='function_tooltip'>__function__</u> above to compare the two resulting <u id='data_frame_tooltip'>__data frames__</u>. `identical()` will compare two objects and if the objects are exactly identical it will print TRUE. 
+If they are not exactly identical it will print FALSE. 
+The <u id='function_tooltip'>function</u> can be given __scalars__, __vectors__, __data frames__ etc. 
+Below are some examples
 ```{r eval=FALSE}
 identical(1,1)
 identical(1,2)
@@ -403,7 +456,8 @@ identical(english_df,tea_df)
 ![](figures/keyboard.png){style="width:300px"}
 </center>
 
-RStudio has many keyboard shortcuts for the __Script editor__. Some of these are common shortcuts used for other software and some are unique to RStudio. 
+RStudio has many keyboard shortcuts for the __Script editor__. 
+Some of these are common shortcuts used for other software and some are unique to RStudio. 
 
 Below are a few:
 
@@ -421,7 +475,9 @@ There are a lot more shortcuts. If you want to see the full list go to "Tools" o
 ![](figures/question_bubble_blue.png){style="width:200px"}
 </center>
 
-Attempt the below MCQs.
+Superb! That is the end of the chapter. Please ensure you are asving your scripts regularly.
+
+For a recap please attempt the below MCQs.
 
 ```{r, echo = FALSE}
 opts_p <- c("Camel case", "Period separated", answer="Snake case")
@@ -464,3 +520,49 @@ opts_p <- c(answer="`gsub()`", "`is.na()`", "Tab")
 8. Which __function__ can be used to replace patterns? `r longmcq(opts_p)`
 
 Now time for exercises!
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```

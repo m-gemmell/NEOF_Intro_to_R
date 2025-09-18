@@ -1,0 +1,313 @@
+# Stats exercises
+
+<center>
+![](figures/world_happiness.png){style="width:200px"}
+</center>
+
+Please use your "Exercises.R" script for this exercise and the main workshop directory as the working directory. Ensure you are using annotations and code sections to keep the contents clear and separated.
+
+## Data
+For this exercise we will be looking at the World Happiness Report for 2016. This report is a survey of the state of global happiness.
+
+Download [world_happiness_report_2016.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/world_happiness_report_2016.csv) to the directory "Chapter_17-18".
+
+Source: https://www.kaggle.com/unsdsn/world-happiness?select=2016.csv
+
+The columns for the data are:
+
+- __Country__: Name of the country.
+- __Region__: Region the country belongs to.
+- __Happiness Rank__: Rank of the country based on the Happiness Score.
+- __Happiness Score__: A metric measured in 2016 by asking the sampled people the question: "How would you rate your happiness on a scale of 0 to 10 where 10 is the happiest".
+- __Lower Confidence Interval__: Lower Confidence Interval of the Happiness Score.
+- __Upper Confidence Interval__: Upper Confidence Interval of the Happiness Score.
+- __Economy (GDP per Capita)__: The extent to which GDP contributes to the calculation of the Happiness Score.
+- __Family__: The extent to which Family contributes to the calculation of the Happiness Score.
+- __Health (Life Expectancy)__: The extent to which Life expectancy contributed to the calculation of the Happiness Score.
+- __Freedom__: The extent to which Freedom contributed to the calculation of the Happiness Score.
+- __Trust (Government Corruption)__: The extent to which Perception of Corruption contributes to Happiness Score.
+- __Generosity__: The extent to which Generosity contributed to the calculation of the Happiness Score.
+- __Dystopia Residual__: The extent to which Dystopia Residual contributed to the calculation of the Happiness Score. More info in the "What is Dystopia?" section at https://worldhappiness.report/faq/.
+
+## World happiness challenges
+
+With that information carry out the following challenges and answer the questions.
+
+Solutions are in the expandable boxes. 
+Try your best to solve each challenge but use the solutions for help if you would like. 
+Even if your method works it can be good to check the solution as there are many ways to do the same thing in R.
+
+### World happiness challenge 1 {-}
+
+Read in the file "world_happiness_report_2016" as __data frame__ called "happy_df". Ensure __strings__ are read in as __factors__ and that none of the columns are read in as row names.
+
+`r hide("World happiness solution 1")`
+```{r eval=TRUE}
+happy_df <- read.csv("Chapter_17-18/world_happiness_report_2016.csv", 
+                      check.names = FALSE,
+                      stringsAsFactors = TRUE,
+                      sep = ","
+                      )
+```
+`r unhide()`
+
+### World happiness challenge 2 {-}
+
+Answer the following questions using the output from one __function__:
+
+```{r, echo = FALSE}
+opts_p <- c("__0.8179__", "__7.526__", answer="__21__")
+```
+How many countries are in the region "Western Europe"? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__0.8179__", answer="__7.526__", "__21__")
+```
+What is the maximum number in the "Happiness Score" column? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__0.8179__", "__7.526__", "__21__")
+```
+What is the minimum value in the "Dystopia Residual" column?`r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__Economy (GDP per Capital)__", "__Freedom__", answer="__Dystopia Residual__")
+```
+From the columns "Economy (GDP per Capital)", "Freedom" , and "Dystopia Residual", which has the highest mean value?`r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__Economy (GDP per Capital)__", answer="__Freedom__", "__Dystopia Residual__")
+```
+From the columns "Economy (GDP per Capital)", "Freedom" , and "Dystopia Residual", which has the lowest mean value? `r longmcq(opts_p)`
+
+`r hide("World happiness solution 2")`
+```{r eval=TRUE}
+summary(happy_df)
+```
+`r unhide()`
+
+### World happiness challenge 3 {-}
+
+Create the below plot.
+
+- The equation does not have to be in exactly the same position as the below. Just make sure it is all clearly visible, it contains the same text, and it is not on top of any points.
+- The colour for the line is "mediumslateblue"
+- Note you can put "\\n" into a label/title to make a new line.
+- e.g "This is the first line \\n and this is the second line"
+
+```{r eval=TRUE, echo=FALSE, fig.width= 8, fig.height=8}
+#Read in df
+happy_df <- read.csv("world_happiness_report_2016.csv", 
+                      check.names = FALSE,
+                      stringsAsFactors = TRUE,
+                      sep = ","
+                      )
+#Fit linear model of Economy (x) against Family (y)
+fit_economy_family <- 
+  lm(Family~`Economy (GDP per Capita)`, data = happy_df)
+#Create string for linear equation
+c <- round(fit_economy_family$coefficients[1], digits = 4)
+m <- round(fit_economy_family$coefficients[2], digits = 4)
+lm_equation <- paste0("y = ", m , "x + ", c)
+#Produce plot
+plot(x = happy_df$`Economy (GDP per Capita)`,
+     y = happy_df$Family,
+     main = "Comparison of the effect of \n Economy and Family on happiness",
+     xlab = "Economy (GDP per Capita)",
+     ylab = "Family",
+     pch = as.numeric(happy_df$Region),
+     xlim = c(0,2), ylim = c(0,1.5),
+     col = 1)
+#Add abline
+abline(fit_economy_family, col = "mediumslateblue")
+#Add equation to top right
+text(x = 0.4, y = 1.1, labels = lm_equation)
+#Add the legend
+legend(x = "bottomright",
+       pch = 1:nlevels(happy_df$Region),
+       legend = levels(happy_df$Region))
+```
+
+`r hide("World happiness solution 3")`
+```{r eval=FALSE}
+#Fit linear model of Economy (x) against Family (y)
+fit_economy_family <- 
+  lm(Family~`Economy (GDP per Capita)`, data = happy_df)
+#Create string for linear equation
+c <- round(fit_economy_family$coefficients[1], digits = 4)
+m <- round(fit_economy_family$coefficients[2], digits = 4)
+lm_equation <- paste0("y = ", m , "x + ", c)
+#Produce plot
+plot(x = happy_df$`Economy (GDP per Capita)`,
+     y = happy_df$Family,
+     main = "Comparison of the effect of \n Economy and Family on happiness",
+     xlab = "Economy (GDP per Capita)",
+     ylab = "Family",
+     pch = as.numeric(happy_df$Region),
+     xlim = c(0,2), ylim = c(0,1.5),
+     col = 1)
+#Add abline
+abline(fit_economy_family, col = "mediumslateblue")
+#Add equation to top right
+text(x = 0.4, y = 1.1, labels = lm_equation)
+#Add the legend
+legend(x = "bottomright",
+       pch = 1:nlevels(happy_df$Region),
+       legend = levels(happy_df$Region))
+```
+`r unhide()`
+
+### World happiness challenge 4 {-}
+
+It may be a bit awkward to get the right size for the plot in the __"Plots"__ pane. Therefore save it as a png file with the following options:
+
+- File name of "Economy_vs_family.png"
+- Dimensions of file is 8 inches for height and width
+- Resolution of 200dpi
+
+`r hide("World happiness solution 4")`
+```{r eval=FALSE}
+#PNG command
+png(filename = "Chapter_17-18/Economy_vs_family.png", 
+    units = "in", height = 8, width = 8, res = 200)
+#Produce plot
+plot(x = happy_df$`Economy (GDP per Capita)`,
+     y = happy_df$Family,
+     main = "Comparison of the effect of \n Economy and Family on happiness",
+     xlab = "Economy (GDP per Capita)",
+     ylab = "Family",
+     pch = as.numeric(happy_df$Region),
+     xlim = c(0,2), ylim = c(0,1.5),
+     col = 1)
+#Add abline
+abline(fit_economy_family, col = "mediumslateblue")
+#Add equation to top right
+text(x = 0.4, y = 1.1, labels = lm_equation)
+#Add the legend
+legend(x = "bottomright",
+       pch = 1:nlevels(happy_df$Region),
+       legend = levels(happy_df$Region))
+#dev.off
+dev.off()
+```
+`r unhide()`
+    
+### World happiness challenge 5 {-}
+
+Answer the following questions using information on the line graph and the linear model.
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__Positive__", "__Negative__")
+```
+Does the linear model have a positive or negative gradient? `r longmcq(opts_p)`
+
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__Economy__", "__Family__")
+```
+Which variable (Economy or Family) has higher values? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__0.582678__", answer="__1.28968__", "__3.972274__")
+```
+If the value of Economy was 2.1 what would be the predictive value of Family according to the linear model equation?`r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__Latin America and Caribbean__", "__North America__", answer="__Western Europe__")
+```
+Which region appears to have the highest values for Economy and for Family? `r longmcq(opts_p)`
+
+### World happiness challenge 6 {-}
+
+Create the following boxplot.
+
+- You can change the the levels with the following code
+
+```{r eval=FALSE}
+short_region_names <- 
+  c("OZ_n_NZ", "C_n_E_Europe", "E_Asia", "L_America_n_Caribbean",
+    "Middle_E_n_N_Africa", "N_America", "SE_Asia", "S_Asia",
+    "Sub_Saharan", "W_Europe")
+levels(happy_df$Region) <- short_region_names
+```
+   
+```{r eval=TRUE, echo=FALSE, fig.width= 16, fig.height=10}
+#Change level names
+short_region_names <- 
+  c("OZ_n_NZ", "C_n_E_Europe", "E_Asia", "Latin_A_n_Carib",
+    "ME_n_N_Africa", "N_America", "SE_Asia", "S_Asia",
+    "Sub_Saharan", "W_Europe")
+levels(happy_df$Region) <- short_region_names
+#Create boxplot
+boxplot(`Happiness Score`~Region, data = happy_df, 
+        ylim = c(0,10),
+        col = 1:nlevels(happy_df$Region),
+        main = "Happiness scores across regions"
+)
+```
+
+`r hide("World happiness solution 6")`
+```{r eval=FALSE}
+#Change level names
+short_region_names <- 
+  c("OZ_n_NZ", "C_n_E_Europe", "E_Asia", "Latin_A_n_Carib",
+    "ME_n_N_Africa", "N_America", "SE_Asia", "S_Asia",
+    "Sub_Saharan", "W_Europe")
+levels(happy_df$Region) <- short_region_names
+#Create boxplot
+boxplot(`Happiness Score`~Region, data = happy_df, 
+        ylim = c(0,10),
+        col = 1:nlevels(happy_df$Region),
+        main = "Happiness scores across regions"
+)
+```
+`r unhide()`
+
+### World happiness challenge 7 {-}
+
+Save the above as a jpeg called "Region_happiness_boxplots.jpg" with a width of 1600 pixels and a height of 750 pixels.
+
+`r hide("World happiness solution 7")`
+```{r eval=FALSE}
+#jpeg
+jpeg(filename = "Chapter_17-18/Region_happiness_boxplots.jpg", units = "px",
+     width = 1600, height = 750 )
+#Create boxplot
+boxplot(`Happiness Score`~Region, data = happy_df, 
+        ylim = c(0,10),
+        col = 1:nlevels(happy_df$Region),
+        main = "Happiness scores across regions"
+)
+#dev.off
+dev.off()
+```
+`r unhide()`
+
+### World happiness challenge 8 {-}
+
+Last challenge! Carry out t-tests on the following comparisons for Happiness Score and determine if the means are significantly different.
+
+- West Europe and North America
+- West Europe and South Asia
+- South Asia and South Eastern Asia
+
+`r hide("World happiness solution 8")`
+```{r eval=TRUE}
+#Subset the data frames to get vectors of our regions of interest
+WE_happiness <- happy_df[happy_df$Region == "W_Europe","Happiness Score"]
+NA_happiness <- happy_df[happy_df$Region == "N_America","Happiness Score"] 
+SA_happiness <- happy_df[happy_df$Region == "S_Asia","Happiness Score"] 
+SEA_happiness <- happy_df[happy_df$Region == "SE_Asia","Happiness Score"]
+#Carry out t-tests
+WE_NA_ttest <- t.test(WE_happiness, NA_happiness)
+WE_SA_ttest <- t.test(WE_happiness, SA_happiness)
+SA_SEA_ttest <- t.test(SA_happiness, SEA_happiness)
+#Extract p values into a new vector with element names
+region_happiness_pvalues <- c(WE_NA = WE_NA_ttest$p.value,
+                              WE_SA = WE_SA_ttest$p.value,
+                              SA_SEA = SA_SEA_ttest$p.value)
+#Logical to determine if the p-value is less than 0.05
+#I.e. the means are significantly different
+region_happiness_pvalues < 0.05
+```
+`r unhide()`

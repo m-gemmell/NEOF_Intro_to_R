@@ -9,6 +9,10 @@ Please set the working directory to your main workshop directory and use your "E
 
 Additionally __read__ in and __write__ out files to "Chapter_10-11" .
 
+Solutions are in the expandable boxes. 
+Try your best to solve each challenge but use the solutions for help if you would like. 
+Even if your method works it can be good to check the solution as there are many ways to do the same thing in R.
+
 ## Tea exercise
 <center>
 ![](figures/tea.png){style="width:200px; background:white; border-radius:15px"}
@@ -21,6 +25,50 @@ The first task you will carry out is printing out information from "tea_df". Bel
 Print out this statement for the countries Ireland, United Kingdom, France, and Australia with their relevant information. Make sure the kilogram value only has one decimal place.
 
 __Tip__: You will require the __functions__ `paste()` and `round()` from day 1.
+
+`r hide("Tea solutions")`
+First ensure you have the "tea_df" loaded (remember your working directory will need to be in the correct location first). Also it needs to be preprocessed with the `gsub()` function.
+```{r eval=FALSE}
+tea_df <- read.csv("Chapter_10-11/tea_consumption.csv", check.names=FALSE)
+tea_df$lb <- tea_df$KG_LB_annual_per_capita
+tea_df$lb <- gsub(pattern = ".*_", replacement = "", tea_df$lb)
+colnames(tea_df)[3] <- "kg"
+tea_df$kg <- gsub(pattern = "_.*", replacement = "", tea_df$kg)
+tea_df$kg <- as.numeric(tea_df$kg)
+tea_df$lb <- as.numeric(tea_df$lb)
+```
+
+Remember there are many ways to carry this out but here is one.
+
+First create a __vector__ with the names of the countries we want:
+```{r eval=FALSE}
+countries <- c("Ireland", "United Kingdom", "France", "Australia")
+```
+
+Set the row names to the countries for easy indexing:
+
+__Note__: Row name must be unique which is the case here.
+```{r eval=FALSE}
+row.names(tea_df) <- tea_df$Country
+```
+
+Create a __data frame__ that only contains our countries of interest. We use the __vector__ as an index for the rows.
+```{r eval=FALSE}
+tea_df_subset <- tea_df[countries,]
+```
+
+Here because we are working with a temporary __variable__ we will overwrite the kg column so the values only contain one decimal place
+```{r eval=FALSE}
+tea_df_subset$kg <- round(x = tea_df_subset$kg, digits = 1)
+```
+
+Last step is to print out the statement. We will use `paste0()` which is exactly like `paste()` but the `sep =` option is set to `""`.
+```{r eval=FALSE}
+paste0(tea_df_subset$Country, " is the number ", 
+       tea_df_subset$Rank, " consumer of tea. It consumes ", 
+       tea_df_subset$kg, "kg of tea annually per capita.")
+```
+`r unhide()`
 
 ## English speakers across the world exercise
 <center>
@@ -63,6 +111,63 @@ When you have created yours check it with the above one. Is your value for the "
 
 Once you have created the __data frame__ __write__ it out as a comma separated file with the function `write.table()` called "English_top_7_populated_countries.csv". Have the row and column names surrounded by quotes in your file. Make sure there is an empty value above your row names.
 
+`r hide("English speakers solutions")`
+First make sure the __data frame__ is created. Remember to set your working directory to where the file is.
+```{r eval=FALSE}
+english_df <- read.csv(
+  "Chapter_10-11/english_speaking_population_of_countries.tsv", 
+  sep = "\t", 
+  row.names = 1,
+  check.names = FALSE)
+english_df[is.na(english_df)] <- 0
+english_complete_datasets_df <- 
+  english_df[
+    (english_df$`As first language` + english_df$`As an additional language`) ==
+      english_df$`Total English speakers`,
+    ]
+```
+
+Create new __data frame__ only containing countries with an eligible population of > 100 million.
+```{r eval=FALSE}
+english_100mil_df <- english_complete_datasets_df[
+  english_complete_datasets_df$`Eligible population` > 100000000,
+  ]
+```
+
+Create column with fraction of total english speakers against population
+```{r eval=FALSE}
+english_100mil_df$`Fraction of population that are English speakers` <- 
+  english_100mil_df$`Total English speakers` /
+  english_100mil_df$`Eligible population`
+```
+
+Create row with mean values
+```{r eval=FALSE}
+english_100mil_df["Mean",] <- colMeans(english_100mil_df)
+```
+
+Create row with totals
+```{r eval=FALSE}
+english_100mil_df["Total",1:4] <- colSums(english_100mil_df[1:7,1:4])
+```
+
+Create the total fraction of english speakers
+```{r eval=FALSE}
+english_100mil_df["Total","Fraction of population that are English speakers"] <- 
+  english_100mil_df["Total","Total English speakers"] /
+  english_100mil_df["Total","Eligible population"]
+```
+
+__Write__ the data as a file
+```{r eval=FALSE}
+write.table(x = english_100mil_df, 
+            file = "Chapter_10-11/English_top_7_populated_countries.csv", 
+            col.names=NA,
+            quote = TRUE, 
+            sep = ",")
+```
+`r unhide()`
+
 ## Extra exercise
 <center>
 ![](figures/multiplication.png){style="width:200px"}
@@ -74,4 +179,4 @@ Create a multiplication table like the one in the practice from today. However h
 
 Then __write__ the __data frame__ to a file. The name and format of the file is up to you.
 
-There is no solution to this in the next section.
+There is no solution for this exercise.
