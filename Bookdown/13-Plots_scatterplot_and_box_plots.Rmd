@@ -1,15 +1,15 @@
 # Scatter plots and Box plots {#scatterandboxchap}
 <center>
-![](figures/large_brush.png){style="width:200px"}
+![](figures/large_brush.png){style="width:200px; background:white; border-radius:5px"}
 </center>
 
 Last chapter we learnt how to make Histograms and Line graphs. In this chapter it is Scatter plots and Box plots.
 
-Continue using the directory "Chapter_13-16" as the working directory.
+Continue using the directory "Chapter_12-14" as the working directory.
 
 ## Scatter plot
 <center>
-![](figures/Scatterplot_2.png){style="width:200px; background:white; border-radius:10px"}
+![](figures/Scatterplot_2.png){style="width:200px; background:white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Scatter plots are a great way to compare two matching variables. To make a scatter plot we use the `plot()` __function__ again. This means a lot of what we went through the last chapter will be helpful for this chapter
@@ -25,15 +25,16 @@ That was a nice linear plot. We'll make a curve this time.
 
 In the command we will not include the option `type = "p"` as this is the default for `plot()`. 
 
-Additionally we will not provide the option names `x = ` and `y = `. __Functions__ have an order to their options so if you leave out the option names but provide options (in this case __vectors__) it will use the options in the order. In the case of `plot()` it will take the first option as `x = ` and the second option as `y = `. It is common for plotting functions to take x first then y.
+Additionally we will not provide the option names `x = ` and `y = `. __Functions__ have an order to their options so if you leave out the option names but provide options (in this case __vectors__) it will use the options in the function's default order. 
+In the case of `plot()` it will take the first option as `x = ` and the second option as `y = `. It is common for plotting functions to take x first then y.
 
 ```{r eval=FALSE}
 plot(1:20, (1:20)*(1:20))
 ```
 
-### Animal sizes
+### Animal sizes data
 <center>
-![](figures/blue_whale.png){style="width:200px; background:white; border-radius:15px"}
+![](figures/blue_whale.png){style="width:200px; background:white; border-radius:5px"}
 </center>
 
 For our scatter plot from real data we will look at the sizes of the largest animals in the world. This data is from: https://en.Wikipedia.org/wiki/Largest_organisms
@@ -47,7 +48,12 @@ The data we will be using will contain the following information:
 - Group, In this case are they Mammals or Reptiles
 - Biom, are they aquatic, semiaquatic, or terrestrial
 
-First download the [animal_sizes.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/animal_sizes.csv) file into your "Chapter_13-16" directory.
+Download the [animal_sizes.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/animal_sizes.csv) file into your "Chapter_12-14" directory.
+
+### Read in animal data
+<center>
+![](figures/reading_glasses.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Next, __read__ the data into R. We have included a new option: `stringsAsFactors = TRUE`. This is important for plotting and will be explained more later.
 
@@ -57,6 +63,11 @@ animal_df <- read.csv("animal_sizes.csv",
                       stringsAsFactors = TRUE
                       )
 ``` 
+
+### Average mass and max mass
+<center>
+![](figures/hippo.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Check the column names with the __function__ `colnames()`. With these column names we can create some quick plots.
 
@@ -70,6 +81,11 @@ Average and maximum weight appear to correlate as expected.
 
 Sometimes a quick and easy plot is all you want. If you're not going to present a plot then it doesn't need to be pretty. As long as it is functional it is useful.  
 
+### Average mass and length
+<center>
+![](figures/elephant.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
 Now let's compare the average weight and length
 ```{r eval=FALSE}
 plot(x = animal_df$`Average mass (tonnes)`,
@@ -80,6 +96,11 @@ With that we can see the following:
 
 - At lower weights (< 20 tonnes) a longer length does not necessarily mean a higher mass
 - At higher weights (>20 tonnes) there appears to be an overall trend of longer lengths equaling higher masses with the animal with the highest mass having the longest length
+
+### Plot section zoom
+<center>
+![](figures/zoom.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 However it is quite hard to see the overall trend in the lower mass animals as they are squashed in a small part of the plot. We can zoom into this part in two different ways
 
@@ -98,6 +119,11 @@ plot(x = animal_df[animal_df$`Average mass (tonnes)` < 10,
 #I personally prefer the x and y limit approach
 ```
 
+### Colour points by metadata
+<center>
+![](figures/coloured_points.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
 We can also include the Biom metadata as an aesthetic in the plot
 ```{r eval=FALSE}
 #Plot
@@ -112,6 +138,10 @@ legend(x = "bottomright", col = 1:nlevels(animal_df$Biom),
 ``` 
 
 ## Factors
+<center>
+![](figures/key_factor.png){style="width:175px; background:white; border-radius:5px; border: 5px white solid"}
+</center>
+
 The last command used a lot of __factors__.
 
 __Factors__ are a new __class__! They are a combination of __String__ and __Numeric__. They are useful for categorical data where the same values will appear multiple times.
@@ -124,7 +154,10 @@ levels(animal_df$Group)
 nlevels(animal_df$Group)
 ```
 
-What are __levels__? 
+### What are levels? 
+<center>
+![](figures/level.png){style="width:150px; background:white; border-radius:15px"}
+</center>
 
 __Levels__ are the unique values in a __factor__. __Levels__ also store a matching number. This number determines the order of the levels. In the case of Group "Mammal" is assigned the number 1 and "Reptile" is assigned the number 2. This is because numbers are assigned to __Levels__ in alphabetical order by default.
 
@@ -142,6 +175,8 @@ However, the __elements__ are actually numbers! Each number is assigned a __stri
 
 If you don't understand __factors__ from that explanation that is fine. I find it is a hard concept to explain or understand. 
 
+### Map key analogy
+
 An analogy would be a map key. You could just write "town", "Mountain", "railroad", "Lake" over a map to say where everything is like below:
 <center>
 ![](figures/town_words.png){style="width:400px; background:white; border-radius:15px"}
@@ -154,6 +189,11 @@ Compare this to our map with symbols and a key:
 </center>
 
 The key represents the __levels__ with our unique __strings__ corresponding to symbols (numbers). Instead of each string being stored on the map multiple times only the symbols (numbers) are.
+
+### Code example
+<center>
+![](figures/keyboard_bfx.png){style="width:150px; background:white; border-radius:5px"}
+</center>
 
 Time for a more practical example with code. We will first create a __character vector__ then create a __factor__ from it with the __function__ `factor()`. We'll then see what we can do with a __factor__.
 ```{r eval=FALSE}
@@ -176,6 +216,11 @@ as.character(factor_vec)
 as.numeric(factor_vec)
 ```
 
+### Level orders
+<center>
+![](figures/reorder.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid"}
+</center>
+
 We will get back to plotting soon but first I want to show you how to specify the order of __levels__. This is important as a lot of the time alphabetically is not wanted. One example is with months.
 ```{r eval=FALSE}
 #Create a factor vector of months
@@ -197,6 +242,11 @@ months_factor_vec <-factor(months_factor_vec,
 months_factor_vec
 levels(months_factor_vec)
 ```
+
+### Scatter plot with shapes
+<center>
+![](figures/scatterplot_colours_shapes.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid"}
+</center>
 
 Now let us make a nice scatter plot of the animal data with points coloured by Biom and shaped (`pch =`) by Group.
 ```{r eval=FALSE}
@@ -231,7 +281,7 @@ If not another tutorial is: https://www.tutorialspoint.com/r/r_factors.htm
 
 ## Box plot
 <center>
-![](figures/boxplot.png){style="width:200px; background:white; border-radius:15px"}
+![](figures/boxplot.png){style="width:200px; background:white; border-radius:5px"}
 </center>
 
 Next we are going to make a box plot with some Penguin data from:
@@ -239,7 +289,7 @@ https://allisonhorst.github.io/palmerpenguins/
 
 This data contains information on individual penguins that were gathered from Palmer Station LTER. 
 
-First download the [penguin.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/penguin.tsv) file into your "Chapter_13-16" directory.
+First download the [penguin.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/penguin.tsv) file into your "Chapter_12-14" directory.
 
 As you expect the next step is to __read__ in the file. This time the file is a tsv (tab separated file) with no row names. We will ensure that columns containing strings are converted to __factors__.
 ```{r eval=FALSE}
@@ -263,12 +313,22 @@ Each row is a measurement of a penguin. The columns for this __data frame__ are:
 
 With all that information we'll make a nice boxplot to show the body mass against the species.
 
+### Body mass boxplot
+<center>
+![](figures/penguin_unix.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid"}
+</center>
+
 The __function__ `boxplot()` can be used with this. This __function__ is different than the others where the first option is `yaxis_column_name~xaxis_column_name`. This is followed by the option `data = ` where you provide the __data frame__.
 
 Below is the command for this:
 ```{r eval=FALSE}
 boxplot(body_mass_g~species, data = penguin_df)
 ```
+
+### Split x axis by two groupings
+<center>
+![](figures/boxplot_2_axis_groups.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid"}
+</center>
 
 What if we want to split the 3 box plots by sex? 
 
@@ -277,6 +337,11 @@ We can do that like below:
 boxplot(body_mass_g~species*sex, data = penguin_df,
         col = c("yellow","green"))
 ```
+
+### Example boxplots
+<center>
+![](figures/penguin_3.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid"}
+</center>
 
 I will show you some more examples followed by a final nice plot.
 
@@ -313,6 +378,11 @@ boxplot(body_mass_g~bill_length_mm , data = penguin_df)
 ```
 This does work! However, a scatter plot would most likely be a lot more suited to plotting this data.
 
+### Final boxplot
+<center>
+![](figures/penguin_2.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid"}
+</center>
+
 We will now make one final plot for this section. I will not explain what the code is doing. Instead read and run the code to figure it out.
 ```{r eval=FALSE}
 boxplot(body_mass_g~species*year , 
@@ -325,7 +395,7 @@ boxplot(body_mass_g~species*year ,
 
 ## Saving a plot to a file
 <center>
-![](figures/r_save.png){style="width:200px"}
+![](figures/r_save.png){style="width:200px; background: white; border-radius:5px; border: 5px solid white"}
 </center>
 
 To save a plot to a file you can use the __functions__ `png()` and `dev.off()`.
@@ -341,6 +411,11 @@ The __function__ `png()` goes before all the plotting commands. It has various o
 After the `png()` and plotting __functions__ you use the __function__ `dev.off()`. This lets R know you are finished plotting and so the file from `png()` will be created.
 
 You can then look at the plot. If it is not how you would like you can edit the script and rerun from `png()` to `dev.off()`. Through trial and error you can make the plot look how you like.
+
+### Save plot as png file
+<center>
+![](figures/display_png.png){style="width:200px; background: white; border-radius:5px; border: 5px solid white"}
+</center>
 
 Let us save the last plot as a png file:
 ```{r eval=FALSE}

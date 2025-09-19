@@ -2,16 +2,17 @@
 
 # Basic programming {#basicprogramming}
 <center>
-![](figures/programming.png){style="width:200px"}
+![](figures/programming.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 In this chapter we will be look at some basic programming with R. This will involve __loops__, __if__ statements, and creating your own __functions__.
 
-Create and use the directory "Chapter_20-21" as the working directory for this chapter. Additionally create a new script called "Programming.R" for this chapter.
+Create and use the directory "Chapter_17-18" as the working directory for this chapter. 
+Additionally, create a new script called "Programming.R" for this chapter.
 
 ## Recycle rule
 <center>
-![](figures/recycle.png){style="width:200px"}
+![](figures/recycle.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 When two __objects__ of different lengths act upon each other the smaller __object__ will be recycled so each element in the larger __object__ is acted upon.
@@ -30,12 +31,7 @@ small_vec * large_vec
     - The second `small_vec` __element__ is used to multiply the 2nd, 5th, and 8th positions of `large_vec`.
     - The last/third `small_vec` __element__ is used to multiply the 3rd, 6th, and 9th positions of `large_vec`.
     
-Below is an example with a visualisation. `large_vec` is the numbers 1 to 9 this time:
-```{r eval=FALSE}
-small_vec <- 1:3
-large_vec <- 1:9 
-small_vec * large_vec
-```
+Below is a visual example of the above.
 
 <center>
 ![](figures/recycle_rule_example_1.png){style="width:600px; border-radius:5px"}
@@ -48,7 +44,8 @@ Depending on the length of the large __vector__ the __elements__ of the smaller 
 - The 1st __element__ of the smaller __vector__ would be used twice (recycled once).
 - The 2nd & 3rd __elements__ of the smaller __vector__ would be used once (not recycled).
 
-Below is a quick example of this. You should notice a warning is printed out as the length of the __objects__ are not multiples of each other. However, above the warning is the correct output.
+Below is a quick example of this. You should notice a warning is printed out as the length of the __objects__ are not multiples of each other. 
+However, above the warning is the correct output.
 ```{r eval=FALSE}
 1:3 * rep(1,4)
 ```
@@ -79,7 +76,7 @@ paste0(recyclable_materials, " can be recycled at ", recycle_centres)
 
 ## Loops
 <center>
-![](figures/loop.png){style="width:200px"}
+![](figures/loop.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 With __loops__ we can carry out the same commands and __functions__ on multiple __elements__ within a 1 dimensional __object__ (__vector__ or __list__) without having to type it out multiple times.
@@ -118,7 +115,7 @@ i <- loop_vec[5]
 print(i * 10)
 ```
 
-Except instead of many lines we were able to carry it out in one command rather than many.
+Except instead of many commands over many lines we were able to carry it out in one command.
 
 Analogy:
 
@@ -212,7 +209,7 @@ mult_prop_row_mat
 Hopefully this is clear how __for loops__ can be used. Further down we'll work with a real dataset to show some real world applications. However, for now we will go onto __while loops__.
 
 ### While loops
-I do not use __while loops__ often so we will only briefly go over them. A __while loop__ will loop over a series of commands until a condition is no longer met. Conditions will either be TRUE or FALSE (logical)
+I do not use __while loops__ often so we will only briefly go over them. A __while loop__ will loop over a series of commands until a condition is no longer met. Conditions will either be TRUE or FALSE (logical).
 
 The format of a __while loop__:
 ```{r eval=FALSE}

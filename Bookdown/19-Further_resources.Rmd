@@ -86,13 +86,13 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 # Workshop files {#workshopfiles}
 
-## Chapter 7 files
+## Chapter 6 files
 
 - [Liverpool_beaches.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/Liverpool_beaches.csv)
 - [Global_eco_footprint.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/Global_eco_footprint.tsv)
 - [parks_biodiveristy.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/parks_biodiveristy.csv)
 
-## Chapter 8 files
+## Chapter 7-9 files
 
 -   [bat_roosts.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/bat_roosts.csv)
 -   [honey_bee.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/honey_bee.tsv)
@@ -102,17 +102,17 @@ frameborder="0" allowfullscreen class="video"></iframe>
 -   [tea_consumption.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/tea_consumption.csv)
 -   [english_speaking_population_of_countries.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/english_speaking_population_of_countries.tsv)
 
-## Chapter 13-16 files
+## Chapter 12-14 files
 
 -   [animal_sizes.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/animal_sizes.csv)
 -   [penguin.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/penguin.tsv)
 
-## Chapter 17-19
+## Chapter 15-16
 
 -   [Fish.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/Fish.csv)
 -   [world_happiness_report_2016.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/world_happiness_report_2016.csv)
 
-## Chapter 20-21
+## Chapter 17-18
 
 -   [student_grades_group_A.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/student_grades_group_A.tsv)
 -   [student_grades_group_B.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/student_grades_group_B.tsv)
@@ -123,8 +123,6 @@ frameborder="0" allowfullscreen class="video"></iframe>
 # R user groups and forums
 
 -   <https://jumpingrivers.github.io/meetingsR/r-user-groups.html#europe>
--   <https://www.r-consortium.org/blog/2019/09/09/r-community-explorer-r-user-groups>
--   <https://r-dir.com/community/forums.html>
 
 # Base R books and links
 
@@ -137,6 +135,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <https://rstudio.com/resources/cheatsheets/>
 
 # Advanced R topics
+
+__NEOF Tidyverse cookbook__: <https://neof-workshops.github.io/Tidyverse/>
 
 **R packages**: <https://r-pkgs.org/>
 

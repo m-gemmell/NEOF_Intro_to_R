@@ -9,7 +9,7 @@ Please use your "Exercises.R" script for this exercise and the main workshop dir
 
 For convenience the code to load the Penguin __data frame__ directory will be:
 ```{r eval=TRUE}
-penguin_df <- read.csv("Chapter_13-16/penguin.tsv", 
+penguin_df <- read.csv("Chapter_12-14/penguin.tsv", 
                       check.names = FALSE,
                       stringsAsFactors = TRUE,
                       sep = "\t"
@@ -113,7 +113,7 @@ Before you continue save this plot. Details below:
 #Create data frame with only the Penguins from 2009
 penguin_2009_df <- penguin_df[penguin_df$year == "2009",]
 #Start png function
-png(filename = "Chapter_13-16/Penguins_2009_bill_depth_vs_length_scatterplot.png",
+png(filename = "Chapter_12-14/Penguins_2009_bill_depth_vs_length_scatterplot.png",
     units = "mm", height = 250, width = 250, res = 150 )
 #Produce plot
 plot(x = penguin_2009_df$bill_length_mm,
@@ -150,13 +150,13 @@ boxplot(flipper_length_mm~sex*species,
 
 For the last task, save this plot. Details below:
 
-- Save the file as a jpg called "Penguins_species_and_flipper_length_boxplot.jpg" in "Chapter_13-16".
+- Save the file as a jpg called "Penguins_species_and_flipper_length_boxplot.jpg" in "Chapter_12-14".
 - Save the plot with a width of 300, height of 250, and resolution of 150
 
 `r hide("Line graph solution")`
 ```{r eval=FALSE}
 #Start png function
-jpeg(filename = "Chapter_13-16/Penguins_species_and_flipper_length_boxplot.jpg",
+jpeg(filename = "Chapter_12-14/Penguins_species_and_flipper_length_boxplot.jpg",
     units = "mm", height = 250, width = 300, res = 150 )
 #Produce boxplot
 boxplot(flipper_length_mm~sex*species,

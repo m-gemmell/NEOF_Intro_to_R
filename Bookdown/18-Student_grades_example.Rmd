@@ -10,7 +10,7 @@ In this section we are going to go through analysing datasets of student grades.
 ![](figures/data.png){style="width:200px"}
 </center>
 
-Download the five following files into your directory "Chapter_20-21".
+Download the five following files into your directory "Chapter_17-18".
 
 - [student_grades_group_A.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/student_grades_group_A.tsv)
 - [student_grades_group_B.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/student_grades_group_B.tsv)
@@ -37,9 +37,9 @@ Source of data: https://www.kaggle.com/spscientist/students-performance-in-exams
 ![](figures/hashtag2.png){style="width:200px"}
 </center>
 
-Before carrying on I would suggest to set your working directory into the directory "Chapter_20-21".
+Before carrying on I would suggest to set your working directory into the directory "Chapter_17-18".
 
-Now create a new R Script and save it as "student_grades.R" in the "Chapter_20-21" directory. It is useful to have your scripts close to their relevant data.
+Now create a new R Script and save it as "student_grades.R" in the "Chapter_17-18" directory. It is useful to have your scripts close to their relevant data.
 
 Ensure you use annotations and code sections to keep your script organised and tidy.
 

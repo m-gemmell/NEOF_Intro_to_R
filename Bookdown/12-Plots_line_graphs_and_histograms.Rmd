@@ -2,19 +2,22 @@
 
 # Histograms and Line graphs {#histsandlineschap}
 <center>
-![](figures/palette.png){style="width:200px"}
+![](figures/palette.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
 </center>
 
 In this chapter we will learn how to create two different types of plots; Histograms and Line graphs. I have chosen these two types of plots first as they are relatively straightforward to create.
 
-Create and use the directory "Chapter_13-16" as the working directory for this chapter. Additionally create a new script called "Histograms_n_line_graphs.R" for this chapter.
+Create and use the directory "Chapter_12-14" as the working directory for this chapter. 
+Additionally, create a new script called "Histograms_n_line_graphs.R" for this chapter.
 
 ## Histogram
 <center>
-![](figures/histogram.png){style="width:200px"}
+![](figures/histogram.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
 </center>
 
 A histogram consists of bars showing the frequency of variables present in numbered ranges (bins). This allows you to see an approximate distribution of numerical data.
+
+### Basic histogram
 
 We are starting with histograms as the __function__ `hist()`, which creates a histogram, only requires one __vector__. 
 
@@ -27,7 +30,13 @@ hist(numeric_vec)
 
 You will notice that the histogram is not very interesting. There are 8 bars all of equal size. This is because we plotted the numbers 1-40 so numbers 1-5 are counted in the first bar/bin, 6-10 in the second bar/bin and so forth. To get a more interesting histogram we will create a more interesting __vector__.
 
-Histograms are good to see the numerical distribution of data. In this case we are going to look at the number of cities (with greater than 300,000 population) in EU countries (https://en.Wikipedia.org/wiki/List_of_cities_in_the_European_Union_by_population_within_city_limits).
+### EU cities
+<center>
+![](figures/barcelona.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid"}
+</center>
+
+Histograms are good to see the numerical distribution of data. 
+Next we are going to look at the number of cities (with greater than 300,000 population) in EU countries (https://en.Wikipedia.org/wiki/List_of_cities_in_the_European_Union_by_population_within_city_limits).
 
 The first step is to create a __vector__ with the numbers of cities in EU countries, however we won't know what countries these correspond to yet. Then we will create a histogram and set the colour of the bars with the option `col = `.
 ```{r eval=FALSE}
@@ -39,7 +48,15 @@ eu_cities <- c(1, 1, 3, 1, 2,
 hist(eu_cities, col = "orange")
 ```
 
-With that histogram we can see that most EU countries have 1-5 cities with a few having a much larger amount. As most of the time you will not be working with just __vectors__ let us make a __data frame__ containing the number of EU cities and the population of the EU countries.
+With that histogram we can see that most EU countries have 1-5 cities with a few having a much larger amount. 
+
+### EU populations
+<center>
+![](figures/copenhagan.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid"}
+</center>
+
+Most of the time you will not be working with just __vectors__.
+Therefore, we'll make a __data frame__ containing the number of EU cities and the population of the EU countries.
 
 The population numbers will be in millions to the closest 1 decimal place and consist of the 2020 Eurostat figures from: https://en.Wikipedia.org/wiki/List_of_European_Union_member_states_by_population
 
@@ -67,6 +84,11 @@ hist(eu_df$eu_pop, col = "purple",
 
 We have a similar pattern as with the number of cities (most have low numbers, some high numbers). 
 
+### EU population and cities ratio
+<center>
+![](figures/edinburgh.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid"}
+</center>
+
 We can quickly check if the countries with the high number of cities also have the high populations by creating a new column equal to population / number of cities. This will give us nice ratios. We can plot the distribution of these ratios in a histogram.
 
 For this histogram we will also add a title to the plot with the option `main = `. Additionally we will choose a different colour. Having different colours and main titles makes it easier for you to instantly know which plot you are looking at.
@@ -82,6 +104,8 @@ hist(eu_df$pop_cities_ratio, col = "blue",
 
 Looking at the plot most countries seem to have a ratio of 2-6 million citizens to every city. However, it is still not a perfect match with some lower and some higher ratios. Of course a result is a result and we have hopefully found out something new.
 
+## Previous plots
+
 Before we go onto line graphs I'll show you how to look at your previous plots. In the __Plots pane__ of the __MISC window__ there are two arrows on the top left. You can use these to go backwards and forwards between the plots you have created since you opened RStudio. Give it a go!
 
 <center>
@@ -90,18 +114,22 @@ Before we go onto line graphs I'll show you how to look at your previous plots. 
 
 ## Line graphs
 <center>
-![](figures/line_graph.png){style="width:200px"}
+![](figures/line_graph.png){style="width:200px; background: white; border-radius:5px; border:5px white solid"}
 </center>
 
-Line graphs are perfect for showing change over time. Knowing this we'll go back to a data set we have touched before, the file "honey_bee.tsv" from Chapter 8. This file showed the number of Honey Bee colonies in various US states from 2015-2018.
+Line graphs are perfect for showing change over time. Knowing this we'll go back to a data set we have touched before, the file "honey_bee.tsv" from [Chapter 9](#honeybeechap). This file showed the number of Honey Bee colonies in various US states from 2015-2018.
 
 ### Read in data
-The first step is to __read__ in the data from the "Chapter_8_files" directory. Once the __data frame__ is created we will remove all non 2017 & 2018 information.
+<center>
+![](figures/read.png){style="width:150px; background: white; border-radius:5px"}
+</center>
 
-__Note__: The `../` below represents going up one directory. I.e. going up from your current working directory ("Chapter_13-16") to the main directory so it can be directed to "Chapter_8_files".
+The first step is to __read__ in the data from the "Chapter_7-9" directory. Once the __data frame__ is created we will remove all non 2017 & 2018 information.
+
+__Note__: The `../` below represents going up one directory. I.e. going up from your current working directory ("Chapter_12-14") to the main directory so it can be directed to "Chapter_8_files".
 
 ```{r eval=FALSE}
-bee_colonies_df <- read.csv("../Chapter_8_files/honey_bee.tsv", 
+bee_colonies_df <- read.csv("../Chapter_7-9/honey_bee.tsv", 
                             sep = "\t", row.names = 1, check.names = FALSE)
 bee_colonies_2017_2018_df <- bee_colonies_df[9:16,]
 ```
@@ -115,6 +143,10 @@ bee_colonies_df <- bee_colonies_df[9:16,]
 Before we continue have a look at the __data frame__ and make sure you are comfortable with what it contains. 
 
 ### Plotting a line graph
+<center>
+![](figures/paint_brush.png){style="width:150px; background: white; border-radius:5px"}
+</center>
+
 We are going to plot the entire information for the state of Minnesota. We will use the __function__ `plot()` with the option `type = "l"`. This will produce a plot of type "line" (`"l"`).
 
 This requires we provide a numeric __vector__ for the x axis (option `x = `) and the y axis (option `y = `). Currently our quarter and year information is in the row names as strings. 
@@ -131,6 +163,10 @@ plot(y = bee_colonies_df$Minnesota, bee_colonies_df$time_point, type = "l")
 ```
 
 ### Adding lines to a plot
+<center>
+![](figures/lines_black.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid"}
+</center>
+
 This is looking decent but you normally want more than one line in a line graph. Thankfully we can do this with the __function__ `lines()`. We can add the other three states to the line graph like below:
 
 __Tip__: Remember to use tab completion to auto fill __function__, __variable__, and column names as well as for __function__ options.
@@ -143,7 +179,11 @@ lines(y = bee_colonies_df$Pennsylvania, x = bee_colonies_df$time_point)
 We have created the line graph with all the states However all the data is not visible.
 
 ### Axis limits
-To fix this we need to make sure all the data is within the graph. When the `plot()` __function__ was run it created the y limits based on Minnesota which has a minimum and maximum value of 136000 and 27000. Unfortunately some of the other states barely fit in this range.
+<center>
+![](figures/limits.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid"}
+</center>
+
+To fix this we need to make sure all the data is within the graph. When the `plot()` __function__ was run it created the y limits based on Minnesota which has a maximum and minimum value of 136000 and 27000. Unfortunately some of the other states barely fit in this range.
 
 To prevent this issue we can use the `plot()` option of `ylim = `. This option is provided with a __vector__ of 2 numbers. The first number is where the y axis will start. The second number is where the y axis will end.
 
@@ -175,6 +215,10 @@ lines(y = bee_colonies_df$Pennsylvania, x = bee_colonies_df$time_point)
 Great! That is much better. We can now see that two lines fall after time_point 2 whilst one increases. 
 
 ### Axis labels
+<center>
+![](figures/axis_labels.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid"}
+</center>
+
 Numbers on the x axis are not ideal in this case. We will therefore use the `axis()` function to set our own x axis labels. We will use the following options for this:
 
 - `1`: The first option to `axis()` indicates the location of the axis labels. `1` indicates they will be located on the x axis (below).
@@ -201,6 +245,10 @@ lines(y = bee_colonies_df$Pennsylvania, x = bee_colonies_df$time_point)
 When the plot is generated there may be only some labels showing for the x axis. If you would like to show them all increase the size of the __MISC window__.
 
 ### Plot titles
+<center>
+![](figures/plot_title.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid"}
+</center>
+
 Before we colour the lines different colours, let us add a main title and provide the x and y axis with better titles.
 ```{r eval=FALSE}
 #Produce line plot of Minnesota over time point.
@@ -219,6 +267,10 @@ lines(y = bee_colonies_df$Pennsylvania, x = bee_colonies_df$time_point)
 ```
 
 ### Line colours
+<center>
+![](figures/lines.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid"}
+</center>
+
 Next we will colour the lines differently to differentiate the states. We carry this out with the `col = ` options for `plot()` and `lines()`.
 ```{r eval=FALSE}
 #Produce line plot of Minnesota over time point.
@@ -238,6 +290,10 @@ lines(y = bee_colonies_df$Pennsylvania, x = bee_colonies_df$time_point, col = "p
 ```
 
 ### Plot legend
+<center>
+![](figures/legend.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
+</center>
+
 We are almost there! The one thing we are missing now is a legend so we can quickly see what colour represents each state.
 
 This can be carried out by using the __function__ `legend()` after the plot is created. In this case the __function__ is run with the following options:

@@ -7,9 +7,13 @@
 Please use your "Exercises.R" script for this exercise and the main workshop directory as the working directory. Ensure you are using annotations and code sections to keep the contents clear and separated.
 
 ## Data
+<center>
+![](figures/report_2.png){style="width:150px; background: white ; border-radius:5px"}
+</center>
+
 For this exercise we will be looking at the World Happiness Report for 2016. This report is a survey of the state of global happiness.
 
-Download [world_happiness_report_2016.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/world_happiness_report_2016.csv) to the directory "Chapter_17-18".
+Download [world_happiness_report_2016.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/world_happiness_report_2016.csv) to the directory "Chapter_15-16".
 
 Source: https://www.kaggle.com/unsdsn/world-happiness?select=2016.csv
 
@@ -38,12 +42,15 @@ Try your best to solve each challenge but use the solutions for help if you woul
 Even if your method works it can be good to check the solution as there are many ways to do the same thing in R.
 
 ### World happiness challenge 1 {-}
+<center>
+![](figures/smiley_1.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid"}
+</center>
 
 Read in the file "world_happiness_report_2016" as __data frame__ called "happy_df". Ensure __strings__ are read in as __factors__ and that none of the columns are read in as row names.
 
 `r hide("World happiness solution 1")`
 ```{r eval=TRUE}
-happy_df <- read.csv("Chapter_17-18/world_happiness_report_2016.csv", 
+happy_df <- read.csv("Chapter_15-16/world_happiness_report_2016.csv", 
                       check.names = FALSE,
                       stringsAsFactors = TRUE,
                       sep = ","
@@ -52,6 +59,9 @@ happy_df <- read.csv("Chapter_17-18/world_happiness_report_2016.csv",
 `r unhide()`
 
 ### World happiness challenge 2 {-}
+<center>
+![](figures/smiley_2.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid"}
+</center>
 
 Answer the following questions using the output from one __function__:
 
@@ -87,6 +97,9 @@ summary(happy_df)
 `r unhide()`
 
 ### World happiness challenge 3 {-}
+<center>
+![](figures/smiley_7.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid"}
+</center>
 
 Create the below plot.
 
@@ -158,6 +171,9 @@ legend(x = "bottomright",
 `r unhide()`
 
 ### World happiness challenge 4 {-}
+<center>
+![](figures/smiley_5.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid"}
+</center>
 
 It may be a bit awkward to get the right size for the plot in the __"Plots"__ pane. Therefore save it as a png file with the following options:
 
@@ -168,7 +184,7 @@ It may be a bit awkward to get the right size for the plot in the __"Plots"__ pa
 `r hide("World happiness solution 4")`
 ```{r eval=FALSE}
 #PNG command
-png(filename = "Chapter_17-18/Economy_vs_family.png", 
+png(filename = "Chapter_15-16/Economy_vs_family.png", 
     units = "in", height = 8, width = 8, res = 200)
 #Produce plot
 plot(x = happy_df$`Economy (GDP per Capita)`,
@@ -193,6 +209,9 @@ dev.off()
 `r unhide()`
     
 ### World happiness challenge 5 {-}
+<center>
+![](figures/smiley_4.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid"}
+</center>
 
 Answer the following questions using information on the line graph and the linear model.
 
@@ -218,6 +237,9 @@ opts_p <- c("__Latin America and Caribbean__", "__North America__", answer="__We
 Which region appears to have the highest values for Economy and for Family? `r longmcq(opts_p)`
 
 ### World happiness challenge 6 {-}
+<center>
+![](figures/smiley_6.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid"}
+</center>
 
 Create the following boxplot.
 
@@ -264,13 +286,16 @@ boxplot(`Happiness Score`~Region, data = happy_df,
 `r unhide()`
 
 ### World happiness challenge 7 {-}
+<center>
+![](figures/smiley_8.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid"}
+</center>
 
 Save the above as a jpeg called "Region_happiness_boxplots.jpg" with a width of 1600 pixels and a height of 750 pixels.
 
 `r hide("World happiness solution 7")`
 ```{r eval=FALSE}
 #jpeg
-jpeg(filename = "Chapter_17-18/Region_happiness_boxplots.jpg", units = "px",
+jpeg(filename = "Chapter_15-16/Region_happiness_boxplots.jpg", units = "px",
      width = 1600, height = 750 )
 #Create boxplot
 boxplot(`Happiness Score`~Region, data = happy_df, 
@@ -284,6 +309,9 @@ dev.off()
 `r unhide()`
 
 ### World happiness challenge 8 {-}
+<center>
+![](figures/smiley_3.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid"}
+</center>
 
 Last challenge! Carry out t-tests on the following comparisons for Happiness Score and determine if the means are significantly different.
 

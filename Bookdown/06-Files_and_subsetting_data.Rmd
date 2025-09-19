@@ -10,7 +10,7 @@
 ![](figures/r_read.png){style="width:400px; background:white; border-radius:15px"}
 </center>
 
-In [chapter 4](#robjectchap) we created <u id='data_frame_tooltip'>__data frames__</u> with R <u id='function_tooltip'>__functions__</u>. 
+In [chapter 4](#robjectschap) we created <u id='data_frame_tooltip'>__data frames__</u> with R <u id='function_tooltip'>__functions__</u>. 
 This was useful to help understand how <u id='data_frame_tooltip'>__data frames__</u> work in R. 
 However, in real life you will most likely not do this very often. 
 Instead you will have data files you need to analyse with R.
@@ -21,8 +21,8 @@ You can get your data into R by having R __read__ your file.
 
 Prior to using a file you will need to acquire it. 
 
-- Make a directory/folder called "Chapter_7" within your main directory/folder for this workshop. 
-- Download the file [Liverpool_beaches.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/Liverpool_beaches.csv) into "Chapter_7". 
+- Make a directory/folder called "Chapter_6" within your main directory/folder for this workshop. 
+- Download the file [Liverpool_beaches.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/Liverpool_beaches.csv) into "Chapter_6". 
 - Set your working directory to this new directory ([Directories](#directories)). You will stay here for this chapter.
 
 ### Viewing the file
@@ -75,7 +75,7 @@ We now know how to __read__ in a csv file with `read.csv`.
 
 For our next task we will __read__ a tab separated file. 
 
-Download [Global_eco_footprint.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/Global_eco_footprint.tsv) into your "Chapter_7" folder/directory. 
+Download [Global_eco_footprint.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/Global_eco_footprint.tsv) into your "Chapter_6" folder/directory. 
 This file contains the 2023 global ecological footprint information. 
 The ecological footprint measures the ecological assets that a given population requires to produce the natural resources it consumes.
 

@@ -5,9 +5,9 @@
 ![](figures/basic_stats.png){style="width:200px"}
 </center>
 
-In this chpater we'll learn how to carry out some basic stats. This will involve linear regressions and some t-tests.
+In this chapter we'll learn how to carry out some basic stats. This will involve linear regressions and some t-tests.
 
-Create and use the directory "Chapter_17-18" as the working directory for this chapter. Additionally create a new script called "Stats.R" for this chapter.
+Create and use the directory "Chapter_15-16" as the working directory for this chapter. Additionally create a new script called "Stats.R" for this chapter.
 
 Before we continue just a reminder about [annotations](#annotations) and [code sections](#codesections).
 

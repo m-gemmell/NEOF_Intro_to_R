@@ -1,4 +1,4 @@
-# Honey bee colonies exercise
+# Honey bee colonies exercise {#honeybeechap}
 <center>
 ![](figures/bee_1.png){style="width:200px"}
 </center>
