@@ -1,6 +1,6 @@
 # Handy exercises
 <center>
-![](figures/exercises.png){style="width:200px"}
+![](figures/exercises.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 There has been a lot covered this session so these exercises will hopefully be straightforward.
@@ -72,7 +72,7 @@ paste0(tea_df_subset$Country, " is the number ",
 
 ## English speakers across the world exercise
 <center>
-![](figures/language.png){style="width:200px"}
+![](figures/language.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 The last exercise is to create the following table as a __data frame__ called "english_100mil_df". Use the "english_complete_datasets_df" __data frame__ as a start.
@@ -170,7 +170,7 @@ write.table(x = english_100mil_df,
 
 ## Extra exercise
 <center>
-![](figures/multiplication.png){style="width:200px"}
+![](figures/multiplication.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 If you still have time this session and you do not have any questions please attempt the following task:

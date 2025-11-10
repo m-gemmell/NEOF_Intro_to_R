@@ -17,7 +17,7 @@ I'll first introduce you to some R conventions and then some useful abilities of
 
 ## R conventions
 <center>
-![](figures/rules.png){style="width:200px"}
+![](figures/rules.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 R conventions are style guides. You do not need to follow them but they are intended to help make code easier to read. There are lots of different suggestions for different parts of R code. Here we will only look at conventions for __object/<u id='variable_tooltip'>variable</u> names__ and wide vs long code formatting.
@@ -124,7 +124,7 @@ RStudio has many useful features which we have not covered. Let us remedy this a
 
 ### Global options
 <center>
-![](figures/global.png){style="width:200px"}
+![](figures/global.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 To get to the RStudio Global Options click "Tools" in the RStudio Toolbar, then from the drop down menu click "Global Options.." . You should see something similar to the below:
@@ -153,7 +153,7 @@ This will be useful for tab completion which we will cover shortly.
 
 ### Sweep buttons
 <center>
-![](figures/sweep.png){style="width:200px"}
+![](figures/sweep.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Sweep buttons allow you to sweep away items you no longer want in RStudio. There are two main sweep buttons, one for the __Console window__ and one for the __Environment pane__.
@@ -179,7 +179,7 @@ The location of the sweep button is shown below.
 
 ## Multiplication table
 <center>
-![](figures/multiplication.png){style="width:200px"}
+![](figures/multiplication.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Hopefully you'll find the above useful. We will learn some new <u id='function_tooltip'>__functions__</u> but before that let us create a quick <u id='data_frame_tooltip'>__data frame__</u>. 
@@ -231,7 +231,7 @@ row.names(multiplication_df)[7:8] <- c("seven","eight")
 
 ## Tab complete
 <center>
-![](figures/tab.png){style="width:200px; border-radius:15px; background:white; border:5px white solid"}
+![](figures/tab.png){style="width:200px; border-radius:15px; background:white; border:10px white solid"}
 </center>
 
 Tab completion is a very useful method when coding in any language. 
@@ -427,7 +427,7 @@ But let us go onto 2 more topics.
 
 ## Identical
 <center>
-![](figures/identikeys.png){style="width:200px"}
+![](figures/identikeys.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 I touched on the `identical()` <u id='function_tooltip'>__function__</u> above to compare the two resulting <u id='data_frame_tooltip'>__data frames__</u>. `identical()` will compare two objects and if the objects are exactly identical it will print TRUE. 
@@ -453,7 +453,7 @@ identical(english_df,tea_df)
 
 ## Shortcuts
 <center>
-![](figures/keyboard.png){style="width:300px"}
+![](figures/keyboard.png){style="width:300px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 RStudio has many keyboard shortcuts for the __Script editor__. 
@@ -472,7 +472,7 @@ There are a lot more shortcuts. If you want to see the full list go to "Tools" o
 
 ## Handy tips & tricks MCQs
 <center>
-![](figures/question_bubble_blue.png){style="width:200px"}
+![](figures/question_bubble_blue.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Superb! That is the end of the chapter. Please ensure you are asving your scripts regularly.

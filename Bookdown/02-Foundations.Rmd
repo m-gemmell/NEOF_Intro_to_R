@@ -55,7 +55,7 @@ When entering commands via the __console__ the results/output is printed to the 
 
 ## Variables
 <center>
-![](figures/boxes.png){style="width:200px"}
+![](figures/boxes.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 The output/result of a command can be saved as a <u id='variable_tooltip'>__variable__</u>. Below is the format for creating a <u id='variable_tooltip'>__variable__</u> in R (don't type this into R).
@@ -200,7 +200,7 @@ With this information create a directory you will use for this course. This can 
 
 ## Script editor{#scripteditor}
 <center>
-![](figures/editor.png){style="width:200px"}
+![](figures/editor.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 You can quickly type and run code using the __console window__. However, to fully utilise Rstudio we will instead use the __script editor__ in the __source window__. This allows us to reuse and edit code easier, and to save our code so we can come back to it.
@@ -226,7 +226,7 @@ On the new line type the below:
 
 ### Running commands
 <center>
-![](figures/command.png){style="width:200px"}
+![](figures/command.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 You can run a command that is in the script editor by one of the two following ways:
@@ -267,7 +267,7 @@ __Tip__: If you have selected the __script editor__ you can use __"Ctrl"__ + __"
 
 ### Saving scripts
 <center>
-![](figures/r_save.png){style="width:200px"}
+![](figures/r_save.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 Finally, one of the best aspects of using the __script editor__ is that you can save your scripts. I use this so I can have scripts for specific projects and template scripts for certain tasks I routinely carry out.
@@ -298,7 +298,7 @@ To create and open a new script, click on the button on the RStudio toolbar show
 
 ## Foundations MCQs
 <center>
-![](figures/question_bubble_black.png){style="width:200px; border-radius:15px; background:white"}
+![](figures/question_bubble_black.png){style="width:200px; border-radius:15px; background:white; border: 5px white solid"}
 </center>
 
 Splendid! This chapter covered the foundations of R including operators, variables, and functions.

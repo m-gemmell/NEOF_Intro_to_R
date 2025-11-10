@@ -1,0 +1,6 @@
+book_filename: R primer for omics resources
+language:
+  ui:
+    chapter_name: 'Chapter '
+delete_merged_file: no
+before_chapter_script: scripts/webex.R

@@ -4,6 +4,19 @@
 knitr::include_graphics(path = "figures/internet.png", auto_pdf = TRUE)
 ```
 
+# NEOF
+
+<center>
+![](figures/NEOF_rounded_corners.png){style="width:300px"}
+</center>
+
+NEOF is a centre of excellence that allows the UK to maintain and develop its world-leading position in environmental omics.
+
+- [NEOF website](https://neof.org.uk/)
+- [Subscribe to the NEOF email newsletter](https://eepurl.com/heBOiX)
+- [Register for other NEOF workshops](https://neof.org.uk/training/)
+- [NEOF Bioinformatics resources](https://neof-workshops.github.io/BFX_resources/)
+
 # Bookdown
 
 If you would like to download the book html file you can find the zipped directory below:

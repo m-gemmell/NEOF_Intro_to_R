@@ -1,0 +1,133 @@
+--- 
+title: "Intro to Unix resources"
+author: "Matthew R. Gemmell"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+favicon: figures/NEOF_favicon.png
+description: NEOF book for the R primer for omics resources
+cover-image: "figures/NEOF.png"
+---
+```{r include=FALSE, cache=FALSE}
+library(webexercises)
+```
+
+```{r cite-packages, include = FALSE}
+# automatically create a bib database for R packages
+# add any packages you want to cite here
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'webexercises'
+), 'packages.bib')
+```
+
+<center>
+![](figures/NEOF_rounded_corners.png){style="width:300px"}
+</center>
+
+
+# Videos, slides, & files
+
+<center>
+![](figures/R.png){style="width:200px; background: white; border-radius:5px"}
+</center>
+
+## Presentations
+
+### Intro and foundations
+
+`r hide("03 December 2024")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/jIPo7PODiOg" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
+
+[Slides](https://docs.google.com/presentation/d/1nd1kl1vXD7QPIRDXQG7QSu515ThCnuLvh-oH42HPs7M/edit?usp=sharing)
+
+### Classes and data structures
+
+`r hide("03 December 2024")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/SDO92gnoAHk" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
+
+[Slides](https://docs.google.com/presentation/d/1J80PSOcy3Uusn_U0NzvSTSFZqZXBf_0tz9bCSGumSSI/edit?usp=sharing)
+
+### Files and subsetting
+
+`r hide("05 December 2024")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/_hg7afEI5sU" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
+
+[Slides](https://docs.google.com/presentation/d/1ePF3t1cO4Ui_5l8giooZWQuPEL-L4h7047bGCV_oQgg/edit?usp=sharing)
+
+### Handy tips and tricks
+
+`r hide("05 December 2024")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/nv_lOsY_TTY" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
+
+[Slides](https://docs.google.com/presentation/d/1zO2o39UaeV9o0BbOP-kKZFgku4WfEKia_z2U4-8yJmw/edit?usp=sharing)
+
+## Workshop files
+
+The below are links to the files used within the workshop:
+
+### Chapter 7 files
+
+- [Liverpool_beaches.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/Liverpool_beaches.csv)
+- [Global_eco_footprint.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/Global_eco_footprint.tsv)
+- [parks_biodiveristy.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/parks_biodiveristy.csv)
+
+### Chapter 8 files
+
+-   [bat_roosts.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/bat_roosts.csv)
+-   [honey_bee.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/honey_bee.tsv)
+
+### Chapter 10-11 files
+
+-   [tea_consumption.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/tea_consumption.csv)
+-   [english_speaking_population_of_countries.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/english_speaking_population_of_countries.tsv)
+
+### Chapter 13-16 files
+
+-   [animal_sizes.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/animal_sizes.csv)
+-   [penguin.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/penguin.tsv)
+
+## Chapter 17-19
+
+-   [Fish.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/Fish.csv)
+-   [world_happiness_report_2016.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/world_happiness_report_2016.csv)
+
+### Chapter 20-21
+
+-   [student_grades_group_A.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/student_grades_group_A.tsv)
+-   [student_grades_group_B.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/student_grades_group_B.tsv)
+-   [student_grades_group_C.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/student_grades_group_C.tsv)
+-   [student_grades_group_D.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/student_grades_group_D.tsv)
+-   [student_grades_group_E.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/student_grades_group_E.tsv)
+
+## Bookdown
+
+[__Online bookdown link__](https://neof-workshops.github.io/R_j4c0xh/)
+
+You can download the html files of the bookdown below. Ensure you unzip the directory before use.
+
+[__Download zipped bookdown__](https://neof-workshops.github.io/R_j4c0xh/downloads/R_primer_for_omics.zip)
+
+
+
+<!--chapter:end:01-R.Rmd-->
+

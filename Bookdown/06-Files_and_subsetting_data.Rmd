@@ -2,7 +2,7 @@
 
 # Files and subsetting data {#filesubsettingchap}
 <center>
-![](figures/R_df.png){style="width:200px"}
+![](figures/R_df.png){style="width:200px; background: white; border-radius:5px; border: white 5px solid"}
 </center>
 
 ## Reading from a file
@@ -111,7 +111,7 @@ An important note is that __reading__ in a file into R will not change the file.
 
 ## Subsetting data
 <center>
-![](figures/R_subset.png){style="width:200px"}
+![](figures/R_subset.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 R allows you to specify specific points in __R objects__. This is one of the primary reasons R is so useful and flexible. With good use of <u id='assignment_tooltip'>__assignment operators__</u> this allows for the subsetting of <u id='variable_tooltip'>__variables__</u>.
@@ -487,7 +487,7 @@ write.table(global_eco_footprint_t_df,
 
 ## Files & subsetting MCQs
 <center>
-![](figures/question_bubble_blue.png){style="width:200px"}
+![](figures/question_bubble_blue.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Grand! With the fundamentals of __reading__, subsetting <u id='data_frame_tooltip'>__data frames__</u>, and __writing__ covered it is time to carry out some exercises after the below MCQs.

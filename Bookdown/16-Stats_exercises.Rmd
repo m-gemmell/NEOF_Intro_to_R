@@ -1,7 +1,7 @@
 # Stats exercises
 
 <center>
-![](figures/world_happiness.png){style="width:200px"}
+![](figures/world_happiness.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Please use your "Exercises.R" script for this exercise and the main workshop directory as the working directory. Ensure you are using annotations and code sections to keep the contents clear and separated.

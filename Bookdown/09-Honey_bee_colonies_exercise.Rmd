@@ -1,6 +1,6 @@
 # Honey bee colonies exercise {#honeybeechap}
 <center>
-![](figures/bee_1.png){style="width:200px"}
+![](figures/bee_1.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Next we have a file ([honey_bee.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/honey_bee.tsv)) that contains information on the number of Honey Bee colonies in 4 different USA states. 
@@ -16,7 +16,7 @@ Even if your method works it can be good to check the solution as there are many
 
 ### Honey bee colony challenge 1 {-}
 <center>
-![](figures/bee_2.png){style="width:150px"}
+![](figures/bee_2.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 __Read__ in the file "honey_bee.tsv" as a <u id='data_frame_tooltip'>__data frame__</u> <u id='variable_tooltip'>__variable__</u> called "bee_colonies_df". 
@@ -32,7 +32,7 @@ bee_colonies_df <- read.csv("Chapter_8_files/honey_bee.tsv",
 
 ### Honey bee colony challenge 2 {-}
 <center>
-![](figures/bee_3.png){style="width:150px"}
+![](figures/bee_3.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Create a <u id='data_frame_tooltip'>__data frame__</u> called "bee_colonies_2017_2018_df" containing the rows for 2017 & 2018 from "bee_colonies_df". 
@@ -51,7 +51,7 @@ bee_colonies_2017_2018_df <- tail(bee_colonies_df, n = 8)
 
 ### Honey bee colony challenge 3 {-}
 <center>
-![](figures/bee_4.png){style="width:200px"}
+![](figures/bee_4.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 For each month in 2017 & 2018 print out the phrase "The number of colonies in Minnesota for \<Year> was \<Value>.
@@ -70,7 +70,7 @@ paste("The number of colonies in Minnesota for",
 
 ### Honey bee colony challenge 4 {-}
 <center>
-![](figures/bee_5.png){style="width:150px"}
+![](figures/bee_5.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Make an average (mean) row for "bee_colonies_2017_2018_df".
@@ -84,7 +84,7 @@ bee_colonies_2017_2018_df["Average",] <- colMeans(bee_colonies_2017_2018_df)
 
 ### Honey bee colony challenge 5 {-}
 <center>
-![](figures/bee_6.png){style="width:200px"}
+![](figures/bee_6.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Finally write out the <u id='data_frame_tooltip'>__data frame__</u> "bee_colonies_2017_2018_df" as a tab separated file called "bee_colonies_2017_2018.tsv".
@@ -100,7 +100,7 @@ write.table(bee_colonies_2017_2018_df,
 
 ## Honey bee colony MCQs
 <center>
-![](figures/question_bubble_orange.png){style="width:200px"}
+![](figures/question_bubble_orange.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Great! Using files and subsetting are very important skills in R so I hope the challenges helped improve your skills and confidence.

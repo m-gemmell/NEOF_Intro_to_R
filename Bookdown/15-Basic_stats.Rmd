@@ -2,7 +2,7 @@
 
 # Basic stats {#basicstats}
 <center>
-![](figures/basic_stats.png){style="width:200px"}
+![](figures/basic_stats.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 In this chapter we'll learn how to carry out some basic stats. This will involve linear regressions and some t-tests.
@@ -26,7 +26,7 @@ Where _m_ is equal to the gradient and _c_ is equal to the intercept. With this 
 
 ### Fish market dataset
 <center>
-![](figures/bream.png){style="width:300px"}
+![](figures/bream.png){style="width:300px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Before getting to the analysis we need to read in the data. For this chapter we will be looking at the file [Fish.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/Fish.csv) which contains information of 7 common fish species sold in Fish markets (Source: https://www.kaggle.com/aungpyaeap/fish-market).
@@ -82,7 +82,7 @@ Super! That looks like a decently linear plot with a positive trend. We will the
 
 ### Linear model
 <center>
-![](figures/lm.png){style="width:200px"}
+![](figures/lm.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 We can fit a linear model with the __function__ `lm()`. We simply provide the column names as a formula ( `y_column_name ~ x_column_name` ) similar to the `boxplot()` __function__.
@@ -136,7 +136,7 @@ The `text()` options `x = ` and `y =` normally require a bit of trial and error 
 
 ## t-test
 <center>
-![](figures/scale.png){style="width:200px"}
+![](figures/scale.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 A t-test can be used to determine if there is a significant difference between the means of two groups.
@@ -176,7 +176,7 @@ We can clearly see that the weights of Parkki and Roach are very similar to each
 
 ### t-test comparison
 <center>
-![](figures/five_percent.png){style="width:200px"}
+![](figures/five_percent.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Will statistical analysis backup our visual findings?
@@ -260,7 +260,7 @@ For future cases it may better to use `stringsAsFactors = TRUE` with the `read.c
 
 ### Table
 <center>
-![](figures/table_ikea.png){style="width:200px"}
+![](figures/table_ikea.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 The `table()` __function__ will provide a __vector__ containing the number of instances for each __level__ in a __factor__. This is pretty much what `summary()` did to a __factor__.
@@ -305,7 +305,7 @@ A few more __functions__ were introduced above. I will let you explore them your
 
 ## Further resources
 <center>
-![](figures/resources.png){style="width:200px"}
+![](figures/resources.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Below are some further resources you can check that will help if you want to do some other plots and figures.

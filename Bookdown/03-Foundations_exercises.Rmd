@@ -1,6 +1,6 @@
 # Foundations of R exercises
 <center>
-![](figures/kettle_bell.png){style="width:200px"}
+![](figures/kettle_bell.png){style="width:200px; background: white; border-radius:5px"}
 </center>
 
 This will be the simplest of the exercises but will be a good opportunity to reinforce what you have learnt. In fact there is no solution section for this as it is unneeded.

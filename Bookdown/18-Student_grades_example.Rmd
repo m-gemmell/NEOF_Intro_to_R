@@ -7,7 +7,7 @@ In this section we are going to go through analysing datasets of student grades.
 
 ## The student grades data
 <center>
-![](figures/data.png){style="width:200px"}
+![](figures/data.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Download the five following files into your directory "Chapter_17-18".
@@ -34,7 +34,7 @@ Source of data: https://www.kaggle.com/spscientist/students-performance-in-exams
 
 ## Analysis script
 <center>
-![](figures/hashtag2.png){style="width:200px"}
+![](figures/hashtag2.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Before carrying on I would suggest to set your working directory into the directory "Chapter_17-18".
@@ -148,7 +148,7 @@ group_e_df <- read_and_preprocess("student_grades_group_E.tsv")
 
 ## Combining the data frames
 <center>
-![](figures/combine.png){style="width:200px"}
+![](figures/combine.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 A lot of the time we have multiple files but we want all the data to be in one __data frame__.
@@ -198,7 +198,7 @@ student_grades_df$group <- factor(student_grades_df$group)
 
 ## Saving the data frame
 <center>
-![](figures/r_save.png){style="width:200px"}
+![](figures/r_save.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 You can write the new __data frame__ to a text file. This is good if you want to use the file outside of R. 
@@ -319,21 +319,21 @@ load("student_grades_df")
 ```
 
 First let us see the distribution of grades for the three topics:
-```{r echo=TRUE, eval=TRUE}
+```{r echo=TRUE, eval=TRUE, fig.width = 10}
 #Math
 #With plot()
 plot(table(student_grades_df$math_grade))
 ```
-```{r echo=TRUE, eval=TRUE}
+```{r echo=TRUE, eval=TRUE, fig.width = 10}
 #With barplot()
 barplot(table(student_grades_df$math_grade))
 ```
-```{r echo=TRUE, eval=TRUE}
+```{r echo=TRUE, eval=TRUE, fig.width = 10}
 #Reading
 #With barplot()
 barplot(table(student_grades_df$reading_grade))
 ```
-```{r echo=TRUE, eval=TRUE}
+```{r echo=TRUE, eval=TRUE, fig.width = 10}
 #Writing
 #With barplot()
 barplot(table(student_grades_df$writing_grade))
@@ -342,7 +342,7 @@ barplot(table(student_grades_df$writing_grade))
 It seems the grades are pretty low. Maybe that is to do with our scaling and harsh grading.
 
 Quickly we'll check the histogram of all the scores and all the scaled scores.
-```{r echo=TRUE, eval=TRUE}
+```{r echo=TRUE, eval=TRUE, fig.width = 10}
 #scores
 hist(
   c(student_grades_df$math_score, 
@@ -351,7 +351,7 @@ hist(
   )
 )
 ```
-```{r echo=TRUE, eval=TRUE}
+```{r echo=TRUE, eval=TRUE, fig.width = 10}
 #scaled scores
 hist(
   c(student_grades_df$math_scaled_score, 

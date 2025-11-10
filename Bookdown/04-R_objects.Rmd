@@ -2,7 +2,7 @@
 
 # R objects {#robjectschap}
 <center>
-![](figures/RObjects.png){style="width:200px; background: white; border-radius:5px"}
+![](figures/RObjects.png){style="width:200px; background: white; border-radius:5px; border: white 5px solid"}
 </center>
 
 In Chapter 2 we learnt how to create a <u id='variable_tooltip'>__variable__</u>. 
@@ -44,7 +44,7 @@ There are also the <u id='class_tooltip'>classes</u> __complex__ and __raw__.
 
 ### Numeric
 <center>
-![](figures/numbers.png){style="width:200px"}
+![](figures/numbers.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 __Numeric__ <u id='class_tooltip'>__classes__</u> come in two types, <u id='integer_tooltip'>__integer__</u> and <u id='double_tooltip'>__double__</u>. 
@@ -117,7 +117,7 @@ Have you been annotating your scripts?
 
 ### Logical
 <center>
-![](figures/logical.png){style="width:200px; background:white; border-radius:15px"}
+![](figures/logical.png){style="width:200px; background:white; border-radius:15px; border: white solid 5px"}
 </center>
 
 <u id='logical_tooltip'>__Logical__</u> values can be __TRUE__ or __FALSE__. 
@@ -417,7 +417,7 @@ Now look at your "beach_df" <u id='data_frame_tooltip'>__data frame__</u> to see
 
 ## Objects MCQs
 <center>
-![](figures/question_bubble_purple.png){style="width:200px"}
+![](figures/question_bubble_purple.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
 </center>
 
 Super! Understanding the different classes and data structures is vital to understanding R.
