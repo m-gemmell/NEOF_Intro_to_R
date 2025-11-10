@@ -1,5 +1,5 @@
 --- 
-title: "Intro to Unix resources"
+title: "R primer for omics resources"
 author: "Matthew R. Gemmell"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site

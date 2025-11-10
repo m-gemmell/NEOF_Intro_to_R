@@ -1,5 +1,5 @@
 --- 
-title: "Intro to Unix resources"
+title: "R primer for omics resources"
 author: "Matthew R. Gemmell"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -61,7 +61,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ### Files and subsetting
 
-`r hide("05 December 2024")`
+`r hide("05 November 2021")`
 <div class="container">
 <iframe src="https://www.youtube.com/embed/_hg7afEI5sU" 
 frameborder="0" allowfullscreen class="video"></iframe>
@@ -72,7 +72,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ### Handy tips and tricks
 
-`r hide("05 December 2024")`
+`r hide("11 November 2021")`
 <div class="container">
 <iframe src="https://www.youtube.com/embed/nv_lOsY_TTY" 
 frameborder="0" allowfullscreen class="video"></iframe>
