@@ -55,7 +55,7 @@ In day 2 we will cover chapters 7-12.
 We will look at how to read in files and write out files from R. 
 Additionally, you will get further practice on the previous materials whilst learning some handy tips and tricks.
 
-## Learning outcome {-}
+## Learning outcomes {-}
 
 At the end of the course learners will be able to:
 
