@@ -83,7 +83,7 @@ These materials will involve theory, practice, exercises, and solutions:
 - Practice will involve code to run whilst reading through the theory. This will allow you to see the output of R and hopefully help you understand how R works.
 - Multiple choice questions (MCQs): These will be used as recap questions at the end of chapters to help solidify the knowledge you are gaining.
 - Exercises will give you a task to carry out based on the knowledge and skills you learned from the theory and practise.
-- Solutions for the exercise are after the exercise. Please try the exercise before looking at the solutions, however make sure you read the solutions even if you completed the exercise successfully as there is extra information in these sections.
+- Solutions for the exercise are after each task in an expandable box. Please try the exercise before looking at the solutions, however make sure you read the solutions even if you completed the exercise successfully as there is extra information in them.
  
 Commands are in the following font and colour and should be run in RStudio (These should not be copied into R from this document): 
 
