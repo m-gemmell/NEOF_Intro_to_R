@@ -50,8 +50,8 @@ knitr::write_bib(c(
 </center>
 
 This course will teach you the fundamentals of R, an essential skill for some of our future courses. 
-The first day will focus on the basics of R with foundations and objects and covers chapters 1-6. 
-In day 2 we will cover chapters 7-12.
+The first day will focus on the basics of R with foundations and objects and covers chapters 1-5. 
+In day 2 we will cover chapters 6-11.
 We will look at how to read in files and write out files from R. 
 Additionally, you will get further practice on the previous materials whilst learning some handy tips and tricks.
 
@@ -69,7 +69,7 @@ At the end of the course learners will be able to:
 
 ## Extra materials {-}
 
-There are extra materials you can attempt after the workshop (chapters 13-21). 
+There are extra materials you can attempt after the workshop (chapters 12-18). 
 These will allow you to apply your R skills to create plots and carry out some statistics. 
 The plots section includes creating line graphs, histograms, scatterplots, and boxplots. 
 The statistics section will cover carrying out some basic statistics, don't worry it won't be a statistics lesson. 
@@ -97,25 +97,25 @@ This is a command
 #Create 2 column dataframe
 column_1 <- c(
   '[**Foundations**](#foundations)', 
- '[![](figures/foundational.png){height="150"}](#foundations)',
+ '[![](figures/foundational.png){style="width:150px; border-radius:5px; border:5px solid white; background:white"}](#foundations)',
    '[**Files & subsetting data**](#filesubsettingchap)', 
- '[![](figures/R_df.png){height="150"}](#filesubsettingchap)',
+ '[![](figures/R_df.png){style="width:150px; border-radius:5px; border:5px solid white; background:white"}](#filesubsettingchap)',
    '[**Histograms & line graphs**](#histsandlineschap)', 
- '[![](figures/palette.png){height="150"}](#histsandlineschap)',
+ '[![](figures/palette.png){style="width:150px; border-radius:5px; border:5px solid white; background:white"}](#histsandlineschap)',
    '[**Basic stats**](#basicstats)', 
- '[![](figures/basic_stats.png){height="150"}](#basicstats)',
+ '[![](figures/basic_stats.png){style="width:150px; border-radius:5px; border:5px solid white; background:white"}](#basicstats)',
    '[**Appendix**](#appendix)', 
- '[![](figures/internet.png){height="150"}](#appendix)'
+ '[![](figures/internet.png){style="width:150px; border-radius:5px; border:5px solid white; background:white"}](#appendix)'
 )
 column_2 <- c(
   '[**R objects**](#robjectschap)', 
- '[![](figures/RObjects.png){height="150"}](#robjectschap)',
+ '[![](figures/RObjects.png){style="width:150px; border-radius:5px; border:5px solid white; background:white"}](#robjectschap)',
    '[**Handy tips & tricks**](#tipsandtrickschap)', 
- '[![](figures/magic.png){height="150"}](#tipsandtrickschap)',
+ '[![](figures/magic.png){style="width:150px; border-radius:5px; border:5px solid white; background:white"}](#tipsandtrickschap)',
    '[**Scatter plots & box plots**](#scatterandboxchap)', 
- '[![](figures/large_brush.png){height="150"}](#scatterandboxchap)',
+ '[![](figures/large_brush.png){style="width:150px; border-radius:5px; border:5px solid white; background:white"}](#scatterandboxchap)',
    '[**Basic programming**](#basicprogramming)', 
- '[![](figures/programming.png){height="150"}](#basicprogramming)',
+ '[![](figures/programming.png){style="width:150px; border-radius:5px; border:5px solid white; background:white"}](#basicprogramming)',
  "",""
 )
 table_df <- data.frame(column_1, column_2)
