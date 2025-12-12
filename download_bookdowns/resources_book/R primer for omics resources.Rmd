@@ -39,6 +39,11 @@ knitr::write_bib(c(
 
 ### Intro and foundations
 
+<div class="container">
+<iframe src="https://www.youtube.com/embed/mYiFY_vxtgs" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
 `r hide("03 December 2024")`
 <div class="container">
 <iframe src="https://www.youtube.com/embed/jIPo7PODiOg" 
@@ -49,6 +54,11 @@ frameborder="0" allowfullscreen class="video"></iframe>
 [Slides](https://docs.google.com/presentation/d/1nd1kl1vXD7QPIRDXQG7QSu515ThCnuLvh-oH42HPs7M/edit?usp=sharing)
 
 ### Classes and data structures
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/Htlv9Nh9da0" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
 
 `r hide("03 December 2024")`
 <div class="container">
@@ -61,6 +71,11 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ### Files and subsetting
 
+<div class="container">
+<iframe src="https://www.youtube.com/embed/eT_DU4U8KKw" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
 `r hide("05 November 2021")`
 <div class="container">
 <iframe src="https://www.youtube.com/embed/_hg7afEI5sU" 
@@ -71,6 +86,11 @@ frameborder="0" allowfullscreen class="video"></iframe>
 [Slides](https://docs.google.com/presentation/d/1ePF3t1cO4Ui_5l8giooZWQuPEL-L4h7047bGCV_oQgg/edit?usp=sharing)
 
 ### Handy tips and tricks
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/BRx0AD8SqJc" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
 
 `r hide("11 November 2021")`
 <div class="container">

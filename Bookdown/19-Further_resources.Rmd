@@ -28,7 +28,7 @@ If you would like to download the book html file you can find the zipped directo
 ## Intro and foundations
 
 <div class="container">
-<iframe src="https://www.youtube.com/embed/mr5B4-6kcyU" 
+<iframe src="https://www.youtube.com/embed/mYiFY_vxtgs" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
@@ -37,7 +37,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 ## Classes and data structures
 
 <div class="container">
-<iframe src="https://www.youtube.com/embed/BiN_DQxizgA" 
+<iframe src="https://www.youtube.com/embed/Htlv9Nh9da0" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
@@ -46,7 +46,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 ## Files and subsetting
 
 <div class="container">
-<iframe src="https://www.youtube.com/embed/_hg7afEI5sU" 
+<iframe src="https://www.youtube.com/embed/eT_DU4U8KKw" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
@@ -55,7 +55,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 ## Handy tips and tricks
 
 <div class="container">
-<iframe src="https://www.youtube.com/embed/nv_lOsY_TTY" 
+<iframe src="https://www.youtube.com/embed/BRx0AD8SqJc" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
 
@@ -142,6 +142,8 @@ frameborder="0" allowfullscreen class="video"></iframe>
 **Quick-R**: <https://www.statmethods.net/index.html>
 
 **R Cookbook**: <https://rc2e.com/>
+
+**W3 R tutorial**: <https://www.w3schools.com/r/>
 
 # R cheat sheets
 

@@ -442,7 +442,7 @@ parks_t_df$Total_species <- rowSums(parks_df[,3:8])
 The final step before writing is to transpose the <u id='data_frame_tooltip'>__data frame__</u> leaving out the Park name and State columns:
 ```{r eval=FALSE}
 #Transpose dataframe
-parks_t_df <- t(parks_t_df[,3:8])
+parks_t_df <- t(parks_t_df[,3:9])
 #Check structure
 str(parks_t_df)
 #It is not a dataframe
