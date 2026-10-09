@@ -1,0 +1,23 @@
+# Code section continued
+After all that you will have some nice code and annotations in your script editor for the __Classes__ code section.
+
+Making a code section is not very useful until you have multiple code sections. 
+To show this create a new code section at the bottom of your script called __"Data structures"__. 
+This new code section will be used for the next section.
+
+```{r eval=FALSE}
+# Data structures ####
+```
+
+With the new code section created we can now see why code sections are so useful. 
+Go to the text that denotes the first code section (__"Classes"__). 
+Look between the numbers on the left that signify the line number, and the text. 
+You will see an arrow pointing downwards. 
+You can click that arrow and it will collapse the code section. 
+Click the arrow, now pointing right, and it will expand the code section. 
+This is super useful so you can hide code sections in your script that you don't currently need to look at.
+
+![](/images/R_code_section_collapse.png){style="width:200px; border-radius:5px" fig-align="center"}
+
+With the __"Classes"__ code section collapsed let us continue to the next section. 
+There will be less annotations in this book as I expect you will make your own now.

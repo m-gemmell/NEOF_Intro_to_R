@@ -1,0 +1,68 @@
+# R objects {#robjectschap}
+![](/images/RObjects.png){style="width:200px; background: white; border-radius:5px; border: white 5px solid" fig-align="center"}
+
+In the [foundations part](/foundations/intro.qmd) you learnt how to create a <u id='variable_tooltip'>__variable__</u>. 
+This consisted of assigning (`<-`) an __object__ a name. 
+In this chapter we will learn about __R objects__. 
+There are two major R terminologies to learn to fully understand __R objects__.
+
+- <u id='class_tooltip'>__Class__</u>: An __R object__ will have a specific class. 
+The <u id='class_tooltip'>__class__</u> determines what the __object__ is. 
+It could be numbers, text, or other types of <u id='class_tooltip'>__classes__</u>.
+- <u id='data_structure_tooltip'>__Data structure__</u>: This determines the structure of an __R object__.
+
+## Code sections
+In this part, and for the rest of the course, you will use code sections in your R scripts to separate pages, sections, and parts in this book.
+
+First set your working directory to your course directory, create a script, and save it as __"2-Objects.R"__.
+
+Next create a code section at the top of this script called __"Classes"__.
+
+In other words have the below at the top of your script:
+
+```{r eval=FALSE}
+# Classes ####
+```
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+```

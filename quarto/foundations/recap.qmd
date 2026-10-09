@@ -1,0 +1,53 @@
+# Recap
+<center>
+![](/images/question_bubble_black.png){style="width:200px; border-radius:15px; background:white; border: 5px white solid"}
+</center>
+
+Splendid! This part covered the foundations of R including [operators](/foundations/operatos), [variables](/foundations/variables), and [functions](/foundations/functions).
+
+Attempt the below MCQs by choosing the correct option in the below sentences to recap what you have learnt.
+
+```{r, echo = FALSE, eval=TRUE}
+opts_p <- c( "Annotations", "Variables", answer = "Operators")
+```
+1. <u>_________</u> are symbols that allow you to carry out common R tasks such as addition and multiplication. `r longmcq(opts_p)`
+
+```{r, echo = FALSE, eval=TRUE}
+opts_p <- c(answer = "Annotations", "Objects", "Operators")
+```
+2. Hash tags (`#`) can be used to create human readable <u>________</u> `r longmcq(opts_p)`
+
+```{r, echo = FALSE, eval=TRUE}
+opts_p <- c("Annotations", answer="Objects", "Operators")
+```
+3. <u>________</u> can be assigned as R Variables `r longmcq(opts_p)`
+
+```{r, echo = FALSE, eval=TRUE}
+opts_p <- c(
+   answer = "`<-`", "`==`", "`>=`"
+)
+```
+4. The assignment operator is: <u>________</u> `r longmcq(opts_p)`
+
+```{r, echo = FALSE, eval=TRUE}
+opts_p <- c("Console", answer = "Function","Objects")
+```
+5. `sqrt` is a R <u>________</u> `r longmcq(opts_p)`
+
+```{r, echo = FALSE, eval=TRUE}
+opts_p <- c(answer="Console", "Function","Object")
+```
+6. You can run commands in the <u>________</u> `r longmcq(opts_p)`
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+```

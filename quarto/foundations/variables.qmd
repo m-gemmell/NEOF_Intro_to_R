@@ -1,0 +1,71 @@
+# Variables
+![](/images/boxes.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
+
+The output/result of a command can be saved as a <u id='variable_tooltip'>__variable__</u>. 
+
+## Variable assignment
+
+Below is the format for creating a <u id='variable_tooltip'>__variable__</u> in R (don't type this into R).
+
+```{r eval=FALSE}
+variable_name <- variable_object
+``` 
+
+There are 3 parts to the above:
+
+- The __<u id='variable_tooltip'>variable</u> name__ (`variable_name`). This is the name of the <u id='variable_tooltip'>__variable__</u> and is what will be used to refer to the <u id='variable_tooltip'>__variable__</u> in future commands. This name can be almost anything. There are some rules on what can be in a name:
+    - Must start with a letter.
+    - Cannot contain spaces.
+    - Cannot start with a number.
+    - Cannot share the same name as a command or <u id='function_tooltip'>__function__</u> in R.
+    - They are case sensitive. The <u id='variable_tooltip'>__variable__</u> name `BB` is different to the <u id='variable_tooltip'>__variable__</u> name `bb` which is different again to `bB`. I find it easiest to keep __<u id='variable_tooltip'>variable</u> names__ in lower case.
+- `<-` is called the assignment <u id='operator_tooltip'>__operator__</u>. It assigns the __<u id='variable_tooltip'>variable</u> object__ to the __<u id='variable_tooltip'>variable</u> name__. 
+    - Tip you can press 'ALT'+ '-' after a __<u id='variable_tooltip'>variable</u> name__ as a shortcut for the assignment <u id='operator_tooltip'>__operator__</u>.
+- The __<u id='variable_tooltip'>variable</u> object__ (`variable_object`). This can be many different objects including the output/results from commands, strings/words, numbers, and many other R data types.
+
+## Box analogy
+
+A __<u id='variable_tooltip'>variable</u>__ can be thought of as a box. The __<u id='variable_tooltip'>variable</u> object__ is held in the box but it can be replaced with any other object. The __<u id='variable_tooltip'>variable</u> name__ can then be thought as the label on the box so you can tell which box is which.
+
+## Roman numeral examples
+
+Type the below commands into the RStudio __console__.
+
+::: {.callout-note}
+Remember the amount of spaces between <u id='operator_tooltip'>__operators__</u> and __integers__ does not matter. I encourage you to experiment with this spacing so you find what is best for you in terms of ease and clarity.
+:::
+
+```{r eval=FALSE}
+bakers_dozen <- 13
+kilobyte <- 1024
+I <- 1
+II <- I + 1
+V <- 7 - II
+X <- (II / I) * V
+L <- X * V
+``` 
+
+In the above commands the <u id='variable_tooltip'>__variables__</u> are not printed out to the screen, this is as it should be. The <u id='variable_tooltip'>__variables__</u> are appearing in the __environment__ pane (Top right). This is very convenient to see what variables are currently in the __environment__ and to see what they contain. 
+
+## Printing out variables
+
+To print the contents of a <u id='variable_tooltip'>__variable__</u> to screen you can type the __<u id='variable_tooltip'>variable</u> name__ into the __console__ and press enter. This will print the __<u id='variable_tooltip'>variable</u> object__ to the screen. This is not needed for small __<u id='variable_tooltip'>variable</u> objects__, for which you can look at the __environment__ pane, but is useful for larger __<u id='variable_tooltip'>__variable__</u> objects__.
+
+Print out the object within the `L` __<u id='variable_tooltip'>__variable__</u>__.
+
+```{r, eval=FALSE}
+L
+```
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+```

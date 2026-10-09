@@ -1,0 +1,119 @@
+# Vectors & lists
+![](/images/Rvector.png){style="width:300px; background: white; border-radius: 5px; border: 5px white solid" fig-align="center"}
+
+A __R object__ can hold multiple values.
+Many <u id='data_structure_tooltip'>__data structures__</u> can do this with the simplest being a <u id='vector_tooltip'>__vector__</u>.
+
+A <u id='vector_tooltip'>__vector__</u> can be created with the `c()` <u id='function_tooltip'>__function__</u>. 
+This function will combine the provided objects into a single <u id='vector_tooltip'>__vector__</u> or __list__.
+
+<u id='vector_tooltip'>__Vectors__</u> and __lists__ are both 1-dimensional <u id='data_structure_tooltip'>__data structures__</u>. 
+<u id='vector_tooltip'>__Vectors__</u> can only contain one <u id='class_tooltip'>__class__</u> (homogeneous) whilst __lists__ can contain multiple (heterogeneous). 
+There is more to __lists__ but we will not go into them.
+
+## Creating vector variables
+
+Run the following commands to produce <u id='variable_tooltip'>__variables__</u> which contain <u id='vector_tooltip'>__vectors__</u>.
+
+```{r eval=FALSE}
+number_vec <- c(1,2,4,8,16)
+number_vec
+number_series_vec <- 1:6
+number_series_vec
+animals <- c("Whale","Seal","Hedgehog","Mouse","Owl","Squirrel","Vole","Shrew")
+animals
+```
+
+## Elements and indices
+
+Elements of a <u id='vector_tooltip'>__vector__</u> can be accessed through their indices:
+
+```{r eval=FALSE}
+birds <- animals[5]
+birds
+aquatic <- animals[1:2]
+aquatic
+rodents <- animals[c(4,6,7)]
+rodents
+mammals <- animals[-5]
+mammals
+```
+
+## Operators & functions
+
+You can use <u id='operator_tooltip'>__operators__</u> and <u id='function_tooltip'>__functions__</u> on a <u id='vector_tooltip'>__vector__</u>. 
+When you do each <u id='scalar_tooltip'>__scalar__</u> within the <u id='vector_tooltip'>__vector__</u> will be acted upon.
+```{r eval=FALSE}
+number_vec - 1
+number_vec * 2
+log(number_vec)
+length(rodents)
+```
+
+Some <u id='function_tooltip'>__functions__</u> are specifically used for <u id='vector_tooltip'>__vectors__</u>:
+```{r eval=FALSE}
+mean(number_vec)
+summary(number_vec)
+```
+
+## Comparisons
+
+We can also test the values within <u id='vector_tooltip'>__vectors__</u>:
+```{r eval=FALSE}
+aquatic == "Whale"
+number_vec > 4
+number_vec[number_vec > 4]
+```
+
+## paste()
+
+The `paste()` <u id='function_tooltip'>__function__</u> can be used to paste __<u id='string_tooltip'>string</u> <u id='scalar_tooltip'>scalars</u>__ to other __<u id='string_tooltip'>string</u> <u id='scalar_tooltip'>scalars</u>__ or to __<u id='string_tooltip'>string</u> <u id='vector_tooltip'>vectors</u>__:
+```{r eval=FALSE}
+paste("Animals", animals)
+bird_or_mammal <- c("mammal","mammal","mammal","mammal","bird","mammal","mammal","mammal")
+paste(animals, bird_or_mammal, sep = ":")
+paste(animals, " is a ", bird_or_mammal, sep = "")
+```
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+```

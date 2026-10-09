@@ -1,0 +1,104 @@
+# Script editor
+![](/images/editor.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
+
+You can quickly type and run code using the __console window__. However, to fully utilise Rstudio we will instead use the __script editor__ in the __source window__. This allows us to reuse and edit code easier, and to save our code so we can come back to it.
+
+If you cannot see your __script editor__, click the multi window button on the top of the __source window__ or __console window__.
+
+![](/images/script_editor_expand.png){style="width:700px; border-radius:5px" fig-align="center"}
+
+Type the below into the __script editor__ and press __"enter"__.
+```{r eval=FALSE}
+2 + 2
+``` 
+
+Pressing enter goes to a new line without running the command, just like other text editors (word, emails etc.).
+
+On the new line type the below:
+
+```{r eval=FALSE}
+4 - 1
+``` 
+
+## Running commands
+![](/images/command.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
+
+You can run a command that is in the script editor by one of the two following ways:
+
+- Via cursor:
+    - Move the cursor to the line you would like to run.
+    - Press __"Ctrl" + "enter"__ ( __"cmd"__ + __"enter"__ for Mac)
+- Highlighting:
+    - Highlight the parts you would like and press __"Ctrl" + "enter"__ ( __"cmd"__ + __"enter"__ for Mac)
+    - You can highlight a part of a line, a whole line, and even multiple lines.
+
+Run the commands you currently have in your __script editor__.
+
+The __script editor__ is unaffected with only the cursor moving if you used the cursor method. What is actually happening is that your commands are being copied to the __console window__ and are being run there.
+
+I would encourage to primarily use the script editor to write your code. It is brilliant for editing, reusing, and documenting your code.
+
+
+## Annotations
+![](/images/hashtag.png){style="width:200px; border-radius:5px; background:white" fig-align="center"}
+
+Annotations can be added to your code in the __script editor__. If a line starts with a `#` it will not be run as a command, this line is then an annotation. This is extremely useful to leave information for your future self. It is much harder to go back to old code and figure out what it does if it is just code.
+
+Be a mate, annotate.
+
+Edit the contents of your __script editor__ so it looks like the below. Then run all the lines.
+
+::: {.callout-tip}
+If you have selected the __script editor__ you can use __"Ctrl"__ + __"a"__ to highlight all.
+:::
+
+```{r eval=FALSE}
+#Command 1
+2 + 2
+#Command 2
+4 - 1
+``` 
+
+## Saving scripts
+![](/images/r_save.png){style="width:150px; background: white; border-radius:5px" fig-align="center"}
+
+Finally, one of the best aspects of using the __script editor__ is that you can save your scripts. I use this so I can have scripts for specific projects and template scripts for certain tasks I routinely carry out.
+
+- To save a script you can click the floppy disk (
+    `r icons::icon_style(icons::fontawesome("save", style="solid"), fill = "#648fff")`
+    ) on the toolbar of the __source window__. 
+- To save as, go to the RStudio toolbar and click __"File"__ > __"Save As..."__.
+
+## Open a saved script
+You can open a previously saved script in 2 main ways:
+
+
+- Via the __Files pane__ in the __MISC window__
+    - Navigate to the directory with the script (you do not need to set the working directory to this directory)
+    - Click the name of the script you would like to open
+- Via the Rstudio toolbar
+    - Click __"File"__
+    - Click __"Open file"__
+    - With the popup browser navigate to the location of the script and open it
+
+## New script
+You can have multiple scripts open at one time and switch between these scripts with the tabs at the top of the __script editor window__.
+
+To create and open a new script, click on the button on the RStudio toolbar shown below and select __"R script"__.
+
+<center>
+![](/images/new_script_button.png){style="width:800px"}
+</center>
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+```

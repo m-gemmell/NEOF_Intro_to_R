@@ -1,0 +1,154 @@
+# Bat roosts
+![](/images/bat_1.png){style="width:200px" fig-align="center"}
+
+First we will look at the file [bat_roosts.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/bat_roosts.csv). 
+This contains information on the max number of roosts for different Bat species in different UK regions. 
+
+The data is from: "Bat Conservation Trust 2020. Roost Count peak counts summary data". Available from <https://www.bats.org.uk/our-work/national-bat-monitoring-programme/reports/nbmp-annual-report>
+
+Solutions are in the expandable boxes. 
+Try your best to solve each challenge but use the solutions for help if you would like. 
+Even if your method works it can be good to check the solution as there are many ways to do the same thing in R
+
+## Bat roost challenges
+
+### Bat roost challenge 1
+![](/images/bat_2.png){style="width:100px" fig-align="center"}
+
+__Read__ in the file "bat_roosts.csv" as a <u id='data_frame_tooltip'>__data frame__</u> <u id='variable_tooltip'>__variable__</u> called "bat_df". 
+Ensure the row names contain the Regions (Channel Islands, East Midlands, etc.).
+
+::: {.callout-note collapse="true" title="Bat roost 1 solution"}
+```{r eval=FALSE}
+bat_df <- read.csv("Chapter_8_files/bat_roosts.csv", 
+                   row.names = 1, check.names = FALSE)
+```
+:::
+
+### Bat roost challenge 2
+![](/images/bat_3.png){style="width:100px" fig-align="center"}
+
+Inspect the <u id='variable_tooltip'>__variable__</u> and ensure there are only numerics within the <u id='data_frame_tooltip'>__data frame__</u> with all <u id='string_tooltip'>strings</u> only being in column and row names.
+
+### Bat roost challenge 3
+![](/images/bat_4.png){style="width:100px" fig-align="center"}
+
+Add a row to "bat_df" called "UK" that contains the totals for each Species.
+
+::: {.callout-note collapse="true" title="Bat roost 3 solution"}
+Add a row with column totals:
+```{r eval=FALSE}
+bat_df["UK",] <- colSums(bat_df) 
+```
+:::
+
+### Bat roost challenge 4
+![](/images/bat_5.png){style="width:100px" fig-align="center"}
+
+Add a column to "bat_df" called "All_Bat_Species" that contains the totals for each Region.
+
+::: {.callout-note collapse="true" title="Bat roost 4 solution"}
+Create transposed __data frame__:
+Add a column with row totals:
+```{r eval=FALSE}
+bat_df$All_Bat_Species <- rowSums(bat_df) 
+```
+:::
+
+### Bat roost challenge 5
+![](/images/bat_6.png){style="width:100px" fig-align="center"}
+
+Create a transposed <u id='data_frame_tooltip'>__data frame__</u> of "bat_df" called "bat_t_df".
+
+::: {.callout-note collapse="true" title="Bat roost 5 solution"}
+Create transposed __data frame__:
+```{r eval=FALSE}
+bat_t_df <- as.data.frame(t(bat_df)) 
+```
+:::
+
+### Bat roost challenge 6
+![](/images/bat_7.png){style="width:100px" fig-align="center"}
+
+__Write__ the <u id='data_frame_tooltip'>__data frame__</u> "bat_t_df" to a comma separated file called "bat_roosts_t.csv". 
+Ensure there are no quotes surrounding the row or column names.
+
+::: {.callout-note collapse="true" title="Bat roost 6 solution"}
+__Write__ file:
+```{r eval=FALSE}
+write.table(bat_t_df, file = "Chapter_8_files/bat_roosts_t.csv", 
+            sep = ",", quote = FALSE, col.names = NA)
+```
+:::
+
+## Bat roost MCQs
+![](/images/question_bubble_purple.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+
+Fantastic! I hope those challenges were engaging and improved your experience working with files and <u id='data_frame_tooltip'>data frames</u>.
+
+Attempt the following MCQs using your final "bat_t_df" object.
+
+```{r, echo = FALSE}
+opts_p <- c(answer="Channel Islands", "North West", "Wales")
+```
+1. Which region has no roosts? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Channel Islands", answer="North West", "Wales")
+```
+2. Which region has the largest amount of _Myotis brandtii_ roosts (excluding UK)? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Pipistrellus nathusii", answer="Pipistrellus pygmaeus", "Rhinolophus hipposideros")
+```
+3. Which Bat species has the highest number of roosts across the UK? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="Pipistrellus nathusii", "Pipistrellus pygmaeus", "Rhinolophus hipposideros")
+```
+4. Which Bat species has the lowest number of roosts across the UK? `r longmcq(opts_p)`
+
+
+::: {.callout-note collapse="true" title="Commands to help with the MCQs"}
+You can figure out the MCQs by viewing the data frame.
+However, you can also figure them out with R code.
+Below are commands to get the answers for the MCQs. 
+I will let you decipher them yourself.
+```{r eval=FALSE}
+#Question 1: Which region has no roosts?
+col_names_logical_vec <- bat_t_df["All_Bat_Species",] == 0
+colnames(bat_t_df)[col_names_logical_vec]
+```
+```{r eval=FALSE}
+#Question 2: Which region has the largest amount of Myotis brandtii roosts?
+species <- "Myotis brandtii"
+df_wo_total_species_and_uk <- bat_t_df[
+  1:(nrow(bat_t_df)-1),1:(ncol(bat_t_df)-1)]
+max_colonies <- max(df_wo_total_species_and_uk[species,])
+col_names_logical_vec <- df_wo_total_species_and_uk[species,] == max_colonies
+colnames(df_wo_total_species_and_uk)[col_names_logical_vec]
+```
+```{r eval=FALSE}
+#Question 3: Which Bat species has the highest number of roosts across the UK?
+max_uk <- max(bat_t_df[1:(nrow(bat_t_df)-1),"UK"])
+row_names_logical_vec <- bat_t_df$UK == max_uk
+row.names(bat_t_df)[row_names_logical_vec]
+```
+```{r eval=FALSE}
+#Question 4: Which Bat species has the lowest number of roosts across the UK?
+min_uk <- min(bat_t_df[1:(nrow(bat_t_df)-1),"UK"])
+row_names_logical_vec <- bat_t_df$UK == min_uk
+row.names(bat_t_df)[row_names_logical_vec]
+```
+:::
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+```

@@ -1,0 +1,15 @@
+{
+  "hash": "7ee596e7b5420369bfab5cd78c164bbe",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Exercises\n![](/images/kettle_bell.png){style=\"width:200px; background: white; border-radius:5px\" fig-align=\"center\"}\n\nThis will be the simplest of the exercises but will be a good opportunity to reinforce what you have learnt. In fact there is no solution section for this as it is unneeded.\n\n## Foundations practice script\n\nThe first task is to add the below text annotation to the top of your current script.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Foundations ####\n```\n:::\n\n\nNow save the file as __\"1-Foundations.R\"__ within your course directory.\n\n## Foundations exercise script\n\nFor the next part you will need to create a new script and save it as __\"Exercises.R\"__.\n\nOn the first line of this script type the following annotation:\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Exercise 1 ####\n```\n:::\n\n\nThe `####` creates a [code section](/objects/intro.qmd#code-sections), these will be explained in a later page. You could also use `----` or `====` at the end of an annotation to create a code section.\n\nThe next step is the most tedious, unfortunately tedious repetition is one of the best ways to learn.\n\nPlease fill in the __\"Exercises.R\"__ script with the commands from the [__operators__](/foundations/operators.qmd) and [__variables__](/foundations/variables.qmd) pages. Additionally, add in [annotations](#annotations) so you can easily tell which pages the commands come from and brief lines on their purposes.\n\nAnnotations require a balance of enough info but not too much info, you don't always need a line of annotation for each line of code. However, with some complex code sometimes you will need multiple lines of annotation for one line of code. It is all about how much annotation you and possibly others will need for the code at hand. Knowing this requires experience.\n\nNext save the script, ensuring it is called __\"Exercises.R\"__\"\n\nFinally, close your script by clicking the __\"x\"__ icon on the tab of the script.\n\n## Next step\n\nThat is the end of Foundations of R! If you have any questions please ask and we are more than happy to try to answer.\n\nOnce you are happy please continue to the [Objects part](/objects/intro.qmd).",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,66 @@
+# Functions
+![](/images/function.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
+
+R <u id='function_tooltip'>__Functions__</u> allow the user to carry out specific tasks. R has many inbuilt <u id='function_tooltip'>__functions__</u> but you can also create your own. Currently we will look at inbuilt <u id='function_tooltip'>__functions__</u>.
+
+## Function layout
+
+The basic layout of a <u id='function_tooltip'>__function__</u> is (don't type the below into `R`):
+
+```{r eval=FALSE}
+function_name(objects, options)
+``` 
+
+There are 3 main parts to the above:
+
+- The __<u id='function_tooltip'>function</u> name__ (`function_name`)
+- The __object/s__ to provide to the <u id='function_tooltip'>__function__</u>
+    - This can be numbers, strings, <u id='variable_tooltip'>__variables__</u> we have created etc
+    - Most <u id='function_tooltip'>__functions__</u> require at least one __object__ 
+    - Some <u id='function_tooltip'>__functions__</u> can take multiple objects, if multiple __objects__ are provided they must be separated by `,`
+- <u id='function_tooltip'>__Function__</u> options (`options`) 
+    - Options can be provided to some <u id='function_tooltip'>__functions__</u> to alter the way they will work
+    - Some <u id='function_tooltip'>__functions__</u> don't have options
+    - Most options have default modes. If the options is not specified the default mode will be used
+    - Like __objects__, when using multiple options they must be separated by `,`
+
+## Numerical rounding examples
+
+Try running the below commands in your Rstudio __console__ which utilise 4 different <u id='function_tooltip'>__functions__</u>.
+
+```{r eval=FALSE}
+ceiling(3.5)
+floor(3.5)
+sqrt(9)
+round(3.5555, digits = 2)
+round(3.5555, digits = 3)
+round(3.5555, digits = 0)
+two <- sqrt(4)
+``` 
+
+## Help page
+
+You may be able to intuit what the above <u id='function_tooltip'>__functions__</u> do from their names and output.
+However, if you are not sure/would like to be certain you can look at the help pages of <u id='function_tooltip'>__functions__</u>.
+
+The help page of <u id='function_tooltip'>__functions__</u> can be accessed in 2 main ways:
+
+- Click on the __<u id='function_tooltip'>function</u> name__ so your cursor is in it and press __F1__.
+- Type `?` followed by the __<u id='function_tooltip'>function</u> name__. Example below:
+
+```{r eval=FALSE}
+?ceiling
+``` 
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+```

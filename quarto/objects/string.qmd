@@ -1,0 +1,134 @@
+# String
+![](/images/string_bubble.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
+
+<u id='string_tooltip'>__Strings__</u> are text.
+They can be modified with R in ways you would normally want to modify text. 
+They are called <u id='string_tooltip'>__strings__</u> as they are strings of characters. 
+<u id='string_tooltip'>__Strings__</u> are flanked by quote marks. 
+Double quotes (`""`) are preferred but single quotes can also be used (`''`).
+
+Below are some examples to get some practice with <u id='string_tooltip'>__strings__</u>.
+
+## Text
+
+A __<u id='string_tooltip'>string</u> object__ can consist of a <u id='string_tooltip'>string</u> containing one __character__:
+```{r eval=FALSE}
+#String
+one_character_string <- "A"
+one_character_string
+```
+
+A __<u id='string_tooltip'>string</u> object__ can consist of a <u id='string_tooltip'>string</u> containing multiple __characters__:
+```{r eval=FALSE}
+word_string <- "alphabet"
+word_string
+```
+
+A <u id='string_tooltip'>__string__</u> can contain all the different characters and any number of them. 
+The only exception is that if you try to put a double quote in your <u id='string_tooltip'>string</u> it will cause an issue.
+```{r eval=FALSE}
+long_string <- "Strings can be long and contain more than letters. \\.("
+long_string
+```
+
+## Numbers
+
+A <u id='string_tooltip'>__string__</u> doesn't need letters, it can consist of only numbers. 
+```{r eval=FALSE}
+number_string <- "1066"
+number_string
+class(number_string)
+```
+
+::: {.callout-note}
+The terms <u id='string_tooltip'>__string__</u> and __character__ can be used interchangeably.
+:::
+
+## String conversion
+
+You can convert a __numeric__ to a <u id='string_tooltip'>__string/character__</u>.
+```{r eval=FALSE}
+number <- 1066
+numeric_to_string <- as.character(number)
+numeric_to_string
+class(numeric_to_string)
+```
+
+An appropriate <u id='string_tooltip'>__string__</u> can be converted to a __numeric__. 
+This is useful as mathematical <u id='operator_tooltip'>__operators__</u> will not work with <u id='string_tooltip'>__strings__</u>.
+```{r eval=FALSE}
+#will get an error as strings and maths don't mix
+"6" - 3
+#will work as maths and numerics work
+as.numeric("6") - 4
+#Below will not work as only strings containing numbers can be converted to numeric
+as.numeric("not_a_number_12")
+```
+
+## Logical comparisons
+
+You can use certain __<u id='logical_tooltip'>logical</u> <u id='operator_tooltip'>operators</u>__ to compare <u id='string_tooltip'>__strings__</u> though:
+```{r eval=FALSE}
+"character" == "character"
+"1066" != "character"
+"numeric" == "string"
+```
+
+## Combing strings
+
+The __paste() <u id='function_tooltip'>function</u>__ is very useful to combine two or more <u id='string_tooltip'>__strings__</u> into one.
+```{r eval=FALSE}
+paste("The following is a string:", long_string) 
+paste(number_string, "and the", word_string)
+#By default paste will put a space (sep = " ") between each string you provide
+#You can use the sep option to specify your own
+paste("However", " this is separated by a comma", sep = ",")
+#Or you can make it so there is no separator
+paste("no separator",numeric_to_string, sep = "")
+#Alternatively you can use paste0()
+#Where there is no separator by default (sep ="")
+paste0("no separator",numeric_to_string)
+```
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+```

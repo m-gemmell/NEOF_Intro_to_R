@@ -1,0 +1,111 @@
+# Recap
+![](/images/question_bubble_purple.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+Super! Understanding the different classes and data structures is vital to understanding R.
+
+Try choosing the correct answer for each of the below MCQs.
+
+```{r, echo = FALSE}
+opts_p <- c(answer="Numeric", "Logical","String")
+```
+1. What __class__ are numbers normally stored in? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Numeric","Logical",answer="String")
+```
+2. What __class__ is text normally stored in? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Numeric",answer="Logical","String")
+```
+3. What __class__ has the value of TRUE or FALSE? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Scalar", "Vector", answer="Data frame")
+```
+4. Which __data structure__ is 2-dimensional and heterogeneous (can contain multiple __classes__)? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Scalar", answer="Vector", "Data frame")
+```
+5. Which __data structure__ is 1-dimensional and homogeneous (can only contain 1 __class__)? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="Scalar", "Vector", "Data frame")
+```
+6. Which __data structure__ consists of only one value? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`c()`", answer="`class()`", "`paste()`")
+```
+7. Which __function__ can show the __class__ of an R __object__? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`c()`", "`class()`", answer="`paste()`")
+```
+8. Which __function__ can be used to combine __strings__? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="`c()`", "`class()`", "`paste()`")
+```
+9. Which __function__ can be used to create a __vector__? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="`<`", "`!=`", "`>=`")
+```
+10. Which __logical operator__ means "less than"? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`<`", answer="`!=`", "`>=`")
+```
+11. Which __logical operator__ means "not equal to"? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`<`", "`!=`", answer="`>=`")
+```
+12. Which __logical operator__ means "greater than or equal to"? `r longmcq(opts_p)`
+
+There was quite a lot to go through in this part, so let us reinforce it all with exercise!
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+```

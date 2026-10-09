@@ -1,0 +1,19 @@
+{
+  "hash": "08d86c690e2909ef75ada17d4f35a753",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Files exercises\n<center>\n![](/images/files.png){style=\"width:200px; background: white; border-radius:5px\"}\n</center>\n\nThe next 2 chapters each cover an exercise looking at a different file. The exercises are comprised of challenges requiring you to __read__ and __write__ files as well as index <u id='data_frame_tooltip'>__data frames__</u>.\n\nUse your __\"Exercises.R\"__ file, ensuring you are using code sections to separate the different exercises and challenges Additionally, set your working directory to your main workshop directory.\n\nCreate a new directory called \"Chapter_7-9\" within your main workshop directory to download the files:\n\n- [bat_roosts.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/bat_roosts.csv) \n- [honey_bee.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/honey_bee.tsv)\n\nAs the files we are going to __read__ are in a different directory to our working directory we will have to specify the directory along with the file names. For example, to read in the \"Liverpool_beaches.csv\" file from the main directory you could use the  following command.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nliv_beaches_df <- read.csv(\"Chapter_6/Liverpool_beaches.csv\", row.names = 1)\n```\n:::\n\n\nEnsure you also __write__ any output to \"Chapter_7-9\".\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<span class=\"tippy html-widget html-fill-item\" height=\"464px\" id=\"htmlwidget-71d8546076fd0a25434e\" width=\"100%\"></span>\n<script type=\"application/json\" data-for=\"htmlwidget-71d8546076fd0a25434e\">{\"x\":{\"element\":\"data_frame_tooltip\",\"opts\":{\"content\":\"Heterogeneous 2-dimensional data structure. Each column is homogeneous\",\"arrow\":true,\"placement\":\"bottom\"}},\"evals\":[],\"jsHooks\":[]}</script>\n```\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<link href=\"../site_libs/htmltools-fill-0.5.9/fill.css\" rel=\"stylesheet\" />\n<script src=\"../site_libs/htmlwidgets-1.6.4/htmlwidgets.js\"></script>\n<link href=\"../site_libs/tippyjs-3.2.0/themes/google.css\" rel=\"stylesheet\" />\n<link href=\"../site_libs/tippyjs-3.2.0/themes/light-border.css\" rel=\"stylesheet\" />\n<link href=\"../site_libs/tippyjs-3.2.0/themes/light.css\" rel=\"stylesheet\" />\n<link href=\"../site_libs/tippyjs-3.2.0/themes/translucent.css\" rel=\"stylesheet\" />\n<script src=\"../site_libs/tippyjs-3.2.0/tippy.all.min.js\"></script>\n<script src=\"../site_libs/tippy-binding-0.1.0/tippy.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

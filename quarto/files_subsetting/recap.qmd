@@ -1,0 +1,82 @@
+# Recap
+![](/images/question_bubble_blue.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+Grand! With the fundamentals of __reading__, subsetting <u id='data_frame_tooltip'>__data frames__</u>, and __writing__ covered it is time to carry out some exercises after the below MCQs.
+
+Try choosing the correct answer for each of the below MCQs.
+
+```{r, echo = FALSE}
+opts_p <- c("__`read.csv()`__", "__`write.table()`__", answer="__`t()`__")
+```
+1. Which function can be used to transpose a data frame?  `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`read.csv()`__", "__`write.table()`__", "__`t()`__")
+```
+2. Which function can be used to import the contents of a file into a R object? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`read.csv()`__", answer="__`write.table()`__", "__`t()`__")
+```
+3. Which function can be used to export the contents of an R object into a file?  `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c('__`sep="\\t"`__', answer='__`sep=","`__', "__`check.names=FALSE`__")
+```
+4. For `read.csv()` or `write.table()` which option allows you to read/write comma separated files? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c('__`sep="\\t"`__', '__`sep=","`__', answer="__`check.names=FALSE`__")
+```
+5. For `read.csv()` which option allows you to read in the data without causing unwanted changes in the text of the column names? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer='__`sep="\\t"`__', '__`sep=","`__', "__`check.names=FALSE`__")
+```
+6. For `read.csv()` or `write.table()` which option allows you to read/write tab separated files `r longmcq(opts_p)`
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```

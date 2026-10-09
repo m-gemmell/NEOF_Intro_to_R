@@ -1,0 +1,123 @@
+# Data frames & Matrices
+![](/images/Rmatrix.png){style="width:200px; background:white; border-radius:5px; border: 5px white solid" fig-align="center"}
+
+<u id='data_frame_tooltip'>__Data frames__</u> & <u id='matrix_tooltip'>__matrices__</u> are 2-dimensional data structures as they have rows and columns.
+
+A <u id='matrix_tooltip'>__matrix__</u> only contains 1 <u id='class_tooltip'>__class__</u> (homogeneous). A <u id='data_frame_tooltip'>__data frame__</u> can contain multiple <u id='class_tooltip'>__classes__</u> (heterogeneous), but each column can only contain one <u id='class_tooltip'>__class__</u>. 
+
+Most of the time <u id='data_frame_tooltip'>__data frames__</u> and <u id='matrix_tooltip'>__matrices__</u> can be treated the same. Because of this I generally use <u id='data_frame_tooltip'>__data frames__</u> and so we will focus on them.
+
+## mtcars dataset
+
+R comes with a set of pre-loaded data. If you are interested you can use the <u id='function_tooltip'>__function__</u> `data()` to see the full list.
+
+We will have a quick look at the dataset "mtcars". This is a <u id='data_frame_tooltip'>__data frame__</u> containing information on various cars. To look at the <u id='data_frame_tooltip'>__data frame__</u> in the __console window__ run the below.
+
+```{r eval=FALSE}
+mtcars
+```
+
+The above shows the info in the __console window__. 
+However we can have a better look at it in RStudio if we save it as a <u id='variable_tooltip'>__variable__</u> in our __environment__ and then click the <u id='variable_tooltip'>__variable__</u> name on the __Environment pane__ of the __"environment and history"__ __window__.
+
+```{r eval=FALSE}
+cars_info <- mtcars
+```
+
+Now the <u id='variable_tooltip'>__variable__</u> will be listed in your __Environment pane__ in the __"environment and history" window__ . 
+Click on the name "cars_info" in the __Environment pane__. 
+A tab in your __script editor__ will open so you can have a good look at the contents of the <u id='data_frame_tooltip'>__data frame__</u>.
+
+When you are ready, close the "cars_info" tab and remove the <u id='variable_tooltip'>__variable__</u> with the below command.
+
+```{r eval=FALSE}
+rm(cars_info)
+```
+
+## Creating a data frame
+
+Now it is time to create our own <u id='data_frame_tooltip'>__data frame__</u>.
+
+First we will create three <u id='variable_tooltip'>__variables__</u> containing <u id='vector_tooltip'>__vectors__</u>. 
+These will be our three columns.
+
+```{r eval=FALSE}
+Crab <- c(10,1,1)
+Oystercatcher <- c(5,6,4)
+Starfish <- c(3,3,7)
+```
+
+Now let us create the <u id='data_frame_tooltip'>__data frame__</u>.
+
+```{r eval=FALSE}
+#Using the function data.frame to create a data frame
+beach_df <- data.frame(Crab,Oystercatcher,Starfish)
+```
+
+
+## Viewing the data frame
+
+Look at the <u id='variable_tooltip'>__variable__</u> "beach_df" (it is useful to use "df" in __<u id='variable_tooltip'>variable</u> names__ to signify it is a <u id='data_frame_tooltip'>__data frame__</u>) and you will see that each <u id='vector_tooltip'>__vector__</u> has become a column. 
+The __<u id='variable_tooltip'>variable</u> names__ have become the column names (this is why we used capital letters in the __<u id='variable_tooltip'>variable</u> names__).
+
+You can think of <u id='data_frame_tooltip'>__data frames__</u> in three different ways:
+
+- A list of columns
+- A list of rows
+- A table
+
+Look at the column and row names with two new <u id='function_tooltip'>__functions__</u>.
+```{r eval=FALSE}
+colnames(beach_df)
+row.names(beach_df)
+```
+
+We can use the <u id='function_tooltip'>__function__</u> `row.names()` and the __assignment operator__ to change the row names to something more useful.
+```{r eval=FALSE}
+row.names(beach_df) <- c("Formby","West Kirby","Crosby")
+```
+
+Now look at your "beach_df" <u id='data_frame_tooltip'>__data frame__</u> to see the difference.
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+```

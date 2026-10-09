@@ -1,0 +1,123 @@
+# Writing to a file
+![](/images/R_writing.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
+
+Data can be read into an R object by [reading](/files_subsetting/reading.qmd).
+Data in an R object can be saved to a file by __writing__.
+
+## Parks data frame
+
+Before we __write__ data to a file we will create a new <u id='data_frame_tooltip'>__data frame__</u> from "parks_df". 
+
+First I like to create a new <u id='variable_tooltip'>__variable__</u> from our old <u id='variable_tooltip'>__variable__</u> if there are many steps. 
+This means if we make a mistake we can go back and recreate the new <u id='variable_tooltip'>__variable__</u>.
+```{r eval=FALSE}
+parks_t_df <- parks_df
+```
+
+Next step we will create a new column called "Total_species".
+
+```{r eval=FALSE}
+parks_t_df$Total_species <- rowSums(parks_df[,3:8])
+```
+
+::: {.callout-note}
+I am including many ways to subset columns as reminders. Normally I wouldn't have so many different ways in one command.
+
+We are using "_" instead of spaces in our column names as R doesn't particularly like spaces in column names. We will see how to use spaces later.
+:::
+
+The final step before writing is to transpose the <u id='data_frame_tooltip'>__data frame__</u> leaving out the Park name and State columns:
+```{r eval=FALSE}
+#Transpose dataframe
+parks_t_df <- t(parks_t_df[,3:9])
+#Check structure
+str(parks_t_df)
+#It is not a dataframe
+#Let us therefore convert it to a data frame
+parks_t_df <- as.data.frame(parks_t_df)
+#Structure check
+str(parks_t_df)
+```
+
+## Writing to a csv file
+
+Now we'll __write__ the <u id='data_frame_tooltip'>__data frame__</u> to a file called "Park_species_info.csv". 
+When __reading__ from a file I prefer `read.csv()`, however when writing to a file I prefer `write.table()`. 
+With this <u id='function_tooltip'>__function__</u> we will include the option `sep=","` to have commas as the column separators. 
+We will also include the option `col.names=NA` to create an empty space above the row names. 
+If this was not included then the first column name would be above the row names.
+```{r eval=FALSE}
+write.table(parks_t_df, file = "Park_species_info.csv", sep = ",", col.names=NA)
+```
+
+Have a look at the file contents with RStudio.
+
+## Writing to a tsv file
+
+Let's do it one more time with the Global ecological footprint info. 
+First __read__ in the file again in case you do not have it. 
+Then transpose the <u id='data_frame_tooltip'>__data frame__</u> and ensure the resulting object is a <u id='data_frame_tooltip'>__data frame__</u>:
+```{r eval=FALSE}
+#Read in
+global_eco_footprint_df <- read.csv("Global_eco_footprint.tsv", 
+                                 row.names = 1, sep = "\t", 
+                                 check.names = FALSE)
+#Transpose ensuring output is a data frame
+global_eco_footprint_t_df <- as.data.frame(t(global_eco_footprint_df))
+```
+
+__Write__ the <u id='data_frame_tooltip'>__data frame__</u> to a tab delimited file (.tsv). 
+This time we will make it so the row and column names are not surrounded by quotes:
+```{r eval=FALSE}
+write.table(global_eco_footprint_t_df, 
+            "Global_eco_footprint_transposed.tsv", 
+            sep = "\t",  
+            col.names=NA, 
+            quote = FALSE)
+```
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```

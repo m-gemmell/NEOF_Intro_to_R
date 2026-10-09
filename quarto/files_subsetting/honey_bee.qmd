@@ -1,0 +1,149 @@
+# Honey bee colonies
+![](/images/bee_1.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+Next we have a file ([honey_bee.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/honey_bee.tsv)) that contains information on the number of Honey Bee colonies in 4 different USA states. 
+It is temporal data containing information on the 4 quarters for the years 2015-2018.
+
+For more details and even more data please see the following link: <https://www.kaggle.com/datasets/kyleahmurphy/nass-honey-bee-20152021>
+
+Solutions are in the expandable boxes. 
+Try your best to solve each challenge but use the solutions for help if you would like. 
+Even if your method works it can be good to check the solution as there are many ways to do the same thing in R
+
+## Honey bee colony challenges
+
+### Honey bee colony challenge 1 {-}
+![](/images/bee_2.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+__Read__ in the file "honey_bee.tsv" as a <u id='data_frame_tooltip'>__data frame__</u> <u id='variable_tooltip'>__variable__</u> called "bee_colonies_df". 
+Ensure the row names contain the Year info (2015-Q1, 2015-Q2, etc.).
+
+::: {.callout-note collapse="true" title="Bees task 1 solution"}
+Read in file:
+```{r eval=FALSE}
+bee_colonies_df <- read.csv("Chapter_8_files/honey_bee.tsv", 
+                         sep = "\t", row.names = 1, check.names = FALSE)
+```
+:::
+
+### Honey bee colony challenge 2 {-}
+![](/images/bee_3.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+Create a <u id='data_frame_tooltip'>__data frame__</u> called "bee_colonies_2017_2018_df" containing the rows for 2017 & 2018 from "bee_colonies_df". 
+
+::: {.callout-note collapse="true" title="Bees task 2 solution"}
+Create 2017 & 2018 __data frame__:
+```{r eval=FALSE}
+#Can index to get the desired columns
+bee_colonies_2017_2018_df <- bee_colonies_df[9:16,]
+#Alternatively the tail() function can be used
+#It is like head() but will get lowest rows
+bee_colonies_2017_2018_df <- tail(bee_colonies_df, n = 8)
+```
+:::
+
+### Honey bee colony challenge 3 {-}
+![](/images/bee_4.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+For each month in 2017 & 2018 print out the phrase "The number of colonies in Minnesota for \<Year> was \<Value>.
+
+- For example, the first phrase will be "The number of colonies in Minnesota for 2017-Q1 was 27000".
+- This can be done with one line of code using the `paste()` <u id='function_tooltip'>function</u>.
+
+::: {.callout-note collapse="true" title="Bees task 3 solution"}
+```{r eval=FALSE}
+paste("The number of colonies in Minnesota for", 
+      row.names(bee_colonies_2017_2018_df),
+      "was", bee_colonies_2017_2018_df$Minnesota, 
+      sep = " ")
+```
+:::
+
+### Honey bee colony challenge 4 {-}
+![](/images/bee_5.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+Make an average (mean) row for "bee_colonies_2017_2018_df".
+
+::: {.callout-note collapse="true" title="Bees task 4 solution"}
+Mean row:
+```{r eval=FALSE}
+bee_colonies_2017_2018_df["Average",] <- colMeans(bee_colonies_2017_2018_df)
+```
+:::
+
+### Honey bee colony challenge 5 {-}
+![](/images/bee_6.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+Finally write out the <u id='data_frame_tooltip'>__data frame__</u> "bee_colonies_2017_2018_df" as a tab separated file called "bee_colonies_2017_2018.tsv".
+
+::: {.callout-note collapse="true" title="Bees task 5 solution"}
+```{r eval=FALSE}
+write.table(bee_colonies_2017_2018_df, 
+            "Chapter_8_files/bee_colonies_2017_2018.tsv", 
+            sep = "\t", col.names = NA, quote = FALSE)
+```
+:::
+
+## Honey bee colony MCQs
+![](/images/question_bubble_orange.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+Great! Using files and subsetting are very important skills in R so I hope the challenges helped improve your skills and confidence.
+
+Now that you have carried out the challenges, attempt the following questions based on the "bee_colonies_2017_2018_df" object.
+
+```{r, echo = FALSE}
+opts_p <- c("Montana", answer="New Mexico", "Pennsylvania")
+```
+1. Which state has the lowest average? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="Minnesota", "New Mexico", "Pennsylvania")
+```
+2. Which state has the highest minimum value of colonies? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("Montana", "New Mexico", answer="Pennsylvania")
+```
+3. Which state had 20,000 colonies in Q3 of 2018 (2018-Q3)? `r longmcq(opts_p)`
+
+__Tip__: If you use the `summary()` function, ensure you do not include the "Average" row.
+
+::: {.callout-note collapse="true" title="Commands to help with the MCQs"}
+You can figure out the MCQs by viewing the data frame.
+However, you can also figure them out with R code.
+Below are commands to get the answers for the MCQs. 
+I will let you decipher them yourself.
+```{r eval=FALSE}
+#Question 1: Which state has the lowest average?
+min_average <- min(bee_colonies_2017_2018_df["Average",])
+states <- colnames(bee_colonies_2017_2018_df)
+min_average_state <- states[
+  bee_colonies_2017_2018_df["Average",] == min_average]
+min_average_state
+```
+```{r eval=FALSE}
+#Question 2: Which state has the highest minimum value of colonies?
+bee_summary <- summary(bee_colonies_2017_2018_df[1:8,])
+bee_summary
+```
+```{r eval=FALSE}
+#Question 3: Which state had 20,000 colonies in Q3 of 2018 (2018-Q3)?
+n <- 20000
+column_logical_vec <- bee_colonies_2017_2018_df["2018-Q3",] == n
+column_logical_vec
+colnames(bee_colonies_2017_2018_df)[column_logical_vec]
+```
+:::
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+```

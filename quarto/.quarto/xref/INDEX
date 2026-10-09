@@ -1,0 +1,128 @@
+{
+  "index.qmd": {
+    "index.html": "bd801b31"
+  },
+  "webexercises.qmd": {
+    "webexercises.html": "cef80dae"
+  },
+  "overview.qmd": {
+    "overview.html": "73db1972"
+  },
+  "foundations/02-Foundations.Rmd": {
+    "02-Foundations.html": "7bc16b38"
+  },
+  "foundations/03-Foundations_exercises.Rmd": {
+    "03-Foundations_exercises.html": "82c34ad7"
+  },
+  "foundations/intro.qmd": {
+    "intro.html": "63bb6a6c"
+  },
+  "foundations/operators.qmd": {
+    "operators.html": "09740e63"
+  },
+  "foundations/variables.qmd": {
+    "variables.html": "9df1c7ce"
+  },
+  "foundations/functions.qmd": {
+    "functions.html": "32942d34"
+  },
+  "foundations/directories.qmd": {
+    "directories.html": "44b921c7"
+  },
+  "foundations/rstudio_interface.qmd": {
+    "rstudio_interface.html": "e87c8a67"
+  },
+  "foundations/script_editor.qmd": {
+    "script_editor.html": "45668756"
+  },
+  "foundations/recap.qmd": {
+    "recap.html": "f62eb4a2"
+  },
+  "foundations/exercise.qmd": {
+    "exercise.html": "786bc1ab"
+  },
+  "objects/05-R_objects_exercises.Rmd": {
+    "05-R_objects_exercises.html": "6b51583d"
+  },
+  "objects/04-R_objects.Rmd": {
+    "04-R_objects.html": "7b84edd2"
+  },
+  "objects/intro.qmd": {
+    "intro.html": "14b61935"
+  },
+  "objects/basic_classes.qmd": {
+    "basic_classes.html": "89510465"
+  },
+  "objects/numeric.qmd": {
+    "numeric.html": "ceec24c8"
+  },
+  "objects/logical.qmd": {
+    "logical.html": "84c6d159"
+  },
+  "objects/string.qmd": {
+    "string.html": "bfa5cf34"
+  },
+  "objects/code_sections.qmd": {
+    "code_sections.html": "886dcf59"
+  },
+  "objects/data_structure.qmd": {
+    "data_structure.html": "5d0dbf7d"
+  },
+  "objects/scalar.qmd": {
+    "scalar.html": "13997eb1"
+  },
+  "objects/vectors_lists.qmd": {
+    "vectors_lists.html": "f7895996"
+  },
+  "objects/data_frames_matrices.qmd": {
+    "data_frames_matrices.html": "ffebd10c"
+  },
+  "objects/recap.qmd": {
+    "recap.html": "daeb7668"
+  },
+  "objects/exercise.qmd": {
+    "exercise.html": "a4eda101"
+  },
+  "files_subsetting/intro.qmd": {
+    "intro.html": "62643779"
+  },
+  "files_subsetting/06-Files_and_subsetting_data.Rmd": {
+    "06-Files_and_subsetting_data.html": "98cfb973"
+  },
+  "files_subsetting/09-Honey_bee_colonies_exercise.Rmd": {
+    "09-Honey_bee_colonies_exercise.html": "bf37cfa0"
+  },
+  "files_subsetting/08-Bats_roosts_exercise.Rmd": {
+    "08-Bats_roosts_exercise.html": "543559fc"
+  },
+  "files_subsetting/07-Files_exercises.Rmd": {
+    "07-Files_exercises.html": "e2dc9387"
+  },
+  "files_subsetting/reading.qmd": {
+    "reading.html": "0642af09"
+  },
+  "files_subsetting/subsetting.qmd": {
+    "subsetting.html": "672b3caa"
+  },
+  "files_subsetting/vector_subsetting.qmd": {
+    "vector_subsetting.html": "f656efbd"
+  },
+  "files_subsetting/data_frame_subsetting.qmd": {
+    "data_frame_subsetting.html": "df299063"
+  },
+  "files_subsetting/writing.qmd": {
+    "writing.html": "ab20558e"
+  },
+  "files_subsetting/recap.qmd": {
+    "recap.html": "ba2423b1"
+  },
+  "files_subsetting/exercises.qmd": {
+    "exercises.html": "dafbaf51"
+  },
+  "files_subsetting/bat_roosts.qmd": {
+    "bat_roosts.html": "09f574a8"
+  },
+  "files_subsetting/honey_bee.qmd": {
+    "honey_bee.html": "d3e96309"
+  }
+}

@@ -1,0 +1,138 @@
+project:
+  type: website
+editor:
+  render-on-save: true
+website:
+  bread-crumbs: false
+  favicon: /images//NEOF_favicon.png
+  page-navigation: true
+  title: NEOF R Primer for omics
+  description: NEOF R Primer for omics course by NEOF
+  navbar:
+    title: NEOF R primer
+    collapse-below: lg
+    left:
+    - text: Intro
+      href: index.qmd
+    - text: Foundations
+      href: foundations/intro.qmd
+    - text: Objects
+      href: objects/intro.qmd
+    - text: Files & subsetting
+      href: files_subsetting/intro.qmd
+    right:
+    - icon: house-fill
+      href: https://neof.org.uk/training/
+      aria-label: Neof website
+    - icon: linkedin
+      href: https://www.linkedin.com/in/training-neof/
+      aria-label: LinkedIn
+    - icon: bluesky
+      href: https://bsky.app/profile/nerc-eof.bsky.social
+      aria-label: bluesky
+  page-footer:
+    left: |
+      [![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png){fig-alt="CC BY-SA 4.0" height=30px}](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+    center: |
+      [![](/images//NEOF_rounded_corners.png){fig-alt="NEOF" height=60px}](https://neof.org.uk/)
+  sidebar:
+  - id: Overview
+    title: Overview
+    style: floating
+    align: left
+    contents:
+    - href: index.qmd
+    - href: overview.qmd
+  - id: Foundations
+    title: Foundations
+    style: floating
+    align: left
+    contents:
+    - href: foundations/intro.qmd
+    - href: foundations/operators.qmd
+    - href: foundations/variables.qmd
+    - href: foundations/functions.qmd
+    - href: foundations/directories.qmd
+    - href: foundations/script_editor.qmd
+    - href: foundations/recap.qmd
+    - href: foundations/exercise.qmd
+  - id: Objects
+    title: objects
+    style: floating
+    align: left
+    contents:
+    - href: objects/intro.qmd
+    - section: "Classes"
+      contents:
+      - href: objects/basic_classes.qmd
+      - href: objects/numeric.qmd
+      - href: objects/logical.qmd
+      - href: objects/string.qmd
+    - href: objects/code_sections.qmd
+    - section: "Data structures"
+      contents:
+      - href: objects/data_structure.qmd
+      - href: objects/scalar.qmd
+      - href: objects/vectors_lists.qmd
+      - href: objects/data_frames_matrices.qmd
+    - href: objects/recap.qmd
+    - href: objects/exercise.qmd
+  - id: Files & subsetting
+    title: files_subsetting
+    style: floating
+    align: left
+    contents:
+    - href: files_subsetting/intro.qmd
+    - href: files_subsetting/reading.qmd
+    - section: "Subsetting"
+      contents:
+      - href: files_subsetting/subsetting.qmd
+      - href: files_subsetting/vector_subsetting.qmd
+      - href: files_subsetting/data_frame_subsetting.qmd
+    - href: files_subsetting/writing.qmd
+    - href: files_subsetting/recap.qmd
+    - section: "Exercises"
+      contents:
+      - href: files_subsetting/exercises.qmd
+      - href: files_subsetting/bat_roosts.qmd
+      - href: files_subsetting/honey_bee.qmd
+#Format
+format:
+  html:
+###Include table of contents
+### "On this page" right of page
+    toc: true
+    toc-depth: 4
+###Page size
+    grid:
+####Width of sidebar
+      sidebar-width: 200px
+####Max width of main page
+      body-width: 1200px
+####Width of empty margin at right of toc
+#### needed to give room for long headers
+      margin-width: 150px
+####Space separating body from sidebar and toc  
+      gutter-width: 10px
+ 
+###Code highlighting style
+### a11y is accessible and auto switches between dark and light mode
+    highlight-style: a11y
+ 
+####Code will overflow in code blocks
+####set to scroll for scroll (i.e. horizontal scroll at bottom of block)
+    code-overflow: wrap
+ 
+###Themes
+###HTML themes: https://quarto.org/docs/output-formats/html-themes.html
+    theme:
+####Dark theme with scss file
+      dark: [darkly, styles_dark.scss]
+####Light theme with scss
+      light: [styles_light.scss]
+####Any text not determined in scss files will be mainfont
+    mainfont: Lexend
+ 
+###Paths for webexercises files
+    css: include/webex.css
+    include-after-body: include/webex.js

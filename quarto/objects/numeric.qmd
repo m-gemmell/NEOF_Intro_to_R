@@ -1,0 +1,125 @@
+# Numeric
+![](/images/numbers.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+__Numeric__ <u id='class_tooltip'>__classes__</u> come in two types, <u id='integer_tooltip'>__integer__</u> and <u id='double_tooltip'>__double__</u>. 
+<u id='integer_tooltip'>__Integers__</u> and <u id='double_tooltip'>__doubles__</u> are almost identical. 
+However, <u id='double_tooltip'>__doubles__</u> contain decimal point information whilst <u id='integer_tooltip'>__integers__</u> do not. 
+
+Most of the time you will only need to know if your data is __numeric__ and you will not need to worry about <u id='double_tooltip'>__doubles__</u> or <u id='integer_tooltip'>__integers__</u>. 
+The exception being if you are working with decimals and your decimals are not showing up. 
+This probably means that your __object__ has the __<u id='integer_tooltip'>integer</u> <u id='class_tooltip'>class</u>__.
+
+Type and run the below command, using the provided annotation to understand what the commands are doing.
+
+::: {.callout-tip}
+Remember you can copy and paste old script.
+:::
+
+## Display class
+
+Use the __function__ `class()` to show the <u id='class_tooltip'>__class__</u> of an R __object__:
+```{r eval=FALSE}
+#Numeric
+#Class of 2
+class(2)
+#class of 3.14
+class(3.14)
+#class of 6
+class(6)
+```
+
+## Converting pi
+
+Create a <u id='variable_tooltip'>__variable__</u> with the __name__ "pie" containing the __numeric__ 3.14:
+```{r eval=FALSE}
+#Creating a variable using the assignment operator
+pie <- 3.14
+```
+
+Use the <u id='function_tooltip'>__functions__</u> `as.numeric()`, `as.integer()`, and `as.double()` to print the <u id='variable_tooltip'>__variable__</u> as a __numeric__, as an <u id='integer_tooltip'>__integer__</u>, and as a <u id='double_tooltip'>__double__</u>:
+```{r eval=FALSE}
+#Printing out previously made variable as numeric, integer, and double
+as.numeric(pie)
+as.integer(pie)
+as.double(pie)
+```
+
+## Nested functions
+
+You can put a <u id='function_tooltip'>__function__</u> as the <u id='variable_tooltip'>__variable__</u> within a <u id='function_tooltip'>__function__</u> (known as nesting). 
+
+Below we will first check the <u id='class_tooltip'>__class__</u> of the __object__ within the "pie" <u id='variable_tooltip'>__variable__</u>. You will note that the <u id='function_tooltip'>__functions__</u> we used previously did not permanently change the __<u id='variable_tooltip'>variable's</u> object__. We can only change a <u id='variable_tooltip'>__variable__</u> if we use the __assignment operator__.
+
+Then we will check the <u id='class_tooltip'>__class__</u> of the __object__ as it is altered by the various `as.` <u id='function_tooltip'>__functions__</u>. 
+
+```{r eval=FALSE}
+#Checking the class of our variable
+class(pie)
+class(as.numeric(pie))
+class(as.integer(pie))
+class(as.double(pie))
+```
+
+::: {.callout-tip}
+Remember to ask for help if you need it!
+:::
+
+## Inbuilt variables
+
+On a side note, R comes with some inbuilt <u id='variable_tooltip'>variables</u> such as `pi`:
+```{r eval=FALSE}
+#The R pi is equal to 3.141593
+pi
+#assign pi to 3.14
+pi <- 3.14
+#print out pi to see you have changed the variable's object
+pi
+#in this case if you want the original R pi object back, we can remove the one we made
+rm(pi)
+pi
+```
+
+Have you been annotating your scripts?
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+```

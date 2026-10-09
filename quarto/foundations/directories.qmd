@@ -1,0 +1,77 @@
+# Directories
+![](/images/directories.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
+
+It is important to know what directory you are working in and how to change to different directories.
+
+## Commands
+Below are commands you can run in the RStudio __console__ or __script editor__ (use of script editor will be taught soon).
+
+Determine what directory you are currently in.
+```{r eval=FALSE}
+getwd()
+``` 
+
+Set working directory. The path of the directory must be in quotes like below. If you do run the below command make sure the path exists in your computer, as I am sure the example below will not. 
+```{r eval=FALSE}
+setwd("/path/of/directory")
+``` 
+
+List the files in the current directory.
+```{r eval=FALSE}
+list.files()
+``` 
+
+## RStudio interface
+The RStudio interface can also be used to carry out the above tasks.
+
+To see what the current working directory is, you can look at the top bar of the __console window__. The below shows I am in the __"F:/R/CE/CE_R_for_Everyone"__ directory. 
+
+![](/images/current_wd.png){style="width:800px; border-radius:5px" fig-align="center"}
+
+There are two main ways to set your working directory.
+
+1. Via the tool bar:
+    1. Click __"Session"__
+    2. Go to the __"Set Working Directory"__ drop down section
+    3. Click __"Choose Directory.."__
+    4. Use the pop-up browser to choose a directory
+
+2. Via the __MISC window__ (bottom right)
+    1. Click the __Files pane__
+    2. Navigate to the directory you would like to set as the working directory
+    3. On the __MISC toolbar__ click on the cog icon (It may say __"More"__ beside it)
+    4. On the drop down click __"Set As Working Directory"__
+    
+To show the current working directory in the __Files__ pane click the arrow on the top bar of the __console window__. You can then see what files and directories are in your working directory via the __Files__ pane in the __MISC__ window.
+
+![](/images/see_files.png){style="width:800px; border-radius:5px" fig-align="center"}
+
+## Course directory task
+
+With this information create a directory you will use for this course. This can be done outside of Rstudio or you can use the __Files pane__ in the __MISC window__. Once this is created set your working directory to it. With that done we can go onto the next page.
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+```
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+```

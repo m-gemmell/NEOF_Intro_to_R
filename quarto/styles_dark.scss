@@ -1,0 +1,54 @@
+/*-- scss:defaults --*/
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lexend&display=swap');;
+
+// Colors
+$ibm-blue: #648fff;
+$blue: #5282FF;
+$ibm-purple: #785ef0;
+$ibm-maroon: #dc267f;
+$ibm-orange: #fe6100;
+$ibm-yellow: #ffb000;
+$neof-green: #00af37;
+$neof-grey: #333e47;
+$code-purple: #7D12BA;
+$light-grey: #F8F9FA;
+
+// Base document colors
+$navbar-bg: $neof-grey;
+$navbar-hl: $neof-green; // highlight color when hovering over navbar links
+$footer-bg: $neof-grey; // footer
+$sidebar-hl: $neof-green;
+
+$link-color: $ibm-blue;
+
+//Inline code
+$code-bg: #383838;
+
+/*-- scss:rules --*/
+body {
+  font-family: "Lexend";
+}
+h1 {
+  font-family: "Lexend";
+  text-align: center;
+}
+h2, h3, h4, h5, h6 {
+  font-family: "Lexend";
+}
+monofont {
+  font-family: "Fira+Mono";
+}
+
+// Code font
+code {
+  color: $ibm-yellow ;
+}
+
+// Make images disappear if size of viewport is too small
+@media (max-width: 450px) {
+  .hexcollast {
+    display: none;
+  }
+}

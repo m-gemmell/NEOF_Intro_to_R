@@ -1,0 +1,28 @@
+# Foundations of R
+![](/images/foundational.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
+
+This section will cover the foundations of R. Understanding these concepts is fundamental to becoming an R user. 
+
+The pages of this part are:
+
+- [Operators](/foundations/operators.qmd): Include `+`, `-`, `*`, and `/`, they allow us to use R like a calculator
+- [Variables](/foundations/variables.qmd): Allow us to save the output from commands so we can use them in future commands
+- [Functions](/foundations/functions.qmd): R contains a plethora of <u id='function_tooltip'>__functions__</u> that perform many different tasks
+- [Directories](/foundations/directories.qmd): How to change directory/folders and view their content
+- [Script editor](/foundations/script_editor.qmd): Use of the Rstudio script editor to write, edit, and save cod ein scripts.
+- [Recap](/foundations/recap.qmd): Recap of definitions with MCQs
+- [Exercises](/foundations/exercise.qmd): Tasks to gain further practice of the foundations of R
+
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+```

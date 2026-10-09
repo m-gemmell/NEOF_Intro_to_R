@@ -1,0 +1,192 @@
+# Vector subsetting
+![](/images/R_square_bracket.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
+
+We will start subsetting with the on-dimensional <u id='vector_tooltip'>__vectors__</u>.
+
+## New vectors
+
+Before carrying out any subsetting let us create some new <u id='vector_tooltip'>__vectors__</u>. 
+We will use a new <u id='function_tooltip'>__function__</u> to create these, `seq()`.
+
+::: {.callout-tip}
+Look at the resulting <u id='vector_tooltip'>__vectors__</u> and, use `?seq()` or search online to understand the `seq()` <u id='function_tooltip'>__function__</u> better.
+:::
+
+```{r eval=FALSE}
+even_seq <- seq(from = 0, to = 8, by = 2)
+odd_seq <- seq(from = 1, to = 9, by = 2)
+long_seq <- seq(from = 10, to = 300, by = 10)
+```
+
+Grand! 
+
+## Foundational vector subsetting
+
+Now we'll subset the <u id='vector_tooltip'>__vectors__</u> with square brackets `[]`.
+
+<u id='vector_tooltip'>__Vectors__</u> are one-dimensional, we can therefore provide the square brackets with one number or one range of numbers. 
+The number/s we provide in the square brackets are the index.
+
+Try out indexing/subsetting the <u id='vector_tooltip'>__vectors__</u>.
+
+```{r eval=FALSE}
+even_seq[2]
+odd_seq[1]
+long_seq[10]
+even_seq[2:3]
+odd_seq[1:4]
+long_seq[21:24]
+long_seq[24:21]
+even_seq[c(2,3)]
+odd_seq[c(1,3,2,5)]
+long_seq[c(1,21,21:24,24:21,1)]
+#As long as the contents within the [] equal numbers they will work
+even_seq[seq(from = 1, to = 3, by = 2)]
+even_seq[seq(from = 0, to = 5, by = 3)]
+long_seq[seq(from = 1, to = 19, by = 2)]
+even_seq[1*2]
+odd_seq[2/1]
+long_seq[(1:10)*2]
+```
+
+## Subsetting and NAs
+
+The <u id='vector_tooltip'>__vectors__</u> even_seq and odd_seq have the indexes 1,2,3,4, and 5 as they each contain 5 <u id='scalar_tooltip'>__scalars__</u>. 
+What if we try to use a higher number to index than is available?
+```{r eval=FALSE}
+even_seq[6]
+even_seq[c(4,7)]
+odd_seq[3:9]
+```
+
+As you can see the above all work with no complaints. 
+Any indexes that are out of range will return a `NA` value. 
+`NA` stands for 'Not Available'. 
+We will not go into how `NA` works in R too much detail.
+
+The most important thing to know about `NA` is that you will most likely get `NA` if you use <u id='operator_tooltip'>__operators__</u> or <u id='function_tooltip'>__functions__</u> with `NA`. 
+Below are a few examples:
+
+```{r eval=FALSE}
+#Will give NA
+1 + NA
+2 - NA
+even_seq[2] * NA
+odd_seq[5] / NA
+#mean() function without NA
+mean(even_seq[2:5])
+#mean() function with NA
+mean(c(1,2,3,4,5,NA))
+mean(even_seq[2:7])
+```
+
+## Inverted subsetting
+
+We have subsetted <u id='vector_tooltip'>__vectors__</u> by specifying which indexes we want. 
+We can also specify which indexes we don't want with `-`:
+
+```{r eval=FALSE}
+even_seq[-2]
+odd_seq[-3:-5]
+long_seq[c(-1,-2,-6)]
+```
+
+## Subsetting with `rep()`
+
+The `rep()` <u id='function_tooltip'>__function__</u> will replicate a __<u id='scalar_tooltip'>scalar</u>/<u id='vector_tooltip'>vector</u>__ a specified amount of times. 
+We will use this <u id='function_tooltip'>__function__</u> to overwrite our previously created <u id='variable_tooltip'>__variables__</u> with longer versions.
+```{r eval=FALSE}
+#Replicate vector even_seq 2 times
+rep(x = even_seq, 2)
+#Replicate vector even_seq 4 times and then assign even_seq as the newly created vector
+even_seq <- rep(x = even_seq, 4)
+#More examples
+odd_seq <- rep(x = odd_seq, 4)
+long_seq <- rep(x = long_seq, 3)
+```
+
+## Logical subsetting
+
+<u id='logical_tooltip'>__Logical__</u> <u id='operator_tooltip'>__operators__</u> can be used as indexes to subset <u id='vector_tooltip'>__vectors__</u>. 
+Having a logical expression (i.e. 1 > 2) as the index will cause all TRUE positions to be included and all FALSE positions to be excluded.
+
+```{r eval=FALSE}
+even_seq > 3
+even_seq[even_seq  > 2]
+odd_seq[odd_seq <= 1 ]
+long_seq <- long_seq[long_seq < 50]
+```
+
+::: {.callout-tip}
+If it is difficult to deduce what the above commands are doing you can run the part in the square brackets by itself. If you highlight code in the __script editor__ it will only run that part, excluding unhighlighted parts of script in the same line.
+:::
+
+## Modulus (`%%`)
+
+We will quickly look at a new <u id='operator_tooltip'>__operator__</u>, `%%`. This is the modulus <u id='operator_tooltip'>__operator__</u>, it divides two numbers and gives the remainder of the division.
+
+With the modulus <u id='operator_tooltip'>__operator__</u>, <u id='logical_tooltip'>logical</u> expressions, and subsetting we can extract even or odd numbers from a <u id='vector_tooltip'>__vector__</u>:
+```{r eval=FALSE}
+#First some basic modulus examples
+2%%2
+3%%2
+#Create a vector with numbers 0 to 9
+single_digit_vec <- 0:9
+#Extract even numbers then odd numbers from the vector
+#We carry this out by determining if numbers are divisible by 2 or not
+even_seq <- single_digit_vec[(single_digit_vec %% 2) == 0 ]
+odd_seq <- single_digit_vec[(single_digit_vec %% 2) != 0]
+#We can determine which numbers in a vector are divisible by any specific number
+#Divisible by 3
+#remember variable names cannot start with numbers
+divis_3_vec <- single_digit_vec[(single_digit_vec %% 3) == 0]
+#Divisible by 7
+divis_7_vec <- single_digit_vec[(single_digit_vec %% 7) == 0]
+#Try out other numbers!
+```
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```

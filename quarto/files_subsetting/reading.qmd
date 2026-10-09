@@ -1,0 +1,141 @@
+# Reading from a file
+![](/images/r_read.png){style="width:400px; background:white; border-radius:5px" fig-align="center"}
+
+In the [objects part](/objects/data_frames_matrices.qmd#creating-a-data-frame) we created <u id='data_frame_tooltip'>__data frames__</u> with R <u id='function_tooltip'>__functions__</u>. 
+This was useful to help understand how <u id='data_frame_tooltip'>__data frames__</u> work in R. 
+However, in real life you will most likely not do this very often. 
+Instead you will have data files you need to analyse with R.
+
+You can get your data into R by having R __read__ your file.
+
+## Directory and file setup
+
+Prior to using a file you will need to acquire it. 
+
+- Make a directory/folder called "Chapter_6" within your main directory/folder for this workshop. 
+- Download the file [Liverpool_beaches.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/Liverpool_beaches.csv) into "Chapter_6". 
+- Set your working directory to this new directory ([Directories](#directories)). You will stay here for this chapter.
+
+## Viewing the file
+![](/images/view.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
+
+The next task to carry out is to __read__ in the file "Liverpool_beaches.csv". 
+Before __reading__ in the file we can check the contents of the file. 
+This can be carried out by opening it with notepad (or similar text tool) or viewing the file with RStudio. 
+
+To view the file with RStudio:
+
+- Use the __Files pane__ of the __MISC window__ to navigate to the directory containing the file
+- Click on the file name and then click "View File"
+- This will open a tab in the __Source window__ matching the file name
+
+You will notice that the values are separated by commas as this is a "comma separated value" (.csv) file. Additionally, this is the same data as the "beach_df_2" <u id='data_frame_tooltip'>__data frame__</u> you created in the [object exercises](/objects/exercise.qmd).
+
+::: {.callout-note}
+Create a new R script file called __"3-Files_and_subsetting.r"__ for this chapter's scripts.
+:::
+
+## read.csv()
+![](/images/csv_file.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+There are various <u id='function_tooltip'>__functions__</u> to __read__ in files into R. 
+My favourite is `read.csv()`. 
+Use this function to __read__ in the file "Liverpool_beaches.csv":
+```{r eval=FALSE}
+liv_beaches_df <- read.csv("Liverpool_beaches.csv")
+```
+
+Have a look at the newly created <u id='data_frame_tooltip'>__data frame__</u>. 
+Is it how you would like it?
+
+The row names are empty and the beach names are in the first column. 
+We'll fix this so the beach names are the row names. 
+This can be carried out by including the option `row.names = 1` to specify the 1st column will be the row names:
+```{r eval=FALSE}
+liv_beaches_df <- read.csv("Liverpool_beaches.csv", row.names = 1)
+```
+
+We now know how to __read__ in a csv file with `read.csv`. 
+
+## TSV files
+![](/images/footprint.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+For our next task we will __read__ a tab separated file. 
+
+Download [Global_eco_footprint.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/Global_eco_footprint.tsv) into your "Chapter_6" folder/directory. 
+This file contains the 2023 global ecological footprint information. 
+The ecological footprint measures the ecological assets that a given population requires to produce the natural resources it consumes.
+
+::: {.callout-note collapse="true" title="Global_eco_footprint.tsv"}
+More info can be found in the following link: <https://www.kaggle.com/datasets/jainaru/global-ecological-footprint-2023>.
+:::
+
+Use `read.csv()` to __read__ in the file. We'll set the option `row.names = 1` again but also include the option `sep = "\t"`. This option specifies the columns are separated (`sep`) by tabs (`"\t"`).
+
+```{r eval=FALSE}
+global_eco_footprint <- read.csv("Global_eco_footprint.tsv", 
+                        row.names = 1, sep = "\t")
+```
+
+Look at the resulting <u id='data_frame_tooltip'>__data frame__</u> and you will notice the column names have been changed by R. This is annoying but thankfully there is an easy fix. __Read__ in the data again with the inclusion of the parameter `check.names = FALSE`. This will stop the function `read.csv()` from 'checking' and 'fixing' the column names. I always use this option.
+
+```{r eval=FALSE}
+global_eco_footprint_df <- read.csv("Global_eco_footprint.tsv", 
+                                 row.names = 1, sep = "\t", 
+                                 check.names = FALSE)
+```
+
+## Excel files and R
+![](/images/readxl.png){style="width:150px" fig-align="center"}
+
+You may want to open excel files with R. Normally to do this I open the file in excel and save it as a .csv or a tab separated file and __read__ this into R. Alternatively there are R packages that can directly __read__ in excel files. If this is something you would like to do you can look at the following package:
+
+<https://readxl.tidyverse.org/>
+
+An important note is that __reading__ in a file into R will not change the file. You are creating a new R __object__. Modifying this __object__ will not alter the original file. Later in the materials we will look into how to create new files or overwrite files by __writing__.
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```
