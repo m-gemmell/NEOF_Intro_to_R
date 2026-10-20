@@ -124,5 +124,11 @@
   },
   "files_subsetting/honey_bee.qmd": {
     "honey_bee.html": "d3e96309"
+  },
+  "tips_tricks/10-Handy_tips_and_tricks.qmd": {
+    "10-Handy_tips_and_tricks.html": "403ca8fb"
+  },
+  "tips_tricks/intro.qmd": {
+    "intro.html": "862a2915"
   }
 }

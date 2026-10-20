@@ -96,6 +96,13 @@ website:
       - href: files_subsetting/exercises.qmd
       - href: files_subsetting/bat_roosts.qmd
       - href: files_subsetting/honey_bee.qmd
+  - id: Tips & Tricks
+    title: tips_tricks
+    style: floating
+    align: left
+    contents:
+    - href: tips_tricks/intro.qmd
+
 #Format
 format:
   html:
