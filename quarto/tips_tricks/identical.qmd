@@ -1,0 +1,73 @@
+# Identical
+<center>
+![](/images/identikeys.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
+</center>
+
+I touched on the `identical()` <u id='function_tooltip'>__function__</u> previously to compare two resulting <u id='data_frame_tooltip'>__data frames__</u>. 
+`identical()` will compare two objects and if the objects are exactly identical it will print TRUE. 
+If they are not exactly identical it will print FALSE. 
+The <u id='function_tooltip'>function</u> can be given __scalars__, __vectors__, __data frames__ etc. 
+
+Try out the below examples.
+```{r eval=FALSE}
+identical(1,1)
+identical(1,2)
+identical("word","word")
+identical("word","orb")
+identical(1,"1")
+identical("one",1)
+identical(1:5,1:5)
+identical(1:5,6:9)
+identical(1:5,1:6)
+identical(c("a","b"),c("a","b"))
+identical(c("a","b"),c("c","b"))
+identical(c("a","b"),c("b","a"))
+identical(english_df,english_df)
+identical(english_df,tea_df)
+```
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```

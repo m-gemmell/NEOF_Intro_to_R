@@ -1,0 +1,73 @@
+# More plot features
+
+In this page we'll edit the following features of our plot:
+
+- The main plot and axes titles
+- The colours of the lines
+- The plot legend to match our previous changes
+
+## Plot titles
+<center>
+![](/images/plot_title.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid"}
+</center>
+
+Let' first add a main title and provide the x and y axis with better titles.
+```{r eval=FALSE}
+#Produce line plot of Minnesota over time point.
+#Add main, x, and y titles
+plot(y = bee_colonies_df$Minnesota, bee_colonies_df$time_point, type = "l",
+     ylim = c(min_y,max_y), xaxt = 'n',
+     main = "Number of Honey Bee colonies in 4 US states over 2017 & 2018",
+     ylab = "Bee colonies",
+     xlab = "Year and Quarter")
+#Add row names (year and quarter strings) as x axix labels
+axis(1, at = bee_colonies_df$time_point, labels = row.names(bee_colonies_df))
+#Add lines
+lines(y = bee_colonies_df$Montana, x = bee_colonies_df$time_point)
+lines(y = bee_colonies_df$`New Mexico`, x = bee_colonies_df$time_point)
+lines(y = bee_colonies_df$Pennsylvania, x = bee_colonies_df$time_point)
+```
+
+## Line colours
+<center>
+![](/images/lines.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid"}
+</center>
+
+Next we will colour the lines differently to differentiate the states. We carry this out with the `col = ` options for `plot()` and `lines()`.
+```{r eval=FALSE}
+#Produce line plot of Minnesota over time point.
+#Include the colour red for the bars
+plot(y = bee_colonies_df$Minnesota, bee_colonies_df$time_point, type = "l",
+     ylim = c(min_y,max_y), xaxt = 'n',
+     main = "Number of Honey Bee colonies in 4 US states over 2017 & 2018",
+     ylab = "Bee colonies",
+     xlab = "Year and Quarter",
+     col = "red")
+#Add row names (year and quarter strings) as x axix labels
+axis(1, at = bee_colonies_df$time_point, labels = row.names(bee_colonies_df))
+#Add lines with different colours
+lines(y = bee_colonies_df$Montana, x = bee_colonies_df$time_point, col = "blue")
+lines(y = bee_colonies_df$`New Mexico`, x = bee_colonies_df$time_point, col = "green")
+lines(y = bee_colonies_df$Pennsylvania, x = bee_colonies_df$time_point, col = "purple")
+```
+
+## Plot legend
+<center>
+![](/images/legend.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
+</center>
+
+We are almost there! The one thing we are missing now is a legend so we can quickly see what colour represents each state.
+
+This can be carried out by using the __function__ `legend()` after the plot is created. In this case the __function__ is run with the following options:
+
+- `x = "topleft"`: The legend will be placed in the top left of the plot.
+- `legend = colnames(bee_colonies_df[,1:4])`: This dictates the labels that will be in the legend.
+- `col = c("red","blue","green","purple")`: This indicates the matching colours for the labels.
+- `lty = 1`: This indicates that the colours will be presented as lines of type 1.
+
+```{r eval=FALSE}
+legend(x = "topleft",
+       legend = colnames(bee_colonies_df[,1:4]),
+       col = c("red","blue","green","purple"),
+       lty = 1)
+```

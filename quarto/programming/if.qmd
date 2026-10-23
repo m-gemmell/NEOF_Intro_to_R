@@ -1,0 +1,47 @@
+# If statements
+<center>
+![](/images/flow_chart.png){style="width:200px; border-radius:15px; background:white"}
+</center>
+
+__If statements__ allow for different commands to be carried out depending on __if__ a condition is met. 
+
+This can be thought of like a flow chart where you go one way if you answer yes and another if you answer no. Example:
+
+- Are you thirsty?
+- If yes, have something to drink.
+- If no, do not have something to drink.
+
+Basic format of an __if equation__:
+```{r eval=FALSE}
+if (condition) {
+  command/s if condition true
+} else {
+  command/s if condition false
+}
+```
+
+I'll show you a coding example using the modulus (`%%`) __operator__.
+```{r eval=FALSE}
+#Create a scalar
+i <- 3
+#If statement determing if the remainder of i/2 is 1
+if (( i %% 2) == 1) {
+  paste0(i, " is odd")
+} else {
+  paste0(i, " is even")
+}
+```
+
+You can have an __if statement__ within a __loop__.
+
+__Reminder__: We need to use `print()` within __loops__ to print results to the console.
+```{r eval=FALSE}
+for (i in 0:9) {
+  #If statement determining if the remainder of i/2 is 1
+  if (( i %% 2) == 1) {
+    print(paste0(i, " is odd"))
+  } else {
+    print(paste0(i, " is even"))
+  }
+}
+```

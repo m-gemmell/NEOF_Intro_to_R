@@ -1,0 +1,9 @@
+# Basic programming
+<center>
+![](/images/programming.png){style="width:200px; background: white; border-radius:5px"}
+</center>
+
+In this chapter we will be look at some basic programming with R. This will involve __loops__, __if__ statements, and creating your own __functions__.
+
+Create and use the directory "Chapter_17-18" as the working directory for this chapter. 
+Additionally, create a new script called "Programming.R" for this chapter.

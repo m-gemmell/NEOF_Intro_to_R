@@ -1,0 +1,15 @@
+{
+  "hash": "6dc659fba9a173e924646a6311c4279f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Basic scatter plot\n<center>\n![](/images/Scatterplot_2.png){style=\"width:200px; background:white; border-radius:5px; border: white solid 5px\"}\n</center>\n\nScatter plots are a great way to compare two matching variables. To make a scatter plot we use the `plot()` __function__ again. This means a lot of what we went through the last chapter will be helpful for this chapter\n\nFirst we'll create a simple scatter plot plotting the numbers 1:20 against the same range of numbers times by 2. For this we provide the option `type = \"p\"` to indicate we want the data plotted as points.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nplot(x = 1:20, y = (1:20)*2, type = \"p\")\n```\n:::\n\n\nThat was a nice linear plot. We'll make a curve this time. \n\nIn the command we will not include the option `type = \"p\"` as this is the default for `plot()`. \n\nAdditionally we will not provide the option names `x = ` and `y = `. __Functions__ have an order to their options so if you leave out the option names but provide options (in this case __vectors__) it will use the options in the function's default order. \nIn the case of `plot()` it will take the first option as `x = ` and the second option as `y = `. It is common for plotting functions to take x first then y.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nplot(1:20, (1:20)*(1:20))\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

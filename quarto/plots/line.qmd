@@ -1,0 +1,63 @@
+# Basic line graph
+<center>
+![](/images/line_graph.png){style="width:200px; background: white; border-radius:5px; border:5px white solid"}
+</center>
+
+Line graphs are perfect for showing change over time. Knowing this we'll go back to a data set we have touched before, the file "honey_bee.tsv" from [Chapter 9](#honeybeechap). This file showed the number of Honey Bee colonies in various US states from 2015-2018.
+
+## Read in data
+<center>
+![](/images/read.png){style="width:150px; background: white; border-radius:5px"}
+</center>
+
+The first step is to __read__ in the data from the "Chapter_7-9" directory. Once the __data frame__ is created we will remove all non 2017 & 2018 information.
+
+__Note__: The `../` below represents going up one directory. I.e. going up from your current working directory ("Chapter_12-14") to the main directory so it can be directed to "Chapter_8_files".
+
+```{r eval=FALSE}
+bee_colonies_df <- read.csv("../Chapter_7-9/honey_bee.tsv", 
+                            sep = "\t", row.names = 1, check.names = FALSE)
+bee_colonies_2017_2018_df <- bee_colonies_df[9:16,]
+```
+
+```{r eval=FALSE,echo=FALSE}
+#For my testing
+bee_colonies_df <- read.csv("honey_bee.tsv", sep = "\t", row.names = 1, check.names = FALSE)
+bee_colonies_df <- bee_colonies_df[9:16,]
+```
+
+Before we continue have a look at the __data frame__ and make sure you are comfortable with what it contains. 
+
+## Plotting a line graph
+<center>
+![](/images/paint_brush.png){style="width:150px; background: white; border-radius:5px"}
+</center>
+
+We are going to plot the entire information for the state of Minnesota. We will use the __function__ `plot()` with the option `type = "l"`. This will produce a plot of type "line" (`"l"`).
+
+This requires we provide a numeric __vector__ for the x axis (option `x = `) and the y axis (option `y = `). Currently our quarter and year information is in the row names as strings. 
+
+Therefore before we plot the information we will create a new column called "time_point" with the numbers 1 to the number of rows. We will carry this out with the __function__ `nrow()` which produces one number equal to the number of rows in the specified __data frame__. 
+
+We won't use it here but the __function__ `ncol()` is similar to `nrow()` but for the number of columns.
+
+```{r eval=FALSE}
+#Produce time_point column
+bee_colonies_df$time_point <- 1:(nrow(bee_colonies_df))
+#Produce line plot of Minnesota over time point.
+plot(y = bee_colonies_df$Minnesota, bee_colonies_df$time_point, type = "l")
+```
+
+## Adding lines
+<center>
+![](/images/lines_black.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid"}
+</center>
+
+This plot looks decent but you normally want more than one line in a line graph. Thankfully we can do this with the __function__ `lines()`. We can add the other three states to the line graph like below:
+
+__Tip__: Remember to use tab completion to auto fill __function__, __variable__, and column names as well as for __function__ options.
+```{r eval=FALSE}
+lines(y = bee_colonies_df$Montana, x = bee_colonies_df$time_point)
+lines(y = bee_colonies_df$`New Mexico`, x = bee_colonies_df$time_point)
+lines(y = bee_colonies_df$Pennsylvania, x = bee_colonies_df$time_point)
+```

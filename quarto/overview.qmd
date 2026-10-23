@@ -5,4 +5,30 @@ This course is split into 2 main parts: the course materials, and the optional/a
 ## Course materials
 
 
+## Extra materials
 
+There are extra materials you can attempt after the workshop. 
+
+### Plots
+
+The [plots](/plots/plots_intro.qmd) part includes creating:
+
+- [Line graphs](/plots/line.qmd)
+- [Histograms](/plots/histogram.qmd)
+- [Scatterplots](/plots/scatter.qmd)
+- [Boxplots](/plots/boxplot.qmd) 
+
+### Statistics
+
+The [statistics](/stats/stats_overview.qmd) part will cover carrying out:
+
+- [Linear regression](/stats/linear_regression.qmd)
+- [T-test](/stats/t_test.qmd)
+
+### Programming
+
+Finally, the last part will introduce some harder coding where you'll learn to create:
+
+- [Loops](programming/loop_types.qmd)
+- [If statements](programming/if.qmd)
+- [Custom functions](/programming/functions.qmd)

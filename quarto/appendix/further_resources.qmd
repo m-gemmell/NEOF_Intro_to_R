@@ -1,0 +1,39 @@
+# Online resources
+
+## R user groups and forums
+
+-   <https://jumpingrivers.github.io/meetingsR/r-user-groups.html#europe>
+
+## Base R books and links
+
+**Quick-R**: <https://www.statmethods.net/index.html>
+
+**R Cookbook**: <https://rc2e.com/>
+
+**W3 R tutorial**: <https://www.w3schools.com/r/>
+
+## R cheat sheets
+
+<https://rstudio.com/resources/cheatsheets/>
+
+## Advanced R topics
+
+__NEOF Tidyverse cookbook__: <https://neof-workshops.github.io/Tidyverse/>
+
+**R packages**: <https://r-pkgs.org/>
+
+**Efficient R Programming**: <https://csgillespie.github.io/efficientR/>
+
+**R for Data Science**: <https://r4ds.had.co.nz/>
+
+**R Graphics Cookbook**: <https://r-graphics.org/>
+
+**Fundamentals of Data Visualization**: <https://clauswilke.com/dataviz/>
+
+**R BOOKDOWN** (used to make this book): <https://bookdown.org/>
+
+**Hands-On Programming with R**: <https://rstudio-education.github.io/hopr/>
+
+**Efficient R programming**: <https://csgillespie.github.io/efficientR/>
+
+

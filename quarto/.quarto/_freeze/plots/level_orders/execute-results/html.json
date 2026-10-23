@@ -1,0 +1,15 @@
+{
+  "hash": "4cb7b554d31c84fc414cf3760369a342",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Level orders\n<center>\n![](/images/reorder.png){style=\"width:150px; background:white; border-radius:5px; border: white 5px solid\"}\n</center>\n\nWe will get back to plotting soon but first I want to show you how to specify the order of __levels__. This is important as a lot of the time alphabetically is not wanted. One example is with months.\n\n::: {.cell}\n\n```{.r .cell-code}\n#Create a factor vector of months\n#We'll only include the 1st 3 months for brevity\nmonths_factor_vec <- factor(c(\"jan\",\"jan\",\"feb\",\"jan\",\"feb\",\n                     \"feb\",\"mar\",\"jan\",\"feb\",\"mar\"))\n#Check the vector and you will notice feb is before jan in the levels\nmonths_factor_vec\nlevels(months_factor_vec)\n#Before reordering our factor we will create a vector string\n#This will contain our levels in the order we want\n#They must contain the same spelling as the existing levels\nmonths_order_vec <- c(\"jan\",\"feb\",\"mar\")\n#We use the factor function on our factor\n#But we include the option levels providing the ordered character vector\nmonths_factor_vec <-factor(months_factor_vec, \n                           levels = months_order_vec)\n#Check the factor now\nmonths_factor_vec\nlevels(months_factor_vec)\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,12 @@
+# Extra exercise
+<center>
+![](/images/multiplication.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
+</center>
+
+If you still have time this session and you do not have any questions please attempt the following task:
+
+Create a multiplication table like the one in the practice from today. However have the row and column names equal one to twelve.
+
+Then __write__ the __data frame__ to a file. The name and format of the file is up to you.
+
+There is no solution for this exercise.

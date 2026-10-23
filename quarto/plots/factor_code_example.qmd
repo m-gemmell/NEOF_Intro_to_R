@@ -1,0 +1,25 @@
+# Code example
+<center>
+![](/images/keyboard_bfx.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+Time for a more practical example with code. We will first create a __character vector__ then create a __factor__ from it with the __function__ `factor()`. We'll then see what we can do with a __factor__.
+```{r eval=FALSE}
+#Create a character vector
+char_vec <- c("a","b","a","a","b","d","d","c")
+#Attempt to convert it to a numeric
+as.numeric(char_vec)
+#As expected this does not work and will give NAs
+
+#Create a factor vector from our previous character vector
+factor_vec <- factor(char_vec)
+#Look at the factor
+#You will notice that even though d is present in an earlier element
+#c is the 3rd level whilst d is the 4th level
+#This is because levels are ordered alphabetically
+factor_vec
+#Convert to string
+as.character(factor_vec)
+#Convert to numeric
+as.numeric(factor_vec)
+```

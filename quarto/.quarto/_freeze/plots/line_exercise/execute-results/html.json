@@ -1,0 +1,17 @@
+{
+  "hash": "3b90677e14a2215fae5e673a0a303390",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Line graph exercise\nFirst we will ignore \"penguin_df\".\n\nCreate the below plot. You will need to create the __vectors__ yourself.\n\n::: {.cell}\n::: {.cell-output-display}\n![](line_exercise_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n__Tip__: The x and y labels may help you figure out the commands to create the __vectors__.\n\n\n<div class='webex-solution'><button>Line graph solution</button>\n\n\n::: {.cell}\n\n```{.r .cell-code}\n#Produce the plot with vectors created inside the function\nplot(x = rep(1:10, 2), \n     y = seq(from = 0.5, to = 10, by = 0.5),\n     col = \"red\",\n     main = 'A line graph with \"red\" as the colour',\n     type = \"l\")\n```\n:::\n\n\n</div>\n",
+    "supporting": [
+      "line_exercise_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

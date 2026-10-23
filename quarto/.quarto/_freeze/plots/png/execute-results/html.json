@@ -1,0 +1,15 @@
+{
+  "hash": "656c14f4bec521e794241bcd846b2d5c",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Save to png\n<center>\n![](/images/display_png.png){style=\"width:200px; background: white; border-radius:5px; border: 5px solid white\"}\n</center>\n\nLet us save the last plot as a png file:\n\n::: {.cell}\n\n```{.r .cell-code}\npng(filename = \"penguin_species_and_year_against_mass.png\",\n    units = \"mm\", width = 50, height = 50, res = 150)\nboxplot(body_mass_g~species*year , \n        data = penguin_df, \n        col = c(\"white\",\"grey\",\"orange\"),\n        main = \"Mass of different Penguin species for 2007 - 2009\",\n        xlab = \"Species and year\",\n        ylab = \"Body mass in grams\")\ndev.off()\n```\n:::\n\n\nLooking at the plot we made the width and height way too small. Therefore let us edit the width and height and then run it again.\n\n__Note__: You will need to close and open the file after running the command to see the new plot.\n\n::: {.cell}\n\n```{.r .cell-code}\npng(filename = \"penguin_species_and_year_against_mass.png\",\n    units = \"mm\", width = 250, height = 250, res = 150)\nboxplot(body_mass_g~species*year , \n        data = penguin_df, \n        col = c(\"white\",\"grey\",\"orange\"),\n        main = \"Mass of different Penguin species for 2007 - 2009\",\n        xlab = \"Species and year\",\n        ylab = \"Body mass in grams\")\ndev.off()\n```\n:::\n\n\nThat overall is much better. But we cannot see all the labels on the x axis. Therefore let us make it wider.\n\n::: {.cell}\n\n```{.r .cell-code}\npng(filename = \"penguin_species_and_year_against_mass.png\",\n    units = \"mm\", width = 400, height = 250, res = 150)\nboxplot(body_mass_g~species*year , \n        data = penguin_df, \n        col = c(\"white\",\"grey\",\"orange\"),\n        main = \"Mass of different Penguin species for 2007 - 2009\",\n        xlab = \"Species and year\",\n        ylab = \"Body mass in grams\")\ndev.off()\n```\n:::\n\n\nSuper! You can save plots in other file formats and there are more options. Check them out with `?png`.\n\nI hope you are ready to make more plots with the Penguin data because it is time for some exercises.",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

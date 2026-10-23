@@ -1,0 +1,15 @@
+{
+  "hash": "4297472a31e02ac07bd29ff5969a27fd",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# More plot features\n<center>\n![](/images/plot_title.png){style=\"width:150px; background: white; border-radius:5px; border: 5px white solid\"}\n</center>\n\nBefore we colour the lines different colours, let us add a main title and provide the x and y axis with better titles.\n\n::: {.cell}\n\n```{.r .cell-code}\n#Produce line plot of Minnesota over time point.\n#Add main, x, and y titles\nplot(y = bee_colonies_df$Minnesota, bee_colonies_df$time_point, type = \"l\",\n     ylim = c(min_y,max_y), xaxt = 'n',\n     main = \"Number of Honey Bee colonies in 4 US states over 2017 & 2018\",\n     ylab = \"Bee colonies\",\n     xlab = \"Year and Quarter\")\n#Add row names (year and quarter strings) as x axix labels\naxis(1, at = bee_colonies_df$time_point, labels = row.names(bee_colonies_df))\n#Add lines\nlines(y = bee_colonies_df$Montana, x = bee_colonies_df$time_point)\nlines(y = bee_colonies_df$`New Mexico`, x = bee_colonies_df$time_point)\nlines(y = bee_colonies_df$Pennsylvania, x = bee_colonies_df$time_point)\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -130,5 +130,260 @@
   },
   "tips_tricks/intro.qmd": {
     "intro.html": "862a2915"
+  },
+  "tips_tricks/11-Tips_exercises.qmd": {
+    "11-Tips_exercises.html": "e8ac26c7"
+  },
+  "tips_tricks/conventions.qmd": {
+    "conventions.html": "5ec22db2"
+  },
+  "tips_tricks/rstudio.qmd": {
+    "rstudio.html": "d0c68ce4"
+  },
+  "tips_tricks/multiplication_table.qmd": {
+    "multiplication_table.html": "11316ddc"
+  },
+  "tips_tricks/tab_complete.qmd": {
+    "tab_complete.html": "554d49aa"
+  },
+  "tips_tricks/tea.qmd": {
+    "tea.html": "f3a4f50c"
+  },
+  "tips_tricks/english_speakers.qmd": {
+    "english_speakers.html": "abd7321c"
+  },
+  "tips_tricks/identical.qmd": {
+    "identical.html": "df52a38a"
+  },
+  "tips_tricks/shortcuts.qmd": {
+    "shortcuts.html": "ff3efc1a"
+  },
+  "tips_tricks/mcqs.qmd": {
+    "mcqs.html": "8f0b1e40"
+  },
+  "tips_tricks/english_exercise.qmd": {
+    "english_exercise.html": "327a945c"
+  },
+  "tips_tricks/handy_exercises.qmd": {
+    "handy_exercises.html": "49922496"
+  },
+  "tips_tricks/tea_exerciseq.qmd": {
+    "tea_exerciseq.html": "9f2a4400"
+  },
+  "tips_tricks/extra_exercise.qmd": {
+    "extra_exercise.html": "0b02ca4e"
+  },
+  "plots/12-Plots_line_graphs_and_histograms.qmd": {
+    "12-Plots_line_graphs_and_histograms.html": "5ccb1582"
+  },
+  "plots/13-Plots_scatterplot_and_box_plots.qmd": {
+    "13-Plots_scatterplot_and_box_plots.html": "4ba6160e"
+  },
+  "plots/14-Plots_exercises.qmd": {
+    "14-Plots_exercises.html": "6dfe18a3"
+  },
+  "plots/plots_intro.qmd": {
+    "plots_intro.html": "808918b3"
+  },
+  "plots/histogram.qmd": {
+    "histogram.html": "eb309e8a"
+  },
+  "plots/histogram copy.qmd": {
+    "histogram copy.html": "9a25b1d8"
+  },
+  "plots/eu_cities.qmd": {
+    "eu_cities.html": "b8bc4216"
+  },
+  "plots/histogram copy 2.qmd": {
+    "histogram copy 2.html": "82776ff3"
+  },
+  "plots/histogram copy 3.qmd": {
+    "histogram copy 3.html": "9ee5dacd"
+  },
+  "plots/eu_populations.qmd": {
+    "eu_populations.html": "679b1bb2"
+  },
+  "plots/eu_ratio.qmd": {
+    "eu_ratio.html": "48bcafef"
+  },
+  "plots/prev_plot.qmd": {
+    "prev_plot.html": "f7f745e7"
+  },
+  "plots/line.qmd": {
+    "line.html": "a0bb775f"
+  },
+  "plots/add_lines.qmd": {
+    "add_lines.html": "c5d9c7e4"
+  },
+  "plots/axis_limits.qmd": {
+    "axis_limits.html": "32c39c53"
+  },
+  "plots/axis_labels.qmd": {
+    "axis_labels.html": "873a3884"
+  },
+  "plots/plot_titles.qmd": {
+    "plot_titles.html": "2cd8e274"
+  },
+  "plots/axes.qmd": {
+    "axes.html": "76626b66"
+  },
+  "plots/plot_features.qmd": {
+    "plot_features.html": "a0f8621a"
+  },
+  "plots/scatter.qmd": {
+    "scatter.html": "88fee10d"
+  },
+  "plots/animal_sizes.qmd": {
+    "animal_sizes.html": "dd6d1787"
+  },
+  "plots/animal_mass_length.qmd": {
+    "animal_mass_length.html": "1f94494a"
+  },
+  "plots/factors.qmd": {
+    "factors.html": "c138424f"
+  },
+  "plots/map_key_analogy.qmd": {
+    "map_key_analogy.html": "5824f822"
+  },
+  "plots/factor_code_example.qmd": {
+    "factor_code_example.html": "b0383328"
+  },
+  "plots/level_orders.qmd": {
+    "level_orders.html": "f2294834"
+  },
+  "plots/scatter_shapes.qmd": {
+    "scatter_shapes.html": "4157201f"
+  },
+  "plots/boxplot.qmd": {
+    "boxplot.html": "3156eaf0"
+  },
+  "plots/example_boxplots.qmd": {
+    "example_boxplots.html": "567e87ee"
+  },
+  "plots/final_boxplot.qmd": {
+    "final_boxplot.html": "fc1a0124"
+  },
+  "plots/png.qmd": {
+    "png.html": "bac1dd9d"
+  },
+  "plots/exercises.qmd": {
+    "exercises.html": "bae1af1a"
+  },
+  "plots/line_exercise.qmd": {
+    "line_exercise.html": "59f49ddb"
+  },
+  "plots/histogram_exercise.qmd": {
+    "histogram_exercise.html": "49b95270"
+  },
+  "plots/boxplot_exercise.qmd": {
+    "boxplot_exercise.html": "445927a0"
+  },
+  "plots/scatter_exercise.qmd": {
+    "scatter_exercise.html": "e5072712"
+  },
+  "tips_tricks/tea_exercise.qmd": {
+    "tea_exercise.html": "5d4571bb"
+  },
+  "stats_programming/15-Basic_stats.Rmd": {
+    "15-Basic_stats.html": "cb65a57c"
+  },
+  "stats_programming/16-Stats_exercises.Rmd": {
+    "16-Stats_exercises.html": "6d094036"
+  },
+  "stats_programming/17-Basic_programming.Rmd": {
+    "17-Basic_programming.html": "2bfdad2d"
+  },
+  "stats_programming/18-Student_grades_example.Rmd": {
+    "18-Student_grades_example.html": "2553cbcf"
+  },
+  "stats_programming/stats_and_programming.qmd": {
+    "stats_and_programming.html": "5a920fda"
+  },
+  "stats_programming/stats_overview.qmd": {
+    "stats_overview.html": "5ac5e7d7"
+  },
+  "stats_programming/linear_regression.qmd": {
+    "linear_regression.html": "1af4c6ef"
+  },
+  "programming/17-Basic_programming.Rmd": {
+    "17-Basic_programming.html": "a287c2b5"
+  },
+  "programming/18-Student_grades_example.Rmd": {
+    "18-Student_grades_example.html": "06b49cfc"
+  },
+  "stats/15-Basic_stats.Rmd": {
+    "15-Basic_stats.html": "64c5e513"
+  },
+  "stats/16-Stats_exercises.Rmd": {
+    "16-Stats_exercises.html": "a67c0d4c"
+  },
+  "stats/linear_regression.qmd": {
+    "linear_regression.html": "b4bcad30"
+  },
+  "stats/stats_overview.qmd": {
+    "stats_overview.html": "6baf1ef7"
+  },
+  "stats/fish_dataset.qmd": {
+    "fish_dataset.html": "ca45b9ca"
+  },
+  "stats/scatterplot.qmd": {
+    "scatterplot.html": "e8d076f0"
+  },
+  "stats/linear_model.qmd": {
+    "linear_model.html": "39c1889b"
+  },
+  "stats/boxplot.qmd": {
+    "boxplot.html": "766cefa8"
+  },
+  "stats/t_test.qmd": {
+    "t_test.html": "d479a1a1"
+  },
+  "stats/t_test_comparison.qmd": {
+    "t_test_comparison.html": "786bc54e"
+  },
+  "stats/useful_functions.qmd": {
+    "useful_functions.html": "d8cc993f"
+  },
+  "stats/exercises.qmd": {
+    "exercises.html": "398e35f5"
+  },
+  "programming/overview.qmd": {
+    "overview.html": "26e4a776"
+  },
+  "programming/recycle.qmd": {
+    "recycle.html": "8c3ae103"
+  },
+  "programming/loop_types.qmd": {
+    "loop_types.html": "bf9b5367"
+  },
+  "programming/for_loops.qmd": {
+    "for_loops.html": "80a9af19"
+  },
+  "programming/while_loops.qmd": {
+    "while_loops.html": "cb41efbf"
+  },
+  "programming/if.qmd": {
+    "if.html": "2efd1b2c"
+  },
+  "programming/functions.qmd": {
+    "functions.html": "cb2825c4"
+  },
+  "programming/student_grades.qmd": {
+    "student_grades.html": "dd16503a"
+  },
+  "appendix/course_materials.qmd": {
+    "course_materials.html": "8a50eefa"
+  },
+  "appendix/faq.qmd": {
+    "faq.html": "28fe3559"
+  },
+  "appendix/files.qmd": {
+    "files.html": "065b7d6d"
+  },
+  "appendix/further_resources.qmd": {
+    "further_resources.html": "ebb83af2"
+  },
+  "appendix/neof.qmd": {
+    "neof.html": "d9d247c2"
   }
 }

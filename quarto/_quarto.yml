@@ -18,8 +18,18 @@ website:
       href: foundations/intro.qmd
     - text: Objects
       href: objects/intro.qmd
-    - text: Files & subsetting
+    - text: Files & subset
       href: files_subsetting/intro.qmd
+    - text: Tips
+      href: tips_tricks\intro.qmd
+    - text: Plots
+      href: plots\plots_intro.qmd
+    - text: Stats
+      href: stats\stats_overview.qmd
+    - text: Programming
+      href: programming\overview.qmd
+    - text: Appendix
+      href: appendix\neof.qmd
     right:
     - icon: house-fill
       href: https://neof.org.uk/training/
@@ -102,6 +112,110 @@ website:
     align: left
     contents:
     - href: tips_tricks/intro.qmd
+    - href: tips_tricks/conventions.qmd
+    - href: tips_tricks/rstudio.qmd
+    - href: tips_tricks/multiplication_table.qmd
+    - href: tips_tricks/tab_complete.qmd
+    - section: "Example datasets"
+      contents:
+      - href: tips_tricks/tea.qmd
+      - href: tips_tricks/english_speakers.qmd
+    - href: tips_tricks/identical.qmd
+    - href: tips_tricks/shortcuts.qmd
+    - href: tips_tricks/mcqs.qmd
+    - section: "Exercises"
+      contents:
+      - href: tips_tricks/handy_exercises.qmd
+      - href: tips_tricks/tea_exercise.qmd
+      - href: tips_tricks/english_speakers.qmd
+      - href: tips_tricks/extra_exercise.qmd
+  - id: Plots
+    title: plots
+    style: floating
+    align: left
+    contents:
+    - href: plots\plots_intro.qmd
+    - section: "Histogram"
+      contents:
+      - href: plots\histogram.qmd
+      - href: plots\eu_cities.qmd
+      - href: plots\eu_populations.qmd
+      - href:  plots\eu_ratio.qmd
+    - href: plots\prev_plot.qmd
+    - section: "Line graph"
+      contents:
+      - href: plots\line.qmd
+      - href: plots\axes.qmd
+      - href: plots\plot_features.qmd
+    - section: "Scatter plot"
+      contents:
+      - href: plots\scatter.qmd
+      - href: plots\animal_sizes.qmd
+      - href: plots\animal_mass_length.qmd
+    - section: "Factors"
+      contents:
+      - href: plots\factors.qmd
+      - href: plots\map_key_analogy.qmd
+      - href: plots\factor_code_example.qmd
+      - href: plots\level_orders.qmd
+      - href: plots\scatter_shapes.qmd
+    - section: "Boxplot"
+      contents:
+      - href: plots\boxplot.qmd
+      - href: plots\example_boxplots.qmd
+      - href: plots\final_boxplot.qmd
+    - href: plots\png.qmd
+    - section: "Exercises"
+      contents:
+      - href: plots\exercises.qmd
+      - href: plots\line_exercise.qmd
+      - href: plots\histogram_exercise.qmd
+      - href: plots\scatter_exercise.qmd
+      - href: plots\boxplot_exercise.qmd
+  - id: Stats
+    title: stats
+    style: floating
+    align: left
+    contents:
+    - href: stats\stats_overview.qmd
+    - section: "Linear regression"
+      contents:
+      - href: stats\linear_regression.qmd
+      - href: stats\fish_dataset.qmd
+      - href: stats\scatterplot.qmd
+      - href: stats\linear_model.qmd
+    - section: "t-test"
+      contents:
+      - href: stats\t_test.qmd
+      - href: stats\boxplot.qmd
+      - href: stats\t_test_comparison.qmd
+    - href: stats\useful_functions.qmd
+    - href: stats\exercises.qmd
+  - id: Programming
+    title: programming
+    style: floating
+    align: left
+    contents:
+    - href: programming\overview.qmd
+    - href: programming\recycle.qmd
+    - section: "Loops"
+      contents:
+      - href: programming\loop_types.qmd
+      - href: programming\for_loops.qmd
+      - href: programming\while_loops.qmd
+    - href: programming\if.qmd
+    - href: programming\functions.qmd
+    - href: programming\student_grades.qmd
+  - id: Appendix
+    title: appendix
+    style: floating
+    align: left
+    contents:
+    - href: appendix\neof.qmd
+    - href: appendix\course_materials.qmd
+    - href: appendix\files.qmd
+    - href: appendix\further_resources.qmd
+    - href: appendix\faq.qmd
 
 #Format
 format:
@@ -139,8 +253,8 @@ format:
       light: [styles_light.scss]
 ####Any text not determined in scss files will be mainfont
     mainfont: Lexend
-####Ensure monofont set to fira Code
-    monofont: Fira Code
+####Ensure monofont set to fira Mono
+    monofont: Fira Mono
 
 ###Paths for webexercises files
     css: include/webex.css

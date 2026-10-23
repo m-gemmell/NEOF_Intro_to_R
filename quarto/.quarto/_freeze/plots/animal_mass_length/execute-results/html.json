@@ -1,0 +1,15 @@
+{
+  "hash": "68dc6c793f8e57c661c9af2d2ab88ef8",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Average mass and length plot\n<center>\n![](/images/elephant.png){style=\"width:150px; background:white; border-radius:5px\"}\n</center>\n\nNow let's compare the average weight and length.\n\n::: {.cell}\n\n```{.r .cell-code}\nplot(x = animal_df$`Average mass (tonnes)`,\n     y = animal_df$`Average total length (m)`)\n```\n:::\n\n\nWith that we can see the following:\n\n- At lower weights (< 20 tonnes) a longer length does not necessarily mean a higher mass\n- At higher weights (>20 tonnes) there appears to be an overall trend of longer lengths equaling higher masses with the animal with the highest mass having the longest length\n\n## Plot section zoom\n<center>\n![](/images/zoom.png){style=\"width:150px; background:white; border-radius:5px\"}\n</center>\n\nIt is quite hard to see the overall trend in the lower mass animals as they are squashed in a small part of the plot. We can zoom into this part in two different ways\n\n\n::: {.cell}\n\n```{.r .cell-code}\n#First method is to set the x and y limits manually \n#This allows us to choose the specific part to zoom into\nplot(x = animal_df$`Average mass (tonnes)`,\n     y = animal_df$`Average total length (m)`,\n     xlim = c(0,10), ylim = c(0,10))\n#The other method is to subset the data\n#so we only plot the data we want\nplot(x = animal_df[animal_df$`Average mass (tonnes)` < 10,\n                   \"Average mass (tonnes)\"],\n     y = animal_df[animal_df$`Average mass (tonnes)` < 10,\n                   \"Average total length (m)\"])\n#I personally prefer the x and y limit approach\n```\n:::\n\n\n## Colour points by metadata\n<center>\n![](/images/coloured_points.png){style=\"width:150px; background:white; border-radius:5px\"}\n</center>\n\nWe can also include the Biom metadata as an aesthetic in the plot\n\n::: {.cell}\n\n```{.r .cell-code}\n#Plot\nplot(x = animal_df$`Average mass (tonnes)`,\n     y = animal_df$`Average total length (m)`, \n     col = as.numeric(animal_df$Biom),\n     pch = 1\n     )\n#Legend\nlegend(x = \"bottomright\", col = 1:nlevels(animal_df$Biom), \n       legend = levels(animal_df$Biom), pch = 1)\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

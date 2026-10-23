@@ -1,0 +1,17 @@
+{
+  "hash": "022981f999401888a0c6f33bd43bde3e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Histogram exercise\n\n\n::: {.cell}\n\n:::\n\n\nFrom the \"penguin_df\" create the below plot:\n\n__Note__: The colour of the bars are \"blue\".\n\n::: {.cell}\n::: {.cell-output-display}\n![](histogram_exercise_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\n\n<div class='webex-solution'><button>Histogram solution</button>\n\n\n::: {.cell}\n\n```{.r .cell-code}\n#Create data frame with only the Penguins from Torgersen\npenguins_torgensen_df <- penguin_df[penguin_df$island == \"Torgersen\",]\n#Create a column with body mass in kilograms\npenguins_torgensen_df$body_mass_kg <- \n  penguins_torgensen_df$body_mass_g / 1000\n#Plot the histogram\nhist(penguins_torgensen_df$body_mass_kg,\n     main = \"Histogram of the body mass of Penguins from Torgersen Island\",\n     xlab = \"Body mass in kilograms\",\n     ylab = \"frequency\",\n     col = \"blue\")\n```\n:::\n\n\n</div>\n",
+    "supporting": [
+      "histogram_exercise_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

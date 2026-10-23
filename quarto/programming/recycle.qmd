@@ -1,0 +1,63 @@
+# Recycle rule
+<center>
+![](/images/recycle.png){style="width:200px; background: white; border-radius:5px"}
+</center>
+
+When two __objects__ of different lengths act upon each other the smaller __object__ will be recycled so each element in the larger __object__ is acted upon.
+
+We will demonstrate this with the below example. Run the command below and then read the explanation.
+```{r eval=FALSE}
+small_vec <- 1:3
+large_vec <- rep(1,9) 
+small_vec * large_vec
+```
+
+- `small_vec` is a __vector__ with 3 __elements__, the numbers 1 to 3.
+- `large_vec` is a __vector__ with 9 __elements__, this is the number 1 repeated 9 times.
+- As `small_vec` is 3 times smaller than `large_vec` each __element__ in `small_vec` is recycled 2 times on top of the first usage.
+    - The first `small_vec` __element__ is used to multiply the 1st, 4th, and 7th positions of `large_vec`.
+    - The second `small_vec` __element__ is used to multiply the 2nd, 5th, and 8th positions of `large_vec`.
+    - The last/third `small_vec` __element__ is used to multiply the 3rd, 6th, and 9th positions of `large_vec`.
+    
+Below is a visual example of the above.
+
+<center>
+![](/images/recycle_rule_example_1.png){style="width:600px; border-radius:5px"}
+</center>
+
+Depending on the length of the large __vector__ the __elements__ of the smaller __vector__ may be recycled an uneven amount of times. For example:
+
+- The smaller __vector__ has 3 __elements__.
+- The larger __vector__ has 4 __elements__.
+- The 1st __element__ of the smaller __vector__ would be used twice (recycled once).
+- The 2nd & 3rd __elements__ of the smaller __vector__ would be used once (not recycled).
+
+Below is a quick example of this. You should notice a warning is printed out as the length of the __objects__ are not multiples of each other. 
+However, above the warning is the correct output.
+```{r eval=FALSE}
+1:3 * rep(1,4)
+```
+ 
+Warnings usually mean the code will run fine but R thinks you may have done something wrong which you should check. Errors on the other hand mean the R code did not work.
+ 
+Below are a few more examples of using the recycle rule:
+```{r eval=FALSE}
+#When you multiply one number (scalar) by a numeric vector
+#You are recycling the one number (scalar)
+2 * 1:6
+#Some numeric recycling
+1:2 * 1:10
+1:4 + 1:8
+8:1 - 1:4
+2:1 / 1:4
+(1:2 + 3:6) * seq(10, 120, 10)
+#Strings can be recycled with the paste() function
+#You'll notice that no warnings appear this time
+#even though the lengths of the variables are not multiples
+recyclable_materials <- c("A:aluminium","B:glass","C:paper")
+recycle_centres <- rep(
+  c("1:old swan","2:otterspool","3:south sefton","4:Huyton","5:Kirkby"),
+  2
+)
+paste0(recyclable_materials, " can be recycled at ", recycle_centres)
+```

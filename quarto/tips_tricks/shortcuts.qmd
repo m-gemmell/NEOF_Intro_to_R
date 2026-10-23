@@ -1,0 +1,64 @@
+# Shortcuts
+<center>
+![](/images/keyboard.png){style="width:300px; background: white; border-radius:5px; border: white solid 5px"}
+</center>
+
+RStudio has many keyboard shortcuts for the __Script editor__. 
+Some of these are common shortcuts used for other software and some are unique to RStudio. 
+
+Below are a few:
+
+- "Ctrl + a" : This will highlight all text in a __Script editor__ that your cursor is in. This is useful to run all your code by highlighting it all and then pressing "Ctrl + enter". Be careful though as if you start typing when all the text is highlighted it will delete it all.
+- "Ctrl + z" : This will undo your last typing action. You can undo your actions till the last time you saved your script. Very useful if you accidentally delete some text.
+- "Ctrl + c" : Copy highlighted text.
+- "Ctrl + p" : Paste text.
+- "Ctrl + shift + c" : This will put a `#` at the start of each highlighted line. This is useful to annotate multiple lines at once. To unannotate the lines, highlight them again and use the shortcut.
+- "Ctrl + f" : This will bring the search and replace menu at the top of the __Script editor__. 
+
+There are a lot more shortcuts. If you want to see the full list go to "Tools" on the RStudio toolbar and then select "Keyboard Shortcuts Help".
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```

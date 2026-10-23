@@ -1,0 +1,15 @@
+{
+  "hash": "d33ba49429091643e28d57de870dc3f3",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Code example\n<center>\n![](/images/keyboard_bfx.png){style=\"width:150px; background:white; border-radius:5px\"}\n</center>\n\nTime for a more practical example with code. We will first create a __character vector__ then create a __factor__ from it with the __function__ `factor()`. We'll then see what we can do with a __factor__.\n\n::: {.cell}\n\n```{.r .cell-code}\n#Create a character vector\nchar_vec <- c(\"a\",\"b\",\"a\",\"a\",\"b\",\"d\",\"d\",\"c\")\n#Attempt to convert it to a numeric\nas.numeric(char_vec)\n#As expected this does not work and will give NAs\n\n#Create a factor vector from our previous character vector\nfactor_vec <- factor(char_vec)\n#Look at the factor\n#You will notice that even though d is present in an earlier element\n#c is the 3rd level whilst d is the 4th level\n#This is because levels are ordered alphabetically\nfactor_vec\n#Convert to string\nas.character(factor_vec)\n#Convert to numeric\nas.numeric(factor_vec)\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

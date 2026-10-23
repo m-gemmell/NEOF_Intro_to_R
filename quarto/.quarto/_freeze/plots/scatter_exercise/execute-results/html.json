@@ -1,0 +1,17 @@
+{
+  "hash": "af24144c0fb368893093c7ebdd90eafa",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Scatterplot exercise\n\n\n::: {.cell}\n\n:::\n\n\nFrom the \"penguin_df\" create the below plot:\n\n__Note__: You can check what numbers refer to what shape for `pch =` at: http://www.sthda.com/english/wiki/r-plot-pch-symbols-the-different-point-shapes-available-in-r\n\n::: {.cell}\n::: {.cell-output-display}\n![](scatter_exercise_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\nBefore you continue save this plot. Details below:\n\n- Save the file as a png called \"Penguins_2009_bill_depth_vs_length_scatterplot.png\"\n- Save the plot with a width and height of 250 and resolution of 150\n\n\n<div class='webex-solution'><button>Scatterplot solution</button>\n\n\n::: {.cell}\n\n```{.r .cell-code}\n#Create data frame with only the Penguins from 2009\npenguin_2009_df <- penguin_df[penguin_df$year == \"2009\",]\n#Start png function\npng(filename = \"Chapter_12-14/Penguins_2009_bill_depth_vs_length_scatterplot.png\",\n    units = \"mm\", height = 250, width = 250, res = 150 )\n#Produce plot\nplot(x = penguin_2009_df$bill_length_mm,\n     y = penguin_2009_df$bill_depth_mm,\n     col = as.numeric(penguin_2009_df$species),\n     main = \"Penguin bills vs depth in 2009\",\n     xlab = \"Bill length (mm)\",\n     ylab = \"Bill depth (mm)\",\n     pch = 15)\n#Create legend\nlegend(x = \"bottomleft\", \n       col = 1:nlevels(penguin_2009_df$species),\n       legend = levels(penguin_2009_df$species),\n       pch = 15)\n#Save file\ndev.off()\n```\n:::\n\n\n</div>\n",
+    "supporting": [
+      "scatter_exercise_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

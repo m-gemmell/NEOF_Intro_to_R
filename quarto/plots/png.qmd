@@ -1,0 +1,49 @@
+# Save to png
+<center>
+![](/images/display_png.png){style="width:200px; background: white; border-radius:5px; border: 5px solid white"}
+</center>
+
+Let us save the last plot as a png file:
+```{r eval=FALSE}
+png(filename = "penguin_species_and_year_against_mass.png",
+    units = "mm", width = 50, height = 50, res = 150)
+boxplot(body_mass_g~species*year , 
+        data = penguin_df, 
+        col = c("white","grey","orange"),
+        main = "Mass of different Penguin species for 2007 - 2009",
+        xlab = "Species and year",
+        ylab = "Body mass in grams")
+dev.off()
+```
+
+Looking at the plot we made the width and height way too small. Therefore let us edit the width and height and then run it again.
+
+__Note__: You will need to close and open the file after running the command to see the new plot.
+```{r eval=FALSE}
+png(filename = "penguin_species_and_year_against_mass.png",
+    units = "mm", width = 250, height = 250, res = 150)
+boxplot(body_mass_g~species*year , 
+        data = penguin_df, 
+        col = c("white","grey","orange"),
+        main = "Mass of different Penguin species for 2007 - 2009",
+        xlab = "Species and year",
+        ylab = "Body mass in grams")
+dev.off()
+```
+
+That overall is much better. But we cannot see all the labels on the x axis. Therefore let us make it wider.
+```{r eval=FALSE}
+png(filename = "penguin_species_and_year_against_mass.png",
+    units = "mm", width = 400, height = 250, res = 150)
+boxplot(body_mass_g~species*year , 
+        data = penguin_df, 
+        col = c("white","grey","orange"),
+        main = "Mass of different Penguin species for 2007 - 2009",
+        xlab = "Species and year",
+        ylab = "Body mass in grams")
+dev.off()
+```
+
+Super! You can save plots in other file formats and there are more options. Check them out with `?png`.
+
+I hope you are ready to make more plots with the Penguin data because it is time for some exercises.

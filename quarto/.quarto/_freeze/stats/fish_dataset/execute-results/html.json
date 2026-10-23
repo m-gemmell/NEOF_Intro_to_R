@@ -1,0 +1,15 @@
+{
+  "hash": "3dcedc3c5567e18a3f4d33ec294bee72",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Fish market dataset\n<center>\n![](/images/bream.png){style=\"width:300px; background: white; border-radius:5px; border: white solid 5px\"}\n</center>\n\nBefore getting to the analysis we need to read in the data. For this chapter we will be looking at the file [Fish.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/Fish.csv) which contains information of 7 common fish species sold in Fish markets (Source: https://www.kaggle.com/aungpyaeap/fish-market).\n\nThe columns for the data are:\n\n- __Species__: Species of fish (\"Bream\", \"Roach\", \"Whitefish\",\n\"Parkki\", \"Perch\", \"Pike\", and \"Smelt\").\n- __Weight__: Weight of the fish in grams.\n- __Length1__: Vertical length of the fish in centimetres.\n- __Length2__: Diagonal length of the fish in centimetres.\n- __Length3__: Cross length of the fish in centimetres.\n- __Height__: Height of the fish in centimetres.\n- __Width__: Diagonal width of the fish in centimetres.\n\nThe dataset is primarily interested in predicting the weight of a fish based on its length, height, or width.\n\nFirst step is to __read__ in the data:\n\n::: {.cell}\n\n```{.r .cell-code}\nfish_df <- read.csv(\"Fish.csv\", check.names = FALSE)\n```\n:::\n\n\nHave a look at the __data frame__ and you'll see it looks pretty good with no `NA` values.\n\nFor now we only want to look at the information for the species Bream. Let's create a \"bream_df\":\n\n::: {.cell}\n\n```{.r .cell-code}\n#Create the data frame\nbream_df <- fish_df[fish_df$Species == \"Bream\",]\n#Check how many rows it has\nnrow(bream_df)\n```\n:::\n\n\nWe are left with 35 data points which should be plenty for our linear regression.",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

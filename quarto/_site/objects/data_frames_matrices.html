@@ -77,12 +77,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a2acb6f4ed5aeb23a104ba421924b87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0b8e113766f0aaf860995efa8b3aa8a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eaf9efb5ff69c09042967cbd085a044f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f8a74d9a586e19f492c822212409a569.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-6a8160b1e9f0502f881127a1b4756f44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-4e6a1594bbf8f5f947181720f4ac8dcb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-24cfeef7f2a87d281aebc36e3f226a79.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -322,7 +322,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../files_subsetting/intro.html"> 
-<span class="menu-text">Files &amp; subsetting</span></a>
+<span class="menu-text">Files &amp; subset</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../tips_tricks/intro.html"> 
+<span class="menu-text">Tips</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../plots/plots_intro.html"> 
+<span class="menu-text">Plots</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -470,7 +478,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#data-frames-matrices" id="toc-data-frames-matrices" class="nav-link active" data-scroll-target="#data-frames-matrices">Data frames &amp; Matrices</a>
-  <ul>
+  <ul class="collapse">
   <li><a href="#mtcars-dataset" id="toc-mtcars-dataset" class="nav-link" data-scroll-target="#mtcars-dataset">mtcars dataset</a></li>
   <li><a href="#creating-a-data-frame" id="toc-creating-a-data-frame" class="nav-link" data-scroll-target="#creating-a-data-frame">Creating a data frame</a></li>
   <li><a href="#viewing-the-data-frame" id="toc-viewing-the-data-frame" class="nav-link" data-scroll-target="#viewing-the-data-frame">Viewing the data frame</a></li>
@@ -548,56 +556,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Now look at your “beach_df” <u id="data_frame_tooltip"><strong>data frame</strong></u> to see the difference.</p>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d767197b3f4351d0b6ae" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-d767197b3f4351d0b6ae">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d8df38979ec28675e363" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-d8df38979ec28675e363">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-40efad1d211017006b63" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-40efad1d211017006b63">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d8eef0d80c5ea98f3004" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-d8eef0d80c5ea98f3004">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-86d8b51e5ae0fbd607ea" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-86d8b51e5ae0fbd607ea">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d54358e4cfef3b4bc05f" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-d54358e4cfef3b4bc05f">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-2a22c75d41a4487b6ff0" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-2a22c75d41a4487b6ff0">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-341c67e8438ce4bd7a24" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-341c67e8438ce4bd7a24">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-3286b631c2d4d51bb638" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-3286b631c2d4d51bb638">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-3a4bf7a210e3e693752e" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-3a4bf7a210e3e693752e">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-433648ac6bc028bd94d7" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-433648ac6bc028bd94d7">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-33ec50e04191855bb4eb" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-33ec50e04191855bb4eb">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d7b07ba45107e9eb5514" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-d7b07ba45107e9eb5514">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-109b219d20214f1045f6" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-109b219d20214f1045f6">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-9817c8c8b235d71118e8" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-9817c8c8b235d71118e8">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-0610fc18aaba74235953" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-0610fc18aaba74235953">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-fb4859f0513b3cdaf63b" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-fb4859f0513b3cdaf63b">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-b7df8526b0eab9e103c5" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-b7df8526b0eab9e103c5">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-8f6328efce03c46a2c9c" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-8f6328efce03c46a2c9c">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-c44aed47f53cdb527f80" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-c44aed47f53cdb527f80">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-c5d999033ab0723175d1" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-c5d999033ab0723175d1">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-0571ab5c552f5dc5558f" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-0571ab5c552f5dc5558f">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-8ec99fad9788e48af5cb" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-8ec99fad9788e48af5cb">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-6f84034654b372c74955" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-6f84034654b372c74955">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-08b7bd53347c5c4edc32" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-08b7bd53347c5c4edc32">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-e275c55b69bf93508961" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-e275c55b69bf93508961">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 

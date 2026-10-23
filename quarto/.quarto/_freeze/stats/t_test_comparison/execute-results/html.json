@@ -1,0 +1,15 @@
+{
+  "hash": "9b5878d1c73b7419f085d28b2fc3ac01",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# t-test comparison\n<center>\n![](/images/five_percent.png){style=\"width:200px; background: white; border-radius:5px; border: white solid 5px\"}\n</center>\n\nWill statistical analysis backup our visual findings?\n\nWe can carry out a t-test with the __function__ `t.test()`. For this we need to provide the __function__ with the two __numerical vectors__ we'd like to compare.\n\n::: {.cell}\n\n```{.r .cell-code}\nbream_parkki_ttest <- t.test(bream_df$Weight, parkki_df$Weight)\nbream_roach_ttest <- t.test(bream_df$Weight, roach_df$Weight)\nparkki_roach_ttest <- t.test(parkki_df$Weight, roach_df$Weight)\n```\n:::\n\n\nPrint the resulting __variables__ to the console and you will see a lot of information. I am sure all these values can say a lot about the data but we are only interested in the p-values.\n\nIn this case we can say the means between the two groups tested are significantly different if the p-value is less than 0.05 (1 in 20).\n\nIt can be a bit annoying to have to look through the `t.test()` output for each result so we'll create a __vector__ to contain the p-values for comparisons against Bream.\n\n::: {.cell}\n\n```{.r .cell-code}\nfish_species_weight_ttests <- c(\n  bream_parkki_ttest$p.value,\n  bream_roach_ttest$p.value\n)\n```\n:::\n\n\nThis is pretty useful but we can't immediately see which comparison each t-test is equal to. Thankfully just like __data frames__ have row and column names, __vectors__ can have names for each element.\n\n::: {.cell}\n\n```{.r .cell-code}\n#Add the vector names\nnames(fish_species_weight_ttests) <- \n  c(\"bream_vs_parkki\",\"bream_vs_roach\")\n#Look at the vector with the added names\nfish_species_weight_ttests\n```\n:::\n\n\nWe can then index the __vector__ through the names.\n\n::: {.cell}\n\n```{.r .cell-code}\n#Access the p-value of Bream against Roach\nfish_species_weight_ttests[\"bream_vs_roach\"]\n#Add the p-value of Parkki against Roach\nfish_species_weight_ttests[\"parkki_vs_roach\"] <- \n  parkki_roach_ttest$p.value\n```\n:::\n\n\nWith our nice __vector__ of p-values we can quickly see where the p-value is less than 0.05 (i.e. the means are significantly different) and where it is higher (i.e. the means aren't significantly different).\n\n::: {.cell}\n\n```{.r .cell-code}\nfish_species_weight_ttests < 0.05\n```\n:::\n\n\nDo these p-values match what you saw in the boxplot?",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

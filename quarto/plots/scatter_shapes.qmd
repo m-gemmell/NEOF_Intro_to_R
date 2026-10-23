@@ -1,0 +1,35 @@
+# Scatter plot with shapes
+<center>
+![](/images/scatterplot_colours_shapes.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid"}
+</center>
+
+Now let us make a nice scatter plot of the animal data with points coloured by Biom and shaped (`pch =`) by Group.
+```{r eval=FALSE}
+#Plot
+plot(x = animal_df$`Average mass (tonnes)`,
+     y = animal_df$`Average total length (m)`, 
+     col = as.numeric(animal_df$Biom),
+     pch = as.numeric(animal_df$Group),
+     xlab = "Average mass in tonnes",
+     ylab = "Average total length in metres",
+     main = "The mass and length of the largest animals"
+     )
+#Legend for biom colours
+legend(x = "bottomright", col = 1:nlevels(animal_df$Biom), 
+       legend = levels(animal_df$Biom), pch = 1)
+#Legend for group shapes
+legend(x = "bottom", col = "black", 
+       legend = levels(animal_df$Group), 
+       pch = 1:nlevels(animal_df$Group))
+``` 
+
+Quite a complicated plot but now we can see:
+
+- Mammals are larger than Reptiles
+- Semiaquatic reptiles are larger than Aquatic and Terrestrial reptiles
+
+Why do you think the above 2 points are true? Check out what specific animals are in the __data frame__ animal_df to confirm your thoughts or help to figure it out.
+
+Hopefully that has helped you figure out what a __factor__ is. If not give it a break and let us do some more plots. Hopefully it will click a bit more over time.
+
+If not another tutorial is: <https://www.tutorialspoint.com/r/r_factors.htm>

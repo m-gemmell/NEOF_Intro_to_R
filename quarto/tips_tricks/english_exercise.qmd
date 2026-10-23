@@ -1,0 +1,97 @@
+# English speakers exercise
+<center>
+![](/images/language.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
+</center>
+
+The last exercise is to create the following table as a __data frame__ called "english_100mil_df". Use the "english_complete_datasets_df" __data frame__ as a start.
+
+```{r echo = FALSE, results = 'MSc_winter_term_df'}
+library("knitr")
+library(kableExtra)
+english_df <- read.csv("english_speaking_population_of_countries.txt", 
+                   sep = "\t", 
+                   row.names = 1,
+                   check.names = FALSE)
+english_df[is.na(english_df)] <- 0
+english_complete_datasets_df <- 
+  english_df[
+    (english_df$`As first language` + english_df$`As an additional language`) ==
+      english_df$`Total English speakers`,
+    ]
+english_100mil_df <- english_complete_datasets_df[english_complete_datasets_df$`Eligible population` > 100000000,]
+english_100mil_df$`Fraction of population that are English speakers` <- 
+  english_100mil_df$`Total English speakers` /
+  english_100mil_df$`Eligible population`
+english_100mil_df["Mean",] <- colMeans(english_100mil_df)
+english_100mil_df["Total",1:4] <- colSums(english_100mil_df[1:7,1:4])
+english_100mil_df["Total","Fraction of population that are English speakers"] <- 
+  english_100mil_df["Total","Total English speakers"] /
+  english_100mil_df["Total","Eligible population"]
+
+kbl(english_100mil_df) %>%
+  scroll_box(width = "100%")
+```
+
+
+The __data frame__ only contains countries that have an eligible population that is greater than 100 million (100000000). Ensure the "Total" row was not calculated using the "Mean row".
+
+When you have created yours check it with the above one. Is your value for the "Total" "Fraction of population that are English speakers" correct?.
+
+Once you have created the __data frame__ __write__ it out as a comma separated file with the function `write.table()` called "English_top_7_populated_countries.csv". Have the row and column names surrounded by quotes in your file. Make sure there is an empty value above your row names.
+
+`r hide("English speakers solutions")`
+First make sure the __data frame__ is created. Remember to set your working directory to where the file is.
+```{r eval=FALSE}
+english_df <- read.csv(
+  "Chapter_10-11/english_speaking_population_of_countries.tsv", 
+  sep = "\t", 
+  row.names = 1,
+  check.names = FALSE)
+english_df[is.na(english_df)] <- 0
+english_complete_datasets_df <- 
+  english_df[
+    (english_df$`As first language` + english_df$`As an additional language`) ==
+      english_df$`Total English speakers`,
+    ]
+```
+
+Create new __data frame__ only containing countries with an eligible population of > 100 million.
+```{r eval=FALSE}
+english_100mil_df <- english_complete_datasets_df[
+  english_complete_datasets_df$`Eligible population` > 100000000,
+  ]
+```
+
+Create column with fraction of total english speakers against population
+```{r eval=FALSE}
+english_100mil_df$`Fraction of population that are English speakers` <- 
+  english_100mil_df$`Total English speakers` /
+  english_100mil_df$`Eligible population`
+```
+
+Create row with mean values
+```{r eval=FALSE}
+english_100mil_df["Mean",] <- colMeans(english_100mil_df)
+```
+
+Create row with totals
+```{r eval=FALSE}
+english_100mil_df["Total",1:4] <- colSums(english_100mil_df[1:7,1:4])
+```
+
+Create the total fraction of english speakers
+```{r eval=FALSE}
+english_100mil_df["Total","Fraction of population that are English speakers"] <- 
+  english_100mil_df["Total","Total English speakers"] /
+  english_100mil_df["Total","Eligible population"]
+```
+
+__Write__ the data as a file
+```{r eval=FALSE}
+write.table(x = english_100mil_df, 
+            file = "Chapter_10-11/English_top_7_populated_countries.csv", 
+            col.names=NA,
+            quote = TRUE, 
+            sep = ",")
+```
+`r unhide()`

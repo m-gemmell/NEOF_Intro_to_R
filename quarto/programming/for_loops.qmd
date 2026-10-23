@@ -1,0 +1,124 @@
+# For loops
+__For loops__ will run through a set of __variables__. Each __variable__ will be run through the set of commands once.
+
+The basic format of a __for loop__ is (don't run the below):
+```{r eval=FALSE}
+for (variable in vector/list) {
+  command/s
+}
+```
+
+We will run a simple example below. We need the `print()` __function__ so the results are print to the console. If this was not done nothing would be print out as it is a __loop__:
+```{r eval=FALSE}
+for (i in 1:5) {
+  print(i * 10)
+}
+```
+
+In essence the below was carried out:
+```{r eval=FALSE}
+loop_vec <- 1:5
+i <- loop_vec[1]
+print(i * 10)
+i <- loop_vec[2]
+print(i * 10)
+i <- loop_vec[3]
+print(i * 10)
+i <- loop_vec[4]
+print(i * 10)
+i <- loop_vec[5]
+print(i * 10)
+```
+
+Except instead of many commands over many lines we were able to carry it out in one command.
+
+Analogy:
+
+- The loop is a circular assembly line.
+- Machines carry out the commands on the provided __variables__.
+- A worker will put the first __element__ of the provided __vector/list__ on the assembly, therefore setting it as `i`.
+- The machines will carry out the commands on `i`.
+- Once the worker gets the 1st set of results they will put the 2nd __element__ on the assembly line, setting it as `i`.
+- This will repeat till the results from all the __elements__ are returned.
+
+A few more examples:
+```{r eval=FALSE}
+for (i in c(3,6,9)) {
+  print(i / 3)
+  print(i / 2)
+}
+for (i in c(3,6,9)) {
+  print(i %% 3)
+  print(i %% 2)
+}
+#You can have loops in a loop
+for (y in 1:5) {
+  for (x in 1:6) {
+    print(paste0(y, " + ", x, " = ", y+x))
+  }
+}
+
+#Let us make the fibonacci sequence (first 10 numbers) as a vector
+#First we create a vector that contains the number 1 twice
+fibo_vec <- c(1,1)
+#In a loop we can use the loop variable (i) to index objects
+#We can use this for assignment and subsetting
+for (i in 3:10) {
+  fibo_vec[i] <- fibo_vec[i-1] + fibo_vec[i-2]
+}
+#Check out the vector
+fibo_vec
+```
+
+A lot of what we have been doing we could do without __loops__. Where I find __for loops__ handy is when I want to carry out a task on multiple columns or rows.
+
+We can use __for loops__ to quickly create a multiplication table in a matrix.
+```{r eval=FALSE}
+#First we create a matrix with NA values
+#Make sure it contains the number of rows and columns we want
+multiplication_mat <- matrix(data = NA, nrow = 10, ncol = 10)
+#Next we create a vector to loop over
+loop_vec <-  1:10
+#Now to loop through the loop_vec for the columns
+for (c in loop_vec) {
+  #Next we loop through the loop_vec for the rows
+  for (r in loop_vec){
+    #Calculate the multiplication
+    multiply_number <- c * r
+    #Assign the relevant position in the matrix to the multiplication
+    multiplication_mat[r,c] <- multiply_number
+  }
+}
+#Check the matrix
+multiplication_mat
+```
+
+We can then use __for loops__ to carry out specific commands to each column or each row.
+```{r eval=FALSE}
+#First thing we are going to do is divide each number in the matrix
+#By the column total of its column
+#We'll save the results in a new matrix called mult_prop_col_mat
+#Create the new matrix
+mult_prop_col_mat <- multiplication_mat
+#Loop through the columns
+for (c in 1:ncol(mult_prop_col_mat)) {
+  #Calculate column total
+  column_total <- sum(mult_prop_col_mat[,c])
+  #Assign calculated proportion vector to the column
+  mult_prop_col_mat[,c] <- mult_prop_col_mat[,c] / column_total
+}
+#check new matrix
+mult_prop_col_mat
+
+#We'll do the same again but for each row
+#This time with no annotation
+mult_prop_row_mat <- multiplication_mat
+for (r in 1:nrow(mult_prop_row_mat)) {
+  mult_prop_row_mat[r,] <- 
+    mult_prop_row_mat[r,] / 
+    sum(mult_prop_row_mat[r,])
+}
+mult_prop_row_mat
+```
+
+Hopefully this is clear how __for loops__ can be used. Further down we'll work with a real dataset to show some real world applications. However, for now we will go onto __while loops__.

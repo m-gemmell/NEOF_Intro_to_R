@@ -1,0 +1,15 @@
+{
+  "hash": "5d79b45c89242ede539e1c0f89ae4f76",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# While loops\nI do not use __while loops__ often so we will only briefly go over them. A __while loop__ will loop over a series of commands until a condition is no longer met. Conditions will either be TRUE or FALSE (logical).\n\nThe format of a __while loop__:\n\n::: {.cell}\n\n```{.r .cell-code}\nwhile (condition) {\n  command/s\n}\n```\n:::\n\n\nBelow is an example:\n\n::: {.cell}\n\n```{.r .cell-code}\ni <- 1\nwhile (i < 10) {\n  print(paste0(\n    \"At the start of loop number:\", i, \", the variable i is \", i))\n  i <- i + 1\n  print(paste0(\"-----\"))\n}\ni\n```\n:::\n\n\nIn this case 1 is being added to `i` in each loop. The loop keeps going till `i` is no longer less than 10. Therefore, at the end of the __while loop__ `i` is equal to 10.\n\nOne final point on __while loops__. You can make a __while loop__ so the condition will always be met. If this is the case the __while loop__ will never finish and you'll need to use \"ESC\" in the console to stop the __while loop__. An example is below which you should not run:\n\n::: {.cell}\n\n```{.r .cell-code}\ni <- 1\nwhile (i > 0) {\n  print(paste0(\n    \"At the start of loop number:\", i, \", the variable i is \", i))\n  i <- i + 1\n  print(paste0(\"-----\"))\n}\ni\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

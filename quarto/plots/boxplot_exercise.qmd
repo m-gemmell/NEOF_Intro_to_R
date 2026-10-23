@@ -1,0 +1,46 @@
+# Boxplot exercise
+
+```{r eval=TRUE, echo=FALSE}
+penguin_df <- read.csv("Chapter_12-14/penguin.tsv", 
+                      check.names = FALSE,
+                      stringsAsFactors = TRUE,
+                      sep = "\t"
+                      )
+```
+
+From the "penguin_df" create the below plot:
+
+__Note__: Make sure the x axis is in the same order as below.
+```{r eval=TRUE, echo=FALSE, fig.width= 12}
+#Produce boxplot
+boxplot(flipper_length_mm~sex*species,
+        data = penguin_df,
+        col = c("yellow","green"),
+        main = "Flipper length of different species",
+        xlab = "Species and sex of Penguin",
+        ylab = "Flipper length (mm)"
+)
+```
+
+For the last task, save this plot. Details below:
+
+- Save the file as a jpg called "Penguins_species_and_flipper_length_boxplot.jpg" in "Chapter_12-14".
+- Save the plot with a width of 300, height of 250, and resolution of 150
+
+`r hide("Line graph solution")`
+```{r eval=FALSE}
+#Start png function
+jpeg(filename = "Chapter_12-14/Penguins_species_and_flipper_length_boxplot.jpg",
+    units = "mm", height = 250, width = 300, res = 150 )
+#Produce boxplot
+boxplot(flipper_length_mm~sex*species,
+        data = penguin_df,
+        col = c("yellow","green"),
+        main = "Flipper length of different species",
+        xlab = "Species and sex of Penguin",
+        ylab = "Flipper length (mm)"
+)
+#Save file
+dev.off()
+```
+`r unhide()`

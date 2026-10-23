@@ -1,0 +1,18 @@
+# Scatterplot
+<center>
+![](/images/Scatterplot_2.png){style="width:200px; background:white; border-radius:5px"}
+</center>
+
+Before we carry out the linear regression we'll create a scatterplot of the two __vectors__ we want to compare. For the first instance we will compare __Height__ to __Length1__ (vertical length).
+
+In fact before we do, let's change the column name "Length1" to "v_length" so it is a bit more intuitive for us. Whilst we are at it we'll change the other length column names.
+```{r eval=FALSE}
+colnames(bream_df)[3:5] <- c("v_length", "d_length", "c_length")
+```
+
+Time to quickly plot "v_length" (x) against "Weight" (y):
+```{r eval=FALSE}
+plot(x = bream_df$v_length, y = bream_df$Weight)
+```
+
+Super! That looks like a decently linear plot with a positive trend. We will therefore fit the linear model.

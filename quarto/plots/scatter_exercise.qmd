@@ -1,0 +1,60 @@
+# Scatterplot exercise
+
+```{r eval=TRUE, echo=FALSE}
+penguin_df <- read.csv("Chapter_12-14/penguin.tsv", 
+                      check.names = FALSE,
+                      stringsAsFactors = TRUE,
+                      sep = "\t"
+                      )
+```
+
+From the "penguin_df" create the below plot:
+
+__Note__: You can check what numbers refer to what shape for `pch =` at: http://www.sthda.com/english/wiki/r-plot-pch-symbols-the-different-point-shapes-available-in-r
+```{r eval=TRUE, echo=FALSE}
+#Create data frame with only the Penguins from 2009
+penguin_2009_df <- penguin_df[penguin_df$year == "2009",]
+#Produce plot
+plot(x = penguin_2009_df$bill_length_mm,
+     y = penguin_2009_df$bill_depth_mm,
+     col = as.numeric(penguin_2009_df$species),
+     main = "Penguin bills vs depth in 2009",
+     xlab = "Bill length (mm)",
+     ylab = "Bill depth (mm)",
+     pch = 15)
+#Create legend
+legend(x = "bottomleft", 
+       col = 1:nlevels(penguin_2009_df$species),
+       legend = levels(penguin_2009_df$species),
+       pch = 15)
+```
+
+Before you continue save this plot. Details below:
+
+- Save the file as a png called "Penguins_2009_bill_depth_vs_length_scatterplot.png"
+- Save the plot with a width and height of 250 and resolution of 150
+
+`r hide("Scatterplot solution")`
+```{r eval=FALSE}
+#Create data frame with only the Penguins from 2009
+penguin_2009_df <- penguin_df[penguin_df$year == "2009",]
+#Start png function
+png(filename = "Chapter_12-14/Penguins_2009_bill_depth_vs_length_scatterplot.png",
+    units = "mm", height = 250, width = 250, res = 150 )
+#Produce plot
+plot(x = penguin_2009_df$bill_length_mm,
+     y = penguin_2009_df$bill_depth_mm,
+     col = as.numeric(penguin_2009_df$species),
+     main = "Penguin bills vs depth in 2009",
+     xlab = "Bill length (mm)",
+     ylab = "Bill depth (mm)",
+     pch = 15)
+#Create legend
+legend(x = "bottomleft", 
+       col = 1:nlevels(penguin_2009_df$species),
+       legend = levels(penguin_2009_df$species),
+       pch = 15)
+#Save file
+dev.off()
+```
+`r unhide()`

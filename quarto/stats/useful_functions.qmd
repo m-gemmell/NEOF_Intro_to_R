@@ -1,0 +1,88 @@
+# Some more useful functions
+<center>
+![](/images/r_toolbox.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
+## Summary
+The __function__ `summary()` can give you some quick summary information for each column of a __data frame__.
+
+```{r eval=FALSE}
+summary(fish_df)
+```
+
+This gives you some nice information for your numerical columns:
+
+- `Min.`: The minimum number
+- `1st Qu.`: The 25th quartile
+- `Median`: The median (Middle sorted number)
+- `Mean`: The average
+- `3rd Qu.`: The 75th quartile
+- `Max.`: The maximum number 
+
+You will notice the information given for the "Species" column is not very informative as it is a __character__ column. However, this would be a lot more descriptive if it was a __factor__.
+
+Therefore we'll change the "Species" column to a __factor__ and run `summary()` again.
+```{r eval=FALSE}
+fish_df$Species <- as.factor(fish_df$Species)
+summary(fish_df)
+```
+
+Now `summary()` shows how many instances of each species is present in the __data frame__.
+
+For future cases it may better to use `stringsAsFactors = TRUE` with the `read.csv()` __function__ when we first read in the file.
+
+## Table
+<center>
+![](/images/table_ikea.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
+</center>
+
+The `table()` __function__ will provide a __vector__ containing the number of instances for each __level__ in a __factor__. This is pretty much what `summary()` did to a __factor__.
+
+However, unlike `summary()` it will also do this for __characters__ and __numerics__.
+
+__Note__: Remember to use the __"Help"__ pane if you are not sure what a __function__ does.
+```{r eval=FALSE}
+#Table command for columns from fish_df
+table(fish_df$Species)
+table(as.character(fish_df$Species))
+table(fish_df$Height)
+table(floor(fish_df$Height))
+table(as.integer(fish_df$Height))
+#Run table on various numeric vectors
+table(1:10)
+table(1:100 * 0)
+table(1:100 %% 2)
+table(seq(from = 0, to = 50, by = 0.5) %% 7.5)
+table(c(1:9,1:8,1:7,1:6,1:5,1:4,1:3,1:2,1))
+#Table will run on logicals too
+table(1:100 > 50)
+table(c("a","a","b","c") == "a")
+#Create a vector of 20 random numbers between 0 and 10
+random_num_vec <- sample(0:10, size = 20, replace = TRUE )
+#table
+table(random_num_vec)
+#Create a character vector randomly containing 1-10 of the strings
+#"Book", "TV", and "Film" each
+random_char_vec <- c(
+  rep("Book", sample(1:10, size = 1)),
+  rep("TV", sample(1:10, size = 1)),
+  rep("Film", sample(1:10, size = 1))
+)
+#Now for table()
+table(random_char_vec)
+#Can create a quick bar plot with the output from table()
+barplot(table(random_char_vec))
+```
+
+A few more __functions__ were introduced above. I will let you explore them yourself or you can ask me verbally.
+
+## Further resources
+<center>
+![](/images/resources.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
+</center>
+
+Below are some further resources you can check that will help if you want to do some other plots and figures.
+
+__Quick-R__: <https://www.statmethods.net/index.html>
+
+__R Cookbook__: <https://rc2e.com/>

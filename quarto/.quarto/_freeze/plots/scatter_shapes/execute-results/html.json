@@ -1,0 +1,15 @@
+{
+  "hash": "276f28110f8b9fe7e80e2feb4ce8835d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Scatter plot with shapes\n<center>\n![](/images/scatterplot_colours_shapes.png){style=\"width:150px; background:white; border-radius:5px; border: white 5px solid\"}\n</center>\n\nNow let us make a nice scatter plot of the animal data with points coloured by Biom and shaped (`pch =`) by Group.\n\n::: {.cell}\n\n```{.r .cell-code}\n#Plot\nplot(x = animal_df$`Average mass (tonnes)`,\n     y = animal_df$`Average total length (m)`, \n     col = as.numeric(animal_df$Biom),\n     pch = as.numeric(animal_df$Group),\n     xlab = \"Average mass in tonnes\",\n     ylab = \"Average total length in metres\",\n     main = \"The mass and length of the largest animals\"\n     )\n#Legend for biom colours\nlegend(x = \"bottomright\", col = 1:nlevels(animal_df$Biom), \n       legend = levels(animal_df$Biom), pch = 1)\n#Legend for group shapes\nlegend(x = \"bottom\", col = \"black\", \n       legend = levels(animal_df$Group), \n       pch = 1:nlevels(animal_df$Group))\n```\n:::\n\n\nQuite a complicated plot but now we can see:\n\n- Mammals are larger than Reptiles\n- Semiaquatic reptiles are larger than Aquatic and Terrestrial reptiles\n\nWhy do you think the above 2 points are true? Check out what specific animals are in the __data frame__ animal_df to confirm your thoughts or help to figure it out.\n\nHopefully that has helped you figure out what a __factor__ is. If not give it a break and let us do some more plots. Hopefully it will click a bit more over time.\n\nIf not another tutorial is: <https://www.tutorialspoint.com/r/r_factors.htm>",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

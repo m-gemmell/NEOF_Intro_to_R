@@ -1,0 +1,26 @@
+# Level orders
+<center>
+![](/images/reorder.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid"}
+</center>
+
+We will get back to plotting soon but first I want to show you how to specify the order of __levels__. This is important as a lot of the time alphabetically is not wanted. One example is with months.
+```{r eval=FALSE}
+#Create a factor vector of months
+#We'll only include the 1st 3 months for brevity
+months_factor_vec <- factor(c("jan","jan","feb","jan","feb",
+                     "feb","mar","jan","feb","mar"))
+#Check the vector and you will notice feb is before jan in the levels
+months_factor_vec
+levels(months_factor_vec)
+#Before reordering our factor we will create a vector string
+#This will contain our levels in the order we want
+#They must contain the same spelling as the existing levels
+months_order_vec <- c("jan","feb","mar")
+#We use the factor function on our factor
+#But we include the option levels providing the ordered character vector
+months_factor_vec <-factor(months_factor_vec, 
+                           levels = months_order_vec)
+#Check the factor now
+months_factor_vec
+levels(months_factor_vec)
+```

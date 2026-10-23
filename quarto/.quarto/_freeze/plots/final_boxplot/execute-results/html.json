@@ -1,0 +1,15 @@
+{
+  "hash": "40b8c62f1d978221243d6b5f1edf1a0a",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Final boxplot\n<center>\n![](/images/penguin_2.png){style=\"width:150px; background:white; border-radius:5px; border: white 5px solid\"}\n</center>\n\nWe will now make one final plot for this section. I will not explain what the code is doing. Instead read and run the code to figure it out.\n\n::: {.cell}\n\n```{.r .cell-code}\nboxplot(body_mass_g~species*year , \n        data = penguin_df, \n        col = c(\"white\",\"grey\",\"orange\"),\n        main = \"Mass of different Penguin species for 2007 - 2009\",\n        xlab = \"Species and year\",\n        ylab = \"Body mass in grams\")\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

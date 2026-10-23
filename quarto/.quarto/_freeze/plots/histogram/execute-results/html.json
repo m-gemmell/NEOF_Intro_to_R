@@ -1,0 +1,15 @@
+{
+  "hash": "af14405d9294c3515c36ed41593f1e37",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Basic histogram\n<center>\n![](/images/histogram.png){style=\"width:200px; background: white; border-radius:5px; border: 5px white solid\"}\n</center>\n\n\nA histogram consists of bars showing the frequency of variables present in numbered ranges (bins). This allows you to see an approximate distribution of numerical data.\n\nWe are starting with histograms as the __function__ `hist()`, which creates a histogram, only requires one __vector__. \n\nThe following code creates a numerical __vector__ and then produces a histogram. When you run the `hist()` command a plot should appear in your __\"Plots\" pane__ of the __MISC window__.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nnumeric_vec <- 1:40\nhist(numeric_vec)\n```\n:::\n\n\nYou will notice that the histogram is not very interesting. There are 8 bars all of equal size. This is because we plotted the numbers 1-40 so numbers 1-5 are counted in the first bar/bin, 6-10 in the second bar/bin and so forth. To get a more interesting histogram we will create a more interesting __vector__.",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,35 @@
+# While loops
+I do not use __while loops__ often so we will only briefly go over them. A __while loop__ will loop over a series of commands until a condition is no longer met. Conditions will either be TRUE or FALSE (logical).
+
+The format of a __while loop__:
+```{r eval=FALSE}
+while (condition) {
+  command/s
+}
+```
+
+Below is an example:
+```{r eval=FALSE}
+i <- 1
+while (i < 10) {
+  print(paste0(
+    "At the start of loop number:", i, ", the variable i is ", i))
+  i <- i + 1
+  print(paste0("-----"))
+}
+i
+```
+
+In this case 1 is being added to `i` in each loop. The loop keeps going till `i` is no longer less than 10. Therefore, at the end of the __while loop__ `i` is equal to 10.
+
+One final point on __while loops__. You can make a __while loop__ so the condition will always be met. If this is the case the __while loop__ will never finish and you'll need to use "ESC" in the console to stop the __while loop__. An example is below which you should not run:
+```{r eval=FALSE}
+i <- 1
+while (i > 0) {
+  print(paste0(
+    "At the start of loop number:", i, ", the variable i is ", i))
+  i <- i + 1
+  print(paste0("-----"))
+}
+i
+```

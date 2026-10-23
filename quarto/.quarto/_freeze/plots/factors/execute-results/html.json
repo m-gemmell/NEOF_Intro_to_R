@@ -1,0 +1,15 @@
+{
+  "hash": "db4c747617a6e669b38df13f5a3d933f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Factors & levels\n<center>\n![](/images/key_factor.png){style=\"width:175px; background:white; border-radius:5px; border: 5px white solid\"}\n</center>\n\nThe last command used a lot of __factors__.\n\n__Factors__ are a new __class__! They are a combination of __String__ and __Numeric__. They are useful for categorical data where the same values will appear multiple times.\n\nView the __data frame__ and then check its structure with `str()`. You should notice that the columns Group and Biom are __Factors__ with different amounts of __levels__. \n\nThe Group column has 2 __levels__. Confirm this with the __function__ `levels()` which returns the levels and `nlevels()` which returns the number of __levels__.\n\n::: {.cell}\n\n```{.r .cell-code}\nlevels(animal_df$Group)\nnlevels(animal_df$Group)\n```\n:::\n\n\n## What are levels? \n<center>\n![](/images/level.png){style=\"width:150px; background:white; border-radius:15px\"}\n</center>\n\n__Levels__ are the unique values in a __factor__. __Levels__ also store a matching number. This number determines the order of the levels. In the case of Group \"Mammal\" is assigned the number 1 and \"Reptile\" is assigned the number 2. This is because numbers are assigned to __Levels__ in alphabetical order by default.\n\nThe other part of a __factor__ is the __elements__. The __elements__ are the part of a __vector__ we are familiar with. Let us look at the __factor vector__\n\n::: {.cell}\n\n```{.r .cell-code}\nanimal_df$Group\n```\n:::\n\n\nIt looks just like a __character vector__ except there are no double quotes and the __levels__ are at the bottom.\n\nHowever, the __elements__ are actually numbers! Each number is assigned a __string__ by the __level__. This means:\n\n- The __factor__ only needs to store a number for each __element__ and then it stores each unique __level__ only once. This will take up less memory than storing a __string__ multiple times.\n- A __factor__ can be used as a __numeric__ or a __string__. This is very useful for plotting.\n\nIf you don't understand __factors__ from that explanation that is fine. I find it is a hard concept to explain or understand. ",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

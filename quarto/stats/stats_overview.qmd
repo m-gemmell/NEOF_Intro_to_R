@@ -1,0 +1,10 @@
+# Stats overview
+<center>
+![](/images/basic_stats.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
+</center>
+
+In this section we'll learn how to carry out some basic stats. This will involve linear regressions and some t-tests.
+
+Create and use the directory "Chapter_15-16" as the working directory for this chapter. Additionally create a new script called "Stats.R" for this chapter.
+
+Before we continue just a reminder to use [annotations](#annotations) and [code sections](#codesections).

@@ -1,0 +1,106 @@
+# Tab complete
+<center>
+![](/images/tab.png){style="width:200px; border-radius:15px; background:white; border:10px white solid"}
+</center>
+
+Tab completion is a very useful method when coding in any language. 
+It takes some practice to get used to but it increases the speed of coding and drastically reduces typos. 
+
+Before we continue, the tab key is the key above the "CAPS" key and left of the 'q' key. 
+If you would like a demonstration of tab completion please ask!
+
+The first way to tab complete is to tab complete file names. 
+First you will need to download the following files into your “Chapter_10-11” directory.
+
+- [tea_consumption.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/tea_consumption.csv)
+- [english_speaking_population_of_countries.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/english_speaking_population_of_countries.tsv)
+
+Next you will run the command that is below. However, when your cursor is in the double quotes first press tab. 
+This will hopefully show a dropdown of selections. 
+There are two ways to then get to your choice:
+
+1. Use the up and down arrow keys to move to the file name you want and then press enter to have the file name be autofilled.
+2. Start typing your file name till it is the top choice of the drop down menu. 
+You can then press enter to autofill the file name.
+
+```{r eval=FALSE}
+tea_df <- read.csv("tea_consumption.csv", check.names=FALSE)
+```
+
+You may notice that we only provided the file name and the `check.names=FALSE` for the `read.csv()` <u id='function_tooltip'>__function__</u>. 
+This is because of the format of the input file. 
+In this case we do not want any of the input columns converted into row names. 
+Additionally, the file was comma separated and the default separator to be used for `read.csv()` is commas. 
+We will come back to this <u id='data_frame_tooltip'>__data frame__</u> so either keep the <u id='variable_tooltip'>__variable__</u> in your __environment__ or keep the __read__ code handy.
+
+Let us __read__ in another file using tab complete to autofill the file name again. 
+```{r eval=FALSE}
+english_df <- read.csv("english_speaking_population_of_countries.tsv", 
+                   sep = "\t", 
+                   row.names = 1,
+                   check.names = FALSE)
+```
+
+Great!
+
+The second way to use tab completion is to autofill <u id='variable_tooltip'>__variable__</u> names, <u id='function_tooltip'>__function__</u> names and options. 
+To autofill a <u id='variable_tooltip'>__variable__</u> or <u id='function_tooltip'>__function__</u> name you can start typing the name then press tab to get the dropdown menu. 
+
+Whilst in the `()` of a <u id='function_tooltip'>__function__</u> you can press tab to get a drop down menu of the option choices and press enter on the highlighted choice to autofill it. 
+
+This only works if the name currently exists. 
+I.e. you cannot autofill a __<u id='variable_tooltip'>variable</u> name__ if the <u id='variable_tooltip'>__variable__</u> is not in your __environment__.
+
+Continue using tab complete for the rest of the course. Practice makes perfect.
+
+If you really don't like it you don't have to use it.
+
+Data from above files:
+
+- <https://worldpopulationreview.com/country-rankings/tea-consumption-by-country>
+- <https://en.wikipedia.org/wiki/List_of_countries_by_English-speaking_population>
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```

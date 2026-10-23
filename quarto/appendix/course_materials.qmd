@@ -1,0 +1,73 @@
+# Workshop slides & videos
+
+## Intro and foundations
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/mYiFY_vxtgs" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+[Slides](https://docs.google.com/presentation/d/1nd1kl1vXD7QPIRDXQG7QSu515ThCnuLvh-oH42HPs7M/edit?usp=sharing)
+
+## Classes and data structures
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/Htlv9Nh9da0" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+[Slides](https://docs.google.com/presentation/d/1J80PSOcy3Uusn_U0NzvSTSFZqZXBf_0tz9bCSGumSSI/edit?usp=sharing)
+
+## Files and subsetting
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/eT_DU4U8KKw" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+[Slides](https://docs.google.com/presentation/d/1ePF3t1cO4Ui_5l8giooZWQuPEL-L4h7047bGCV_oQgg/edit?usp=sharing)
+
+## Handy tips and tricks
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/BRx0AD8SqJc" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+[Slides](https://docs.google.com/presentation/d/1zO2o39UaeV9o0BbOP-kKZFgku4WfEKia_z2U4-8yJmw/edit?usp=sharing)
+
+## Plots part 1
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/4UrVC1saNKE" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+[Slides](https://docs.google.com/presentation/d/1LVAZGos0san43kJbY-VM9jwyUtWthhMhsysNZUgeVpA/edit?usp=sharing)
+
+## Plots part 2
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/Yhh_sQYOx7E" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+[Slides](https://docs.google.com/presentation/d/1fDHpFeiP7pckCdOV_WO7yMEfGkL0Yzcu1FDdw6afxWM/edit?usp=sharing)
+
+## Basic stats
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/Ff2_sfQvf3c" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+[Slides](https://docs.google.com/presentation/d/1Gp3v5xGCi0mnJa5lRr7akV0kFOiachaZv7B_9dT4MbI/edit?usp=sharing)
+
+## Basic programming
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/O6F2N12VhjU" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+[Slides](https://docs.google.com/presentation/d/16b6K8nQEsdTkioMyVFLb0s7jLrG83KtycTSJ5t4_PqQ/edit?usp=sharing)

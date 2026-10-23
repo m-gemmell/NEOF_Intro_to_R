@@ -1,0 +1,17 @@
+{
+  "hash": "03cf17b7994bd05e3fc05aae041c9691",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# t-test data\n<center>\n![](/images/scale.png){style=\"width:200px; background: white; border-radius:5px; border: white solid 5px\"}\n</center>\n\nA t-test can be used to determine if there is a significant difference between the means of two groups.\n\nIn this example we will compare the weights of the fish Bream, Parkki, and Roach. Therefore let's subset our __data frame__ so we have three __data frames__, one for each species.\n\nWe already have a \"bream_df\" so we only need to make one for Parkki and one for Roach. Before we do we'll change the column names for \"fish_df\" like we did for \"bream_df\"\n\n::: {.cell}\n\n```{.r .cell-code}\ncolnames(fish_df)[3:5] <- c(\"v_length\", \"d_length\", \"c_length\")\nparkki_df <- fish_df[fish_df$Species == \"Parkki\",]\nroach_df <- fish_df[fish_df$Species == \"Roach\",]\n```\n:::\n",
+    "supporting": [
+      "t_test_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

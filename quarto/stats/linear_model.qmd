@@ -1,0 +1,53 @@
+# Linear model
+<center>
+![](/images/lm.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
+</center>
+
+We can fit a linear model with the __function__ `lm()`. We simply provide the column names as a formula ( `y_column_name ~ x_column_name` ) similar to the `boxplot()` __function__.
+
+```{r eval=FALSE}
+fit <- lm(Weight~v_length, data=bream_df)
+```
+
+We can now add the linear model as a line to our plot with the __function__ `abline()`
+```{r eval=FALSE}
+abline(fit)
+```
+
+With the line added we also want to add the linear equation to the plot. To do this we need to check the contents of the "fit" __variable__ first so we know what to add.
+```{r eval=FALSE}
+fit
+```
+
+You'll see the following two sections:
+
+- `Call:` Shows the __function__ with options you ran to create "fit"
+- `Coefficients:`: This contains 2 parts
+    - `(Intercept)`: This is the intercept value of the linear model (_c_)
+    - `v_length`: This is the gradient values (_m_)
+
+Our next step is to create a __string scalar__ containing the linear equation. To do this we can extract the coefficients from the "fit" __object__ like below:
+```{r eval=FALSE}
+m <- fit$coefficients[2]
+c <- fit$coefficients[1]
+```
+
+If you print out "m" and "c" to the console you'll notice they have a different number of decimal places than when displayed through printing "fit". We will therefore change these to 2 decimal places with the `round()` __function__:
+```{r eval=FALSE}
+m <- round(m, digits = 2)
+c <- round(c, digits = 2)
+```
+
+Now to use the `paste0()` __function__ to create our linear equation as a __string scalar__:
+```{r eval=FALSE}
+linear_equation <- paste0("y = ", m , "x + ", c)
+```
+
+Finally we will recreate our plot, add the abline, and then add the linear equation. We will add the linear equation with the __function__ `text()`:
+```{r eval=FALSE}
+plot(x = bream_df$v_length, y = bream_df$Weight)
+abline(fit)
+text(x = 30, y = 800, labels = linear_equation)
+```
+
+The `text()` options `x = ` and `y =` normally require a bit of trial and error to set it in a nice location. This can be a bit fiddly but is made much easier by making the label smaller (e.g. making the numbers have a smaller amount of decimal places).

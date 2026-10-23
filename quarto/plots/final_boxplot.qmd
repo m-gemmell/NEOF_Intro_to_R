@@ -1,0 +1,14 @@
+# Final boxplot
+<center>
+![](/images/penguin_2.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid"}
+</center>
+
+We will now make one final plot for this section. I will not explain what the code is doing. Instead read and run the code to figure it out.
+```{r eval=FALSE}
+boxplot(body_mass_g~species*year , 
+        data = penguin_df, 
+        col = c("white","grey","orange"),
+        main = "Mass of different Penguin species for 2007 - 2009",
+        xlab = "Species and year",
+        ylab = "Body mass in grams")
+```

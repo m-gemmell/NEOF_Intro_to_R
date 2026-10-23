@@ -1,0 +1,60 @@
+# Basic box plot
+<center>
+![](/images/boxplot.png){style="width:200px; background:white; border-radius:5px"}
+</center>
+
+Next we are going to make a box plot with some Penguin data from:
+<https://allisonhorst.github.io/palmerpenguins/>
+
+## Dataset
+
+This data contains information on individual penguins that were gathered from Palmer Station LTER. 
+
+First download the [penguin.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/penguin.tsv) file into your "Chapter_12-14" directory.
+
+As you expect the next step is to __read__ in the file. This time the file is a tsv (tab separated file) with no row names. We will ensure that columns containing strings are converted to __factors__.
+```{r eval=FALSE}
+penguin_df <- read.csv("penguin.tsv", 
+                      check.names = FALSE,
+                      stringsAsFactors = TRUE,
+                      sep = "\t"
+                      )
+```
+
+Each row is a measurement of a penguin. The columns for this __data frame__ are:
+
+- species: Species of Penguin
+- island: Island the Penguin was found on
+- bill_length_mm: The bill length of the Penguin in millimetres
+- bill_depth_mm: The bill depth of the Penguin in millimetres
+- flipper_length_mm: The flipper length of the Penguin in millimetres
+- body_mass_g: Weight of Penguin in grams
+- sex: female or male
+- year: Year the measurement was carried out in
+
+With all that information we'll make a nice boxplot to show the body mass against the species.
+
+## Body mass boxplot
+<center>
+![](/images/penguin_unix.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid"}
+</center>
+
+The __function__ `boxplot()` can be used with this. This __function__ is different than the others where the first option is `yaxis_column_name~xaxis_column_name`. This is followed by the option `data = ` where you provide the __data frame__.
+
+Below is the command for this:
+```{r eval=FALSE}
+boxplot(body_mass_g~species, data = penguin_df)
+```
+
+## Split x axis by two groupings
+<center>
+![](/images/boxplot_2_axis_groups.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid"}
+</center>
+
+What if we want to split the 3 box plots by sex? 
+
+We can do that like below:
+```{r eval=FALSE}
+boxplot(body_mass_g~species*sex, data = penguin_df,
+        col = c("yellow","green"))
+```

@@ -1,0 +1,50 @@
+# Recap MCQs
+<center>
+![](/images/question_bubble_blue.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
+</center>
+
+Superb! That is the end of the chapter. Please ensure you are saving your scripts regularly.
+
+For a recap please attempt the below MCQs.
+
+```{r, echo = FALSE}
+opts_p <- c("Camel case", "Period separated", answer="Snake case")
+```
+1. Which __variable__ naming convention uses underscores to separate words? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="Camel case", "Period separated", "Snake case")
+```
+2. Which __variable__ naming convention uses upper case to denote new words? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`seq()`", answer='Sweep', "`rep()`")
+```
+3. Which button can you use to clear the text from your console or environment? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`seq()`", 'Sweep', answer="`rep()`")
+```
+4. Which __function__ allows you replicate an __object__? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="`seq()`", answer='Sweep', "`rep()`")
+```
+5. Which __function__ can be used to create a numeric sequence? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`gsub()`", answer="`is.na()`", "Tab")
+```
+6. Which __function__ is useful for changing NAs to 0s? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("`gsub()`", "`is.na()`", answer="Tab")
+```
+7. Which key can be used to auto-complete file and __function__ names?  `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="`gsub()`", "`is.na()`", "Tab")
+```
+8. Which __function__ can be used to replace patterns? `r longmcq(opts_p)`
+
+Now time for exercises!

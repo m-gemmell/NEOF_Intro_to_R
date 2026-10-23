@@ -1,0 +1,97 @@
+# Multiplication table
+<center>
+![](/images/multiplication.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
+</center>
+
+Hopefully you'll find the above useful. We will learn some new <u id='function_tooltip'>__functions__</u> but before that let us create a quick <u id='data_frame_tooltip'>__data frame__</u>. 
+You are going to make a multiplication table. 
+The <u id='data_frame_tooltip'>__data frame__</u> will be a 10 by 10 table with numbers one to ten as the row names and the column names. 
+The value in each cell/index will be equal to the row name number multiplied by the column name number.
+
+Before looking at the code below can you think of a way to do this?
+
+The code below shows a method to create this <u id='data_frame_tooltip'>__data frame__</u>. 
+I have tried to show you a variety of methods to create the <u id='vector_tooltip'>__vectors__</u> below for demonstration purposes. 
+Look at each command and make sure you understand how they work before continuing. 
+In real life I would use one of these methods rather than many different methods.
+
+__Tip__: If you double click a word/name in the __script editor__ it will highlight it. 
+You can then start typing to replace the highlighted word.
+
+```{r eval=FALSE}
+#Vectors that will become columns
+one <- 1:10
+two <- one*2
+three <- one+two
+four <- seq(from = 4, to = 40, by = 4)
+five <- (1:10)*5
+six <- seq(from = 6, by = 6, length.out = 10)
+seven <- one * (rep(x = 7, 10))
+ate <- (1:80)[((1:80) %% 8) == 0]
+nine <- one * (rep(x = 9, 10))
+ten <- (seq(100,1000,100))/rep(10,10)
+#Vector for row name
+row_names <- c("one","two","three","four","five",
+               "six","sefen","ate","nine","ten")
+#Create data frame
+multiplication_df <- data.frame(one, two, three,
+                                four, five, six,
+                                seven, ate, nine, ten,
+                                row.names = row_names)
+```
+
+Have a look at the resulting <u id='data_frame_tooltip'>__data frame__</u>. 
+You may have noticed that two of the row names and one of the column names is incorrect. 
+We'll use the <u id='function_tooltip'>__functions__</u> `colnames()`and `row.names()` along with indexes and assignment to change these.
+```{r eval=FALSE}
+#Change the 8th column name ("ate") to "eight"
+colnames(multiplication_df)[8] <- "eight"
+#Change the 7th and 8th row names ("sefen" and "ate") to "seven" and "eight"
+row.names(multiplication_df)[7:8] <- c("seven","eight")
+```
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```

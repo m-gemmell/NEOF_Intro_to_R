@@ -1,0 +1,15 @@
+{
+  "hash": "0977d2cc4f188240725009e69f83ea14",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Animal sizes data\n<center>\n![](/images/blue_whale.png){style=\"width:200px; background:white; border-radius:5px\"}\n</center>\n\nFor our scatter plot from real data we will look at the sizes of the largest animals in the world. This data is from: <https://en.Wikipedia.org/wiki/Largest_organisms>\n\nThe data we will be using will contain the following information:\n\n- Animal names\n- Average mass in tonnes\n- Maximum mass in tonnes\n- Average total length in metres\n- Group, In this case are they Mammals or Reptiles\n- Biom, are they aquatic, semiaquatic, or terrestrial\n\nDownload the [animal_sizes.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/animal_sizes.csv) file into your \"Chapter_12-14\" directory.\n\n## Read in animal data\n<center>\n![](/images/reading_glasses.png){style=\"width:150px; background:white; border-radius:5px\"}\n</center>\n\nNext, __read__ the data into R. We have included a new option: `stringsAsFactors = TRUE`. This is important for plotting and will be explained more later.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nanimal_df <- read.csv(\"animal_sizes.csv\", \n                      row.names = 1, check.names = FALSE,\n                      stringsAsFactors = TRUE\n                      )\n```\n:::\n\n\n## Average mass and max mass\n<center>\n![](/images/hippo.png){style=\"width:150px; background:white; border-radius:5px\"}\n</center>\n\nCheck the column names with the __function__ `colnames()`. With these column names we can create some quick plots.\n\nWe'll compare the average and maximum weight\n\n::: {.cell}\n\n```{.r .cell-code}\nplot(x = animal_df$`Average mass (tonnes)`,\n     y = animal_df$`Maximum mass (tonnes)`)\n```\n:::\n\n\nAverage and maximum weight appear to correlate as expected.\n\nSometimes a quick and easy plot is all you want. If you're not going to present a plot then it doesn't need to be pretty. As long as it is functional it is useful.  ",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

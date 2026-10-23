@@ -1,0 +1,15 @@
+{
+  "hash": "1517991204457ff50cdd183582cc7746",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Example boxplots\n<center>\n![](/images/penguin_3.png){style=\"width:150px; background:white; border-radius:5px; border: white 5px solid\"}\n</center>\n\nI will show you some more examples followed by a final nice plot.\n\nx axis = island, y axis = flipper length\n\n::: {.cell}\n\n```{.r .cell-code}\nboxplot(flipper_length_mm~island, data = penguin_df)\n```\n:::\n\n\nx axis = island, y axis = bill depth\n\n::: {.cell}\n\n```{.r .cell-code}\nboxplot(bill_depth_mm~island, data = penguin_df)\n```\n:::\n\n\nx axis = bill length, y axis = species and sex\n\n::: {.cell}\n\n```{.r .cell-code}\nboxplot(bill_length_mm~species*sex, data = penguin_df)\n```\n:::\n\n\nWhat happens if we try to plot a __factor__ on the x axis?\n\n::: {.cell}\n\n```{.r .cell-code}\nboxplot(island~species*sex, data = penguin_df)\n```\n:::\n\nIt does not work as an object with __class__ __factor__ can not be added to the x axis __object__.\n\nWhat about a numeric to the x axis?\n\n::: {.cell}\n\n```{.r .cell-code}\nboxplot(flipper_length_mm~year, data = penguin_df)\n```\n:::\n\nThat works and looks good because it is a discrete set of numbers. In fact you can have a __factor__ where the __levels__ are numerics. If you do this make sure it is a discrete set of numbers.\n\nWhat if we use a continuous set of numbers?\n\n::: {.cell}\n\n```{.r .cell-code}\nboxplot(body_mass_g~bill_length_mm , data = penguin_df)\n```\n:::\n\nThis does work! However, a scatter plot would most likely be a lot more suited to plotting this data.",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

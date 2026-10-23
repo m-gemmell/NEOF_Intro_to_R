@@ -1,0 +1,23 @@
+# Exercises overview
+<center>
+![](/images/penguin.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
+These exercises will primarily use the "penguin_df" from the theory and practice session.
+
+Please use your "Exercises.R" script for this exercise and the main workshop directory as the working directory. Ensure you are using annotations and code sections to keep the contents clear and separated.
+
+For convenience the code to load the Penguin __data frame__ directory will be:
+```{r eval=FALSE}
+penguin_df <- read.csv("Chapter_12-14/penguin.tsv", 
+                      check.names = FALSE,
+                      stringsAsFactors = TRUE,
+                      sep = "\t"
+                      )
+```
+
+Your plots might not look exactly the same. As long as your plot contains the same data it is good.
+
+Solutions are in the expandable boxes. 
+Try your best to solve each challenge but use the solutions for help if you would like. 
+Even if your method works it can be good to check the solution as there are many ways to do the same thing in R.

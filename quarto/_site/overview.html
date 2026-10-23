@@ -41,12 +41,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-5a2acb6f4ed5aeb23a104ba421924b87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-0b8e113766f0aaf860995efa8b3aa8a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-eaf9efb5ff69c09042967cbd085a044f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f8a74d9a586e19f492c822212409a569.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-6a8160b1e9f0502f881127a1b4756f44.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-4e6a1594bbf8f5f947181720f4ac8dcb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-24cfeef7f2a87d281aebc36e3f226a79.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -270,7 +270,27 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./files_subsetting/intro.html"> 
-<span class="menu-text">Files &amp; subsetting</span></a>
+<span class="menu-text">Files &amp; subset</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./tips_tricks/intro.html"> 
+<span class="menu-text">Tips</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./plots/plots_intro.html"> 
+<span class="menu-text">Plots</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./stats/stats_overview.html"> 
+<span class="menu-text">Stats</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./programming/overview.html"> 
+<span class="menu-text">Programming</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./appendix/neof.html"> 
+<span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -336,8 +356,14 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
-  <ul>
+  <ul class="collapse">
   <li><a href="#course-materials" id="toc-course-materials" class="nav-link" data-scroll-target="#course-materials">Course materials</a></li>
+  <li><a href="#extra-materials" id="toc-extra-materials" class="nav-link" data-scroll-target="#extra-materials">Extra materials</a>
+  <ul class="collapse">
+  <li><a href="#plots" id="toc-plots" class="nav-link" data-scroll-target="#plots">Plots</a></li>
+  <li><a href="#statistics" id="toc-statistics" class="nav-link" data-scroll-target="#statistics">Statistics</a></li>
+  <li><a href="#programming" id="toc-programming" class="nav-link" data-scroll-target="#programming">Programming</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -354,8 +380,39 @@ ul.task-list li input[type="checkbox"] {
 <p>This course is split into 2 main parts: the course materials, and the optional/additional materials.</p>
 <section id="course-materials" class="level2">
 <h2 class="anchored" data-anchor-id="course-materials">Course materials</h2>
+</section>
+<section id="extra-materials" class="level2">
+<h2 class="anchored" data-anchor-id="extra-materials">Extra materials</h2>
+<p>There are extra materials you can attempt after the workshop.</p>
+<section id="plots" class="level3">
+<h3 class="anchored" data-anchor-id="plots">Plots</h3>
+<p>The <a href="./plots/plots_intro.html">plots</a> part includes creating:</p>
+<ul>
+<li><a href="./plots/line.html">Line graphs</a></li>
+<li><a href="./plots/histogram.html">Histograms</a></li>
+<li><a href="./plots/scatter.html">Scatterplots</a></li>
+<li><a href="./plots/boxplot.html">Boxplots</a></li>
+</ul>
+</section>
+<section id="statistics" class="level3">
+<h3 class="anchored" data-anchor-id="statistics">Statistics</h3>
+<p>The <a href="./stats/stats_overview.html">statistics</a> part will cover carrying out:</p>
+<ul>
+<li><a href="./stats/linear_regression.html">Linear regression</a></li>
+<li><a href="./stats/t_test.html">T-test</a></li>
+</ul>
+</section>
+<section id="programming" class="level3">
+<h3 class="anchored" data-anchor-id="programming">Programming</h3>
+<p>Finally, the last part will introduce some harder coding where you’ll learn to create:</p>
+<ul>
+<li><a href="./programming/loop_types.html">Loops</a></li>
+<li><a href="./programming/if.html">If statements</a></li>
+<li><a href="./programming/functions.html">Custom functions</a></li>
+</ul>
 
 
+</section>
 </section>
 </section>
 

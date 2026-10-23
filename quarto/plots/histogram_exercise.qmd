@@ -1,0 +1,42 @@
+# Histogram exercise
+
+```{r eval=TRUE, echo=FALSE}
+penguin_df <- read.csv("Chapter_12-14/penguin.tsv", 
+                      check.names = FALSE,
+                      stringsAsFactors = TRUE,
+                      sep = "\t"
+                      )
+```
+
+From the "penguin_df" create the below plot:
+
+__Note__: The colour of the bars are "blue".
+```{r eval=TRUE, echo=FALSE}
+#Create data frame with only the Penguins from Torgersen
+penguins_torgensen_df <- penguin_df[penguin_df$island == "Torgersen",]
+#Create a column with body mass in kilograms
+penguins_torgensen_df$body_mass_kg <- 
+  penguins_torgensen_df$body_mass_g / 1000
+#Plot the histogram
+hist(penguins_torgensen_df$body_mass_kg,
+     main = "Histogram of the body mass of Penguins from Torgersen Island",
+     xlab = "Body mass in kilograms",
+     ylab = "frequency",
+     col = "blue")
+```
+
+`r hide("Histogram solution")`
+```{r eval=FALSE}
+#Create data frame with only the Penguins from Torgersen
+penguins_torgensen_df <- penguin_df[penguin_df$island == "Torgersen",]
+#Create a column with body mass in kilograms
+penguins_torgensen_df$body_mass_kg <- 
+  penguins_torgensen_df$body_mass_g / 1000
+#Plot the histogram
+hist(penguins_torgensen_df$body_mass_kg,
+     main = "Histogram of the body mass of Penguins from Torgersen Island",
+     xlab = "Body mass in kilograms",
+     ylab = "frequency",
+     col = "blue")
+```
+`r unhide()`

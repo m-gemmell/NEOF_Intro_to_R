@@ -1,0 +1,19 @@
+# EU population and cities ratio
+<center>
+![](/images/edinburgh.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
+</center>
+
+We can quickly check if the countries with the high number of cities also have the high populations by creating a new column equal to population / number of cities. This will give us nice ratios. We can plot the distribution of these ratios in a histogram.
+
+For this histogram we will also add a title to the plot with the option `main = `. Additionally we will choose a different colour. Having different colours and main titles makes it easier for you to instantly know which plot you are looking at.
+
+```{r eval=FALSE}
+#Create ratio column
+eu_df$pop_cities_ratio <- eu_df$eu_pop / eu_df$eu_cities
+#Histogram of ratio distribution
+hist(eu_df$pop_cities_ratio, col = "blue",
+     xlab = "Ratio of population (millions) to numer of cities",
+     main = "EU countries ratio of population to cities")
+```
+
+Looking at the plot most countries seem to have a ratio of 2-6 million citizens to every city. However, it is still not a perfect match with some lower and some higher ratios. Of course a result is a result and we have hopefully found out something new.

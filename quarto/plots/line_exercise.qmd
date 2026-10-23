@@ -1,0 +1,24 @@
+# Line graph exercise
+First we will ignore "penguin_df".
+
+Create the below plot. You will need to create the __vectors__ yourself.
+```{r eval=TRUE, echo=FALSE}
+plot(x = rep(1:10, 2), 
+     y = seq(from = 0.5, to = 10, by = 0.5),
+     col = "red",
+     main = 'A line graph with "red" as the colour',
+     type = "l")
+```
+
+__Tip__: The x and y labels may help you figure out the commands to create the __vectors__.
+
+`r hide("Line graph solution")`
+```{r eval=FALSE}
+#Produce the plot with vectors created inside the function
+plot(x = rep(1:10, 2), 
+     y = seq(from = 0.5, to = 10, by = 0.5),
+     col = "red",
+     main = 'A line graph with "red" as the colour',
+     type = "l")
+```
+`r unhide()`

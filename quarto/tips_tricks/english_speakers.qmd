@@ -1,0 +1,103 @@
+# English speakers across the world
+<center>
+![](/images/language.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
+Now we will do some processing of the "english_df" <u id='data_frame_tooltip'>__data frame__</u>. 
+This shows the various number of english speakers with info on the number of those who have English as a first language and those who have it as an additional language. 
+View the <u id='data_frame_tooltip'>__data frame__</u> to see its contents.
+
+There are a lot of NA values. 
+Looking at the values in the <u id='data_frame_tooltip'>__data frame__</u> try to figure out the two reasons that these NA values are present. 
+Once you have had a thought you can have a look at the below two reasons.
+
+1. Some countries have zero population of English first speakers and some countries have zero population of people who speak English as an additional language.
+2. Some countries are missing data on the number of first and additional speakers, e.g. Ukraine.
+
+We will fix these issues one by one. First let us change all NAs to the number 0.
+```{r eval=FALSE}
+english_df[is.na(english_df)] <- 0
+```
+
+We have changed all NAs. 
+However, some of the rows in the 3rd and 4th column don't equal the 2nd column. 
+We'll now remove these rows as they have missing data and we don't want that here.
+```{r eval=FALSE}
+#1st method with multiple lines for clarity
+#Create a vector of first language + additional language
+english_total_vec <- english_df[,3] + english_df[,"As an additional language"]
+#Compare the column of total english speakers against the vector we created above
+#This will create a logical vector (TRUE or FALSE)
+english_total_logical_vec <- 
+  english_df$`Total English speakers` == english_total_vec
+#Now create a new data frame by indexing the english_df rows by the logical vector
+#This will mean all TRUE rows will be kept and all FALSE rows will not be kept
+english_complete_datasets_df <- english_df[english_total_logical_vec,]
+#Remove the vectors we do not need any more
+rm(english_total_vec,english_total_logical_vec)
+
+#2nd method is to carry out the above all in one command
+english_complete_datasets_df_2 <- 
+  english_df[
+    (english_df$`As first language` + english_df$`As an additional language`) ==
+      english_df$`Total English speakers`,
+    ]
+
+#We can compare our two created data frames with the identical() function
+identical(english_complete_datasets_df,english_complete_datasets_df_2)
+```
+
+I would use the one command method but the multi line method is just as valid. It doesn't matter if your R code is not as compact as possible. The main things that matter are:
+
+1. Your code works. When writing your own code make sure you test it with small datasets first so you know it is doing what you think it is doing.
+2. Your code is well annotated. This will help with the first step and it will help your future self and others who will read your code.
+3. You can read and understand your own code (annotation helps). There is little point in code you cannot read. You will most likely need to debug code you write (I know I do). Write code in a way that you know you will be able to read. If this means doing little parts over multiple lines then do it that way.
+
+We will come back to the <u id='data_frame_tooltip'>__data frames__</u> "tea_df" and "english_complete_datasets_df" for the exercises. 
+But let us go onto 2 more topics.
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```

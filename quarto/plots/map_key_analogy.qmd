@@ -1,0 +1,14 @@
+# Map key analogy
+
+An analogy would be a map key. You could just write "town", "Mountain", "railroad", "Lake" over a map to say where everything is like below:
+<center>
+![](/images/town_words.png){style="width:400px; background:white; border-radius:15px"}
+</center>
+
+Compare this to our map with symbols and a key:
+
+<center>
+![](/images/town_symbols.png){style="width:400px; background:white;border-radius:15px"}
+</center>
+
+The key represents the __levels__ with our unique __strings__ corresponding to symbols (numbers). Instead of each string being stored on the map multiple times only the symbols (numbers) are.

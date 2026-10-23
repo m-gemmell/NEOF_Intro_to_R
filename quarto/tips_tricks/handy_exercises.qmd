@@ -1,0 +1,14 @@
+# Handy exercises
+<center>
+![](/images/exercises.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
+</center>
+
+There has been a lot covered this session so these exercises will hopefully be straightforward.
+
+Please set the working directory to your main workshop directory and use your "Exercises.R" script. Ensure you are using annotations and code sections to keep the contents clear and separated.
+
+Additionally __read__ in and __write__ out files to "Chapter_10-11" .
+
+Solutions are in the expandable boxes. 
+Try your best to solve each challenge but use the solutions for help if you would like. 
+Even if your method works it can be good to check the solution as there are many ways to do the same thing in R.

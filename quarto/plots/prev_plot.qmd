@@ -1,0 +1,7 @@
+# Previous plots
+
+Before we go onto line graphs I'll show you how to look at your previous plots. In the __Plots pane__ of the __MISC window__ there are two arrows on the top left. You can use these to go backwards and forwards between the plots you have created since you opened RStudio. Give it a go!
+
+<center>
+![](/images/RStudio_plot_pane_arrows.png){style="width:400px; border-radius:5px"}
+</center>

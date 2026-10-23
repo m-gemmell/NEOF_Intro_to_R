@@ -1,0 +1,15 @@
+{
+  "hash": "bf6fcfebb88f261a2ca2fb1cd0924587",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Tea exercise\n<center>\n![](/images/tea.png){style=\"width:200px; background:white; border-radius:15px\"}\n</center>\n\nThe first task you will carry out is printing out information from \"tea_df\". Below is an example statement for the country Turkey:\n\n\"Turkey is the number 1 consumer of tea. It consumes 5.8kg of tea annually per capita.\"\n\nPrint out this statement for the countries Ireland, United Kingdom, France, and Australia with their relevant information. Make sure the kilogram value only has one decimal place.\n\n__Tip__: You will require the __functions__ `paste()` and `round()` from day 1.\n\n\n<div class='webex-solution'><button>Tea solutions</button>\n\nFirst ensure you have the \"tea_df\" loaded (remember your working directory will need to be in the correct location first). Also it needs to be preprocessed with the `gsub()` function.\n\n::: {.cell}\n\n```{.r .cell-code}\ntea_df <- read.csv(\"Chapter_10-11/tea_consumption.csv\", check.names=FALSE)\ntea_df$lb <- tea_df$KG_LB_annual_per_capita\ntea_df$lb <- gsub(pattern = \".*_\", replacement = \"\", tea_df$lb)\ncolnames(tea_df)[3] <- \"kg\"\ntea_df$kg <- gsub(pattern = \"_.*\", replacement = \"\", tea_df$kg)\ntea_df$kg <- as.numeric(tea_df$kg)\ntea_df$lb <- as.numeric(tea_df$lb)\n```\n:::\n\n\nRemember there are many ways to carry this out but here is one.\n\nFirst create a __vector__ with the names of the countries we want:\n\n::: {.cell}\n\n```{.r .cell-code}\ncountries <- c(\"Ireland\", \"United Kingdom\", \"France\", \"Australia\")\n```\n:::\n\n\nSet the row names to the countries for easy indexing:\n\n__Note__: Row name must be unique which is the case here.\n\n::: {.cell}\n\n```{.r .cell-code}\nrow.names(tea_df) <- tea_df$Country\n```\n:::\n\n\nCreate a __data frame__ that only contains our countries of interest. We use the __vector__ as an index for the rows.\n\n::: {.cell}\n\n```{.r .cell-code}\ntea_df_subset <- tea_df[countries,]\n```\n:::\n\n\nHere because we are working with a temporary __variable__ we will overwrite the kg column so the values only contain one decimal place\n\n::: {.cell}\n\n```{.r .cell-code}\ntea_df_subset$kg <- round(x = tea_df_subset$kg, digits = 1)\n```\n:::\n\n\nLast step is to print out the statement. We will use `paste0()` which is exactly like `paste()` but the `sep =` option is set to `\"\"`.\n\n::: {.cell}\n\n```{.r .cell-code}\npaste0(tea_df_subset$Country, \" is the number \", \n       tea_df_subset$Rank, \" consumer of tea. It consumes \", \n       tea_df_subset$kg, \"kg of tea annually per capita.\")\n```\n:::\n\n\n</div>\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

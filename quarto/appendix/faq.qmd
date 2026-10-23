@@ -1,0 +1,11 @@
+# FAQ
+
+This is a page of frequently asked questions.
+It will be updated with the answers to questions asked during these courses.
+
+## General
+
+### Where can I get the presentation recordings and the dataset?
+
+These can be found on the [course materials page](/appendix/course_materials.qmd).
+

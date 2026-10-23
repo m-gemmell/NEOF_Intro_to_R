@@ -1,0 +1,15 @@
+{
+  "hash": "2061db71071a5beefa552813b5828b0e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# If statements\n<center>\n![](/images/flow_chart.png){style=\"width:200px; border-radius:15px; background:white\"}\n</center>\n\n__If statements__ allow for different commands to be carried out depending on __if__ a condition is met. \n\nThis can be thought of like a flow chart where you go one way if you answer yes and another if you answer no. Example:\n\n- Are you thirsty?\n- If yes, have something to drink.\n- If no, do not have something to drink.\n\nBasic format of an __if equation__:\n\n::: {.cell}\n\n```{.r .cell-code}\nif (condition) {\n  command/s if condition true\n} else {\n  command/s if condition false\n}\n```\n:::\n\n\nI'll show you a coding example using the modulus (`%%`) __operator__.\n\n::: {.cell}\n\n```{.r .cell-code}\n#Create a scalar\ni <- 3\n#If statement determing if the remainder of i/2 is 1\nif (( i %% 2) == 1) {\n  paste0(i, \" is odd\")\n} else {\n  paste0(i, \" is even\")\n}\n```\n:::\n\n\nYou can have an __if statement__ within a __loop__.\n\n__Reminder__: We need to use `print()` within __loops__ to print results to the console.\n\n::: {.cell}\n\n```{.r .cell-code}\nfor (i in 0:9) {\n  #If statement determining if the remainder of i/2 is 1\n  if (( i %% 2) == 1) {\n    print(paste0(i, \" is odd\"))\n  } else {\n    print(paste0(i, \" is even\"))\n  }\n}\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

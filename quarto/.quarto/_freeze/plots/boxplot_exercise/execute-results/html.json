@@ -1,0 +1,17 @@
+{
+  "hash": "4901496fee4525f931af3a99aee4c892",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Boxplot exercise\n\n\n::: {.cell}\n\n:::\n\n\nFrom the \"penguin_df\" create the below plot:\n\n__Note__: Make sure the x axis is in the same order as below.\n\n::: {.cell}\n::: {.cell-output-display}\n![](boxplot_exercise_files/figure-html/unnamed-chunk-2-1.png){width=1152}\n:::\n:::\n\n\nFor the last task, save this plot. Details below:\n\n- Save the file as a jpg called \"Penguins_species_and_flipper_length_boxplot.jpg\" in \"Chapter_12-14\".\n- Save the plot with a width of 300, height of 250, and resolution of 150\n\n\n<div class='webex-solution'><button>Line graph solution</button>\n\n\n::: {.cell}\n\n```{.r .cell-code}\n#Start png function\njpeg(filename = \"Chapter_12-14/Penguins_species_and_flipper_length_boxplot.jpg\",\n    units = \"mm\", height = 250, width = 300, res = 150 )\n#Produce boxplot\nboxplot(flipper_length_mm~sex*species,\n        data = penguin_df,\n        col = c(\"yellow\",\"green\"),\n        main = \"Flipper length of different species\",\n        xlab = \"Species and sex of Penguin\",\n        ylab = \"Flipper length (mm)\"\n)\n#Save file\ndev.off()\n```\n:::\n\n\n</div>\n",
+    "supporting": [
+      "boxplot_exercise_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

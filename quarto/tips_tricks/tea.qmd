@@ -1,0 +1,119 @@
+# Tea
+<center>
+![](/images/tea.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
+We will have a quick look at the "tea_df". 
+This data shows the annual consumption of tea per capita with a rank based on the highest to lowest consumers.
+
+Unfortunately the third column has the annual per capita consumption in kilograms (KG) and pounds (LB) with the two values separated by a "_". 
+Thankfully we can use the <u id='function_tooltip'>__function__</u> `gsub()` to fix this. 
+
+`gsub()` will look for a specified pattern and replace it with a specified replacement.
+`gsub()` is only to be used for <u id='string_tooltip'>__strings__</u>.
+
+Before fixing our <u id='data_frame_tooltip'>__data frame__</u> I'll show you some examples of `gsub()`.
+```{r eval=FALSE}
+#Scalar string with mistake
+sentence <- "The number 8 is spelt ate"
+#gsub to print out line with mistake fixed
+gsub(pattern = "ate", replacement = "eight", sentence)
+#We can assign the scalar with the fix
+sentence <- gsub(pattern = "ate", replacement = "eight", sentence)
+
+#Vector with unwanted capital As
+letter_vec <- c("A","Ab","Abc","Abcd")
+#Replace pattern A with replacement a
+letter_vec <- gsub(pattern = "A", replacement = "a", letter_vec)
+
+#Vector with unwanted info after "_"
+extra_info_vec <- c("A_some","B_nada","C_stuff","D_nill")
+#Replace the _ and everything after it with nothing
+#We signify this with ".*" 
+#This means any character (.) repeated zero or more times (*)
+gsub(pattern = "_.*", replacement = "", extra_info_vec)
+
+#What if we use gsub() with numerics?
+gsub(pattern = 5, replacement = 2, 1:20)
+#The output will be strings!
+```
+
+`.` and `*` are regular expressions. 
+There are many regular expressions but we will only use `.*` to represent "all strings". 
+The best part about this is we can put the `.*` after a specific character to replace the specific character and everything after it. 
+Alternatively we can put the `.*` before a specific character to replace the specific character and everything before it.
+
+Let us carry this out with the "tea_df" so it will hopefully make more sense. 
+We are going to do this so we can make a kilogram column and a pound column.
+
+__Note__: Make sure you have the "tea_df" in your environment before proceeding.
+```{r eval=FALSE}
+#Create a column for lb (pound). We'll copy the KG_LB_annual_per_capita column
+tea_df$lb <- tea_df$KG_LB_annual_per_capita
+#For the lb column we'll replace the "_" and everything before it with nothing
+tea_df$lb <- gsub(pattern = ".*_", replacement = "", tea_df$lb)
+
+#Change the column name KG_LB_annual_per_capita to kg
+colnames(tea_df)[3] <- "kg"
+#For the kg column we'll replace the "_" and everything after it with nothing
+tea_df$kg <- gsub(pattern = "_.*", replacement = "", tea_df$kg)
+
+#Since the columns initially contained "_" they are string columns
+#Check if this is correct with the str() function
+str(tea_df)
+#Change the kg and lb columns to numerics
+tea_df$kg <- as.numeric(tea_df$kg)
+tea_df$lb <- as.numeric(tea_df$lb)
+#Check with str() to see if it is now numerics
+str(tea_df)
+```
+
+If you are interested in more regular expressions I would recommend looking at the following resources:
+
+- <https://r4ds.had.co.nz/strings.html#matching-patterns-with-regular-expressions>
+- <https://raw.githubusercontent.com/rstudio/cheatsheets/main/regex.pdf>
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```

@@ -1,0 +1,36 @@
+# Fish market dataset
+<center>
+![](/images/bream.png){style="width:300px; background: white; border-radius:5px; border: white solid 5px"}
+</center>
+
+Before getting to the analysis we need to read in the data. For this chapter we will be looking at the file [Fish.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/Fish.csv) which contains information of 7 common fish species sold in Fish markets (Source: https://www.kaggle.com/aungpyaeap/fish-market).
+
+The columns for the data are:
+
+- __Species__: Species of fish ("Bream", "Roach", "Whitefish",
+"Parkki", "Perch", "Pike", and "Smelt").
+- __Weight__: Weight of the fish in grams.
+- __Length1__: Vertical length of the fish in centimetres.
+- __Length2__: Diagonal length of the fish in centimetres.
+- __Length3__: Cross length of the fish in centimetres.
+- __Height__: Height of the fish in centimetres.
+- __Width__: Diagonal width of the fish in centimetres.
+
+The dataset is primarily interested in predicting the weight of a fish based on its length, height, or width.
+
+First step is to __read__ in the data:
+```{r eval=FALSE}
+fish_df <- read.csv("Fish.csv", check.names = FALSE)
+```
+
+Have a look at the __data frame__ and you'll see it looks pretty good with no `NA` values.
+
+For now we only want to look at the information for the species Bream. Let's create a "bream_df":
+```{r eval=FALSE}
+#Create the data frame
+bream_df <- fish_df[fish_df$Species == "Bream",]
+#Check how many rows it has
+nrow(bream_df)
+```
+
+We are left with 35 data points which should be plenty for our linear regression.

@@ -1,0 +1,15 @@
+# t-test data
+<center>
+![](/images/scale.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
+</center>
+
+A t-test can be used to determine if there is a significant difference between the means of two groups.
+
+In this example we will compare the weights of the fish Bream, Parkki, and Roach. Therefore let's subset our __data frame__ so we have three __data frames__, one for each species.
+
+We already have a "bream_df" so we only need to make one for Parkki and one for Roach. Before we do we'll change the column names for "fish_df" like we did for "bream_df"
+```{r eval=FALSE}
+colnames(fish_df)[3:5] <- c("v_length", "d_length", "c_length")
+parkki_df <- fish_df[fish_df$Species == "Parkki",]
+roach_df <- fish_df[fish_df$Species == "Roach",]
+```

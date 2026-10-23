@@ -1,0 +1,55 @@
+# Average mass and length plot
+<center>
+![](/images/elephant.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+Now let's compare the average weight and length.
+```{r eval=FALSE}
+plot(x = animal_df$`Average mass (tonnes)`,
+     y = animal_df$`Average total length (m)`)
+``` 
+
+With that we can see the following:
+
+- At lower weights (< 20 tonnes) a longer length does not necessarily mean a higher mass
+- At higher weights (>20 tonnes) there appears to be an overall trend of longer lengths equaling higher masses with the animal with the highest mass having the longest length
+
+## Plot section zoom
+<center>
+![](/images/zoom.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+It is quite hard to see the overall trend in the lower mass animals as they are squashed in a small part of the plot. We can zoom into this part in two different ways
+
+```{r eval=FALSE}
+#First method is to set the x and y limits manually 
+#This allows us to choose the specific part to zoom into
+plot(x = animal_df$`Average mass (tonnes)`,
+     y = animal_df$`Average total length (m)`,
+     xlim = c(0,10), ylim = c(0,10))
+#The other method is to subset the data
+#so we only plot the data we want
+plot(x = animal_df[animal_df$`Average mass (tonnes)` < 10,
+                   "Average mass (tonnes)"],
+     y = animal_df[animal_df$`Average mass (tonnes)` < 10,
+                   "Average total length (m)"])
+#I personally prefer the x and y limit approach
+```
+
+## Colour points by metadata
+<center>
+![](/images/coloured_points.png){style="width:150px; background:white; border-radius:5px"}
+</center>
+
+We can also include the Biom metadata as an aesthetic in the plot
+```{r eval=FALSE}
+#Plot
+plot(x = animal_df$`Average mass (tonnes)`,
+     y = animal_df$`Average total length (m)`, 
+     col = as.numeric(animal_df$Biom),
+     pch = 1
+     )
+#Legend
+legend(x = "bottomright", col = 1:nlevels(animal_df$Biom), 
+       legend = levels(animal_df$Biom), pch = 1)
+``` 

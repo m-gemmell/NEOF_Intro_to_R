@@ -80,8 +80,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-eaf9efb5ff69c09042967cbd085a044f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-02dfbc97502851d02b07a3652481cc6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-95b0bf51327562952de4aaf4d3ea0e10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-4e6a1594bbf8f5f947181720f4ac8dcb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-24cfeef7f2a87d281aebc36e3f226a79.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -305,7 +305,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./files_subsetting/intro.html"> 
-<span class="menu-text">Files &amp; subsetting</span></a>
+<span class="menu-text">Files &amp; subset</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./tips_tricks/intro.html"> 
+<span class="menu-text">Tips</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./plots/plots_intro.html"> 
+<span class="menu-text">Plots</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./stats/stats_overview.html"> 
+<span class="menu-text">Stats</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./programming/overview.html"> 
+<span class="menu-text">Programming</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./appendix/neof.html"> 
+<span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -371,8 +391,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
-  <li><a href="#extra-materials" id="toc-extra-materials" class="nav-link" data-scroll-target="#extra-materials">Extra materials</a></li>
   <li><a href="#material-contents" id="toc-material-contents" class="nav-link" data-scroll-target="#material-contents">Material contents</a></li>
+  <li><a href="#course-overview" id="toc-course-overview" class="nav-link" data-scroll-target="#course-overview">Course overview</a></li>
+  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
   </ul>
 </nav>
     </div>
@@ -404,7 +425,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src=".\images//R.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; border-radius:5px; background:white"></p>
 </figure>
 </div>
-<p>This course will teach you the fundamentals of R, an essential skill for some of our future courses. The first day will focus on the basics of R with foundations and objects and covers chapters 1-5. In day 2 we will cover chapters 6-11. We will look at how to read in files and write out files from R. Additionally, you will get further practice on the previous materials whilst learning some handy tips and tricks.</p>
+<p>This course will teach you the fundamentals of R, an essential skill for some of our future courses. The first day will focus on the basics of R with <a href="./foundations/intro.html">foundations</a> and <a href="./objects/intro.html">objects</a>. In day 2 we will cover <a href="./files_subsetting/intro.html">files &amp; subsetting</a>, and <a href="./tips_tricks/intro.html">tips &amp; tricks</a>.</p>
 <section id="learning-outcomes" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="learning-outcomes">Learning outcomes</h2>
 <div class="quarto-figure quarto-figure-center">
@@ -417,30 +438,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Create, edit, run, and save R scripts with RStudio</li>
 <li>Understand and use fundamental R concepts including operators, annotations, variables, and functions</li>
 <li>Utilise a variety of R functions</li>
-<li>Explain the difference between the R classes; Integer, Double, String, and logical</li>
-<li>Utilise the different R structures; Scalars, Vectors, and Data frames</li>
+<li>Explain the difference between the R classes; integer, double, string, and logical</li>
+<li>Utilise the different R structures; scalars, vectors, and data frames</li>
 <li>Read in data from files to R and write out data from R to files</li>
 <li>Subset and manipulate R vectors and data frames with indexing</li>
 </ul>
-</section>
-<section id="extra-materials" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="extra-materials">Extra materials</h2>
-<p>There are extra materials you can attempt after the workshop (chapters 12-18). These will allow you to apply your R skills to create plots and carry out some statistics. The plots section includes creating line graphs, histograms, scatterplots, and boxplots. The statistics section will cover carrying out some basic statistics, don’t worry it won’t be a statistics lesson. Finally, the last section will introduce some harder coding where you’ll learn to make loops, use ifs, and create R functions.</p>
 </section>
 <section id="material-contents" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="material-contents">Material contents</h2>
 <p>These materials will involve theory, practice, exercises, and solutions:</p>
 <ul>
-<li>The theory will explain R concepts and terminology. R terminology can be quite confusing but it is important to learn as it makes asking questions online a lot easier.</li>
-<li>Practice will involve code to run whilst reading through the theory. This will allow you to see the output of R and hopefully help you understand how R works.</li>
-<li>Multiple choice questions (MCQs): These will be used as recap questions at the end of chapters to help solidify the knowledge you are gaining.</li>
-<li>Exercises will give you a task to carry out based on the knowledge and skills you learned from the theory and practise.</li>
-<li>Solutions for the exercise are after each task in an expandable box. Please try the exercise before looking at the solutions, however make sure you read the solutions even if you completed the exercise successfully as there is extra information in them.</li>
+<li>The theory will explain R concepts and terminology
+<ul>
+<li>R terminology can be quite confusing but it is important to learn as it makes asking questions online a lot easier</li>
+</ul></li>
+<li>Practice will involve code to run whilst reading through the theory
+<ul>
+<li>This will allow you to see the output of R and hopefully help you understand how R works</li>
+</ul></li>
+<li>Multiple choice questions (MCQs): These will be used as recap questions at the end of chapters to help solidify the knowledge you are gaining</li>
+<li>Exercises will give you a task to carry out based on the knowledge and skills you learned from the theory and practise</li>
+<li>Solutions for the exercise are after each task in an expandable box
+<ul>
+<li>Please try the exercise before looking at the solutions, however make sure you read the solutions even if you completed the exercise successfully as there may be extra information in them</li>
+</ul></li>
 </ul>
 <p>Commands are in the following font and colour and should be run in RStudio (These should not be copied into R from this document):</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>This is a command </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</section>
+<section id="course-overview" class="level2">
+<h2 class="anchored" data-anchor-id="course-overview">Course overview</h2>
+<p>Please read through the next page <a href="./overview.html">Overview</a> to get an overview of the course materials and the order to read it through.</p>
+</section>
+<section id="license" class="level2">
+<h2 class="anchored" data-anchor-id="license">License</h2>
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Licence" style="border-width:0"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
 
 

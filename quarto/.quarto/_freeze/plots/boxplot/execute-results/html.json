@@ -1,0 +1,15 @@
+{
+  "hash": "8e2591127b20bbc42c712eeace3db0a1",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Basic box plot\n<center>\n![](/images/boxplot.png){style=\"width:200px; background:white; border-radius:5px\"}\n</center>\n\nNext we are going to make a box plot with some Penguin data from:\n<https://allisonhorst.github.io/palmerpenguins/>\n\n## Dataset\n\nThis data contains information on individual penguins that were gathered from Palmer Station LTER. \n\nFirst download the [penguin.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/penguin.tsv) file into your \"Chapter_12-14\" directory.\n\nAs you expect the next step is to __read__ in the file. This time the file is a tsv (tab separated file) with no row names. We will ensure that columns containing strings are converted to __factors__.\n\n::: {.cell}\n\n```{.r .cell-code}\npenguin_df <- read.csv(\"penguin.tsv\", \n                      check.names = FALSE,\n                      stringsAsFactors = TRUE,\n                      sep = \"\\t\"\n                      )\n```\n:::\n\n\nEach row is a measurement of a penguin. The columns for this __data frame__ are:\n\n- species: Species of Penguin\n- island: Island the Penguin was found on\n- bill_length_mm: The bill length of the Penguin in millimetres\n- bill_depth_mm: The bill depth of the Penguin in millimetres\n- flipper_length_mm: The flipper length of the Penguin in millimetres\n- body_mass_g: Weight of Penguin in grams\n- sex: female or male\n- year: Year the measurement was carried out in\n\nWith all that information we'll make a nice boxplot to show the body mass against the species.\n\n## Body mass boxplot\n<center>\n![](/images/penguin_unix.png){style=\"width:150px; background:white; border-radius:5px; border: white 5px solid\"}\n</center>\n\nThe __function__ `boxplot()` can be used with this. This __function__ is different than the others where the first option is `yaxis_column_name~xaxis_column_name`. This is followed by the option `data = ` where you provide the __data frame__.\n\nBelow is the command for this:\n\n::: {.cell}\n\n```{.r .cell-code}\nboxplot(body_mass_g~species, data = penguin_df)\n```\n:::\n\n\n## Split x axis by two groupings\n<center>\n![](/images/boxplot_2_axis_groups.png){style=\"width:150px; background:white; border-radius:5px; border: white 5px solid\"}\n</center>\n\nWhat if we want to split the 3 box plots by sex? \n\nWe can do that like below:\n\n::: {.cell}\n\n```{.r .cell-code}\nboxplot(body_mass_g~species*sex, data = penguin_df,\n        col = c(\"yellow\",\"green\"))\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

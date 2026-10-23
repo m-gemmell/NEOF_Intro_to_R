@@ -1,0 +1,23 @@
+# Boxplot
+<center>
+![](/images/boxplot.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
+Before carrying out a t-test it can be useful to visualise the difference between groups with a boxplot.
+
+Before we do this we need to combine the three __data frames__ into one. This can be done by binding the rows with `rbind()`. This will combine two provided __data frames__ which contain the same number of columns with the same column names.
+```{r eval=FALSE}
+#Combine bream_df and parkki_df
+fish_subset_df <- rbind(bream_df, parkki_df)
+#Now rbind roach_df to our new df
+fish_subset_df <- rbind(fish_subset_df, roach_df)
+```
+
+There is also `cbind` to combine __data frames__ by columns. In this case the __data frames__ need to have the same number of rows with the same order and names.
+
+Time for a boxplot!
+```{r eval=FALSE}
+boxplot(Weight~Species, data = fish_subset_df)
+```
+
+We can clearly see that the weights of Parkki and Roach are very similar to each other but very different to Bream's weight.
