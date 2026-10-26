@@ -24,6 +24,7 @@ There are 3 parts to the above:
 - The __<u id='variable_tooltip'>variable</u> object__ (`variable_object`). This can be many different objects including the output/results from commands, strings/words, numbers, and many other R data types.
 
 ## Box analogy
+![](/images/box.png){style="width:150px; border-radius:5px; background: white; border: white solid 5px" fig-align="center"}
 
 A __<u id='variable_tooltip'>variable</u>__ can be thought of as a box. The __<u id='variable_tooltip'>variable</u> object__ is held in the box but it can be replaced with any other object. The __<u id='variable_tooltip'>variable</u> name__ can then be thought as the label on the box so you can tell which box is which.
 

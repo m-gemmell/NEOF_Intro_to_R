@@ -4,12 +4,65 @@ This course is split into 2 main parts: the course materials, and the optional/a
 
 ## Course materials
 
+The course materials are split into the below 4 parts.
+
+### Foundations
+![](/images/foundational.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
+
+The [Foundations part](/foundations/intro.qmd) introduces the use of R with RStudio, building a strong foundation for the rest of the course.
+
+The topics covered include:
+
+- [**Operators**](/foundations/operators.qmd): Include `+`, `-`, `*`, and `/`, they allow us to use R like a calculator
+- [**Variables**](/foundations/variables.qmd): Allow us to save the output from commands so we can use them in future commands
+- [**Functions**](/foundations/functions.qmd): R contains a plethora of <u id='function_tooltip'>__functions__</u> that perform many different tasks
+- [**Directories**](/foundations/directories.qmd): How to change directory/folders and view their content
+- [**Script editor**](/foundations/script_editor.qmd): Use of the Rstudio script editor to write, edit, and save code in scripts
+
+### R Objects
+![](/images/RObjects.png){style="width:150px; background: white; border-radius:5px; border: white 5px solid" fig-align="center"}
+
+The [R objects part](/objects/intro.qmd) covers the two major R terminologies to learn to fully understand __R objects__.
+These are:
+
+- [__Class__](/objects/basic_classes.qmd): __R objects__ specific classes which determine what the __object__ is
+- [__Data structure__](/objects/data_structure.qmd): This determines the structure of an __R object__
+
+### Files & subsetting
+
+The [Files & subsetting part](/files_subsetting/intro.qmd) demonstrates how to get tabular data in and out of R as well as how to manipulate it.
+
+The part includes:
+
+- [**Reading from a file**](/files_subsetting/reading.qmd): Reading data from a file and create and R object from it
+- [**Subsetting**](/files_subsetting/subsetting.qmd): Subsetting a `data.frame` with indexxes
+- [**Writing to a file**](/files_subsetting/writing.qmd): Writing data from a R object into a file
+
+### Handy tips and tricks
+![](/images/magic.png){style="width:150px; border-radius:5px; border: white solid 5px; background:white" fig-align="center"}
+
+The [handy tips & tricks part](/tips_tricks/intro.qmd) reinforces the previous parts whilst introducing a variety of handy practices with R and RStudio.
+
+The topics covered are:
+
+- [**R conventions**](/tips_tricks/conventions.qmd): Covers naming styles for variables and wide vs long coding
+- [**RStudio**](/tips_tricks/rstudio.qmd): Global options and the sweep buttons
+- [**Tab completion**](/tips_tricks/tab_complete.qmd): Autocompletion of file paths, function names, and arguments with tab
+- [**Identical**](/tips_tricks/identical.qmd): The `identical()` function to determine if 2 object are identical or not
+- [**Shortcuts**](/tips_tricks/shortcuts.qmd): Various keyboard shortcuts for RStudio
+
+
+
+
+
 
 ## Extra materials
 
 There are extra materials you can attempt after the workshop. 
 
 ### Plots
+
+
 
 The [plots](/plots/plots_intro.qmd) part includes creating:
 
@@ -32,3 +85,16 @@ Finally, the last part will introduce some harder coding where you'll learn to c
 - [Loops](programming/loop_types.qmd)
 - [If statements](programming/if.qmd)
 - [Custom functions](/programming/functions.qmd)
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+```

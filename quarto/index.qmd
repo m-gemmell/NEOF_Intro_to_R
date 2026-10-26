@@ -43,7 +43,7 @@ This is a command
 
 ## Course overview
 
-Please read through the next page [Overview](/overview.qmd) to get an overview of the course materials and the order to read it through.
+Please read through the next page, [Overview](/overview.qmd), to get an overview of the course materials and the order to progress through it.
 
 ## License
 

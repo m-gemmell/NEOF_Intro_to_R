@@ -1,8 +1,5 @@
 # Handy tips & tricks
-
-<center>
-![](/images/magic.png){style="width:200px; border-radius:15px; background:white"}
-</center>
+![](/images/magic.png){style="width:200px; border-radius:15px; background:white" fig-align="center"}
 
 Welcome to Chapter 10! This chapter will include coding to reinforce what you have learnt up to this point. 
 There will also be plenty of new handy <u id='function_tooltip'>__functions__</u> and some more concepts to learn.

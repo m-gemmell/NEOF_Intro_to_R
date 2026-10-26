@@ -11,6 +11,7 @@ The four most commonly used arithmetic <u id='operator_tooltip'>__operators__</u
 - `*` : Multiply
 
 ## Basic arithmetic
+![](/images/plus_sign.png){style="width:150px; border-radius:5px; background: white; border: white solid 5px" fig-align="center"}
 
 Run the following commands in your RStudio __console__.
 
@@ -28,6 +29,7 @@ Each line below represents one command. Once a command is typed out press enter 
 ``` 
 
 ## BODMAS
+![](/images/bodmas_ribbon.png){style="width:500px; border-radius:5px; background: white" fig-align="center"}
 
 R follows the BODMAS rules (Brackets, Orders (powers/roots), Division, Multiplication, Addition, Subtraction). Try out the following commands to demonstrate the usefulness of brackets.
 

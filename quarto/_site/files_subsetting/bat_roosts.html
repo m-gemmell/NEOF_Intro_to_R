@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -77,12 +80,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0b8e113766f0aaf860995efa8b3aa8a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eaf9efb5ff69c09042967cbd085a044f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5981ca9ed2f01d41a9ae447c87bc4519.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a07d9f573de810e4e0204a3fc88c056.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4e6a1594bbf8f5f947181720f4ac8dcb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-24cfeef7f2a87d281aebc36e3f226a79.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-48e7d81eeb1de436c9c69269a6532de2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-d39630f428076f2ede93a0af808caec0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -332,6 +335,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../plots/plots_intro.html"> 
 <span class="menu-text">Plots</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../stats/stats_overview.html"> 
+<span class="menu-text">Stats</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../programming/overview.html"> 
+<span class="menu-text">Programming</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../appendix/neof.html"> 
+<span class="menu-text">Appendix</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -492,7 +507,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Bat roosts</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="..\images/bat_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px"></p>
+<p><img src="../images/bat_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px"></p>
 </figure>
 </div>
 <p>First we will look at the file <a href="https://neof-workshops.github.io/R_j4c0xh/downloads/bat_roosts.csv">bat_roosts.csv</a>. This contains information on the max number of roosts for different Bat species in different UK regions.</p>
@@ -504,7 +519,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="bat-roost-challenge-1">Bat roost challenge 1</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="..\images/bat_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100px"></p>
+<p><img src="../images/bat_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100px"></p>
 </figure>
 </div>
 <p><strong>Read</strong> in the file “bat_roosts.csv” as a <u id="data_frame_tooltip"><strong>data frame</strong></u> <u id="variable_tooltip"><strong>variable</strong></u> called “bat_df”. Ensure the row names contain the Regions (Channel Islands, East Midlands, etc.).</p>
@@ -532,7 +547,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="bat-roost-challenge-2">Bat roost challenge 2</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="..\images/bat_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100px"></p>
+<p><img src="../images/bat_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100px"></p>
 </figure>
 </div>
 <p>Inspect the <u id="variable_tooltip"><strong>variable</strong></u> and ensure there are only numerics within the <u id="data_frame_tooltip"><strong>data frame</strong></u> with all <u id="string_tooltip">strings</u> only being in column and row names.</p>
@@ -541,7 +556,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="bat-roost-challenge-3">Bat roost challenge 3</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="..\images/bat_4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100px"></p>
+<p><img src="../images/bat_4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100px"></p>
 </figure>
 </div>
 <p>Add a row to “bat_df” called “UK” that contains the totals for each Species.</p>
@@ -569,7 +584,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="bat-roost-challenge-4">Bat roost challenge 4</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="..\images/bat_5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100px"></p>
+<p><img src="../images/bat_5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100px"></p>
 </figure>
 </div>
 <p>Add a column to “bat_df” called “All_Bat_Species” that contains the totals for each Region.</p>
@@ -597,7 +612,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="bat-roost-challenge-5">Bat roost challenge 5</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="..\images/bat_6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100px"></p>
+<p><img src="../images/bat_6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100px"></p>
 </figure>
 </div>
 <p>Create a transposed <u id="data_frame_tooltip"><strong>data frame</strong></u> of “bat_df” called “bat_t_df”.</p>
@@ -625,7 +640,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="bat-roost-challenge-6">Bat roost challenge 6</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="..\images/bat_7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100px"></p>
+<p><img src="../images/bat_7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100px"></p>
 </figure>
 </div>
 <p><strong>Write</strong> the <u id="data_frame_tooltip"><strong>data frame</strong></u> “bat_t_df” to a comma separated file called “bat_roosts_t.csv”. Ensure there are no quotes surrounding the row or column names.</p>
@@ -655,7 +670,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="bat-roost-mcqs">Bat roost MCQs</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="..\images/question_bubble_purple.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px; border: white solid 5px"></p>
+<p><img src="../images/question_bubble_purple.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px; border: white solid 5px"></p>
 </figure>
 </div>
 <p>Fantastic! I hope those challenges were engaging and improved your experience working with files and <u id="data_frame_tooltip">data frames</u>.</p>
@@ -1586,7 +1601,7 @@ window.onload = function() {
 <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="CC BY-SA 4.0" height="30"></a></p>
 </div>   
     <div class="nav-footer-center">
-<p><a href="https://neof.org.uk/"><img src="..\images//NEOF_rounded_corners.png" alt="NEOF" height="60"></a></p>
+<p><a href="https://neof.org.uk/"><img src="../images//NEOF_rounded_corners.png" alt="NEOF" height="60"></a></p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

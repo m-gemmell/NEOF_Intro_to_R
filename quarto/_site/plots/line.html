@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -77,12 +80,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0b8e113766f0aaf860995efa8b3aa8a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eaf9efb5ff69c09042967cbd085a044f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5981ca9ed2f01d41a9ae447c87bc4519.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a07d9f573de810e4e0204a3fc88c056.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4e6a1594bbf8f5f947181720f4ac8dcb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-24cfeef7f2a87d281aebc36e3f226a79.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-48e7d81eeb1de436c9c69269a6532de2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-d39630f428076f2ede93a0af808caec0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -620,13 +623,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="basic-line-graph" class="level1">
 <h1>Basic line graph</h1>
 <center>
-<img src="..\images/line_graph.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border:5px white solid">
+<img src="../images/line_graph.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border:5px white solid">
 </center>
 <p>Line graphs are perfect for showing change over time. Knowing this we’ll go back to a data set we have touched before, the file “honey_bee.tsv” from <a href="#honeybeechap">Chapter 9</a>. This file showed the number of Honey Bee colonies in various US states from 2015-2018.</p>
 <section id="read-in-data" class="level2">
 <h2 class="anchored" data-anchor-id="read-in-data">Read in data</h2>
 <center>
-<img src="..\images/read.png" class="img-fluid" style="width:150px; background: white; border-radius:5px">
+<img src="../images/read.png" class="img-fluid" style="width:150px; background: white; border-radius:5px">
 </center>
 <p>The first step is to <strong>read</strong> in the data from the “Chapter_7-9” directory. Once the <strong>data frame</strong> is created we will remove all non 2017 &amp; 2018 information.</p>
 <p><strong>Note</strong>: The <code>../</code> below represents going up one directory. I.e. going up from your current working directory (“Chapter_12-14”) to the main directory so it can be directed to “Chapter_8_files”.</p>
@@ -640,7 +643,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="plotting-a-line-graph" class="level2">
 <h2 class="anchored" data-anchor-id="plotting-a-line-graph">Plotting a line graph</h2>
 <center>
-<img src="..\images/paint_brush.png" class="img-fluid" style="width:150px; background: white; border-radius:5px">
+<img src="../images/paint_brush.png" class="img-fluid" style="width:150px; background: white; border-radius:5px">
 </center>
 <p>We are going to plot the entire information for the state of Minnesota. We will use the <strong>function</strong> <code>plot()</code> with the option <code>type = "l"</code>. This will produce a plot of type “line” (<code>"l"</code>).</p>
 <p>This requires we provide a numeric <strong>vector</strong> for the x axis (option <code>x =</code>) and the y axis (option <code>y =</code>). Currently our quarter and year information is in the row names as strings.</p>
@@ -656,7 +659,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="adding-lines" class="level2">
 <h2 class="anchored" data-anchor-id="adding-lines">Adding lines</h2>
 <center>
-<img src="..\images/lines_black.png" class="img-fluid" style="width:150px; background: white; border-radius:5px; border: 5px white solid">
+<img src="../images/lines_black.png" class="img-fluid" style="width:150px; background: white; border-radius:5px; border: 5px white solid">
 </center>
 <p>This plot looks decent but you normally want more than one line in a line graph. Thankfully we can do this with the <strong>function</strong> <code>lines()</code>. We can add the other three states to the line graph like below:</p>
 <p><strong>Tip</strong>: Remember to use tab completion to auto fill <strong>function</strong>, <strong>variable</strong>, and column names as well as for <strong>function</strong> options.</p>
@@ -1515,7 +1518,7 @@ window.onload = function() {
 <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="CC BY-SA 4.0" height="30"></a></p>
 </div>   
     <div class="nav-footer-center">
-<p><a href="https://neof.org.uk/"><img src="..\images//NEOF_rounded_corners.png" alt="NEOF" height="60"></a></p>
+<p><a href="https://neof.org.uk/"><img src="../images//NEOF_rounded_corners.png" alt="NEOF" height="60"></a></p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

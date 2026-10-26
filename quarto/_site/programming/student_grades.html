@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -76,12 +79,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0b8e113766f0aaf860995efa8b3aa8a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eaf9efb5ff69c09042967cbd085a044f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5981ca9ed2f01d41a9ae447c87bc4519.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a07d9f573de810e4e0204a3fc88c056.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4e6a1594bbf8f5f947181720f4ac8dcb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-24cfeef7f2a87d281aebc36e3f226a79.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-48e7d81eeb1de436c9c69269a6532de2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-d39630f428076f2ede93a0af808caec0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -323,6 +326,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link active" href="../programming/overview.html" aria-current="page"> 
 <span class="menu-text">Programming</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../appendix/neof.html"> 
+<span class="menu-text">Appendix</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -457,13 +464,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="student-grades-example" class="level1">
 <h1>Student grades example</h1>
 <center>
-<img src="..\images/grades.png" class="img-fluid" style="width:200px; background:white; border-radius:15px">
+<img src="../images/grades.png" class="img-fluid" style="width:200px; background:white; border-radius:15px">
 </center>
 <p>In this section we are going to go through analysing datasets of student grades.</p>
 <section id="the-student-grades-data" class="level2">
 <h2 class="anchored" data-anchor-id="the-student-grades-data">The student grades data</h2>
 <center>
-<img src="..\images/data.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: white solid 5px">
+<img src="../images/data.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: white solid 5px">
 </center>
 <p>Download the five following files into your directory “Chapter_17-18”.</p>
 <ul>
@@ -489,7 +496,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="analysis-script" class="level2">
 <h2 class="anchored" data-anchor-id="analysis-script">Analysis script</h2>
 <center>
-<img src="..\images/hashtag2.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: white solid 5px">
+<img src="../images/hashtag2.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: white solid 5px">
 </center>
 <p>Before carrying on I would suggest to set your working directory into the directory “Chapter_17-18”.</p>
 <p>Now create a new R Script and save it as “student_grades.R” in the “Chapter_17-18” directory. It is useful to have your scripts close to their relevant data.</p>
@@ -499,7 +506,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="reading-in-and-preprocessing-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="reading-in-and-preprocessing-the-data">Reading in and preprocessing the data</h2>
 <center>
-<img src="..\images/r_read.png" class="img-fluid" style="width:200px; border-radius:15px; background:white">
+<img src="../images/r_read.png" class="img-fluid" style="width:200px; border-radius:15px; background:white">
 </center>
 <p>We are going to first read in the data and carry out some changes to it. First we’ll carry this out on just the group A data.</p>
 <p>Read in the group A TSV (tab separated value) file:</p>
@@ -592,7 +599,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="combining-the-data-frames" class="level2">
 <h2 class="anchored" data-anchor-id="combining-the-data-frames">Combining the data frames</h2>
 <center>
-<img src="..\images/combine.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: white solid 5px">
+<img src="../images/combine.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: white solid 5px">
 </center>
 <p>A lot of the time we have multiple files but we want all the data to be in one <strong>data frame</strong>.</p>
 <p>The first step is to create a <strong>list</strong> containing our <strong>data frames</strong>. A <strong>list</strong> is just like a <strong>vector</strong> except it can hold heterogeneous data (multiple classes) whilst a <strong>vector</strong> can only contain homogeneous data (one class).</p>
@@ -636,7 +643,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="saving-the-data-frame" class="level2">
 <h2 class="anchored" data-anchor-id="saving-the-data-frame">Saving the data frame</h2>
 <center>
-<img src="..\images/r_save.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: white solid 5px">
+<img src="../images/r_save.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: white solid 5px">
 </center>
 <p>You can write the new <strong>data frame</strong> to a text file. This is good if you want to use the file outside of R.</p>
 <p>What if you want to save a R <strong>object</strong> so you can use it later without having to run all the script you used to create it or <strong>reading</strong> in a file you created?</p>
@@ -657,7 +664,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="scaling-grading" class="level2">
 <h2 class="anchored" data-anchor-id="scaling-grading">Scaling &amp; Grading</h2>
 <center>
-<img src="..\images/letter_grades.png" class="img-fluid" style="width:200px; border-radius:15px; background:white">
+<img src="../images/letter_grades.png" class="img-fluid" style="width:200px; border-radius:15px; background:white">
 </center>
 <p>We currently have the base scores (%) for the students but not their letter grade (A,B,C, or F in this case).</p>
 <p>Before we provide the grades we are going to scale each student’s results. There are complicated ways to do this but we will get the mean score for each topic (math, writing, and reading). For each score below the mean we will minus 5 and for each score above will will add 5. Scores equal to the mean will not be affected.</p>
@@ -739,7 +746,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="some-quick-plots" class="level2">
 <h2 class="anchored" data-anchor-id="some-quick-plots">Some quick plots</h2>
 <center>
-<img src="..\images/bar_chart.png" class="img-fluid" style="width:200px; background:white; border-radius:15px">
+<img src="../images/bar_chart.png" class="img-fluid" style="width:200px; background:white; border-radius:15px">
 </center>
 <p>Below are some quick plots with their code.</p>
 <p>First let us see the distribution of grades for the three topics:</p>
@@ -843,7 +850,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="tips-for-creating-your-own-loops-and-functions" class="level2">
 <h2 class="anchored" data-anchor-id="tips-for-creating-your-own-loops-and-functions">Tips for creating your own loops and functions</h2>
 <center>
-<img src="..\images/tip_box.png" class="img-fluid" style="width:200px; background:white; border-radius:10px">
+<img src="../images/tip_box.png" class="img-fluid" style="width:200px; background:white; border-radius:10px">
 </center>
 <p>Before you go here are some quick tips.</p>
 <ul>
@@ -1700,7 +1707,7 @@ window.onload = function() {
 <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="CC BY-SA 4.0" height="30"></a></p>
 </div>   
     <div class="nav-footer-center">
-<p><a href="https://neof.org.uk/"><img src="..\images//NEOF_rounded_corners.png" alt="NEOF" height="60"></a></p>
+<p><a href="https://neof.org.uk/"><img src="../images//NEOF_rounded_corners.png" alt="NEOF" height="60"></a></p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
