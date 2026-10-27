@@ -469,9 +469,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="../images/function.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px"></p>
 </figure>
 </div>
-<p>R <u id="function_tooltip"><strong>Functions</strong></u> allow the user to carry out specific tasks. R has many inbuilt <u id="function_tooltip"><strong>functions</strong></u> but you can also create your own. Currently we will look at inbuilt <u id="function_tooltip"><strong>functions</strong></u>.</p>
+<p>R <u id="function_tooltip"><strong>Functions</strong></u> allow the user to carry out specific tasks. R has many inbuilt <u id="function_tooltip"><strong>functions</strong></u> but you can also create your own (covered later in the <a href="../programming/functions.html">custom functions page</a>). Currently we will look at inbuilt <u id="function_tooltip"><strong>functions</strong></u>.</p>
 <section id="function-layout" class="level2">
 <h2 class="anchored" data-anchor-id="function-layout">Function layout</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/layout.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px"></p>
+</figure>
+</div>
 <p>The basic layout of a <u id="function_tooltip"><strong>function</strong></u> is (don’t type the below into <code>R</code>):</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">function_name</span>(objects, options)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -481,21 +486,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>The <strong><u id="function_tooltip">function</u> name</strong> (<code>function_name</code>)</li>
 <li>The <strong>object/s</strong> to provide to the <u id="function_tooltip"><strong>function</strong></u>
 <ul>
-<li>This can be numbers, strings, <u id="variable_tooltip"><strong>variables</strong></u> we have created etc</li>
+<li>This can be numbers, strings, <u id="variable_tooltip"><strong>variables</strong></u> we have created etc.</li>
 <li>Most <u id="function_tooltip"><strong>functions</strong></u> require at least one <strong>object</strong></li>
-<li>Some <u id="function_tooltip"><strong>functions</strong></u> can take multiple objects, if multiple <strong>objects</strong> are provided they must be separated by <code>,</code></li>
+<li>Some <u id="function_tooltip"><strong>functions</strong></u> can take multiple objects, if multiple <strong>objects</strong> are provided they must be separated by commas (<code>,</code>)</li>
 </ul></li>
 <li><u id="function_tooltip"><strong>Function</strong></u> options (<code>options</code>)
 <ul>
 <li>Options can be provided to some <u id="function_tooltip"><strong>functions</strong></u> to alter the way they will work</li>
 <li>Some <u id="function_tooltip"><strong>functions</strong></u> don’t have options</li>
 <li>Most options have default modes. If the options is not specified the default mode will be used</li>
-<li>Like <strong>objects</strong>, when using multiple options they must be separated by <code>,</code></li>
+<li>Like <strong>objects</strong>, when using multiple options they must be separated by commas (<code>,</code>)</li>
 </ul></li>
 </ul>
 </section>
 <section id="numerical-rounding-examples" class="level2">
 <h2 class="anchored" data-anchor-id="numerical-rounding-examples">Numerical rounding examples</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/roundabout.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:100px; border: white 5px solid"></p>
+</figure>
+</div>
 <p>Try running the below commands in your Rstudio <strong>console</strong> which utilise 4 different <u id="function_tooltip"><strong>functions</strong></u>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ceiling</span>(<span class="fl">3.5</span>)</span>
@@ -509,27 +519,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="help-page" class="level2">
 <h2 class="anchored" data-anchor-id="help-page">Help page</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/help_page.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px; border: white 5px solid"></p>
+</figure>
+</div>
 <p>You may be able to intuit what the above <u id="function_tooltip"><strong>functions</strong></u> do from their names and output. However, if you are not sure/would like to be certain you can look at the help pages of <u id="function_tooltip"><strong>functions</strong></u>.</p>
 <p>The help page of <u id="function_tooltip"><strong>functions</strong></u> can be accessed in 2 main ways:</p>
 <ul>
-<li>Click on the <strong><u id="function_tooltip">function</u> name</strong> so your cursor is in it and press <strong>F1</strong>.</li>
-<li>Type <code>?</code> followed by the <strong><u id="function_tooltip">function</u> name</strong>. Example below:</li>
+<li>Click on the <strong><u id="function_tooltip">function</u> name</strong> so your cursor is in it and press <strong>F1</strong></li>
+<li>Type <code>?</code> followed by the <strong><u id="function_tooltip">function</u> name</strong>
+<ul>
+<li>Example below:</li>
+</ul></li>
 </ul>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>?ceiling</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-7582955bd99b227bba9f" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-7582955bd99b227bba9f">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-f619ac8e55641de250a9" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-f619ac8e55641de250a9">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-97149628f8d77d1a187b" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-97149628f8d77d1a187b">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-8b3c79cd4a1832cbb438" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-8b3c79cd4a1832cbb438">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-b713d2443318761b8511" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-b713d2443318761b8511">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-885b4078426bd24431bf" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-885b4078426bd24431bf">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 

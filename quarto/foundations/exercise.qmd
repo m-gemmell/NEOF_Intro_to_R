@@ -27,7 +27,7 @@ The `####` creates a [code section](/objects/intro.qmd#code-sections), these wil
 
 The next step is the most tedious, unfortunately tedious repetition is one of the best ways to learn.
 
-Please fill in the __"Exercises.R"__ script with the commands from the [__operators__](/foundations/operators.qmd) and [__variables__](/foundations/variables.qmd) pages. Additionally, add in [annotations](#annotations) so you can easily tell which pages the commands come from and brief lines on their purposes.
+Please fill in the __"Exercises.R"__ script with the commands from the [__operators__](/foundations/operators.qmd) and [__variables__](/foundations/variables.qmd) pages. Additionally, add in [annotations](/foundations/script_editor.html#annotations) so you can easily tell which pages the commands come from and brief lines on their purposes.
 
 Annotations require a balance of enough info but not too much info, you don't always need a line of annotation for each line of code. However, with some complex code sometimes you will need multiple lines of annotation for one line of code. It is all about how much annotation you and possibly others will need for the code at hand. Knowing this requires experience.
 
@@ -36,6 +36,8 @@ Next save the script, ensuring it is called __"Exercises.R"__"
 Finally, close your script by clicking the __"x"__ icon on the tab of the script.
 
 ## Next step
+![](/images/RObjects.png){style="width:200px; background: white; border-radius:5px; border: white 5px solid" fig-align="center"}
+
 
 That is the end of Foundations of R! If you have any questions please ask and we are more than happy to try to answer.
 

@@ -1,9 +1,7 @@
 # Recap
-<center>
-![](/images/question_bubble_black.png){style="width:200px; border-radius:15px; background:white; border: 5px white solid"}
-</center>
+![](/images/question_bubble_black.png){style="width:200px; border-radius:15px; background:white; border: 5px white solid" fig-align="center"}
 
-Splendid! This part covered the foundations of R including [operators](/foundations/operatos), [variables](/foundations/variables), and [functions](/foundations/functions).
+Splendid! This part covered the foundations of R including [operators](/foundations/operators.qmd), [variables](/foundations/variables.qmd), and [functions](/foundations/functions.qmd).
 
 Attempt the below MCQs by choosing the correct option in the below sentences to recap what you have learnt.
 

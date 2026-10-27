@@ -4,6 +4,8 @@
 It is important to know what directory you are working in and how to change to different directories.
 
 ## Commands
+![](/images/folder.png){style="width:150px; background: white; border-radius:5px" fig-align="center"}
+
 Below are commands you can run in the RStudio __console__ or __script editor__ (use of script editor will be taught soon).
 
 Determine what directory you are currently in.
@@ -47,6 +49,7 @@ To show the current working directory in the __Files__ pane click the arrow on t
 ![](/images/see_files.png){style="width:800px; border-radius:5px" fig-align="center"}
 
 ## Course directory task
+![](/images/course_folder.png){style="width:150px; background: white; border-radius:5px" fig-align="center"}
 
 With this information create a directory you will use for this course. This can be done outside of Rstudio or you can use the __Files pane__ in the __MISC window__. Once this is created set your working directory to it. With that done we can go onto the next page.
 

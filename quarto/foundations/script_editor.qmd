@@ -21,7 +21,7 @@ On the new line type the below:
 ``` 
 
 ## Running commands
-![](/images/command.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
+![](/images/command.png){style="width:150px; background: white; border-radius:5px" fig-align="center"}
 
 You can run a command that is in the script editor by one of the two following ways:
 
@@ -30,7 +30,7 @@ You can run a command that is in the script editor by one of the two following w
     - Press __"Ctrl" + "enter"__ ( __"cmd"__ + __"enter"__ for Mac)
 - Highlighting:
     - Highlight the parts you would like and press __"Ctrl" + "enter"__ ( __"cmd"__ + __"enter"__ for Mac)
-    - You can highlight a part of a line, a whole line, and even multiple lines.
+    - You can highlight a part of a line, a whole line, and even multiple lines
 
 Run the commands you currently have in your __script editor__.
 
@@ -40,7 +40,7 @@ I would encourage to primarily use the script editor to write your code. It is b
 
 
 ## Annotations
-![](/images/hashtag.png){style="width:200px; border-radius:5px; background:white" fig-align="center"}
+![](/images/annotation.png){style="width:150px; border-radius:5px; background:white" fig-align="center"}
 
 Annotations can be added to your code in the __script editor__. If a line starts with a `#` it will not be run as a command, this line is then an annotation. This is extremely useful to leave information for your future self. It is much harder to go back to old code and figure out what it does if it is just code.
 
@@ -66,12 +66,14 @@ Finally, one of the best aspects of using the __script editor__ is that you can 
 
 - To save a script you can click the floppy disk (
     `r icons::icon_style(icons::fontawesome("save", style="solid"), fill = "#648fff")`
-    ) on the toolbar of the __source window__. 
-- To save as, go to the RStudio toolbar and click __"File"__ > __"Save As..."__.
+    ) on the toolbar of the __source window__
+- To save as, go to the RStudio toolbar and click __"File"__ > __"Save As..."__
 
 ## Open a saved script
-You can open a previously saved script in 2 main ways:
+![](/images/bottle_opener.png){style="width:125px; border-radius:5px; background:white" fig-align="center"}
 
+
+You can open a previously saved script in 2 main ways:
 
 - Via the __Files pane__ in the __MISC window__
     - Navigate to the directory with the script (you do not need to set the working directory to this directory)
@@ -86,9 +88,7 @@ You can have multiple scripts open at one time and switch between these scripts 
 
 To create and open a new script, click on the button on the RStudio toolbar shown below and select __"R script"__.
 
-<center>
-![](/images/new_script_button.png){style="width:800px"}
-</center>
+![](/images/new_script_button.png){style="width:800px" fig-align="center"}
 
 ```{r, echo=FALSE}
 #Tippy tooltips
