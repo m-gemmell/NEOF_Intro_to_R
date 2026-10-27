@@ -5,6 +5,17 @@ A <u id='scalar_tooltip'>__scalar__</u> consists of one value in an object.
 This can be one <u id='string_tooltip'>__string__</u>, one __numeric__, one <u id='logical_tooltip'>__logical__</u> etc. 
 We have only been working with <u id='scalar_tooltip'>__scalars__</u> thus far but this is about to change. 
 
+Create and run the below code to view a few <u id='scalar_tooltip'>__scalars__</u>.
+
+```{r, eval=FALSE}
+#A number
+1
+#A string
+"How long is a string?"
+#A logical
+TRUE
+```
+
 ```{r, echo=FALSE}
 #Tippy tooltips
 tippy::tippy_this(elementId = "operator_tooltip", 

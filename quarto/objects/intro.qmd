@@ -4,12 +4,31 @@
 In the [foundations part](/foundations/intro.qmd) you learnt how to create a <u id='variable_tooltip'>__variable__</u>. 
 This consisted of assigning (`<-`) an __object__ a name. 
 In this chapter we will learn about __R objects__. 
-There are two major R terminologies to learn to fully understand __R objects__.
+There are two major R terminologies to learn to fully understand __R objects__, <u id='class_tooltip'>__Class__</u> and <u id='data_structure_tooltip'>__Data structure__</u>.
 
-- <u id='class_tooltip'>__Class__</u>: An __R object__ will have a specific class. 
-The <u id='class_tooltip'>__class__</u> determines what the __object__ is. 
-It could be numbers, text, or other types of <u id='class_tooltip'>__classes__</u>.
-- <u id='data_structure_tooltip'>__Data structure__</u>: This determines the structure of an __R object__.
+## Class
+![](/images/category.png){style="width:200px; background: white; border-radius:5px; border: white 5px solid" fig-align="center"}
+
+A R <u id='class_tooltip'>__Class__</u> refers to the type of data.
+There are six basic <u id='class_tooltip'>__classes__</u> in R (Also known as the __atomic <u id='class_tooltip'>classes</u>__). 
+These materials cover:
+
+- [**Numerics**](/objects/numeric.qmd): Numbers
+  - Numeric can come in the form of <u id='integer_tooltip'>__integers__</u> and <u id='double_tooltip'>__doubles__</u>
+- [**Strings**](/objects/string.qmd): Text
+- [**Logicals**](/objects/logical.qmd): `TRUE` or `FALSE` 
+
+There are also the <u id='class_tooltip'>classes</u> __complex__ and __raw__.
+
+## Data structure
+![](/images/data_structure){style="width:150px; background: white; border-radius:5px" fig-align="center"}
+
+<u id='data_structure_tooltip'>__Data structures__</u> describe how data is structured in an __object__. 
+We will focus on 3 main types of <u id='data_structure_tooltip'>__data structures__</u>.
+
+- [**Scalar**](/objects/scalar.qmd): One value
+- [**Vectors** & **Lists**](/objects/vectors_lists.qmd): 1-dimensional structures containing multiple values
+- [**Data frames** & **Matrices**](/objects/data_frames_matrices.qmd): 2-dimensional structures containing multiple values over rows and columns (i.e. tabular)
 
 ## Code sections
 In this part, and for the rest of the course, you will use code sections in your R scripts to separate pages, sections, and parts in this book.

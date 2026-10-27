@@ -74,14 +74,12 @@ website:
     - href: objects/intro.qmd
     - section: "Classes"
       contents:
-      - href: objects/basic_classes.qmd
       - href: objects/numeric.qmd
       - href: objects/logical.qmd
       - href: objects/string.qmd
     - href: objects/code_sections.qmd
     - section: "Data structures"
       contents:
-      - href: objects/data_structure.qmd
       - href: objects/scalar.qmd
       - href: objects/vectors_lists.qmd
       - href: objects/data_frames_matrices.qmd

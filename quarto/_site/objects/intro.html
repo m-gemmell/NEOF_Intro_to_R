@@ -71,7 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../objects/basic_classes.html" rel="next">
+<link href="../objects/numeric.html" rel="next">
 <link href="..//images//NEOF_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -404,12 +404,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../objects/basic_classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Basic classes</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../objects/numeric.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Numeric</span></a>
   </div>
@@ -443,12 +437,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../objects/data_structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3 main structures</span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../objects/scalar.html" class="sidebar-item-text sidebar-link">
@@ -493,6 +481,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#robjectschap" id="toc-robjectschap" class="nav-link active" data-scroll-target="#robjectschap">R objects</a>
   <ul class="collapse">
+  <li><a href="#class" id="toc-class" class="nav-link" data-scroll-target="#class">Class</a></li>
+  <li><a href="#data-structure" id="toc-data-structure" class="nav-link" data-scroll-target="#data-structure">Data structure</a></li>
   <li><a href="#code-sections" id="toc-code-sections" class="nav-link" data-scroll-target="#code-sections">Code sections</a></li>
   </ul></li>
   </ul>
@@ -512,11 +502,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="../images/RObjects.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px; border: white 5px solid"></p>
 </figure>
 </div>
-<p>In the <a href="../foundations/intro.html">foundations part</a> you learnt how to create a <u id="variable_tooltip"><strong>variable</strong></u>. This consisted of assigning (<code>&lt;-</code>) an <strong>object</strong> a name. In this chapter we will learn about <strong>R objects</strong>. There are two major R terminologies to learn to fully understand <strong>R objects</strong>.</p>
+<p>In the <a href="../foundations/intro.html">foundations part</a> you learnt how to create a <u id="variable_tooltip"><strong>variable</strong></u>. This consisted of assigning (<code>&lt;-</code>) an <strong>object</strong> a name. In this chapter we will learn about <strong>R objects</strong>. There are two major R terminologies to learn to fully understand <strong>R objects</strong>, <u id="class_tooltip"><strong>Class</strong></u> and <u id="data_structure_tooltip"><strong>Data structure</strong></u>.</p>
+<section id="class" class="level2">
+<h2 class="anchored" data-anchor-id="class">Class</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/category.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px; border: white 5px solid"></p>
+</figure>
+</div>
+<p>A R <u id="class_tooltip"><strong>Class</strong></u> refers to the type of data. There are six basic <u id="class_tooltip"><strong>classes</strong></u> in R (Also known as the <strong>atomic <u id="class_tooltip">classes</u></strong>). These materials cover:</p>
 <ul>
-<li><u id="class_tooltip"><strong>Class</strong></u>: An <strong>R object</strong> will have a specific class. The <u id="class_tooltip"><strong>class</strong></u> determines what the <strong>object</strong> is. It could be numbers, text, or other types of <u id="class_tooltip"><strong>classes</strong></u>.</li>
-<li><u id="data_structure_tooltip"><strong>Data structure</strong></u>: This determines the structure of an <strong>R object</strong>.</li>
+<li><a href="../objects/numeric.html"><strong>Numerics</strong></a>: Numbers
+<ul>
+<li>Numeric can come in the form of <u id="integer_tooltip"><strong>integers</strong></u> and <u id="double_tooltip"><strong>doubles</strong></u></li>
+</ul></li>
+<li><a href="../objects/string.html"><strong>Strings</strong></a>: Text</li>
+<li><a href="../objects/logical.html"><strong>Logicals</strong></a>: <code>TRUE</code> or <code>FALSE</code></li>
 </ul>
+<p>There are also the <u id="class_tooltip">classes</u> <strong>complex</strong> and <strong>raw</strong>.</p>
+</section>
+<section id="data-structure" class="level2">
+<h2 class="anchored" data-anchor-id="data-structure">Data structure</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/data_structure.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px"></p>
+</figure>
+</div>
+<p><u id="data_structure_tooltip"><strong>Data structures</strong></u> describe how data is structured in an <strong>object</strong>. We will focus on 3 main types of <u id="data_structure_tooltip"><strong>data structures</strong></u>.</p>
+<ul>
+<li><a href="../objects/scalar.html"><strong>Scalar</strong></a>: One value</li>
+<li><a href="../objects/vectors_lists.html"><strong>Vectors</strong> &amp; <strong>Lists</strong></a>: 1-dimensional structures containing multiple values</li>
+<li><a href="../objects/data_frames_matrices.html"><strong>Data frames</strong> &amp; <strong>Matrices</strong></a>: 2-dimensional structures containing multiple values over rows and columns (i.e.&nbsp;tabular)</li>
+</ul>
+</section>
 <section id="code-sections" class="level2">
 <h2 class="anchored" data-anchor-id="code-sections">Code sections</h2>
 <p>In this part, and for the rest of the course, you will use code sections in your R scripts to separate pages, sections, and parts in this book.</p>
@@ -528,56 +546,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-21661dbba8559c0ccf07" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-21661dbba8559c0ccf07">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-3e8325de423590755547" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-3e8325de423590755547">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-4f3a5e677c6f7d23fbf3" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-4f3a5e677c6f7d23fbf3">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-3910fe9ae6f410914b8c" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-3910fe9ae6f410914b8c">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-9440fdcc75f3ab312553" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-9440fdcc75f3ab312553">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-fa1ff629fafae3909a38" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-fa1ff629fafae3909a38">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-6aefef0dd7237c9a732d" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-6aefef0dd7237c9a732d">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-c7897bdcfa6dbb0c6707" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-c7897bdcfa6dbb0c6707">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-3ea53650084d365a0dcb" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-3ea53650084d365a0dcb">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-727df5f1a9224e272fa8" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-727df5f1a9224e272fa8">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-ec2f5e7463791e89da9b" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-ec2f5e7463791e89da9b">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-a8b5e735a1e3c5d81e91" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-a8b5e735a1e3c5d81e91">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-4eceebff7d94a492b1d5" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-4eceebff7d94a492b1d5">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-34cc863b4b7da275f3eb" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-34cc863b4b7da275f3eb">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-de681fd843ba818b73ca" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-de681fd843ba818b73ca">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-bee024ff50f306e2fc1b" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-bee024ff50f306e2fc1b">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-a07cee0483553a8f0d3d" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-a07cee0483553a8f0d3d">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-711d2e8f81ae216ff31f" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-711d2e8f81ae216ff31f">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-6a4f7dba5c5689e762d7" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-6a4f7dba5c5689e762d7">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-2b3ceca1011511635fc3" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-2b3ceca1011511635fc3">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-888ad2f146ac9ebc4d1a" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-888ad2f146ac9ebc4d1a">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-42a08864e9c0ded9648e" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-42a08864e9c0ded9648e">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-dc066e27ed24885b34a6" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-dc066e27ed24885b34a6">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-21fbe49109a55193cd6a" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-21fbe49109a55193cd6a">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-3410ae5ff37975f180a6" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-3410ae5ff37975f180a6">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-e1a953a6f62598aa8990" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-e1a953a6f62598aa8990">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
@@ -1415,8 +1433,8 @@ window.onload = function() {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../objects/basic_classes.html" class="pagination-link" aria-label="Basic classes">
-        <span class="nav-page-text">Basic classes</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../objects/numeric.html" class="pagination-link" aria-label="Numeric">
+        <span class="nav-page-text">Numeric</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

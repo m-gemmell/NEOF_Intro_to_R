@@ -1807,7 +1807,7 @@
     "href": "objects/intro.html",
     "title": "R objects",
     "section": "",
-    "text": "In the foundations part you learnt how to create a variable. This consisted of assigning (&lt;-) an object a name. In this chapter we will learn about R objects. There are two major R terminologies to learn to fully understand R objects.\n\nClass: An R object will have a specific class. The class determines what the object is. It could be numbers, text, or other types of classes.\nData structure: This determines the structure of an R object.\n\n\n\nIn this part, and for the rest of the course, you will use code sections in your R scripts to separate pages, sections, and parts in this book.\nFirst set your working directory to your course directory, create a script, and save it as “2-Objects.R”.\nNext create a code section at the top of this script called “Classes”.\nIn other words have the below at the top of your script:\n\n# Classes ####",
+    "text": "In the foundations part you learnt how to create a variable. This consisted of assigning (&lt;-) an object a name. In this chapter we will learn about R objects. There are two major R terminologies to learn to fully understand R objects, Class and Data structure.\n\n\n\n\n\n\n\nA R Class refers to the type of data. There are six basic classes in R (Also known as the atomic classes). These materials cover:\n\nNumerics: Numbers\n\nNumeric can come in the form of integers and doubles\n\nStrings: Text\nLogicals: TRUE or FALSE\n\nThere are also the classes complex and raw.\n\n\n\n\n\n\n\n\nData structures describe how data is structured in an object. We will focus on 3 main types of data structures.\n\nScalar: One value\nVectors & Lists: 1-dimensional structures containing multiple values\nData frames & Matrices: 2-dimensional structures containing multiple values over rows and columns (i.e. tabular)\n\n\n\n\nIn this part, and for the rest of the course, you will use code sections in your R scripts to separate pages, sections, and parts in this book.\nFirst set your working directory to your course directory, create a script, and save it as “2-Objects.R”.\nNext create a code section at the top of this script called “Classes”.\nIn other words have the below at the top of your script:\n\n# Classes ####",
     "crumbs": [
       "Objects",
       "R objects"
@@ -1889,7 +1889,7 @@
     "href": "objects/scalar.html",
     "title": "Scalar",
     "section": "",
-    "text": "Scalar\n\n\n\n\n\nA scalar consists of one value in an object. This can be one string, one numeric, one logical etc. We have only been working with scalars thus far but this is about to change.",
+    "text": "Scalar\n\n\n\n\n\nA scalar consists of one value in an object. This can be one string, one numeric, one logical etc. We have only been working with scalars thus far but this is about to change.\nCreate and run the below code to view a few scalars.\n\n#A number\n1\n#A string\n\"How long is a string?\"\n#A logical\nTRUE",
     "crumbs": [
       "Objects",
       "Data structures",
@@ -2558,6 +2558,28 @@
     "crumbs": [
       "Intro",
       "Overview"
+    ]
+  },
+  {
+    "objectID": "objects/intro.html#class",
+    "href": "objects/intro.html#class",
+    "title": "R objects",
+    "section": "",
+    "text": "A R Class refers to the type of data. There are six basic classes in R (Also known as the atomic classes). These materials cover:\n\nNumerics: Numbers\n\nNumeric can come in the form of integers and doubles\n\nStrings: Text\nLogicals: TRUE or FALSE\n\nThere are also the classes complex and raw.",
+    "crumbs": [
+      "Objects",
+      "R objects"
+    ]
+  },
+  {
+    "objectID": "objects/intro.html#data-structure",
+    "href": "objects/intro.html#data-structure",
+    "title": "R objects",
+    "section": "",
+    "text": "Data structures describe how data is structured in an object. We will focus on 3 main types of data structures.\n\nScalar: One value\nVectors & Lists: 1-dimensional structures containing multiple values\nData frames & Matrices: 2-dimensional structures containing multiple values over rows and columns (i.e. tabular)",
+    "crumbs": [
+      "Objects",
+      "R objects"
     ]
   }
 ]
