@@ -3,9 +3,7 @@
   "result": {
     "engine": "knitr",
     "markdown": "# Exercises overview\n<center>\n![](/images/penguin.png){style=\"width:200px; background:white; border-radius:15px\"}\n</center>\n\nThese exercises will primarily use the \"penguin_df\" from the theory and practice session.\n\nPlease use your \"Exercises.R\" script for this exercise and the main workshop directory as the working directory. Ensure you are using annotations and code sections to keep the contents clear and separated.\n\nFor convenience the code to load the Penguin __data frame__ directory will be:\n\n::: {.cell}\n\n```{.r .cell-code}\npenguin_df <- read.csv(\"Chapter_12-14/penguin.tsv\", \n                      check.names = FALSE,\n                      stringsAsFactors = TRUE,\n                      sep = \"\\t\"\n                      )\n```\n:::\n\n\nYour plots might not look exactly the same. As long as your plot contains the same data it is good.\n\nSolutions are in the expandable boxes. \nTry your best to solve each challenge but use the solutions for help if you would like. \nEven if your method works it can be good to check the solution as there are many ways to do the same thing in R.",
-    "supporting": [
-      "exercises_files"
-    ],
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

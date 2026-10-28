@@ -12,6 +12,8 @@ This function will combine the provided objects into a single <u id='vector_tool
 There is more to __lists__ but we will not go into them.
 
 ## Creating vector variables
+![](/images/list_5.png){style="width:150px; background: white; border-radius:5px" fig-align="center"}
+
 
 Run the following commands to produce <u id='variable_tooltip'>__variables__</u> which contain <u id='vector_tooltip'>__vectors__</u>.
 
@@ -25,28 +27,38 @@ animals
 ```
 
 ## Elements and indices
+![](/images/index_3.png){style="width:150px; background: white; border-radius:5px" fig-align="center"}
 
-Elements of a <u id='vector_tooltip'>__vector__</u> can be accessed through their indices:
+Elements of a <u id='vector_tooltip'>__vector__</u> can be accessed through their indices.
 
 ```{r eval=FALSE}
+#Fifth element
 birds <- animals[5]
 birds
+#First to second element
 aquatic <- animals[1:2]
 aquatic
+#Fourth, sixth, and seventh element
 rodents <- animals[c(4,6,7)]
 rodents
+#All except the fifth element
 mammals <- animals[-5]
 mammals
 ```
 
 ## Operators & functions
+![](/images/vector_operator.png){style="width:150px; background: white; border-radius:5px" fig-align="center"}
 
 You can use <u id='operator_tooltip'>__operators__</u> and <u id='function_tooltip'>__functions__</u> on a <u id='vector_tooltip'>__vector__</u>. 
 When you do each <u id='scalar_tooltip'>__scalar__</u> within the <u id='vector_tooltip'>__vector__</u> will be acted upon.
 ```{r eval=FALSE}
+#Minus 1 form all element
 number_vec - 1
+#Multiple all elements by 2
 number_vec * 2
+#Log value of all elements
 log(number_vec)
+#The length of vector (i.e. the number of elements)
 length(rodents)
 ```
 
@@ -57,17 +69,21 @@ summary(number_vec)
 ```
 
 ## Comparisons
+![](/images/comparisons.png){style="width:150px; background: white; border-radius:5px" fig-align="center"}
 
 We can also test the values within <u id='vector_tooltip'>__vectors__</u>:
 ```{r eval=FALSE}
+#Provides vector of logical values for each element
 aquatic == "Whale"
 number_vec > 4
+#Prints elements with values >4
 number_vec[number_vec > 4]
 ```
 
 ## paste()
+![](/images/gluestick.png){style="width:150px; background: white; border-radius:5px" fig-align="center"}
 
-The `paste()` <u id='function_tooltip'>__function__</u> can be used to paste __<u id='string_tooltip'>string</u> <u id='scalar_tooltip'>scalars</u>__ to other __<u id='string_tooltip'>string</u> <u id='scalar_tooltip'>scalars</u>__ or to __<u id='string_tooltip'>string</u> <u id='vector_tooltip'>vectors</u>__:
+The `paste()` <u id='function_tooltip'>__function__</u> can be used to paste __<u id='string_tooltip'>string</u> <u id='scalar_tooltip'>scalars</u>__ to other __<u id='string_tooltip'>string</u> <u id='scalar_tooltip'>scalars</u>__ or to __<u id='string_tooltip'>string</u> <u id='vector_tooltip'>vectors</u>__.
 ```{r eval=FALSE}
 paste("Animals", animals)
 bird_or_mammal <- c("mammal","mammal","mammal","mammal","bird","mammal","mammal","mammal")

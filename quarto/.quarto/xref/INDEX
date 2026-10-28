@@ -385,5 +385,11 @@
   },
   "appendix/neof.qmd": {
     "neof.html": "d9d247c2"
+  },
+  "objects/numeric.knit.md": {
+    "numeric.knit.html": "6bba729e"
+  },
+  "objects/string.knit.md": {
+    "string.knit.html": "a742f80c"
   }
 }

@@ -481,68 +481,70 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="handy-tips-tricks" class="level1">
 <h1>Handy tips &amp; tricks</h1>
-<center>
-<img src="../images/magic.png" class="img-fluid" style="width:200px; border-radius:15px; background:white">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/magic.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; border-radius:15px; background:white"></p>
+</figure>
+</div>
 <p>Welcome to Chapter 10! This chapter will include coding to reinforce what you have learnt up to this point. There will also be plenty of new handy <u id="function_tooltip"><strong>functions</strong></u> and some more concepts to learn.</p>
 <p>For this chapter create a directory called “Chapter_10-11” in your main directory and set it as the working directory. Then create a script called “4-Handy_tips.R”. Remember to use annotations (<code>#</code>) and code sections (<code>####</code>)!</p>
 <p>I’ll first introduce you to some R conventions and then some useful abilities of RStudio.</p>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-c0950b4cfaab0ecb7653" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-c0950b4cfaab0ecb7653">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-0c8a1cf98e8459d09ef4" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-0c8a1cf98e8459d09ef4">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-bec1bbbbbf8097724e9c" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-bec1bbbbbf8097724e9c">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d39f42900543f4e45f08" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-d39f42900543f4e45f08">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-1c82f3ea4073c026aae7" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-1c82f3ea4073c026aae7">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-a75af7a79d7e914ec500" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-a75af7a79d7e914ec500">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-ac64dbb488b8478cfc98" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-ac64dbb488b8478cfc98">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-05f2d7567199396df78d" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-05f2d7567199396df78d">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-bf6052c9ec75ad1a3216" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-bf6052c9ec75ad1a3216">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-063e0cd329d5e979695e" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-063e0cd329d5e979695e">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-6680ad3d798d4cf3d500" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-6680ad3d798d4cf3d500">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d16c8d89c14888fcf766" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-d16c8d89c14888fcf766">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-19130e452664c333a7f6" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-19130e452664c333a7f6">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-e0b5d5543179806e3dbb" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-e0b5d5543179806e3dbb">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-7070d0c09467f60ac7d5" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-7070d0c09467f60ac7d5">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-79aa09901a214e0cca9f" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-79aa09901a214e0cca9f">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-8595df64f366a46afe7d" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-8595df64f366a46afe7d">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-28dce485cc6e94ac79eb" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-28dce485cc6e94ac79eb">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-34742d6f1afa5d104f38" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-34742d6f1afa5d104f38">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-f753530c60678057ad1c" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-f753530c60678057ad1c">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-eec1473032576003ade0" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-eec1473032576003ade0">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-93167009a7de603c09c4" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-93167009a7de603c09c4">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-8bb57e150bd9b811df6a" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-8bb57e150bd9b811df6a">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-11f10d59bc5ad11e9afe" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-11f10d59bc5ad11e9afe">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d68e2fe37fa7449705e0" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-d68e2fe37fa7449705e0">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-12695654a4c07203b959" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-12695654a4c07203b959">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-26331d3902af75c53c6b" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-26331d3902af75c53c6b">{"x":{"element":"assignment_tooltip","opts":{"content":"<-","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-a5ea2cb22710096327de" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-a5ea2cb22710096327de">{"x":{"element":"assignment_tooltip","opts":{"content":"<-","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 

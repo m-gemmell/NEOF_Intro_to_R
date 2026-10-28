@@ -10,6 +10,7 @@ Double quotes (`""`) are preferred but single quotes can also be used (`''`).
 Below are some examples to get some practice with <u id='string_tooltip'>__strings__</u>.
 
 ## Text
+![](/images/text_icon.png){style="width:150px; background: white; border-radius:5px; border: 0px white solid" fig-align="center"}
 
 A __<u id='string_tooltip'>string</u> object__ can consist of a <u id='string_tooltip'>string</u> containing one __character__:
 ```{r eval=FALSE}
@@ -32,6 +33,7 @@ long_string
 ```
 
 ## Numbers
+![](/images/number_text.png){style="width:250px; background: white; border-radius:5px; border: 0px white solid" fig-align="center"}
 
 A <u id='string_tooltip'>__string__</u> doesn't need letters, it can consist of only numbers. 
 ```{r eval=FALSE}
@@ -45,6 +47,7 @@ The terms <u id='string_tooltip'>__string__</u> and __character__ can be used in
 :::
 
 ## String conversion
+![](/images/string_conversion.png){style="width:400px; background: white; border-radius:5px; border: 0px white solid" fig-align="center"}
 
 You can convert a __numeric__ to a <u id='string_tooltip'>__string/character__</u>.
 ```{r eval=FALSE}
@@ -66,15 +69,20 @@ as.numeric("not_a_number_12")
 ```
 
 ## Logical comparisons
+![](/images/trueorfalse.png){style="width:150px; background: white; border-radius:5px; border: 0px white solid" fig-align="center"}
 
-You can use certain __<u id='logical_tooltip'>logical</u> <u id='operator_tooltip'>operators</u>__ to compare <u id='string_tooltip'>__strings__</u> though:
+You can use certain __<u id='logical_tooltip'>logical</u> <u id='operator_tooltip'>operators</u>__ to compare <u id='string_tooltip'>__strings__</u>.
 ```{r eval=FALSE}
+# "character" the same as "character"
 "character" == "character"
+#"1066" not the same as "character"
 "1066" != "character"
+#"numeric" the same as "string"
 "numeric" == "string"
 ```
 
-## Combing strings
+## Combining strings
+![](/images/combine_icon.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
 
 The __paste() <u id='function_tooltip'>function</u>__ is very useful to combine two or more <u id='string_tooltip'>__strings__</u> into one.
 ```{r eval=FALSE}

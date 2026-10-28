@@ -405,12 +405,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../objects/basic_classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Basic classes</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../objects/numeric.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Numeric</span></a>
   </div>
@@ -444,12 +438,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../objects/data_structure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">3 main structures</span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../objects/scalar.html" class="sidebar-item-text sidebar-link">
@@ -522,6 +510,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><u id="vector_tooltip"><strong>Vectors</strong></u> and <strong>lists</strong> are both 1-dimensional <u id="data_structure_tooltip"><strong>data structures</strong></u>. <u id="vector_tooltip"><strong>Vectors</strong></u> can only contain one <u id="class_tooltip"><strong>class</strong></u> (homogeneous) whilst <strong>lists</strong> can contain multiple (heterogeneous). There is more to <strong>lists</strong> but we will not go into them.</p>
 <section id="creating-vector-variables" class="level2">
 <h2 class="anchored" data-anchor-id="creating-vector-variables">Creating vector variables</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/list_5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px"></p>
+</figure>
+</div>
 <p>Run the following commands to produce <u id="variable_tooltip"><strong>variables</strong></u> which contain <u id="vector_tooltip"><strong>vectors</strong></u>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>number_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">8</span>,<span class="dv">16</span>)</span>
@@ -534,26 +527,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="elements-and-indices" class="level2">
 <h2 class="anchored" data-anchor-id="elements-and-indices">Elements and indices</h2>
-<p>Elements of a <u id="vector_tooltip"><strong>vector</strong></u> can be accessed through their indices:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/index_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px"></p>
+</figure>
+</div>
+<p>Elements of a <u id="vector_tooltip"><strong>vector</strong></u> can be accessed through their indices.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>birds <span class="ot">&lt;-</span> animals[<span class="dv">5</span>]</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>birds</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>aquatic <span class="ot">&lt;-</span> animals[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>aquatic</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>rodents <span class="ot">&lt;-</span> animals[<span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">7</span>)]</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>rodents</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>mammals <span class="ot">&lt;-</span> animals[<span class="sc">-</span><span class="dv">5</span>]</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>mammals</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Fifth element</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>birds <span class="ot">&lt;-</span> animals[<span class="dv">5</span>]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>birds</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#First to second element</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>aquatic <span class="ot">&lt;-</span> animals[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>aquatic</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Fourth, sixth, and seventh element</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>rodents <span class="ot">&lt;-</span> animals[<span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">7</span>)]</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>rodents</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">#All except the fifth element</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>mammals <span class="ot">&lt;-</span> animals[<span class="sc">-</span><span class="dv">5</span>]</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>mammals</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="operators-functions" class="level2">
 <h2 class="anchored" data-anchor-id="operators-functions">Operators &amp; functions</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/vector_operator.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px"></p>
+</figure>
+</div>
 <p>You can use <u id="operator_tooltip"><strong>operators</strong></u> and <u id="function_tooltip"><strong>functions</strong></u> on a <u id="vector_tooltip"><strong>vector</strong></u>. When you do each <u id="scalar_tooltip"><strong>scalar</strong></u> within the <u id="vector_tooltip"><strong>vector</strong></u> will be acted upon.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>number_vec <span class="sc">-</span> <span class="dv">1</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>number_vec <span class="sc">*</span> <span class="dv">2</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(number_vec)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(rodents)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Minus 1 form all element</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>number_vec <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Multiple all elements by 2</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>number_vec <span class="sc">*</span> <span class="dv">2</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Log value of all elements</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(number_vec)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#The length of vector (i.e. the number of elements)</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(rodents)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Some <u id="function_tooltip"><strong>functions</strong></u> are specifically used for <u id="vector_tooltip"><strong>vectors</strong></u>:</p>
 <div class="cell">
@@ -563,16 +574,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="comparisons" class="level2">
 <h2 class="anchored" data-anchor-id="comparisons">Comparisons</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/comparisons.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px"></p>
+</figure>
+</div>
 <p>We can also test the values within <u id="vector_tooltip"><strong>vectors</strong></u>:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>aquatic <span class="sc">==</span> <span class="st">"Whale"</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>number_vec <span class="sc">&gt;</span> <span class="dv">4</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>number_vec[number_vec <span class="sc">&gt;</span> <span class="dv">4</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Provides vector of logical values for each element</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>aquatic <span class="sc">==</span> <span class="st">"Whale"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>number_vec <span class="sc">&gt;</span> <span class="dv">4</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Prints elements with values &gt;4</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>number_vec[number_vec <span class="sc">&gt;</span> <span class="dv">4</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="paste" class="level2">
 <h2 class="anchored" data-anchor-id="paste">paste()</h2>
-<p>The <code>paste()</code> <u id="function_tooltip"><strong>function</strong></u> can be used to paste <strong><u id="string_tooltip">string</u> <u id="scalar_tooltip">scalars</u></strong> to other <strong><u id="string_tooltip">string</u> <u id="scalar_tooltip">scalars</u></strong> or to <strong><u id="string_tooltip">string</u> <u id="vector_tooltip">vectors</u></strong>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/gluestick.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px"></p>
+</figure>
+</div>
+<p>The <code>paste()</code> <u id="function_tooltip"><strong>function</strong></u> can be used to paste <strong><u id="string_tooltip">string</u> <u id="scalar_tooltip">scalars</u></strong> to other <strong><u id="string_tooltip">string</u> <u id="scalar_tooltip">scalars</u></strong> or to <strong><u id="string_tooltip">string</u> <u id="vector_tooltip">vectors</u></strong>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"Animals"</span>, animals)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>bird_or_mammal <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"mammal"</span>,<span class="st">"mammal"</span>,<span class="st">"mammal"</span>,<span class="st">"mammal"</span>,<span class="st">"bird"</span>,<span class="st">"mammal"</span>,<span class="st">"mammal"</span>,<span class="st">"mammal"</span>)</span>
@@ -581,56 +604,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-5d2c24c78e7e498241b1" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-5d2c24c78e7e498241b1">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-71b2c448ae4606ae1913" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-71b2c448ae4606ae1913">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-289a67c42ab0801aa7e8" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-289a67c42ab0801aa7e8">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-34fce841ce8bae95596a" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-34fce841ce8bae95596a">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-ec5f7ff11260b776b342" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-ec5f7ff11260b776b342">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-3a1c479756238ad113a7" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-3a1c479756238ad113a7">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-582700f98c1fc8326c5c" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-582700f98c1fc8326c5c">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-2abc22a5e976203b3197" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-2abc22a5e976203b3197">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-a6fdff4d391e5052e72c" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-a6fdff4d391e5052e72c">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-90b01b56574ed39f70e2" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-90b01b56574ed39f70e2">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-afb111e887322393895c" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-afb111e887322393895c">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-956a814578fcb545e768" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-956a814578fcb545e768">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-871dfe14d9836a8f790c" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-871dfe14d9836a8f790c">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-caae87dca98db5b94d60" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-caae87dca98db5b94d60">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d558131aa125528f0298" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-d558131aa125528f0298">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d291a8e060f8f895f333" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-d291a8e060f8f895f333">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-4c3b2266f8b4dfc828f6" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-4c3b2266f8b4dfc828f6">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-e6fa5e81e96a19b3e82f" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-e6fa5e81e96a19b3e82f">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-fda6431713309310fbd7" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-fda6431713309310fbd7">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-6f0be7a577e65d46fa66" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-6f0be7a577e65d46fa66">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-b76772b40958896c8b7f" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-b76772b40958896c8b7f">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-6bb6e75d405814032912" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-6bb6e75d405814032912">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-31d8b6832332cc03df64" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-31d8b6832332cc03df64">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-90ca9974cb1b1c9ab3a1" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-90ca9974cb1b1c9ab3a1">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-bab3fb6858900aefca07" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-bab3fb6858900aefca07">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-e605b40ae90339f3effd" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-e605b40ae90339f3effd">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 

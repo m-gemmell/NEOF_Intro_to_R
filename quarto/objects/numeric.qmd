@@ -9,15 +9,16 @@ Most of the time you will only need to know if your data is __numeric__ and you 
 The exception being if you are working with decimals and your decimals are not showing up. 
 This probably means that your __object__ has the __<u id='integer_tooltip'>integer</u> <u id='class_tooltip'>class</u>__.
 
-Type and run the below command, using the provided annotation to understand what the commands are doing.
+In this page and other commands will contain more annotations describing what they do.
 
 ::: {.callout-tip}
 Remember you can copy and paste old script.
 :::
 
 ## Display class
+![](/images/digital_clock.png){style="width:200px; background: white; border-radius:5px; border: white solid 0px" fig-align="center"}
 
-Use the __function__ `class()` to show the <u id='class_tooltip'>__class__</u> of an R __object__:
+Use the __function__ `class()` to show the <u id='class_tooltip'>__class__</u> of an R __object__.
 ```{r eval=FALSE}
 #Numeric
 #Class of 2
@@ -29,14 +30,15 @@ class(6)
 ```
 
 ## Converting pi
+![](/images/pie.png){style="width:200px; background: white; border-radius:100px; border: white solid 0px" fig-align="center"}
 
-Create a <u id='variable_tooltip'>__variable__</u> with the __name__ "pie" containing the __numeric__ 3.14:
+Create a <u id='variable_tooltip'>__variable__</u> with the __name__ "pie" containing the __numeric__ 3.14.
 ```{r eval=FALSE}
 #Creating a variable using the assignment operator
 pie <- 3.14
 ```
 
-Use the <u id='function_tooltip'>__functions__</u> `as.numeric()`, `as.integer()`, and `as.double()` to print the <u id='variable_tooltip'>__variable__</u> as a __numeric__, as an <u id='integer_tooltip'>__integer__</u>, and as a <u id='double_tooltip'>__double__</u>:
+Use the <u id='function_tooltip'>__functions__</u> `as.numeric()`, `as.integer()`, and `as.double()` to print the <u id='variable_tooltip'>__variable__</u> as a __numeric__, as an <u id='integer_tooltip'>__integer__</u>, and as a <u id='double_tooltip'>__double__</u>.
 ```{r eval=FALSE}
 #Printing out previously made variable as numeric, integer, and double
 as.numeric(pie)
@@ -45,6 +47,7 @@ as.double(pie)
 ```
 
 ## Nested functions
+![](/images/nest.png){style="width:200px; background: white; border-radius:5px; border: white solid 0px" fig-align="center"}
 
 You can put a <u id='function_tooltip'>__function__</u> as the <u id='variable_tooltip'>__variable__</u> within a <u id='function_tooltip'>__function__</u> (known as nesting). 
 
@@ -65,8 +68,9 @@ Remember to ask for help if you need it!
 :::
 
 ## Inbuilt variables
+![](/images/pi.png){style="width:200px; background: white; border-radius:100px; border: white solid 0px" fig-align="center"}
 
-On a side note, R comes with some inbuilt <u id='variable_tooltip'>variables</u> such as `pi`:
+On a side note, R comes with some inbuilt <u id='variable_tooltip'>variables</u> such as `pi`.
 ```{r eval=FALSE}
 #The R pi is equal to 3.141593
 pi

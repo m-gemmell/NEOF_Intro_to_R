@@ -8,6 +8,7 @@ A <u id='matrix_tooltip'>__matrix__</u> only contains 1 <u id='class_tooltip'>__
 Most of the time <u id='data_frame_tooltip'>__data frames__</u> and <u id='matrix_tooltip'>__matrices__</u> can be treated the same. Because of this I generally use <u id='data_frame_tooltip'>__data frames__</u> and so we will focus on them.
 
 ## mtcars dataset
+![](/images/car.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
 
 R comes with a set of pre-loaded data. If you are interested you can use the <u id='function_tooltip'>__function__</u> `data()` to see the full list.
 
@@ -35,6 +36,7 @@ rm(cars_info)
 ```
 
 ## Creating a data frame
+![](/images/oystercatcher.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
 
 Now it is time to create our own <u id='data_frame_tooltip'>__data frame__</u>.
 
@@ -56,6 +58,7 @@ beach_df <- data.frame(Crab,Oystercatcher,Starfish)
 
 
 ## Viewing the data frame
+![](/images/view_pc.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
 
 Look at the <u id='variable_tooltip'>__variable__</u> "beach_df" (it is useful to use "df" in __<u id='variable_tooltip'>variable</u> names__ to signify it is a <u id='data_frame_tooltip'>__data frame__</u>) and you will see that each <u id='vector_tooltip'>__vector__</u> has become a column. 
 The __<u id='variable_tooltip'>variable</u> names__ have become the column names (this is why we used capital letters in the __<u id='variable_tooltip'>variable</u> names__).
