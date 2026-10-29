@@ -91,12 +91,20 @@ website:
     align: left
     contents:
     - href: files_subsetting/intro.qmd
-    - href: files_subsetting/reading.qmd
-    - section: "Subsetting"
+    - section: "Reading"
       contents:
-      - href: files_subsetting/subsetting.qmd
-      - href: files_subsetting/vector_subsetting.qmd
-      - href: files_subsetting/data_frame_subsetting.qmd
+      - href: files_subsetting/viewing.qmd
+      - href: files_subsetting/read_csv.qmd
+      - href: files_subsetting/read_tsv.qmd
+      - href: files_subsetting/read_xl.qmd
+    - section: "Vector subsetting"
+      contents:
+      - href: files_subsetting/foundation_vector_subsetting.qmd
+      - href: files_subsetting/complex_vector_subsetting.qmd
+    - section: "Data frame subsetting"
+      contents:
+      - href: files_subsetting/foundation_data_frame_subsetting.qmd
+      - href: files_subsetting/complex_data_frame_subsetting.qmd
     - href: files_subsetting/writing.qmd
     - href: files_subsetting/recap.qmd
     - section: "Exercises"

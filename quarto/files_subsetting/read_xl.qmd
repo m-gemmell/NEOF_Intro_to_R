@@ -1,0 +1,99 @@
+# Suffixes, separators, and excel files
+![](/images/file_explorer.png){style="width:200px; background:white; border-radius:5px; border: 5px solid white" fig-align="center"}
+
+You have learnt how to read in .csv and .tsv files.
+However, you may encounter text files with other separators or you may even want to read in an excel file.
+
+## File suffixes
+![](/images/txt_files.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+There are many types of file suffixes, including:
+
+- .csv: Command Separated Value
+- .tsv: Tab Separated Value
+- .txt: Text file
+- .zip: Compressed file/directory
+- .mp3: MPEG-1 Audio Layer III
+
+An important note of file suffixes is that they are arbitrary.
+If you change the suffix of a zipped file from .zip to .banana it is still a zip file.
+File suffixes are for the benefit of the user and so programs know what type of file the file is.
+A music file called "September.banana" will still contain the song data but most media players won't know what to do with it if it does not have the correct file suffix.
+
+## Separators
+![](/images/separate.png){style="width:200px; background:white; border-radius:5px; border: 5px solid white" fig-align="center"}
+
+Why is this relevant to you?
+Though you may encounter files with the suffix .csv or .tsv and therefore know which separator to use (`,` or `\t`), it is likely you will also encounter .txt files.
+Most .txt files will be tab separated (`\t`) but they may also be comma separated (`,`).
+Therefore [viewing](/files_subsetting/reading.html) your files can be very useful before reading it in.
+
+Additionally, other file separators that may be used include:
+
+- Space (` `) 
+- Tilde (`~`)
+- Colon (`:`)
+- Semi-colon (`;`)
+- Pipe (`|`)
+
+
+## Excel files
+![](/images/readxl.png){style="width:150px; background: white; border-radius:5px; border: 5px solid white" fig-align="center"}
+
+You may want to open excel files with R. Normally to do this I open the file in excel and save it as a <u id='csv'>**.csv**</u> or a <u id='tsv'>**.tsv**</u> file and __read__ this into R. Alternatively there are R packages that can directly __read__ in excel files. If this is something you would like to do you can look at the following package:
+
+<https://readxl.tidyverse.org/>
+
+An important note is that __reading__ in a file into R will not change the file. You are creating a new R __object__. Modifying this __object__ will not alter the original file. Later in the materials we will look into how to create new files or overwrite files by __writing__.
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "csv", 
+                  tooltip = "csv = Comma Seperated Value, i.e. fields/columns are sperated by commas (,)",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "tsv", 
+                  tooltip = "tsc = Tab Seperated Value, i.e. fields/columns are sperated by tabs (\t)",
+                  arrow = TRUE, placement = "bottom")
+```

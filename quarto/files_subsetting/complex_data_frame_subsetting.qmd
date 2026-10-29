@@ -1,0 +1,163 @@
+# Complex Data frame subsetting
+![](/images/gear_2.png){style="width:200px; background:white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+There are many different ways to index <u id='data_frame_tooltip'>__Data frames__</u>.
+
+This page includes the following more complex topics:
+
+- Printing the top of a <u id='data_frame_tooltip'>__data frame__</u> with `head()`
+- Subsetting all rows or all columns
+- Subsetting columns with the dollar sign (`$`)
+- Using <u id='vector_tooltip'>__vector__</u> <u id='function_tooltip'>__functions__</u> with subsetted data
+- Using <u id='data_frame_tooltip'>__data frame__</u> <u id='function_tooltip'>__functions__</u> with subsetted data
+- Transposing <u id='data_frame_tooltip'>**data frames**</u> with `t()`
+
+## head()
+![](/images/heads.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+A quick <u id='function_tooltip'>__function__</u> to subset a <u id='data_frame_tooltip'>__data frame__</u> is `head()`. 
+By default it will return the first 6 rows.
+```{r eval=FALSE}
+#Return first 6 rows
+head(parks_df)
+#Return first 10 rows
+head(parks_df, 10)
+```
+
+The <u id='data_frame_tooltip'>__data frame__</u> is quite large. 
+We will therefore use the `head()` <u id='function_tooltip'>__function__</u> and the <u id='assignment_tooltip'>__assignment operator__</u> to make the <u id='data_frame_tooltip'>__data frame__</u> smaller for further examples.
+
+```{r eval=FALSE}
+parks_df <- head(parks_df, 20)
+```
+
+## Subset all rows or columns
+![](/images/columns.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+To return all the rows of the specified columns you can leave the part before the comma empty. 
+Similarly you can leave the part after the comma empty to return all of the columns of the specified rows. 
+Leave both sides empty and you will get the entire __data frame__.
+
+```{r eval=FALSE}
+parks_df[,]
+parks_df[,2]
+parks_df[3,]
+parks_df[,"State"]
+parks_df[2:4,]
+```
+
+## Subsetting columns with $
+![](/images/dollar_coin.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+The sign `$` allows you to indicate which column you would like from the <u id='data_frame_tooltip'>__data frame__</u>. 
+This is done like so:
+```{r eval=FALSE}
+parks_df$State
+parks_df$Amphibian
+parks_df$Fish
+```
+
+You will notice that the above commands return <u id='vector_tooltip'>__vectors__</u>. 
+We can therefore subset these <u id='vector_tooltip'>__vectors__</u> with `[]`:
+```{r eval=FALSE}
+parks_df$State[2]
+parks_df$Amphibian[2]
+parks_df$Fish[4:7]
+```
+
+## Vector functions
+
+Below are a selection of useful <u id='function_tooltip'>__functions__</u> that can be used on <u id='vector_tooltip'>__vectors__</u>.
+```{r eval=FALSE}
+#Sum the values of a numeric vector
+sum(parks_df$Mammal)
+#Mean of the values of a numeric vector
+mean(parks_df$Mammal)
+```
+
+## Data frame functions
+
+The above <u id='function_tooltip'>__functions__</u> are useful but limted if you are working with <u id='data_frame_tooltip'>__data frames__</u>. 
+Thankfully there are also many <u id='function_tooltip'>__functions__</u> used specifically for <u id='data_frame_tooltip'>__data frames__</u> (they can also be used for matrices).
+```{r eval=FALSE}
+#Sum numeric columns
+colSums(parks_df[,3:6])
+#Sum numeric rows
+rowSums(parks_df[,4:5])
+#Mean of numeric columns
+colMeans(parks_df[,3:6])
+#Mean of numeric rows
+rowMeans(parks_df[,4:5])
+#Summary information for each column
+#This works for string and numeric columns with different outputs
+summary(parks_df)
+```
+
+Try out some of the above commands with the entire <u id='data_frame_tooltip'>__data frame__</u>. 
+Do they give an error? 
+Is so, why?
+
+## Transpose with t()
+![](/images/transpose_table){style="width:300px; background:white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+Before we learn how to __write__ data to a file I will introduce one more <u id='data_frame_tooltip'>__data frame__</u> associated <u id='function_tooltip'>__function__</u>. 
+`t()` which stands for transpose:
+```{r eval=FALSE}
+parks_df[3:5]
+t(parks_df[,3:5])
+summary(t(parks_df[,3:5]))
+```
+
+Try the above commands without subsetting the <u id='data_frame_tooltip'>__data frame__</u>. 
+What is happening and why?
+
+::: {.callout-note collapse="true" title="Answer"}
+You cannot transpose a whole <u id='data_frame_tooltip'>__data frame__</u> which has columns of different <u id='class_tooltip'>classes</u>. 
+Columns must be homogeneous (one class) and trying to transpose a <u id='data_frame_tooltip'>data frame</u> with heterogeneous <u id='class_tooltip'>classes</u> breaks this. 
+:::
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```

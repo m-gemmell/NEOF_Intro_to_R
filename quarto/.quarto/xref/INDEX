@@ -391,5 +391,41 @@
   },
   "objects/string.knit.md": {
     "string.knit.html": "a742f80c"
+  },
+  "files_subsetting/read_csv.qmd": {
+    "read_csv.html": "eb18abc3"
+  },
+  "files_subsetting/read_tsv.qmd": {
+    "read_tsv.html": "c9f30962"
+  },
+  "files_subsetting/read_xl.qmd": {
+    "read_xl.html": "ea993f8b"
+  },
+  "files_subsetting/viewing.qmd": {
+    "viewing.html": "d54754c4"
+  },
+  "files_subsetting/fondation_vector_subsetting.qmd": {
+    "fondation_vector_subsetting.html": "2d26214b"
+  },
+  "files_subsetting/foundation_vector_subsetting.qmd": {
+    "foundation_vector_subsetting.html": "4b36a89e"
+  },
+  "files_subsetting/complex_vector_subsetting.qmd": {
+    "complex_vector_subsetting.html": "d6267447"
+  },
+  "files_subsetting/logical_vector_subsetting.qmd": {
+    "logical_vector_subsetting.html": "0dfa85ae"
+  },
+  "files_subsetting/foundation_data_frame_subsetting.qmd": {
+    "foundation_data_frame_subsetting.html": "5038cf5f"
+  },
+  "files_subsetting/complex_data_frame_subsetting.qmd": {
+    "complex_data_frame_subsetting.html": "207c2fd5"
+  },
+  "objects/data_frames_matrices.knit.md": {
+    "data_frames_matrices.knit.html": "c30e283f"
+  },
+  "objects/exercise.knit.md": {
+    "exercise.knit.html": "e1627767"
   }
 }

@@ -1,0 +1,77 @@
+# Read in tsv files
+![](/images/footprint.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+For our next task we will __read__ a tab separated file. 
+
+Download [Global_eco_footprint.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/Global_eco_footprint.tsv) into your "files_and_subsetting" folder/directory. 
+This file contains the 2023 global ecological footprint information. 
+The ecological footprint measures the ecological assets that a given population requires to produce the natural resources it consumes.
+
+::: {.callout-note collapse="true" title="Global_eco_footprint.tsv"}
+More info can be found in the following link: <https://www.kaggle.com/datasets/jainaru/global-ecological-footprint-2023>.
+:::
+
+## sep = "\\t"
+
+Use `read.csv()` to __read__ in the file. We'll set the option `row.names = 1` again but also include the option `sep = "\t"`. This option specifies the columns are separated (`sep`) by tabs (`"\t"`).
+
+```{r eval=FALSE}
+global_eco_footprint <- read.csv("Global_eco_footprint.tsv", 
+                        row.names = 1, sep = "\t")
+```
+
+## check.names  = FALSE
+
+Look at the resulting <u id='data_frame_tooltip'>__data frame__</u> and you will notice that the column names have been changed by R. This is annoying but thankfully there is an easy fix. __Read__ in the data again with the inclusion of the parameter `check.names = FALSE`. This will stop the function `read.csv()` from 'checking' and 'fixing' the column names. I always use this option.
+
+```{r eval=FALSE}
+global_eco_footprint_df <- read.csv("Global_eco_footprint.tsv", 
+                                 row.names = 1, sep = "\t", 
+                                 check.names = FALSE)
+```
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```

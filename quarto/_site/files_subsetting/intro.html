@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../files_subsetting/reading.html" rel="next">
+<link href="../files_subsetting/viewing.html" rel="next">
 <link href="..//images//NEOF_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -77,6 +77,22 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="../site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<link href="../site_libs/tippyjs-3.2.0/themes/google.css" rel="stylesheet">
+
+<link href="../site_libs/tippyjs-3.2.0/themes/light-border.css" rel="stylesheet">
+
+<link href="../site_libs/tippyjs-3.2.0/themes/light.css" rel="stylesheet">
+
+<link href="../site_libs/tippyjs-3.2.0/themes/translucent.css" rel="stylesheet">
+
+<script src="../site_libs/tippyjs-3.2.0/tippy.all.min.js"></script>
+
+<script src="../site_libs/tippy-binding-0.1.0/tippy.js"></script>
+
 
 
 <link rel="stylesheet" href="../include/webex.css">
@@ -342,16 +358,10 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Reading, subsetting, and writing</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files_subsetting/reading.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Reading from a file</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Subsetting</span></a>
+ <span class="menu-text">Reading</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -359,20 +369,72 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files_subsetting/subsetting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Subsetting data</span></a>
+  <a href="../files_subsetting/viewing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Viewing files</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files_subsetting/vector_subsetting.html" class="sidebar-item-text sidebar-link">
+  <a href="../files_subsetting/read_csv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Read in csv files</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files_subsetting/read_tsv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Read in tsv files</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files_subsetting/read_xl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suffixes, separators, and excel files</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Vector subsetting</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files_subsetting/foundation_vector_subsetting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Foundational vector subsetting</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files_subsetting/data_frame_subsetting.html" class="sidebar-item-text sidebar-link">
+  <a href="../files_subsetting/complex_vector_subsetting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Complex vector subsetting</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Data frame subsetting</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files_subsetting/foundation_data_frame_subsetting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Foundational data frame subsetting</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files_subsetting/complex_data_frame_subsetting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Complex Data frame subsetting</span></a>
   </div>
 </li>
       </ul>
@@ -391,13 +453,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Exercises</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files_subsetting/exercises.html" class="sidebar-item-text sidebar-link">
@@ -428,7 +490,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#reading-subsetting-and-writing" id="toc-reading-subsetting-and-writing" class="nav-link active" data-scroll-target="#reading-subsetting-and-writing">Reading, subsetting, and writing</a></li>
+  <li><a href="#reading-subsetting-and-writing" id="toc-reading-subsetting-and-writing" class="nav-link active" data-scroll-target="#reading-subsetting-and-writing">Reading, subsetting, and writing</a>
+  <ul class="collapse">
+  <li><a href="#reading" id="toc-reading" class="nav-link" data-scroll-target="#reading">Reading</a></li>
+  <li><a href="#subsetting" id="toc-subsetting" class="nav-link" data-scroll-target="#subsetting">Subsetting</a></li>
+  <li><a href="#directory-and-file-setup" id="toc-directory-and-file-setup" class="nav-link" data-scroll-target="#directory-and-file-setup">Directory and file setup</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -441,8 +508,108 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="reading-subsetting-and-writing" class="level1">
 <h1>Reading, subsetting, and writing</h1>
+<p>You’ve learnt how to assign objects to variables, the different object classes, and how objects are structured. In this part you’ll learn how to subset vectors and data frames, and how this can be used to manipulate R objects.</p>
+<p>However, another essentially set of skills in R is how to get data into and out of R with reading and writing.</p>
+<section id="reading" class="level2">
+<h2 class="anchored" data-anchor-id="reading">Reading</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/r_read.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:400px; background:white; border-radius:5px"></p>
+</figure>
+</div>
+<p>The first section of this part will involve reading in files into R as <u id="data_frame_tooltip"><strong>data frames</strong></u>.</p>
+<p>This will include:</p>
+<ul>
+<li><a href="../files_subsetting/viewing.html">Viewing</a> the contents of files</li>
+<li><a href="files_subsetting/read_csv.qmd">Reading in a csv file</a></li>
+<li><a href="files_subsetting/read_tsv.qmd">Reading in a tsv</a></li>
+<li>A quick intro on how to <a href="files_subsetting/read_xl.qmd">read in excel files</a></li>
+</ul>
+</section>
+<section id="subsetting" class="level2">
+<h2 class="anchored" data-anchor-id="subsetting">Subsetting</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/R_square_bracket.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background:white; border-radius:5px"></p>
+</figure>
+</div>
+<p>R allows you to specify specific points in <strong>R objects</strong>. This is one of the primary reasons R is so useful and flexible. With good use of <u id="assignment_tooltip"><strong>assignment operators</strong></u> this allows for the subsetting of <u id="variable_tooltip"><strong>variables</strong></u>.</p>
+<p>There are 2 main sections:</p>
+<ul>
+<li><a href="../files_subsetting/foundation_vector_subsetting.html">Subsetting with vectors</a></li>
+<li><a href="../files_subsetting/foundation_data_frame_subsetting.html">Subsetting with data frames</a></li>
+</ul>
+</section>
+<section id="directory-and-file-setup" class="level2">
+<h2 class="anchored" data-anchor-id="directory-and-file-setup">Directory and file setup</h2>
+<p>Please carry out the below setup instructions before moving onto the next page.</p>
+<ul>
+<li>Make a directory/folder called “files_and_subsetting” within your main directory/folder for this workshop</li>
+<li>Download the file <a href="https://neof-workshops.github.io/R_j4c0xh/downloads/Liverpool_beaches.csv">Liverpool_beaches.csv</a> into “files_and_subsetting”</li>
+<li>Set your working directory to this new directory (<a href="http://localhost:3406/foundations/directories.html#commands">set working directory</a>). You will stay here for this part</li>
+<li>Create a new R script file called <strong>“3-Files_and_subsetting.r”</strong> for this part’s scripts</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-782d9dca76579a31d2f3" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-782d9dca76579a31d2f3">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-4987deb0b7230c789099" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-4987deb0b7230c789099">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-fb897d163629d7076c1d" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-fb897d163629d7076c1d">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-dadf5a999e7b4c5630e9" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-dadf5a999e7b4c5630e9">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-78504355adf47e117439" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-78504355adf47e117439">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-40ab79d74f514363a47f" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-40ab79d74f514363a47f">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-0b6f8081af689275a1c4" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-0b6f8081af689275a1c4">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-1867fa4a00c64c4c1a1a" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-1867fa4a00c64c4c1a1a">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-0b755ee88a83125fba4a" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-0b755ee88a83125fba4a">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-7e9316c5d2a4f1a1dfc6" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-7e9316c5d2a4f1a1dfc6">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-4538fd3ea1b2159536fc" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-4538fd3ea1b2159536fc">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-1ae172a9fb910894e888" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-1ae172a9fb910894e888">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-4d8db5d7511ae31f3d7c" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-4d8db5d7511ae31f3d7c">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d1d48ef6757ec969f318" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-d1d48ef6757ec969f318">{"x":{"element":"assignment_tooltip","opts":{"content":"<-","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1275,8 +1442,8 @@ window.onload = function() {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../files_subsetting/reading.html" class="pagination-link" aria-label="Reading from a file">
-        <span class="nav-page-text">Reading from a file</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../files_subsetting/viewing.html" class="pagination-link" aria-label="Viewing files">
+        <span class="nav-page-text">Viewing files</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

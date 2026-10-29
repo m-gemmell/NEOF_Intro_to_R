@@ -1,0 +1,72 @@
+# Viewing files
+![](/images/view.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
+
+In the [objects part](/objects/data_frames_matrices.qmd#creating-a-data-frame) we created <u id='data_frame_tooltip'>__data frames__</u> with R <u id='function_tooltip'>__functions__</u>. 
+This was useful to help understand how <u id='data_frame_tooltip'>__data frames__</u> work in R. 
+However, in real life you will most likely not do this very often. 
+Instead you will have data files you need to analyse with R.
+
+You can get your data into R by having R __read__ your file.
+
+Before reading in a file is important to know the contents and structure of a file.
+We'll carry this out by viewing the file with RStudio.
+
+## Viewing the file
+
+In the next page we'll __read__ in the file "Liverpool_beaches.csv". 
+Before __reading__ in the file we can check the contents of the file. 
+This can be carried out by opening it with notepad (or similar text tool) or viewing the file with RStudio. 
+
+To view the file with RStudio:
+
+- Use the __Files pane__ of the __MISC window__ to navigate to the directory containing the file
+- Click on the file name and then click "View File"
+- This will open a tab in the __Source window__ matching the file name
+
+You will notice that the values/fields/columns are separated by commas as this is a "comma separated value" (.csv) file. Additionally, this is the same data as the "beach_df_2" <u id='data_frame_tooltip'>__data frame__</u> you created in the [object exercises](/objects/exercise.qmd).
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```

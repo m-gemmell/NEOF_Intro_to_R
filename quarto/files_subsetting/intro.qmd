@@ -1,1 +1,84 @@
 # Reading, subsetting, and writing
+
+You've learnt how to assign objects to variables, the different object classes, and how objects are structured.
+In this part you'll learn how to subset vectors and data frames, and how this can be used to manipulate R objects.
+
+However, another essentially set of skills in R is how to get data into and out of R with reading and writing.
+
+## Reading
+![](/images/r_read.png){style="width:400px; background:white; border-radius:5px" fig-align="center"}
+
+The first section of this part will involve reading in files into R as <u id='data_frame_tooltip'>__data frames__</u>.
+
+This will include:
+
+- [Viewing](/files_subsetting/viewing.qmd) the contents of files
+- [Reading in a csv file](files_subsetting/read_csv.qmd)
+- [Reading in a tsv](files_subsetting/read_tsv.qmd)
+- A quick intro on how to [read in excel files](files_subsetting/read_xl.qmd)
+
+## Subsetting
+![](/images/R_square_bracket.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+R allows you to specify specific points in __R objects__. This is one of the primary reasons R is so useful and flexible. With good use of <u id='assignment_tooltip'>__assignment operators__</u> this allows for the subsetting of <u id='variable_tooltip'>__variables__</u>.
+
+There are 2 main sections: 
+
+- [Subsetting with vectors](/files_subsetting/foundation_vector_subsetting.qmd)
+- [Subsetting with data frames](/files_subsetting/foundation_data_frame_subsetting.qmd)
+
+
+## Directory and file setup
+
+Please carry out the below setup instructions before moving onto the next page.
+
+- Make a directory/folder called "files_and_subsetting" within your main directory/folder for this workshop
+- Download the file [Liverpool_beaches.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/Liverpool_beaches.csv) into "files_and_subsetting"
+- Set your working directory to this new directory ([set working directory](http://localhost:3406/foundations/directories.html#commands)). You will stay here for this part
+- Create a new R script file called __"3-Files_and_subsetting.r"__ for this part's scripts
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```

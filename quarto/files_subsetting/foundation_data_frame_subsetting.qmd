@@ -1,0 +1,124 @@
+# Foundational data frame subsetting
+![](/images/subset_table.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
+
+<u id='data_frame_tooltip'>__Data frames__</u> can be subset similar to <u id='vector_tooltip'>__vectors__</u>. 
+As with <u id='vector_tooltip'>__vectors__</u> you can use `[]`. 
+Additionally, `$` can be used to subset <u id='data_frame_tooltip'>__data frames__</u>.
+
+Square brackets must be provided indexes for rows and for columns. 
+The structure for this is `df[row,column]`. 
+It is very useful to remember that R always wants rows first then columns second.
+
+## Read in Parks biodiversity data frame
+![](/images/biodiversity.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+To practice subsetting <u id='data_frame_tooltip'>__data frames__</u> with square brackets we will __read__ in a new file called [parks_biodiveristy.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/parks_biodiveristy.csv). 
+This contains the number of different species of various groups (Bird, Mammal, etc.) in US national parks.
+
+```{r eval=FALSE}
+#Read in the file
+parks_df <- read.csv("parks_biodiveristy.csv", check.names = FALSE,
+                             row.names = 1)
+#View the resulting object
+parks_df
+#View its column names
+colnames(parks_df)
+```
+
+::: {.callout-note collapse="true" title="parks_biodiveristy.csv source"}
+Original data can be found:
+
+<https://www.kaggle.com/datasets/nationalparkservice/park-biodiversity>
+:::
+
+## Square bracket subsetting
+![](/images/R_square_bracket.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+Now for some subset commands specifying the row/s then column/s with square brackets (`[]`).
+
+```{r eval=FALSE}
+#Scalar from the 1st row and 1st column
+parks_df[1,1]
+#Row names and column names can be used for indexing
+#Scalar from the row called YOSE and the column called Amphibian
+parks_df["YOSE","Amphibian"]
+#More examples
+parks_df[1:10,2]
+parks_df[1:10,"State"]
+parks_df[3,2:4]
+parks_df["SAGU",2]
+parks_df[1:10,"Bird"]
+parks_df[c(1,3,5,6),c("Bird","Fish")]
+```
+
+::: {.callout-tip}
+## Rows then columns
+A quick reminder that it is always rows then columns in square brackets.
+
+`df[row,column]`
+:::
+
+## Subsetted object
+
+As you can see in the above set of code the structure of the resulting subsetted object is dependant on how it was subsetted.
+It may be a <u id='scalar_tooltip'>__scalar__</u>, <u id='vector_tooltip'>__vector__</u>, or <u id='data_frame_tooltip'>__data frame__</u>. 
+
+Below describes what structure your resulting subsetted object will be based on the subsetting.
+
+- <u id='scalar_tooltip'>__Scalar__</u>: 
+    - Indexing to get a single value by choosing one row and one column
+    - E.g. `parks_df[1,1]`
+- <u id='vector_tooltip'>__Vector__</u>:
+    - Indexing so you get multiple values from one column
+    - This occurs as each column is in essence a <u id='vector_tooltip'>__vector__</u>
+    - E.g. `parks_df[1:10,2]`
+- <u id='data_frame_tooltip'>__Data frame__</u>:
+    - Indexing so you get multiple values from a row or multiple rows
+    - Subsetting a <u id='data_frame_tooltip'>__data frame__</u> like this provides you with a <u id='data_frame_tooltip'>__data frame__</u>
+    - E.g. `parks_df[3,2:4]` or `parks_df[3:4,2:4]`
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```
