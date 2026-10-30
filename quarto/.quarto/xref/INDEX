@@ -427,5 +427,17 @@
   },
   "objects/exercise.knit.md": {
     "exercise.knit.html": "e1627767"
+  },
+  "tips_tricks/variable_names.qmd": {
+    "variable_names.html": "8dfe58c9"
+  },
+  "tips_tricks/wide_long.qmd": {
+    "wide_long.html": "cac08206"
+  },
+  "tips_tricks/global_options.qmd": {
+    "global_options.html": "79ac101e"
+  },
+  "tips_tricks/sweep.qmd": {
+    "sweep.html": "28d728ee"
   }
 }

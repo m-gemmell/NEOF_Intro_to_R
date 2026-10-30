@@ -1,14 +1,29 @@
 # Reading, subsetting, and writing
+![](/images/data_files.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
 
 You've learnt how to assign objects to variables, the different object classes, and how objects are structured.
 In this part you'll learn how to subset vectors and data frames, and how this can be used to manipulate R objects.
 
 However, another essentially set of skills in R is how to get data into and out of R with reading and writing.
 
-## Reading
+## Directory and file setup
+
+Please carry out the below setup instructions before moving onto the next page.
+
+- Make a directory/folder called "files_and_subsetting" within your main directory/folder for this workshop
+- Download the file [Liverpool_beaches.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/Liverpool_beaches.csv) into "files_and_subsetting"
+- Set your working directory to this new directory ([set working directory](http://localhost:3406/foundations/directories.html#commands))
+  - You will stay here till the [exercises](/files_subsetting/exercises.qmd)
+- Create a new R script file called __"3-Files_and_subsetting.r"__ for this part's scripts
+
+## Sections
+
+An overview of the sections in this part are below.
+
+### Reading
 ![](/images/r_read.png){style="width:400px; background:white; border-radius:5px" fig-align="center"}
 
-The first section of this part will involve reading in files into R as <u id='data_frame_tooltip'>__data frames__</u>.
+The first section of this part will involve **reading** in files into R as <u id='data_frame_tooltip'>__data frames__</u>.
 
 This will include:
 
@@ -17,7 +32,7 @@ This will include:
 - [Reading in a tsv](files_subsetting/read_tsv.qmd)
 - A quick intro on how to [read in excel files](files_subsetting/read_xl.qmd)
 
-## Subsetting
+### Subsetting
 ![](/images/R_square_bracket.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
 
 R allows you to specify specific points in __R objects__. This is one of the primary reasons R is so useful and flexible. With good use of <u id='assignment_tooltip'>__assignment operators__</u> this allows for the subsetting of <u id='variable_tooltip'>__variables__</u>.
@@ -27,15 +42,19 @@ There are 2 main sections:
 - [Subsetting with vectors](/files_subsetting/foundation_vector_subsetting.qmd)
 - [Subsetting with data frames](/files_subsetting/foundation_data_frame_subsetting.qmd)
 
+### Writing
+![](/images/R_writing.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
 
-## Directory and file setup
+Getting data out of R is just as important as **reading** it in.
+The [writing page](/files_subsetting/writing.qmd) quickly demonstrates how to write data to a csv file and a tsv file with `write.table()`.
 
-Please carry out the below setup instructions before moving onto the next page.
+### Recap and exercise
+![](/images/question_bubble_3_blue.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
-- Make a directory/folder called "files_and_subsetting" within your main directory/folder for this workshop
-- Download the file [Liverpool_beaches.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/Liverpool_beaches.csv) into "files_and_subsetting"
-- Set your working directory to this new directory ([set working directory](http://localhost:3406/foundations/directories.html#commands)). You will stay here for this part
-- Create a new R script file called __"3-Files_and_subsetting.r"__ for this part's scripts
+At the end you'll reinforce the skills and knowledge you have learnt with:
+
+- [Recap MCQs](/files_subsetting/recap.qmd): Multiple choice questions to reinforce the various functions and options you have learnt
+- [Exercises](/files_subsetting/exercises.qmd): Two exercises with multiple challenges focussing on 2 files related to bat roosts and bee colonies
 
 ```{r, echo=FALSE}
 #Tippy tooltips

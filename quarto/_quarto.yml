@@ -118,8 +118,14 @@ website:
     align: left
     contents:
     - href: tips_tricks/intro.qmd
-    - href: tips_tricks/conventions.qmd
-    - href: tips_tricks/rstudio.qmd
+    - section: "R conventions"
+      contents:
+      - href: tips_tricks/variable_names.qmd
+      - href: tips_tricks/wide_long.qmd
+    - sections: "RStudio"
+      contents:
+      - href: tips_tricks/global_options.qmd
+      - href: tips_tricks/sweep.qmd
     - href: tips_tricks/multiplication_table.qmd
     - href: tips_tricks/tab_complete.qmd
     - section: "Example datasets"
@@ -248,7 +254,7 @@ format:
 
 ####Code will overflow in code blocks
 ####set to scroll for scroll (i.e. horizontal scroll at bottom of block)
-    code-overflow: wrap
+    code-overflow: scroll
 
 ###Themes
 ###HTML themes: https://quarto.org/docs/output-formats/html-themes.html

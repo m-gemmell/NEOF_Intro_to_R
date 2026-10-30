@@ -20,7 +20,7 @@ Ensure the row names contain the Regions (Channel Islands, East Midlands, etc.).
 
 ::: {.callout-note collapse="true" title="Bat roost 1 solution"}
 ```{r eval=FALSE}
-bat_df <- read.csv("Chapter_8_files/bat_roosts.csv", 
+bat_df <- read.csv("bats_and_bees/bat_roosts.csv", 
                    row.names = 1, check.names = FALSE)
 ```
 :::
@@ -76,7 +76,7 @@ Ensure there are no quotes surrounding the row or column names.
 ::: {.callout-note collapse="true" title="Bat roost 6 solution"}
 __Write__ file:
 ```{r eval=FALSE}
-write.table(bat_t_df, file = "Chapter_8_files/bat_roosts_t.csv", 
+write.table(bat_t_df, file = "bats_and_bees/bat_roosts_t.csv", 
             sep = ",", quote = FALSE, col.names = NA)
 ```
 :::

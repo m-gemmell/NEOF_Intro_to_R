@@ -48,8 +48,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a07d9f573de810e4e0204a3fc88c056.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-48e7d81eeb1de436c9c69269a6532de2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-d39630f428076f2ede93a0af808caec0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-58102aee4e65b2f852e11c7b23a63b85.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-6929054a0fa9c2e78769c32dde380a12.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -492,9 +492,14 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#reading-subsetting-and-writing" id="toc-reading-subsetting-and-writing" class="nav-link active" data-scroll-target="#reading-subsetting-and-writing">Reading, subsetting, and writing</a>
   <ul class="collapse">
+  <li><a href="#directory-and-file-setup" id="toc-directory-and-file-setup" class="nav-link" data-scroll-target="#directory-and-file-setup">Directory and file setup</a></li>
+  <li><a href="#sections" id="toc-sections" class="nav-link" data-scroll-target="#sections">Sections</a>
+  <ul class="collapse">
   <li><a href="#reading" id="toc-reading" class="nav-link" data-scroll-target="#reading">Reading</a></li>
   <li><a href="#subsetting" id="toc-subsetting" class="nav-link" data-scroll-target="#subsetting">Subsetting</a></li>
-  <li><a href="#directory-and-file-setup" id="toc-directory-and-file-setup" class="nav-link" data-scroll-target="#directory-and-file-setup">Directory and file setup</a></li>
+  <li><a href="#writing" id="toc-writing" class="nav-link" data-scroll-target="#writing">Writing</a></li>
+  <li><a href="#recap-and-exercise" id="toc-recap-and-exercise" class="nav-link" data-scroll-target="#recap-and-exercise">Recap and exercise</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -508,16 +513,37 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="reading-subsetting-and-writing" class="level1">
 <h1>Reading, subsetting, and writing</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/data_files.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background:white; border-radius:5px"></p>
+</figure>
+</div>
 <p>You’ve learnt how to assign objects to variables, the different object classes, and how objects are structured. In this part you’ll learn how to subset vectors and data frames, and how this can be used to manipulate R objects.</p>
 <p>However, another essentially set of skills in R is how to get data into and out of R with reading and writing.</p>
-<section id="reading" class="level2">
-<h2 class="anchored" data-anchor-id="reading">Reading</h2>
+<section id="directory-and-file-setup" class="level2">
+<h2 class="anchored" data-anchor-id="directory-and-file-setup">Directory and file setup</h2>
+<p>Please carry out the below setup instructions before moving onto the next page.</p>
+<ul>
+<li>Make a directory/folder called “files_and_subsetting” within your main directory/folder for this workshop</li>
+<li>Download the file <a href="https://neof-workshops.github.io/R_j4c0xh/downloads/Liverpool_beaches.csv">Liverpool_beaches.csv</a> into “files_and_subsetting”</li>
+<li>Set your working directory to this new directory (<a href="http://localhost:3406/foundations/directories.html#commands">set working directory</a>)
+<ul>
+<li>You will stay here till the <a href="../files_subsetting/exercises.html">exercises</a></li>
+</ul></li>
+<li>Create a new R script file called <strong>“3-Files_and_subsetting.r”</strong> for this part’s scripts</li>
+</ul>
+</section>
+<section id="sections" class="level2">
+<h2 class="anchored" data-anchor-id="sections">Sections</h2>
+<p>An overview of the sections in this part are below.</p>
+<section id="reading" class="level3">
+<h3 class="anchored" data-anchor-id="reading">Reading</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../images/r_read.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:400px; background:white; border-radius:5px"></p>
 </figure>
 </div>
-<p>The first section of this part will involve reading in files into R as <u id="data_frame_tooltip"><strong>data frames</strong></u>.</p>
+<p>The first section of this part will involve <strong>reading</strong> in files into R as <u id="data_frame_tooltip"><strong>data frames</strong></u>.</p>
 <p>This will include:</p>
 <ul>
 <li><a href="../files_subsetting/viewing.html">Viewing</a> the contents of files</li>
@@ -526,8 +552,8 @@ ul.task-list li input[type="checkbox"] {
 <li>A quick intro on how to <a href="files_subsetting/read_xl.qmd">read in excel files</a></li>
 </ul>
 </section>
-<section id="subsetting" class="level2">
-<h2 class="anchored" data-anchor-id="subsetting">Subsetting</h2>
+<section id="subsetting" class="level3">
+<h3 class="anchored" data-anchor-id="subsetting">Subsetting</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../images/R_square_bracket.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background:white; border-radius:5px"></p>
@@ -540,75 +566,88 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="../files_subsetting/foundation_data_frame_subsetting.html">Subsetting with data frames</a></li>
 </ul>
 </section>
-<section id="directory-and-file-setup" class="level2">
-<h2 class="anchored" data-anchor-id="directory-and-file-setup">Directory and file setup</h2>
-<p>Please carry out the below setup instructions before moving onto the next page.</p>
+<section id="writing" class="level3">
+<h3 class="anchored" data-anchor-id="writing">Writing</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/R_writing.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background:white; border-radius:5px"></p>
+</figure>
+</div>
+<p>Getting data out of R is just as important as <strong>reading</strong> it in. The <a href="../files_subsetting/writing.html">writing page</a> quickly demonstrates how to write data to a csv file and a tsv file with <code>write.table()</code>.</p>
+</section>
+<section id="recap-and-exercise" class="level3">
+<h3 class="anchored" data-anchor-id="recap-and-exercise">Recap and exercise</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/question_bubble_3_blue.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px; border: white solid 5px"></p>
+</figure>
+</div>
+<p>At the end you’ll reinforce the skills and knowledge you have learnt with:</p>
 <ul>
-<li>Make a directory/folder called “files_and_subsetting” within your main directory/folder for this workshop</li>
-<li>Download the file <a href="https://neof-workshops.github.io/R_j4c0xh/downloads/Liverpool_beaches.csv">Liverpool_beaches.csv</a> into “files_and_subsetting”</li>
-<li>Set your working directory to this new directory (<a href="http://localhost:3406/foundations/directories.html#commands">set working directory</a>). You will stay here for this part</li>
-<li>Create a new R script file called <strong>“3-Files_and_subsetting.r”</strong> for this part’s scripts</li>
+<li><a href="../files_subsetting/recap.html">Recap MCQs</a>: Multiple choice questions to reinforce the various functions and options you have learnt</li>
+<li><a href="../files_subsetting/exercises.html">Exercises</a>: Two exercises with multiple challenges focussing on 2 files related to bat roosts and bee colonies</li>
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-782d9dca76579a31d2f3" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-782d9dca76579a31d2f3">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-b52ccc6612cbeea7202f" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-b52ccc6612cbeea7202f">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-4987deb0b7230c789099" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-4987deb0b7230c789099">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-a1460cc4c136d4ef1291" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-a1460cc4c136d4ef1291">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-fb897d163629d7076c1d" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-fb897d163629d7076c1d">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-9156c5c6f6d3513ad8b7" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-9156c5c6f6d3513ad8b7">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-dadf5a999e7b4c5630e9" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-dadf5a999e7b4c5630e9">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-472188315b654691a002" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-472188315b654691a002">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-78504355adf47e117439" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-78504355adf47e117439">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-0faad79f92780ffba1fb" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-0faad79f92780ffba1fb">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-40ab79d74f514363a47f" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-40ab79d74f514363a47f">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-077edee47e7970e8519e" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-077edee47e7970e8519e">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-0b6f8081af689275a1c4" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-0b6f8081af689275a1c4">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-1c4f535f1d5cc61fecf9" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-1c4f535f1d5cc61fecf9">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-1867fa4a00c64c4c1a1a" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-1867fa4a00c64c4c1a1a">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-c3938bafc49ceb2a2c4d" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-c3938bafc49ceb2a2c4d">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-0b755ee88a83125fba4a" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-0b755ee88a83125fba4a">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-f23b741114f9e13c751f" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-f23b741114f9e13c751f">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-7e9316c5d2a4f1a1dfc6" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-7e9316c5d2a4f1a1dfc6">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-f1f9e289694260166ea1" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-f1f9e289694260166ea1">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-4538fd3ea1b2159536fc" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-4538fd3ea1b2159536fc">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-aaaa008a5d13f070eb68" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-aaaa008a5d13f070eb68">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-1ae172a9fb910894e888" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-1ae172a9fb910894e888">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-e19eb119f50e9d48f436" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-e19eb119f50e9d48f436">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-4d8db5d7511ae31f3d7c" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-4d8db5d7511ae31f3d7c">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-7c6e091f244352ac8e84" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-7c6e091f244352ac8e84">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d1d48ef6757ec969f318" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-d1d48ef6757ec969f318">{"x":{"element":"assignment_tooltip","opts":{"content":"<-","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-8112a68610b111b9670f" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-8112a68610b111b9670f">{"x":{"element":"assignment_tooltip","opts":{"content":"<-","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
 
+</section>
 </section>
 </section>
 

@@ -1,12 +1,34 @@
 # Handy tips & tricks
 ![](/images/magic.png){style="width:200px; border-radius:15px; background:white" fig-align="center"}
 
-Welcome to Chapter 10! This chapter will include coding to reinforce what you have learnt up to this point. 
+Welcome to the final part of the workshops, Handy tips & tricks! 
+This part will include coding to reinforce what you have learnt up to this point. 
 There will also be plenty of new handy <u id='function_tooltip'>__functions__</u> and some more concepts to learn.
 
-For this chapter create a directory called "Chapter_10-11" in your main directory and set it as the working directory. 
+## Setup
+
+For this part create a directory called "tips_and_tricks" in your main directory and set it as the working directory. 
 Then create a script called "4-Handy_tips.R". 
 Remember to use annotations (`#`) and code sections (`####`)!
+
+## Sections & pages
+
+Below is an overview of the contents of this part.
+
+- [R conventions](tips_tricks/variable_names.qmd): Conventions on variable names and wide vs long coding
+- [RStudio] 
+- [Multiplication table](tips_tricks/multiplication_table.qmd): 
+    - href: tips_tricks/tab_complete.qmd
+    - section: "Example datasets"
+      contents:
+      - href: tips_tricks/tea.qmd
+      - href: tips_tricks/english_speakers.qmd
+    - href: tips_tricks/identical.qmd
+    - href: tips_tricks/shortcuts.qmd
+    - href: tips_tricks/mcqs.qmd
+    - section: "Exercises"
+      contents:
+      - href: tips_tricks/handy_exercises.qmd
 
 I'll first introduce you to some R conventions and then some useful abilities of RStudio.
 

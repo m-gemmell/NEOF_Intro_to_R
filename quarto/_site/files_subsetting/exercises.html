@@ -84,8 +84,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a07d9f573de810e4e0204a3fc88c056.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-48e7d81eeb1de436c9c69269a6532de2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-d39630f428076f2ede93a0af808caec0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-58102aee4e65b2f852e11c7b23a63b85.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-6929054a0fa9c2e78769c32dde380a12.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -526,7 +526,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#files-exercises" id="toc-files-exercises" class="nav-link active" data-scroll-target="#files-exercises">Files exercises</a></li>
+  <li><a href="#files-exercises" id="toc-files-exercises" class="nav-link active" data-scroll-target="#files-exercises">Files exercises</a>
+  <ul class="collapse">
+  <li><a href="#exercise-script" id="toc-exercise-script" class="nav-link" data-scroll-target="#exercise-script">Exercise script</a></li>
+  <li><a href="#data-directory" id="toc-data-directory" class="nav-link" data-scroll-target="#data-directory">Data directory</a></li>
+  <li><a href="#file-paths" id="toc-file-paths" class="nav-link" data-scroll-target="#file-paths">File paths</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -544,26 +549,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="../images/files.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px"></p>
 </figure>
 </div>
-<p>The next 2 chapters each cover an exercise looking at a different file. The exercises are comprised of challenges requiring you to <strong>read</strong> and <strong>write</strong> files as well as index <u id="data_frame_tooltip"><strong>data frames</strong></u>.</p>
-<p>Use your <strong>“Exercises.R”</strong> file, ensuring you are using code sections to separate the different exercises and challenges Additionally, set your working directory to your main workshop directory.</p>
-<p>Create a new directory called “Chapter_7-9” within your main workshop directory to download the files:</p>
+<p>The next 2 pages each cover an exercise looking at a different file. The exercises are comprised of challenges requiring you to <strong>read</strong> and <strong>write</strong> files as well as index <u id="data_frame_tooltip"><strong>data frames</strong></u>.</p>
+<section id="exercise-script" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-script">Exercise script</h2>
+<p>Use your <strong>“Exercises.R”</strong> file in your main workshop directory. Ensure you are using code sections to separate the different exercises and challenges Additionally, set your working directory to your main workshop directory.</p>
+</section>
+<section id="data-directory" class="level2">
+<h2 class="anchored" data-anchor-id="data-directory">Data directory</h2>
+<p>Create a new directory called “bats_and_bees” within your main workshop directory. Download the following files into your “bats_and_bees” directory:</p>
 <ul>
 <li><a href="https://neof-workshops.github.io/R_j4c0xh/downloads/bat_roosts.csv">bat_roosts.csv</a></li>
 <li><a href="https://neof-workshops.github.io/R_j4c0xh/downloads/honey_bee.tsv">honey_bee.tsv</a></li>
 </ul>
-<p>As the files we are going to <strong>read</strong> are in a different directory to our working directory we will have to specify the directory along with the file names. For example, to read in the “Liverpool_beaches.csv” file from the main directory you could use the following command.</p>
+</section>
+<section id="file-paths" class="level2">
+<h2 class="anchored" data-anchor-id="file-paths">File paths</h2>
+<p>As the files we are going to <strong>read</strong> are in a different directory to our working directory we will have to specify the directory along with the file names. For example, to read in the “Liverpool_beaches.csv” file from the main directory you could use the below command.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>liv_beaches_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Chapter_6/Liverpool_beaches.csv"</span>, <span class="at">row.names =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>liv_beaches_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"files_and_subsetting/Liverpool_beaches.csv"</span>, <span class="at">row.names =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Ensure you also <strong>write</strong> any output to “Chapter_7-9”.</p>
+<p>Ensure you also <strong>write</strong> any output files to the “bats_and_bees” directory.</p>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-adb7ea82997c1ac9bb90" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-adb7ea82997c1ac9bb90">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-829aacbe31679165d6a1" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-829aacbe31679165d6a1">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

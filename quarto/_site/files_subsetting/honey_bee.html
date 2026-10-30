@@ -83,8 +83,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a07d9f573de810e4e0204a3fc88c056.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-48e7d81eeb1de436c9c69269a6532de2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-d39630f428076f2ede93a0af808caec0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-58102aee4e65b2f852e11c7b23a63b85.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-6929054a0fa9c2e78769c32dde380a12.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -536,6 +536,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#honey-bee-colony-challenge-5" id="toc-honey-bee-colony-challenge-5" class="nav-link" data-scroll-target="#honey-bee-colony-challenge-5">Honey bee colony challenge 5</a></li>
   </ul></li>
   <li><a href="#honey-bee-colony-mcqs" id="toc-honey-bee-colony-mcqs" class="nav-link" data-scroll-target="#honey-bee-colony-mcqs">Honey bee colony MCQs</a></li>
+  <li><a href="#next-step" id="toc-next-step" class="nav-link" data-scroll-target="#next-step">Next step</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -581,7 +582,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <p>Read in file:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>bee_colonies_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Chapter_8_files/honey_bee.tsv"</span>, </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>bee_colonies_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"bats_and_bees/honey_bee.tsv"</span>, </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                         <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>, <span class="at">row.names =</span> <span class="dv">1</span>, <span class="at">check.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
@@ -689,7 +690,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="../images/bee_6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px; border: white solid 5px"></p>
 </figure>
 </div>
-<p>Finally write out the <u id="data_frame_tooltip"><strong>data frame</strong></u> “bee_colonies_2017_2018_df” as a tab separated file called “bee_colonies_2017_2018.tsv”.</p>
+<p>Finally, write out the <u id="data_frame_tooltip"><strong>data frame</strong></u> “bee_colonies_2017_2018_df” as a tab separated file called “bee_colonies_2017_2018.tsv”.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Bees task 5 solution">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -704,7 +705,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(bee_colonies_2017_2018_df, </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Chapter_8_files/bee_colonies_2017_2018.tsv"</span>, </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>            <span class="st">"bats_and_bees/bee_colonies_2017_2018.tsv"</span>, </span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>, <span class="at">col.names =</span> <span class="cn">NA</span>, <span class="at">quote =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
@@ -723,20 +724,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Now that you have carried out the challenges, attempt the following questions based on the “bee_colonies_2017_2018_df” object.</p>
 <ol type="1">
 <li>Which state has the lowest average?
-<div id="radio_ZXBQPGFXHK" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ZXBQPGFXHK" value=""> <span>Montana</span></label><label><input type="radio" autocomplete="off" name="radio_ZXBQPGFXHK" value="answer"> <span>New Mexico</span></label><label><input type="radio" autocomplete="off" name="radio_ZXBQPGFXHK" value=""> <span>Pennsylvania</span></label>
+<div id="radio_CTSUJSXEIV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_CTSUJSXEIV" value=""> <span>Montana</span></label><label><input type="radio" autocomplete="off" name="radio_CTSUJSXEIV" value="answer"> <span>New Mexico</span></label><label><input type="radio" autocomplete="off" name="radio_CTSUJSXEIV" value=""> <span>Pennsylvania</span></label>
 </div></li>
 </ol>
 <ol start="2" type="1">
 <li>Which state has the highest minimum value of colonies?
-<div id="radio_UCBRLPTDEE" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_UCBRLPTDEE" value="answer"> <span>Minnesota</span></label><label><input type="radio" autocomplete="off" name="radio_UCBRLPTDEE" value=""> <span>New Mexico</span></label><label><input type="radio" autocomplete="off" name="radio_UCBRLPTDEE" value=""> <span>Pennsylvania</span></label>
+<div id="radio_TRXYMZUEFF" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_TRXYMZUEFF" value="answer"> <span>Minnesota</span></label><label><input type="radio" autocomplete="off" name="radio_TRXYMZUEFF" value=""> <span>New Mexico</span></label><label><input type="radio" autocomplete="off" name="radio_TRXYMZUEFF" value=""> <span>Pennsylvania</span></label>
 </div></li>
 </ol>
 <ol start="3" type="1">
 <li>Which state had 20,000 colonies in Q3 of 2018 (2018-Q3)?
-<div id="radio_XWLANZKCVO" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_XWLANZKCVO" value=""> <span>Montana</span></label><label><input type="radio" autocomplete="off" name="radio_XWLANZKCVO" value=""> <span>New Mexico</span></label><label><input type="radio" autocomplete="off" name="radio_XWLANZKCVO" value="answer"> <span>Pennsylvania</span></label>
+<div id="radio_BREGYSOBEI" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_BREGYSOBEI" value=""> <span>Montana</span></label><label><input type="radio" autocomplete="off" name="radio_BREGYSOBEI" value=""> <span>New Mexico</span></label><label><input type="radio" autocomplete="off" name="radio_BREGYSOBEI" value="answer"> <span>Pennsylvania</span></label>
 </div></li>
 </ol>
 <p><strong>Tip</strong>: If you use the <code>summary()</code> function, ensure you do not include the “Average” row.</p>
@@ -776,18 +777,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+</section>
+<section id="next-step" class="level2">
+<h2 class="anchored" data-anchor-id="next-step">Next step</h2>
+<p>Stupendous! You’ve completed the files and subsetting part. You can now continue onto the <a href="../tips_tricks/intro.html">tips &amp; tricks</a>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-1421838b30b86db24fe8" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-1421838b30b86db24fe8">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-36db15d96b8e6ff2fe03" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-36db15d96b8e6ff2fe03">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-54be1e51a6e8b3fe1a7b" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-54be1e51a6e8b3fe1a7b">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-588e9da51ca553579ef1" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-588e9da51ca553579ef1">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-9f6bec3e4bd0a3dd682f" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-9f6bec3e4bd0a3dd682f">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-8cdde78f8cc26300dfd9" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-8cdde78f8cc26300dfd9">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 

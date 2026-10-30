@@ -29,13 +29,14 @@ These are:
 - [__Data structure__](/objects/data_structure.qmd): This determines the structure of an __R object__
 
 ### Files & subsetting
+![](/images/data_files.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
 
 The [Files & subsetting part](/files_subsetting/intro.qmd) demonstrates how to get tabular data in and out of R as well as how to manipulate it.
 
 The part includes:
 
-- [**Reading from a file**](/files_subsetting/reading.qmd): Reading data from a file and create and R object from it
-- [**Subsetting**](/files_subsetting/subsetting.qmd): Subsetting a `data.frame` with indexxes
+- [**Reading from a file**](/files_subsetting/viewing.qmd): Reading data from a file and create and R object from it
+- [**Subsetting**](/files_subsetting/foundation_vector_subsetting.qmd): Subsetting a `data.frame` with indexxes
 - [**Writing to a file**](/files_subsetting/writing.qmd): Writing data from a R object into a file
 
 ### Handy tips and tricks
@@ -45,7 +46,7 @@ The [handy tips & tricks part](/tips_tricks/intro.qmd) reinforces the previous p
 
 The topics covered are:
 
-- [**R conventions**](/tips_tricks/conventions.qmd): Covers naming styles for variables and wide vs long coding
+- [**R conventions**](/tips_tricks/variable_names.qmd): Covers naming styles for variables and wide vs long coding
 - [**RStudio**](/tips_tricks/rstudio.qmd): Global options and the sweep buttons
 - [**Tab completion**](/tips_tricks/tab_complete.qmd): Autocompletion of file paths, function names, and arguments with tab
 - [**Identical**](/tips_tricks/identical.qmd): The `identical()` function to determine if 2 object are identical or not

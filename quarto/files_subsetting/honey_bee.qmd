@@ -21,7 +21,7 @@ Ensure the row names contain the Year info (2015-Q1, 2015-Q2, etc.).
 ::: {.callout-note collapse="true" title="Bees task 1 solution"}
 Read in file:
 ```{r eval=FALSE}
-bee_colonies_df <- read.csv("Chapter_8_files/honey_bee.tsv", 
+bee_colonies_df <- read.csv("bats_and_bees/honey_bee.tsv", 
                          sep = "\t", row.names = 1, check.names = FALSE)
 ```
 :::
@@ -74,12 +74,12 @@ bee_colonies_2017_2018_df["Average",] <- colMeans(bee_colonies_2017_2018_df)
 ### Honey bee colony challenge 5 {-}
 ![](/images/bee_6.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
-Finally write out the <u id='data_frame_tooltip'>__data frame__</u> "bee_colonies_2017_2018_df" as a tab separated file called "bee_colonies_2017_2018.tsv".
+Finally, write out the <u id='data_frame_tooltip'>__data frame__</u> "bee_colonies_2017_2018_df" as a tab separated file called "bee_colonies_2017_2018.tsv".
 
 ::: {.callout-note collapse="true" title="Bees task 5 solution"}
 ```{r eval=FALSE}
 write.table(bee_colonies_2017_2018_df, 
-            "Chapter_8_files/bee_colonies_2017_2018.tsv", 
+            "bats_and_bees/bee_colonies_2017_2018.tsv", 
             sep = "\t", col.names = NA, quote = FALSE)
 ```
 :::
@@ -134,6 +134,12 @@ column_logical_vec
 colnames(bee_colonies_2017_2018_df)[column_logical_vec]
 ```
 :::
+
+## Next step
+
+Stupendous!
+You've completed the files and subsetting part.
+You can now continue onto the [tips & tricks](/tips_tricks/intro.qmd).
 
 ```{r, echo=FALSE}
 #Tippy tooltips

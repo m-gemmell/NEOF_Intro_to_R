@@ -66,6 +66,7 @@ parks_df$Fish[4:7]
 ```
 
 ## Vector functions
+![](/images/park_award.png){style="width:150px; background:white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
 Below are a selection of useful <u id='function_tooltip'>__functions__</u> that can be used on <u id='vector_tooltip'>__vectors__</u>.
 ```{r eval=FALSE}
@@ -76,6 +77,7 @@ mean(parks_df$Mammal)
 ```
 
 ## Data frame functions
+![](/images/bison.png){style="width:200px; background:white; border-radius:5px; border: white solid 0px" fig-align="center"}
 
 The above <u id='function_tooltip'>__functions__</u> are useful but limted if you are working with <u id='data_frame_tooltip'>__data frames__</u>. 
 Thankfully there are also many <u id='function_tooltip'>__functions__</u> used specifically for <u id='data_frame_tooltip'>__data frames__</u> (they can also be used for matrices).

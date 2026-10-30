@@ -1,0 +1,88 @@
+# Wide vs Long
+![](/images/wide_long_box.png){style="width:250px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+Wide vs long coding refers to how you layout your code.
+It does not change how your code functions, but it can effect how easy it is to parse/read code.
+
+## Wide
+![](/images/width_box.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+If your command/<u id='function_tooltip'>__function__</u> is only on one line then you were using __wide__ coding. 
+This is good with short commands and <u id='function_tooltip'>__functions__</u> but is not very suitable for longer commands. Below are examples of long commands over one line each.
+
+```{r eval=FALSE}
+#Create a data frame called df
+df <- data.frame(one = c(2,4,6), three = c(6,12,18), five = c(10,20,30), row.names = c("Two", "Four", "Six"))
+#Create a data frame called beach_df_2
+beach_df_2 <- data.frame(Crab = c(10,1,1,4), Oystercatcher = c(5,6,4,4), Sandpiper = c(1,1,2,3), Starfish = c(3,3,7,4), row.names = c("Formby","West Kirby","Crosby","New Brighton"))
+```
+
+## Long
+![](/images/length_box.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+Compare the above with the below __long__ coding where arguments are separated by new lines.
+
+```{r eval=FALSE}
+#Create a data frame called df
+df <- data.frame(one = c(2,4,6), 
+                 three = c(6,12,18), 
+                 five = c(10,20,30), 
+                 row.names = c("Two", "Four", "Six"))
+#Create a data frame called beach_df_2
+beach_df_2 <- data.frame(Crab = c(10,1,1,4), 
+                         Oystercatcher = c(5,6,4,4),
+                         Sandpiper = c(1,1,2,3),
+                         Starfish = c(3,3,7,4), 
+                         row.names = c("Formby","West Kirby",
+                                       "Crosby","New Brighton"))
+```
+
+Hopefully you will agree with me that the long coding is a lot easier and quicker to read.
+
+If you are interested in more about R style guides I would recommend looking at the following resource: <https://style.tidyverse.org/>.
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```

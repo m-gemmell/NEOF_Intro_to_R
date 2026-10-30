@@ -1,10 +1,11 @@
 # Writing to a file
 ![](/images/R_writing.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
 
-Data can be read into an R object by [reading](/files_subsetting/reading.qmd).
+Data can be read into an R object by [reading](/files_subsetting/read_csv.qmd).
 Data in an R object can be saved to a file by __writing__.
 
 ## Parks data frame
+![](/images/park_award_transposed.png){style="width:150px; background:white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
 Before we __write__ data to a file we will create a new <u id='data_frame_tooltip'>__data frame__</u> from "parks_df". 
 
@@ -20,13 +21,7 @@ Next step we will create a new column called "Total_species".
 parks_t_df$Total_species <- rowSums(parks_df[,3:8])
 ```
 
-::: {.callout-note}
-I am including many ways to subset columns as reminders. Normally I wouldn't have so many different ways in one command.
-
-We are using "_" instead of spaces in our column names as R doesn't particularly like spaces in column names. We will see how to use spaces later.
-:::
-
-The final step before writing is to transpose the <u id='data_frame_tooltip'>__data frame__</u> leaving out the Park name and State columns:
+The final step before writing is to transpose the <u id='data_frame_tooltip'>__data frame__</u> leaving out the Park name and State columns.
 ```{r eval=FALSE}
 #Transpose dataframe
 parks_t_df <- t(parks_t_df[,3:9])
@@ -39,7 +34,14 @@ parks_t_df <- as.data.frame(parks_t_df)
 str(parks_t_df)
 ```
 
+::: {.callout-note}
+I've included many ways to subset columns as reminders. Normally I wouldn't have so many different ways in one command.
+
+We are using "_" instead of spaces in our column names as R doesn't particularly like spaces in column names. We will see how to use spaces later.
+:::
+
 ## Writing to a csv file
+![](/images/csv.png){style="width:150px; background:white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
 Now we'll __write__ the <u id='data_frame_tooltip'>__data frame__</u> to a file called "Park_species_info.csv". 
 When __reading__ from a file I prefer `read.csv()`, however when writing to a file I prefer `write.table()`. 
@@ -53,10 +55,11 @@ write.table(parks_t_df, file = "Park_species_info.csv", sep = ",", col.names=NA)
 Have a look at the file contents with RStudio.
 
 ## Writing to a tsv file
+![](/images/tsv.png){style="width:150px; background:white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
 Let's do it one more time with the Global ecological footprint info. 
 First __read__ in the file again in case you do not have it. 
-Then transpose the <u id='data_frame_tooltip'>__data frame__</u> and ensure the resulting object is a <u id='data_frame_tooltip'>__data frame__</u>:
+Then transpose the <u id='data_frame_tooltip'>__data frame__</u> and ensure the resulting object is a <u id='data_frame_tooltip'>__data frame__</u>.
 ```{r eval=FALSE}
 #Read in
 global_eco_footprint_df <- read.csv("Global_eco_footprint.tsv", 

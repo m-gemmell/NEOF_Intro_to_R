@@ -1,0 +1,126 @@
+# Variable names
+![](/images/nametag.png){style="width:250px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+R conventions are style guides. 
+You do not need to follow them but they are intended to help make code easier to read. 
+There are lots of different suggestions for different parts of R code. 
+In this page we will look at conventions for __<u id='variable_tooltip'>variable</u> names__.
+
+## Rules
+![](/images/rules.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+__<u id='variable_tooltip'>Variable</u> names__ have certain rules that must be followed. 
+We covered these in the [variabel asisgnment page](/foundations/variables.qmd) but below is a reminder:
+
+- Must start with a letter.
+- Cannot contain spaces.
+- Cannot start with a number.
+- Cannot share the same name as a command or <u id='function_tooltip'>function</u> in R.
+- They are case sensitive. The <u id='variable_tooltip'>__variable__</u> name `BB` is different to the <u id='variable_tooltip'>__variable__</u> name `bb` which is different again to `bB`.
+
+## Naming styles
+
+On top of these rules there are a few naming styles that are recommended. 
+It is very good to choose one naming style and stick with it always. 
+Below are three commonly used naming conventions for R. 
+Look through them and choose your favourite to use.
+
+### Snake case
+<center>
+![](/images/snake_case.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
+Snake case is my preferred naming convention and the one used in these materials. 
+It consists of using lower case letters with underscores (`_`) between words. 
+Numbers can also be used. 
+Below are some examples of names in snake case.
+
+```{r eval=FALSE}
+one
+two_df
+two_2_df
+three_four_five
+three_four_five_2_vec
+this_is_snake_case
+``` 
+
+### Period separated
+<center>
+![](/images/period_separated.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
+Period separated is almost identical to snake case. All you need to do is swap the underscores (`_`) with periods (`.`). Below are some examples of names in the period separated style.
+
+```{r eval=FALSE}
+one
+two.df
+two.2.df
+three.four.five
+three.four.five.2.vec
+this.is.period.separated
+``` 
+
+### Camel case
+<center>
+![](/images/camelCase.png){style="width:200px; background:white; border-radius:15px"}
+</center>
+
+Camel case has no symbols to separate words. Instead after the first word every word starts with an upper case. Below are some examples of names in Camel Case. 
+
+```{r eval=FALSE}
+one
+twoDf
+two2Df
+threeFourFive
+threeFourFive2Vec
+thisIsCamelCase
+``` 
+
+There are exceptions when you will want to break your preferred naming style. 
+One such example is when you are creating <u id='vector_tooltip'>__vectors__</u> to be used as columns for a <u id='data_frame_tooltip'>__data frame__</u>.
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "operator_tooltip", 
+                  tooltip = "+, -, /, *, etc.",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "variable_tooltip", 
+                  tooltip = "Container of an R object with a name",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "function_tooltip", 
+                  tooltip = "Named block of code that performs a specific task",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "class_tooltip", 
+                  tooltip = "Object data type, e.g. integer, double, string, and logical",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_structure_tooltip", 
+                  tooltip = "Object structure type, e.g. scalar, vector, and data frame",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "integer_tooltip", 
+                  tooltip = "Number without decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "double_tooltip", 
+                  tooltip = "Number with decimal points",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "string_tooltip", 
+                  tooltip = "Text",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "logical_tooltip", 
+                  tooltip = "TRUE or FALSE",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "scalar_tooltip", 
+                  tooltip = "A single value in a object",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "vector_tooltip", 
+                  tooltip = "Homogenous 1-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "matrix_tooltip", 
+                  tooltip = "Homogeneous 2-dimensional data structure",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "data_frame_tooltip", 
+                  tooltip = "Heterogeneous 2-dimensional data structure. Each column is homogeneous",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "assignment_tooltip", 
+                  tooltip = "<-",
+                  arrow = TRUE, placement = "bottom")
+```

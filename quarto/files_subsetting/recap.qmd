@@ -1,5 +1,5 @@
 # Recap
-![](/images/question_bubble_blue.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+![](/images/question_bubble_3_blue.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
 Grand! With the fundamentals of __reading__, subsetting <u id='data_frame_tooltip'>__data frames__</u>, and __writing__ covered it is time to carry out some exercises after the below MCQs.
 
