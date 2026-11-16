@@ -1,7 +1,5 @@
 # Tab complete
-<center>
-![](/images/tab.png){style="width:200px; border-radius:15px; background:white; border:10px white solid"}
-</center>
+![](/images/tab.png){style="width:200px; border-radius:5px; background:white; border:10px white solid" fig-align="center"}
 
 Tab completion is a very useful method when coding in any language. 
 It takes some practice to get used to but it increases the speed of coding and drastically reduces typos. 
@@ -9,8 +7,11 @@ It takes some practice to get used to but it increases the speed of coding and d
 Before we continue, the tab key is the key above the "CAPS" key and left of the 'q' key. 
 If you would like a demonstration of tab completion please ask!
 
-The first way to tab complete is to tab complete file names. 
-First you will need to download the following files into your “Chapter_10-11” directory.
+## File names/path
+![](/images/file_path.png){style="width:150px; border-radius:5px; background:white; border:2px white solid" fig-align="center"}
+
+The first way to tab complete is to tab complete file names/paths. 
+First you will need to download the following files into your "tips_and_tricks” directory.
 
 - [tea_consumption.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/tea_consumption.csv)
 - [english_speaking_population_of_countries.tsv](https://neof-workshops.github.io/R_j4c0xh/downloads/english_speaking_population_of_countries.tsv)
@@ -30,7 +31,7 @@ tea_df <- read.csv("tea_consumption.csv", check.names=FALSE)
 You may notice that we only provided the file name and the `check.names=FALSE` for the `read.csv()` <u id='function_tooltip'>__function__</u>. 
 This is because of the format of the input file. 
 In this case we do not want any of the input columns converted into row names. 
-Additionally, the file was comma separated and the default separator to be used for `read.csv()` is commas. 
+Additionally, the file was comma separated and the default separator for `read.csv()` is comma. 
 We will come back to this <u id='data_frame_tooltip'>__data frame__</u> so either keep the <u id='variable_tooltip'>__variable__</u> in your __environment__ or keep the __read__ code handy.
 
 Let us __read__ in another file using tab complete to autofill the file name again. 
@@ -41,7 +42,8 @@ english_df <- read.csv("english_speaking_population_of_countries.tsv",
                    check.names = FALSE)
 ```
 
-Great!
+## Variables, functions, and options
+![](/images/autofill.png){style="width:150px; border-radius:5px; background:white; border:2px white solid" fig-align="center"}
 
 The second way to use tab completion is to autofill <u id='variable_tooltip'>__variable__</u> names, <u id='function_tooltip'>__function__</u> names and options. 
 To autofill a <u id='variable_tooltip'>__variable__</u> or <u id='function_tooltip'>__function__</u> name you can start typing the name then press tab to get the dropdown menu. 
@@ -49,11 +51,13 @@ To autofill a <u id='variable_tooltip'>__variable__</u> or <u id='function_toolt
 Whilst in the `()` of a <u id='function_tooltip'>__function__</u> you can press tab to get a drop down menu of the option choices and press enter on the highlighted choice to autofill it. 
 
 This only works if the name currently exists. 
-I.e. you cannot autofill a __<u id='variable_tooltip'>variable</u> name__ if the <u id='variable_tooltip'>__variable__</u> is not in your __environment__.
+You cannot autofill a __<u id='variable_tooltip'>variable</u> name__ if the <u id='variable_tooltip'>__variable__</u> is not in your __environment__.
 
 Continue using tab complete for the rest of the course. Practice makes perfect.
 
 If you really don't like it you don't have to use it.
+
+## Data sources
 
 Data from above files:
 

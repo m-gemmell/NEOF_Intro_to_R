@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,13 +12,10 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -45,12 +42,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5981ca9ed2f01d41a9ae447c87bc4519.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a07d9f573de810e4e0204a3fc88c056.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0b8e113766f0aaf860995efa8b3aa8a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eaf9efb5ff69c09042967cbd085a044f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-58102aee4e65b2f852e11c7b23a63b85.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-6929054a0fa9c2e78769c32dde380a12.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d3dbc30dbc48f6f58dbcf08637aa38e6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-78af124ace17c31d74afd4dd2c6d8795.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -458,8 +455,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tips_tricks/english_speakers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">English speakers across the world</span></a>
+  <a href="../tips_tricks/english_exercise.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">English speakers exercise</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -499,7 +496,7 @@ ul.task-list li input[type="checkbox"] {
 <h1>Sweep</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/sweep.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px; border: white solid 5px"></p>
+<p><img src="..\images/sweep.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px; border: white solid 5px"></p>
 </figure>
 </div>
 <p>Sweep buttons allow you to sweep away items you no longer want in RStudio. There are two main sweep buttons, one for the <strong>Console window</strong> and one for the <strong>Environment pane</strong>.</p>
@@ -508,7 +505,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The sweep button for the <strong>console window</strong> will clear all the text in the <strong>console pane</strong>. This is useful if you have filled the <strong>console</strong> with lots of commands and <u id="data_frame_tooltip"><strong>data frames</strong></u>. This sweep button will not actually affect any of your work so do not be afraid to use it. The location of the sweep button is shown below.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/RStudio_console_sweep.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:600px; border-radius:5px"></p>
+<p><img src="..\images/RStudio_console_sweep.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:600px; border-radius:5px"></p>
 </figure>
 </div>
 </section>
@@ -516,64 +513,64 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="environment-sweep">Environment sweep</h2>
 <p>The sweep button for the <strong>Environment pane</strong> is a bit more dangerous. This sweep button will clear all the objects from your environment. This will remove all the <u id="variable_tooltip"><strong>variables</strong></u> you have created. This is not too bad if you have been using the <strong>script editor</strong> to do your work as you can rerun all your commands to refill your environment. The location of the sweep button is shown below.</p>
 <center>
-<img src="../images/RStudio_env_sweep.png" class="img-fluid" style="width:500px; border-radius:5px">
+<img src="..\images/RStudio_env_sweep.png" class="img-fluid" style="width:500px; border-radius:5px">
 </center>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-fad2db7442a15b1e46c3" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-fad2db7442a15b1e46c3">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-f755361c3001b47b626c" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-f755361c3001b47b626c">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-7692e1c4d16fed45c6ab" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-7692e1c4d16fed45c6ab">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-b0731272c5e1f961c6ba" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-b0731272c5e1f961c6ba">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-24f3692d2d8880247228" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-24f3692d2d8880247228">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-66000043accdf7daf98f" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-66000043accdf7daf98f">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-44e0c2ae1d1dfbdf7ef3" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-44e0c2ae1d1dfbdf7ef3">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-7354c98eef8a547a418c" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-7354c98eef8a547a418c">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d71101b9638145cb5827" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-d71101b9638145cb5827">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-dbb36fb5fe86ed4e47fc" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-dbb36fb5fe86ed4e47fc">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-01cf23f35eb01389dfc7" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-01cf23f35eb01389dfc7">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-f4150d3b44642346c126" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-f4150d3b44642346c126">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-6e0e01da2316aa67edf2" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-6e0e01da2316aa67edf2">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-55c52daa850082c1762a" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-55c52daa850082c1762a">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d6688e9acc8a081b08ec" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-d6688e9acc8a081b08ec">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-5a9acf27ed6ce2b71895" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-5a9acf27ed6ce2b71895">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-6eab5521c6323b04cf8a" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-6eab5521c6323b04cf8a">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-c03afb6dcc604f009b62" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-c03afb6dcc604f009b62">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-7d3f40b6c79b3e401a05" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-7d3f40b6c79b3e401a05">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-6aaf689553da5fca4133" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-6aaf689553da5fca4133">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-9bec5ce5da50b10ea1f3" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-9bec5ce5da50b10ea1f3">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-93c2f5e4fd789a75be5c" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-93c2f5e4fd789a75be5c">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-5af1249951f5dcf462e2" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-5af1249951f5dcf462e2">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-6c5025f694a1289650d7" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-6c5025f694a1289650d7">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-440711a26430a5ca25cb" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-440711a26430a5ca25cb">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-f7cb6d68188b4cc18b9a" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-f7cb6d68188b4cc18b9a">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-0bfea047280604bda30f" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-0bfea047280604bda30f">{"x":{"element":"assignment_tooltip","opts":{"content":"<-","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-303cff98bf153daf5148" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-303cff98bf153daf5148">{"x":{"element":"assignment_tooltip","opts":{"content":"<-","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
@@ -1426,7 +1423,7 @@ window.onload = function() {
 <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="CC BY-SA 4.0" height="30"></a></p>
 </div>   
     <div class="nav-footer-center">
-<p><a href="https://neof.org.uk/"><img src="../images//NEOF_rounded_corners.png" alt="NEOF" height="60"></a></p>
+<p><a href="https://neof.org.uk/"><img src="..\images//NEOF_rounded_corners.png" alt="NEOF" height="60"></a></p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

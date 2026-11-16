@@ -25,8 +25,8 @@ The topics covered include:
 The [R objects part](/objects/intro.qmd) covers the two major R terminologies to learn to fully understand __R objects__.
 These are:
 
-- [__Class__](/objects/basic_classes.qmd): __R objects__ specific classes which determine what the __object__ is
-- [__Data structure__](/objects/data_structure.qmd): This determines the structure of an __R object__
+- [__Class__](/objects/numeric.qmd): __R objects__ specific classes which determine what the __object__ is
+- [__Data structure__](/objects/scalar.qmd): This determines the structure of an __R object__
 
 ### Files & subsetting
 ![](/images/data_files.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
@@ -47,7 +47,7 @@ The [handy tips & tricks part](/tips_tricks/intro.qmd) reinforces the previous p
 The topics covered are:
 
 - [**R conventions**](/tips_tricks/variable_names.qmd): Covers naming styles for variables and wide vs long coding
-- [**RStudio**](/tips_tricks/rstudio.qmd): Global options and the sweep buttons
+- [**RStudio**](/tips_tricks/global_options.qmd): Global options and the sweep buttons
 - [**Tab completion**](/tips_tricks/tab_complete.qmd): Autocompletion of file paths, function names, and arguments with tab
 - [**Identical**](/tips_tricks/identical.qmd): The `identical()` function to determine if 2 object are identical or not
 - [**Shortcuts**](/tips_tricks/shortcuts.qmd): Various keyboard shortcuts for RStudio

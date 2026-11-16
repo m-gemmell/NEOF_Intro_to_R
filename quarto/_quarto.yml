@@ -139,7 +139,7 @@ website:
       contents:
       - href: tips_tricks/handy_exercises.qmd
       - href: tips_tricks/tea_exercise.qmd
-      - href: tips_tricks/english_speakers.qmd
+      - href: tips_tricks/english_exercise.qmd
       - href: tips_tricks/extra_exercise.qmd
   - id: Plots
     title: plots

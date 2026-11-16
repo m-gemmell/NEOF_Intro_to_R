@@ -1,12 +1,12 @@
 # Extra exercise
-<center>
-![](/images/multiplication.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
-</center>
+![](/images/multiplication.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
-If you still have time this session and you do not have any questions please attempt the following task:
+If you still have time this session and you do not have any questions please attempt the following tasks:
 
-Create a multiplication table like the one in the practice from today. However have the row and column names equal one to twelve.
-
-Then __write__ the __data frame__ to a file. The name and format of the file is up to you.
+1. Create a multiplication table like the one in the [practice from today](/tips_tricks/multiplication_table.qmd). However, have the row and column names equal one to twelve.
+2. __Write__ the __data frame__ to a file. The name and format of the file is up to you.
 
 There is no solution for this exercise.
+
+That is the end of the course. Thank you so much for your hard work.
+There are [optional materials](/overview.qmd#extra-materials) you can go through and its always a good idea to look at the [appendix](/appendix/neof.qmd) too.

@@ -1,9 +1,7 @@
 # Multiplication table
-<center>
-![](/images/multiplication.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
-</center>
+![](/images/multiplication.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
-Hopefully you'll find the above useful. We will learn some new <u id='function_tooltip'>__functions__</u> but before that let us create a quick <u id='data_frame_tooltip'>__data frame__</u>. 
+With some R conventions covered let's create a quick <u id='data_frame_tooltip'>__data frame__</u>. 
 You are going to make a multiplication table. 
 The <u id='data_frame_tooltip'>__data frame__</u> will be a 10 by 10 table with numbers one to ten as the row names and the column names. 
 The value in each cell/index will be equal to the row name number multiplied by the column name number.
@@ -14,9 +12,6 @@ The code below shows a method to create this <u id='data_frame_tooltip'>__data f
 I have tried to show you a variety of methods to create the <u id='vector_tooltip'>__vectors__</u> below for demonstration purposes. 
 Look at each command and make sure you understand how they work before continuing. 
 In real life I would use one of these methods rather than many different methods.
-
-__Tip__: If you double click a word/name in the __script editor__ it will highlight it. 
-You can then start typing to replace the highlighted word.
 
 ```{r eval=FALSE}
 #Vectors that will become columns
@@ -39,6 +34,13 @@ multiplication_df <- data.frame(one, two, three,
                                 seven, ate, nine, ten,
                                 row.names = row_names)
 ```
+
+::: {.callout-tip}
+If you double click a word/name in the __script editor__ it will highlight it. 
+You can then start typing to replace the highlighted word.
+:::
+
+## Changing row and column names
 
 Have a look at the resulting <u id='data_frame_tooltip'>__data frame__</u>. 
 You may have noticed that two of the row names and one of the column names is incorrect. 

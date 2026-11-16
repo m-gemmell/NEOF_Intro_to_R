@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,13 +12,10 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -80,12 +77,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5981ca9ed2f01d41a9ae447c87bc4519.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a07d9f573de810e4e0204a3fc88c056.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0b8e113766f0aaf860995efa8b3aa8a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eaf9efb5ff69c09042967cbd085a044f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-58102aee4e65b2f852e11c7b23a63b85.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-6929054a0fa9c2e78769c32dde380a12.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d3dbc30dbc48f6f58dbcf08637aa38e6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-78af124ace17c31d74afd4dd2c6d8795.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -493,8 +490,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tips_tricks/english_speakers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">English speakers across the world</span></a>
+  <a href="../tips_tricks/english_exercise.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">English speakers exercise</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -515,7 +512,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tab-complete" id="toc-tab-complete" class="nav-link active" data-scroll-target="#tab-complete">Tab complete</a></li>
+  <li><a href="#tab-complete" id="toc-tab-complete" class="nav-link active" data-scroll-target="#tab-complete">Tab complete</a>
+  <ul class="collapse">
+  <li><a href="#file-namespath" id="toc-file-namespath" class="nav-link" data-scroll-target="#file-namespath">File names/path</a></li>
+  <li><a href="#variables-functions-and-options" id="toc-variables-functions-and-options" class="nav-link" data-scroll-target="#variables-functions-and-options">Variables, functions, and options</a></li>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data sources</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -528,12 +530,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="tab-complete" class="level1">
 <h1>Tab complete</h1>
-<center>
-<img src="../images/tab.png" class="img-fluid" style="width:200px; border-radius:15px; background:white; border:10px white solid">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/tab.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; border-radius:5px; background:white; border:10px white solid"></p>
+</figure>
+</div>
 <p>Tab completion is a very useful method when coding in any language. It takes some practice to get used to but it increases the speed of coding and drastically reduces typos.</p>
 <p>Before we continue, the tab key is the key above the “CAPS” key and left of the ‘q’ key. If you would like a demonstration of tab completion please ask!</p>
-<p>The first way to tab complete is to tab complete file names. First you will need to download the following files into your “Chapter_10-11” directory.</p>
+<section id="file-namespath" class="level2">
+<h2 class="anchored" data-anchor-id="file-namespath">File names/path</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/file_path.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; border-radius:5px; background:white; border:2px white solid"></p>
+</figure>
+</div>
+<p>The first way to tab complete is to tab complete file names/paths. First you will need to download the following files into your “tips_and_tricks” directory.</p>
 <ul>
 <li><a href="https://neof-workshops.github.io/R_j4c0xh/downloads/tea_consumption.csv">tea_consumption.csv</a></li>
 <li><a href="https://neof-workshops.github.io/R_j4c0xh/downloads/english_speaking_population_of_countries.tsv">english_speaking_population_of_countries.tsv</a></li>
@@ -546,7 +557,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>tea_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"tea_consumption.csv"</span>, <span class="at">check.names=</span><span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>You may notice that we only provided the file name and the <code>check.names=FALSE</code> for the <code>read.csv()</code> <u id="function_tooltip"><strong>function</strong></u>. This is because of the format of the input file. In this case we do not want any of the input columns converted into row names. Additionally, the file was comma separated and the default separator to be used for <code>read.csv()</code> is commas. We will come back to this <u id="data_frame_tooltip"><strong>data frame</strong></u> so either keep the <u id="variable_tooltip"><strong>variable</strong></u> in your <strong>environment</strong> or keep the <strong>read</strong> code handy.</p>
+<p>You may notice that we only provided the file name and the <code>check.names=FALSE</code> for the <code>read.csv()</code> <u id="function_tooltip"><strong>function</strong></u>. This is because of the format of the input file. In this case we do not want any of the input columns converted into row names. Additionally, the file was comma separated and the default separator for <code>read.csv()</code> is comma. We will come back to this <u id="data_frame_tooltip"><strong>data frame</strong></u> so either keep the <u id="variable_tooltip"><strong>variable</strong></u> in your <strong>environment</strong> or keep the <strong>read</strong> code handy.</p>
 <p>Let us <strong>read</strong> in another file using tab complete to autofill the file name again.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>english_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"english_speaking_population_of_countries.tsv"</span>, </span>
@@ -554,12 +565,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">row.names =</span> <span class="dv">1</span>,</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">check.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Great!</p>
+</section>
+<section id="variables-functions-and-options" class="level2">
+<h2 class="anchored" data-anchor-id="variables-functions-and-options">Variables, functions, and options</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/autofill.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; border-radius:5px; background:white; border:2px white solid"></p>
+</figure>
+</div>
 <p>The second way to use tab completion is to autofill <u id="variable_tooltip"><strong>variable</strong></u> names, <u id="function_tooltip"><strong>function</strong></u> names and options. To autofill a <u id="variable_tooltip"><strong>variable</strong></u> or <u id="function_tooltip"><strong>function</strong></u> name you can start typing the name then press tab to get the dropdown menu.</p>
 <p>Whilst in the <code>()</code> of a <u id="function_tooltip"><strong>function</strong></u> you can press tab to get a drop down menu of the option choices and press enter on the highlighted choice to autofill it.</p>
-<p>This only works if the name currently exists. I.e. you cannot autofill a <strong><u id="variable_tooltip">variable</u> name</strong> if the <u id="variable_tooltip"><strong>variable</strong></u> is not in your <strong>environment</strong>.</p>
+<p>This only works if the name currently exists. You cannot autofill a <strong><u id="variable_tooltip">variable</u> name</strong> if the <u id="variable_tooltip"><strong>variable</strong></u> is not in your <strong>environment</strong>.</p>
 <p>Continue using tab complete for the rest of the course. Practice makes perfect.</p>
 <p>If you really don’t like it you don’t have to use it.</p>
+</section>
+<section id="data-sources" class="level2">
+<h2 class="anchored" data-anchor-id="data-sources">Data sources</h2>
 <p>Data from above files:</p>
 <ul>
 <li><a href="https://worldpopulationreview.com/country-rankings/tea-consumption-by-country" class="uri">https://worldpopulationreview.com/country-rankings/tea-consumption-by-country</a></li>
@@ -567,64 +588,65 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-df03b7c1615b83a7648d" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-df03b7c1615b83a7648d">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-6828ee50d9878664a665" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-6828ee50d9878664a665">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-08f9f1838a9d9d8d8916" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-08f9f1838a9d9d8d8916">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-b07ec624f9a255a87081" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-b07ec624f9a255a87081">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-bd6baba41c07ec9cac02" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-bd6baba41c07ec9cac02">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-f4bb06833b948027dad3" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-f4bb06833b948027dad3">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-f338047dc27aa6e7262e" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-f338047dc27aa6e7262e">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-71ee4b0f4046d312f7b6" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-71ee4b0f4046d312f7b6">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-7c7a55c7691881ab23ae" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-7c7a55c7691881ab23ae">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-b257a813f324a834588b" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-b257a813f324a834588b">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-c82401d62971efdabc11" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-c82401d62971efdabc11">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d0f427f5972d6de55d5f" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-d0f427f5972d6de55d5f">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-9187b70d4b64c8163cfc" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-9187b70d4b64c8163cfc">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-2a5994fafb5368fcfb9b" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-2a5994fafb5368fcfb9b">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-5de3274c5888e12188b2" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-5de3274c5888e12188b2">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-3c0a85ca7430489d28eb" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-3c0a85ca7430489d28eb">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-9cae5d23df44a8068a02" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-9cae5d23df44a8068a02">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-ebc35954272c2b930692" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-ebc35954272c2b930692">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-6c773bc89eb7dc714cfd" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-6c773bc89eb7dc714cfd">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-72b7a13793a45305be66" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-72b7a13793a45305be66">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-523071e615af24fbd2a9" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-523071e615af24fbd2a9">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-45a42841ec646a801a94" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-45a42841ec646a801a94">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-a67dc5dc1429a3676ff6" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-a67dc5dc1429a3676ff6">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-b8924e688a914fb9266e" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-b8924e688a914fb9266e">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-638368921fd149f1f7d3" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-638368921fd149f1f7d3">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-40476a28505aa4657236" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-40476a28505aa4657236">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d1cb6b60dc2763a8183a" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-d1cb6b60dc2763a8183a">{"x":{"element":"assignment_tooltip","opts":{"content":"<-","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-4b439943621a6ba9af6a" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-4b439943621a6ba9af6a">{"x":{"element":"assignment_tooltip","opts":{"content":"<-","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1472,7 +1494,7 @@ window.onload = function() {
 <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="CC BY-SA 4.0" height="30"></a></p>
 </div>   
     <div class="nav-footer-center">
-<p><a href="https://neof.org.uk/"><img src="../images//NEOF_rounded_corners.png" alt="NEOF" height="60"></a></p>
+<p><a href="https://neof.org.uk/"><img src="..\images//NEOF_rounded_corners.png" alt="NEOF" height="60"></a></p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

@@ -85,7 +85,7 @@ write.table(bee_colonies_2017_2018_df,
 :::
 
 ## Honey bee colony MCQs
-![](/images/question_bubble_orange.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+![](/images/question_bubble_orange.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
 Great! Using files and subsetting are very important skills in R so I hope the challenges helped improve your skills and confidence.
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.19">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,13 +12,10 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -45,12 +42,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5981ca9ed2f01d41a9ae447c87bc4519.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a07d9f573de810e4e0204a3fc88c056.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0b8e113766f0aaf860995efa8b3aa8a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eaf9efb5ff69c09042967cbd085a044f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-58102aee4e65b2f852e11c7b23a63b85.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-6929054a0fa9c2e78769c32dde380a12.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d3dbc30dbc48f6f58dbcf08637aa38e6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-78af124ace17c31d74afd4dd2c6d8795.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -511,7 +508,7 @@ ul.task-list li input[type="checkbox"] {
 <h1>Suffixes, separators, and excel files</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/file_explorer.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background:white; border-radius:5px; border: 5px solid white"></p>
+<p><img src="..\images/file_explorer.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background:white; border-radius:5px; border: 5px solid white"></p>
 </figure>
 </div>
 <p>You have learnt how to read in .csv and .tsv files. However, you may encounter text files with other separators or you may even want to read in an excel file.</p>
@@ -519,7 +516,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="file-suffixes">File suffixes</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/txt_files.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background:white; border-radius:5px"></p>
+<p><img src="..\images/txt_files.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background:white; border-radius:5px"></p>
 </figure>
 </div>
 <p>There are many types of file suffixes, including:</p>
@@ -536,10 +533,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="separators">Separators</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/separate.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background:white; border-radius:5px; border: 5px solid white"></p>
+<p><img src="..\images/separate.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background:white; border-radius:5px; border: 5px solid white"></p>
 </figure>
 </div>
-<p>Why is this relevant to you? Though you may encounter files with the suffix .csv or .tsv and therefore know which separator to use (<code>,</code> or <code>\t</code>), it is likely you will also encounter .txt files. Most .txt files will be tab separated (<code>\t</code>) but they may also be comma separated (<code>,</code>). Therefore <a href="../files_subsetting/reading.html">viewing</a> your files can be very useful before reading it in.</p>
+<p>Why is this relevant to you? Though you may encounter files with the suffix .csv or .tsv and therefore know which separator to use (<code>,</code> or <code>\t</code>), it is likely you will also encounter .txt files. Most .txt files will be tab separated (<code>\t</code>) but they may also be comma separated (<code>,</code>). Therefore <a href="..\files_subsetting/reading.html">viewing</a> your files can be very useful before reading it in.</p>
 <p>Additionally, other file separators that may be used include:</p>
 <ul>
 <li>Space (<code></code>)</li>
@@ -553,7 +550,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="excel-files">Excel files</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/readxl.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px; border: 5px solid white"></p>
+<p><img src="..\images/readxl.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px; border: 5px solid white"></p>
 </figure>
 </div>
 <p>You may want to open excel files with R. Normally to do this I open the file in excel and save it as a <u id="csv"><strong>.csv</strong></u> or a <u id="tsv"><strong>.tsv</strong></u> file and <strong>read</strong> this into R. Alternatively there are R packages that can directly <strong>read</strong> in excel files. If this is something you would like to do you can look at the following package:</p>
@@ -561,68 +558,68 @@ ul.task-list li input[type="checkbox"] {
 <p>An important note is that <strong>reading</strong> in a file into R will not change the file. You are creating a new R <strong>object</strong>. Modifying this <strong>object</strong> will not alter the original file. Later in the materials we will look into how to create new files or overwrite files by <strong>writing</strong>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d4b5f583a30f3d2aceae" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-d4b5f583a30f3d2aceae">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-dd0b9bfc9dbf6549870b" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-dd0b9bfc9dbf6549870b">{"x":{"element":"operator_tooltip","opts":{"content":"+, -, /, *, etc.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-db8f303400ff7724fead" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-db8f303400ff7724fead">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-ae2dca7a9f04f6674a01" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-ae2dca7a9f04f6674a01">{"x":{"element":"variable_tooltip","opts":{"content":"Container of an R object with a name","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-81aefa1a6fdd3406edd7" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-81aefa1a6fdd3406edd7">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-4f36ed3f2dc9f91752f2" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-4f36ed3f2dc9f91752f2">{"x":{"element":"function_tooltip","opts":{"content":"Named block of code that performs a specific task","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-9413f47107655a63ff9a" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-9413f47107655a63ff9a">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d643d80016d337beb61f" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-d643d80016d337beb61f">{"x":{"element":"class_tooltip","opts":{"content":"Object data type, e.g. integer, double, string, and logical","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-f328deef867df096e939" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-f328deef867df096e939">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-83704c8427976433289b" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-83704c8427976433289b">{"x":{"element":"data_structure_tooltip","opts":{"content":"Object structure type, e.g. scalar, vector, and data frame","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-c3c796b2f200ac08dbb8" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-c3c796b2f200ac08dbb8">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-74ae225c7e669dae6655" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-74ae225c7e669dae6655">{"x":{"element":"integer_tooltip","opts":{"content":"Number without decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-1ef18402e83192020c10" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-1ef18402e83192020c10">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-1008771dec2cc3b68127" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-1008771dec2cc3b68127">{"x":{"element":"double_tooltip","opts":{"content":"Number with decimal points","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-e41058e7654dc121b6d9" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-e41058e7654dc121b6d9">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-38b4afd4efb2f02655c7" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-38b4afd4efb2f02655c7">{"x":{"element":"string_tooltip","opts":{"content":"Text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-c00c37e076633b02fa5f" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-c00c37e076633b02fa5f">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-b4fecd16bc00d8a1480c" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-b4fecd16bc00d8a1480c">{"x":{"element":"logical_tooltip","opts":{"content":"TRUE or FALSE","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-dea75e99c952e1bcd613" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-dea75e99c952e1bcd613">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-1fab50b8346a52706609" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-1fab50b8346a52706609">{"x":{"element":"scalar_tooltip","opts":{"content":"A single value in a object","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-7da220033c1d94418cb0" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-7da220033c1d94418cb0">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-c434a1fa415ff4d5473d" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-c434a1fa415ff4d5473d">{"x":{"element":"vector_tooltip","opts":{"content":"Homogenous 1-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-57f5eb2f62aa998e70b7" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-57f5eb2f62aa998e70b7">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-ab7f092ffdc2decb8e1b" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-ab7f092ffdc2decb8e1b">{"x":{"element":"matrix_tooltip","opts":{"content":"Homogeneous 2-dimensional data structure","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-26f5d61ea5a0f42c171a" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-26f5d61ea5a0f42c171a">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-fe16c066a9310360007c" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-fe16c066a9310360007c">{"x":{"element":"data_frame_tooltip","opts":{"content":"Heterogeneous 2-dimensional data structure. Each column is homogeneous","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-61bb18449b9a0a8b72ce" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-61bb18449b9a0a8b72ce">{"x":{"element":"assignment_tooltip","opts":{"content":"<-","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d01f79fee43f4934a498" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-d01f79fee43f4934a498">{"x":{"element":"assignment_tooltip","opts":{"content":"<-","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-769ee6e525054395e578" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-769ee6e525054395e578">{"x":{"element":"csv","opts":{"content":"csv = Comma Seperated Value, i.e. fields/columns are sperated by commas (,)","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-77c446a81d0fb322729a" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-77c446a81d0fb322729a">{"x":{"element":"csv","opts":{"content":"csv = Comma Seperated Value, i.e. fields/columns are sperated by commas (,)","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-c181fdb9cab583f284eb" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-c181fdb9cab583f284eb">{"x":{"element":"tsv","opts":{"content":"tsc = Tab Seperated Value, i.e. fields/columns are sperated by tabs (\t)","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-a047a1f56353beaf4d13" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-a047a1f56353beaf4d13">{"x":{"element":"tsv","opts":{"content":"tsc = Tab Seperated Value, i.e. fields/columns are sperated by tabs (\t)","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
@@ -1475,7 +1472,7 @@ window.onload = function() {
 <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="CC BY-SA 4.0" height="30"></a></p>
 </div>   
     <div class="nav-footer-center">
-<p><a href="https://neof.org.uk/"><img src="../images//NEOF_rounded_corners.png" alt="NEOF" height="60"></a></p>
+<p><a href="https://neof.org.uk/"><img src="..\images//NEOF_rounded_corners.png" alt="NEOF" height="60"></a></p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

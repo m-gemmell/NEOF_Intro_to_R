@@ -1,13 +1,11 @@
 # Handy exercises
-<center>
-![](/images/exercises.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
-</center>
+![](/images/exercises.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
-There has been a lot covered this session so these exercises will hopefully be straightforward.
+There has been a lot covered in this part so the following exercises will hopefully be straightforward.
 
 Please set the working directory to your main workshop directory and use your "Exercises.R" script. Ensure you are using annotations and code sections to keep the contents clear and separated.
 
-Additionally __read__ in and __write__ out files to "Chapter_10-11" .
+Additionally __read__ in and __write__ out files from/to "tips_and_tricks" .
 
 Solutions are in the expandable boxes. 
 Try your best to solve each challenge but use the solutions for help if you would like. 

@@ -1,11 +1,9 @@
 # Identical
-<center>
-![](/images/identikeys.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
-</center>
+![](/images/identikeys.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
 I touched on the `identical()` <u id='function_tooltip'>__function__</u> previously to compare two resulting <u id='data_frame_tooltip'>__data frames__</u>. 
-`identical()` will compare two objects and if the objects are exactly identical it will print TRUE. 
-If they are not exactly identical it will print FALSE. 
+`identical()` will compare two objects and if the objects are exactly identical it will print `TRUE`. 
+If they are not exactly identical it will print `FALSE`. 
 The <u id='function_tooltip'>function</u> can be given __scalars__, __vectors__, __data frames__ etc. 
 
 Try out the below examples.
