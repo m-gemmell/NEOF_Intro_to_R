@@ -313,15 +313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../plots/plots_intro.html" aria-current="page"> 
+    <a class="nav-link active" href="../plots/intro.html" aria-current="page"> 
 <span class="menu-text">Plots</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../stats/stats_overview.html"> 
+    <a class="nav-link" href="../stats/intro.html"> 
 <span class="menu-text">Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../programming/overview.html"> 
+    <a class="nav-link" href="../programming/intro.html"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plots/plots_intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../plots/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Base R Plots</span></a>
   </div>
 </li>
@@ -616,20 +616,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Line graph exercise</h1>
 <p>First we will ignore “penguin_df”.</p>
 <p>Create the below plot. You will need to create the <strong>vectors</strong> yourself.</p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="line_exercise_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="line_exercise_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p><strong>Tip</strong>: The x and y labels may help you figure out the commands to create the <strong>vectors</strong>.</p>
-<div class="webex-solution">
-<button>
-Line graph solution
-</button>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The x and y labels may help you figure out the commands to create the <strong>vectors</strong>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Line graph solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Produce the plot with vectors created inside the function</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">2</span>), </span>
@@ -637,6 +657,8 @@ Line graph solution
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"red"</span>,</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">'A line graph with "red" as the colour'</span>,</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">type =</span> <span class="st">"l"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
 </div>
 </div>
 

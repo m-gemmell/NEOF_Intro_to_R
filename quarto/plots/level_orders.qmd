@@ -1,7 +1,5 @@
 # Level orders
-<center>
-![](/images/reorder.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid"}
-</center>
+![](/images/reorder.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid" fig-align="center"}
 
 We will get back to plotting soon but first I want to show you how to specify the order of __levels__. This is important as a lot of the time alphabetically is not wanted. One example is with months.
 ```{r eval=FALSE}

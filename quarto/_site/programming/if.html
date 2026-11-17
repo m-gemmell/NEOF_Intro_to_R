@@ -313,15 +313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../plots/plots_intro.html"> 
+    <a class="nav-link" href="../plots/intro.html"> 
 <span class="menu-text">Plots</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../stats/stats_overview.html"> 
+    <a class="nav-link" href="../stats/intro.html"> 
 <span class="menu-text">Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../programming/overview.html" aria-current="page"> 
+    <a class="nav-link active" href="../programming/intro.html" aria-current="page"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../programming/overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../programming/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basic programming</span></a>
   </div>
 </li>
@@ -438,7 +438,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#if-statements" id="toc-if-statements" class="nav-link active" data-scroll-target="#if-statements">If statements</a></li>
+  <li><a href="#if-statements" id="toc-if-statements" class="nav-link active" data-scroll-target="#if-statements">If statements</a>
+  <ul class="collapse">
+  <li><a href="#modulus-with-if" id="toc-modulus-with-if" class="nav-link" data-scroll-target="#modulus-with-if">Modulus with if</a></li>
+  <li><a href="#if-in-loop" id="toc-if-in-loop" class="nav-link" data-scroll-target="#if-in-loop">If in loop</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -451,9 +455,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="if-statements" class="level1">
 <h1>If statements</h1>
-<center>
-<img src="..\images/flow_chart.png" class="img-fluid" style="width:200px; border-radius:15px; background:white">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/flow_chart.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; border-radius:15px; background:white"></p>
+</figure>
+</div>
 <p><strong>If statements</strong> allow for different commands to be carried out depending on <strong>if</strong> a condition is met.</p>
 <p>This can be thought of like a flow chart where you go one way if you answer yes and another if you answer no. Example:</p>
 <ul>
@@ -469,6 +475,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  command<span class="sc">/</span>s <span class="cf">if</span> condition false</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<section id="modulus-with-if" class="level2">
+<h2 class="anchored" data-anchor-id="modulus-with-if">Modulus with if</h2>
 <p>I’ll show you a coding example using the modulus (<code>%%</code>) <strong>operator</strong>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Create a scalar</span></span>
@@ -480,8 +488,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste0</span>(i, <span class="st">" is even"</span>)</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</section>
+<section id="if-in-loop" class="level2">
+<h2 class="anchored" data-anchor-id="if-in-loop">If in loop</h2>
 <p>You can have an <strong>if statement</strong> within a <strong>loop</strong>.</p>
-<p><strong>Reminder</strong>: We need to use <code>print()</code> within <strong>loops</strong> to print results to the console.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">9</span>) {</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">#If statement determining if the remainder of i/2 is 1</span></span>
@@ -492,8 +502,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We need to use <code>print()</code> within <strong>loops</strong> to print results to the console.</p>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

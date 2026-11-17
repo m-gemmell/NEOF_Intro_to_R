@@ -313,15 +313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../plots/plots_intro.html" aria-current="page"> 
+    <a class="nav-link active" href="../plots/intro.html" aria-current="page"> 
 <span class="menu-text">Plots</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../stats/stats_overview.html"> 
+    <a class="nav-link" href="../stats/intro.html"> 
 <span class="menu-text">Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../programming/overview.html"> 
+    <a class="nav-link" href="../programming/intro.html"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plots/plots_intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../plots/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Base R Plots</span></a>
   </div>
 </li>
@@ -614,10 +614,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="eu-cities" class="level1">
 <h1>EU cities</h1>
-<center>
-<img src="..\images/barcelona.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: 5px white solid">
-</center>
-<p>Histograms are good to see the numerical distribution of data. Next we are going to look at the number of cities (with greater than 300,000 population) in EU countries (https://en.Wikipedia.org/wiki/List_of_cities_in_the_European_Union_by_population_within_city_limits).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/barcelona.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px; border: 5px white solid"></p>
+</figure>
+</div>
+<p>We are going to look at the number of cities (with greater than 300,000 population) in EU countries (<a href="https://en.Wikipedia.org/wiki/List_of_cities_in_the_European_Union_by_population_within_city_limits" class="uri">https://en.Wikipedia.org/wiki/List_of_cities_in_the_European_Union_by_population_within_city_limits</a>).</p>
 <p>The first step is to create a <strong>vector</strong> with the numbers of cities in EU countries, however we won’t know what countries these correspond to yet. Then we will create a histogram and set the colour of the bars with the option <code>col =</code>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>eu_cities <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>,</span>

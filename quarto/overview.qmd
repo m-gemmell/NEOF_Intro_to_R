@@ -62,10 +62,9 @@ The topics covered are:
 There are extra materials you can attempt after the workshop. 
 
 ### Plots
+![](/images/palette.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
 
-
-
-The [plots](/plots/plots_intro.qmd) part includes creating:
+The [plots](/plots/intro.qmd) part includes creating:
 
 - [Line graphs](/plots/line.qmd)
 - [Histograms](/plots/histogram.qmd)
@@ -73,13 +72,15 @@ The [plots](/plots/plots_intro.qmd) part includes creating:
 - [Boxplots](/plots/boxplot.qmd) 
 
 ### Statistics
+![](/images/basic_stats.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
-The [statistics](/stats/stats_overview.qmd) part will cover carrying out:
+The [statistics](/stats/intro.qmd) part will cover carrying out:
 
 - [Linear regression](/stats/linear_regression.qmd)
 - [T-test](/stats/t_test.qmd)
 
 ### Programming
+![](/images/programming.png){style="width:150px; background: white; border-radius:5px" fig-align="center"}
 
 Finally, the last part will introduce some harder coding where you'll learn to create:
 

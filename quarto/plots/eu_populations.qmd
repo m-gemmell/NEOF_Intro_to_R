@@ -1,12 +1,10 @@
 # EU populations
-<center>
-![](/images/copenhagan.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
-</center>
+![](/images/copenhagan.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
 
 Most of the time you will not be working with just __vectors__.
 Therefore, we'll make a __data frame__ containing the number of EU cities and the population of the EU countries.
 
-The population numbers will be in millions to the closest 1 decimal place and consist of the 2020 Eurostat figures from: https://en.Wikipedia.org/wiki/List_of_European_Union_member_states_by_population
+The population numbers will be in millions to the closest 1 decimal place and consist of the 2020 Eurostat figures from: <https://en.Wikipedia.org/wiki/List_of_European_Union_member_states_by_population>
 
 ```{r eval=FALSE}
 eu_country_names <- c("Austria", "Belgium", "Bulgaria", "Croatia", "Czech Republic", 
@@ -23,7 +21,13 @@ eu_df <- data.frame(eu_cities,eu_pop,
                     row.names = eu_country_names)
 ```
 
-We will quickly create a histogram for the population numbers. We'll make the bar colours purple and we'll make the x axis label "2020 Eurostat population number in millions" with the `xlab = ` option.
+::: {.callout-tip}
+Normally I recommend typing out the code in these materials.
+Learning to type and debug your code is very important.
+However, I would recommend copying and pasting the above code since its very long and it is primarily data.
+:::
+
+We will quickly create a histogram for the population numbers. We'll make the bar colours purple and set the x axis label to "2020 Eurostat population number in millions" with the `xlab = ` option.
 
 ```{r eval=FALSE}
 hist(eu_df$eu_pop, col = "purple",

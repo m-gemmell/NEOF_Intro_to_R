@@ -313,15 +313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../plots/plots_intro.html"> 
+    <a class="nav-link" href="../plots/intro.html"> 
 <span class="menu-text">Plots</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../stats/stats_overview.html"> 
+    <a class="nav-link" href="../stats/intro.html"> 
 <span class="menu-text">Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../programming/overview.html" aria-current="page"> 
+    <a class="nav-link active" href="../programming/intro.html" aria-current="page"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../programming/overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../programming/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basic programming</span></a>
   </div>
 </li>
@@ -438,7 +438,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#for-loops" id="toc-for-loops" class="nav-link active" data-scroll-target="#for-loops">For loops</a></li>
+  <li><a href="#for-loops" id="toc-for-loops" class="nav-link active" data-scroll-target="#for-loops">For loops</a>
+  <ul class="collapse">
+  <li><a href="#print-each-element" id="toc-print-each-element" class="nav-link" data-scroll-target="#print-each-element">Print each element</a></li>
+  <li><a href="#analogy" id="toc-analogy" class="nav-link" data-scroll-target="#analogy">Analogy</a></li>
+  <li><a href="#for-loop-examples" id="toc-for-loop-examples" class="nav-link" data-scroll-target="#for-loop-examples">For loop examples</a></li>
+  <li><a href="#looping-over-rows-or-columns" id="toc-looping-over-rows-or-columns" class="nav-link" data-scroll-target="#looping-over-rows-or-columns">Looping over rows or columns</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -458,6 +464,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  command<span class="sc">/</span>s</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<section id="print-each-element" class="level2">
+<h2 class="anchored" data-anchor-id="print-each-element">Print each element</h2>
 <p>We will run a simple example below. We need the <code>print()</code> <strong>function</strong> so the results are print to the console. If this was not done nothing would be print out as it is a <strong>loop</strong>:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>) {</span>
@@ -479,7 +487,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(i <span class="sc">*</span> <span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Except instead of many commands over many lines we were able to carry it out in one command.</p>
-<p>Analogy:</p>
+</section>
+<section id="analogy" class="level2">
+<h2 class="anchored" data-anchor-id="analogy">Analogy</h2>
+<p>A possible analogy of for loops is:</p>
 <ul>
 <li>The loop is a circular assembly line.</li>
 <li>Machines carry out the commands on the provided <strong>variables</strong>.</li>
@@ -488,6 +499,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Once the worker gets the 1st set of results they will put the 2nd <strong>element</strong> on the assembly line, setting it as <code>i</code>.</li>
 <li>This will repeat till the results from all the <strong>elements</strong> are returned.</li>
 </ul>
+</section>
+<section id="for-loop-examples" class="level2">
+<h2 class="anchored" data-anchor-id="for-loop-examples">For loop examples</h2>
 <p>A few more examples:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">6</span>,<span class="dv">9</span>)) {</span>
@@ -516,6 +530,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co">#Check out the vector</span></span>
 <span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>fibo_vec</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</section>
+<section id="looping-over-rows-or-columns" class="level2">
+<h2 class="anchored" data-anchor-id="looping-over-rows-or-columns">Looping over rows or columns</h2>
 <p>A lot of what we have been doing we could do without <strong>loops</strong>. Where I find <strong>for loops</strong> handy is when I want to carry out a task on multiple columns or rows.</p>
 <p>We can use <strong>for loops</strong> to quickly create a multiplication table in a matrix.</p>
 <div class="cell">
@@ -567,6 +584,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Hopefully this is clear how <strong>for loops</strong> can be used. Further down we’ll work with a real dataset to show some real world applications. However, for now we will go onto <strong>while loops</strong>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

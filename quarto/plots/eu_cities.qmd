@@ -1,10 +1,7 @@
 # EU cities
-<center>
-![](/images/barcelona.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
-</center>
+![](/images/barcelona.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
 
-Histograms are good to see the numerical distribution of data. 
-Next we are going to look at the number of cities (with greater than 300,000 population) in EU countries (https://en.Wikipedia.org/wiki/List_of_cities_in_the_European_Union_by_population_within_city_limits).
+We are going to look at the number of cities (with greater than 300,000 population) in EU countries (<https://en.Wikipedia.org/wiki/List_of_cities_in_the_European_Union_by_population_within_city_limits>).
 
 The first step is to create a __vector__ with the numbers of cities in EU countries, however we won't know what countries these correspond to yet. Then we will create a histogram and set the colour of the bars with the option `col = `.
 ```{r eval=FALSE}

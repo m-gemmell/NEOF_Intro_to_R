@@ -1,7 +1,5 @@
 #  Custom functions
-<center>
-![](/images/custon_function.png){style="width:200px; background:white; border-radius:100px"}
-</center>
+![](/images/custon_function.png){style="width:200px; background:white; border-radius:100px" fig-align="center"}
 
 Throughout this course we have used many __functions__. However, you may want a __function__ that does not exist. In this case you can create your own.
 
@@ -18,7 +16,9 @@ There are 2 new __functions__ above:
 - `function()`: This __function__ creates the new __function__.
 - `return()`: This specifies what will be returned when we run our new __function__.
 
-A quick example to add VAT to each number in a __vector__:
+## VAT example
+
+A quick example to add VAT to each number in a __vector__.
 ```{r eval=FALSE}
 #Create the function
 add_vat <- function(input_num_vec) {
@@ -29,6 +29,8 @@ add_vat <- function(input_num_vec) {
 add_vat(0.99)
 add_vat(c(9.99, 8.78, 2.45))
 ```
+
+## Multiples of 5
 
 In the below example we will create a __function__ that will __return__ all numbers that are multiples of 5 from the input __vector__.
 ```{r eval=FALSE}
@@ -52,6 +54,8 @@ all_mult_5_func(1:20)
 all_mult_5_func(seq(from = 0, to = 100, by = 8))
 all_mult_5_func(1:10 * 5)
 ```
+
+## Multiple arguments/options
 
 Like with normal __functions__ a custom one can be given multiple arguments if built that way. Knowing this we will alter the above __function__ so it can __return__ all numbers that are multiples of a chosen number.
 ```{r eval=FALSE}
@@ -78,4 +82,4 @@ all_mult_x_func(1:10 * 5, 10)
 multiples_of_6_btwn_1_100 <- all_mult_x_func(1:100, 6)
 ```
 
-With all that we are now going to a real dataset in the next session to show the use and applications of these new techniques.
+With all that we are now going to look at a real dataset in the next page to show the use and applications of these new techniques.

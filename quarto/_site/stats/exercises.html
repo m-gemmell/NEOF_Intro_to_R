@@ -312,15 +312,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../plots/plots_intro.html"> 
+    <a class="nav-link" href="../plots/intro.html"> 
 <span class="menu-text">Plots</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../stats/stats_overview.html" aria-current="page"> 
+    <a class="nav-link active" href="../stats/intro.html" aria-current="page"> 
 <span class="menu-text">Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../programming/overview.html"> 
+    <a class="nav-link" href="../programming/intro.html"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -370,8 +370,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../stats/stats_overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Stats overview</span></a>
+  <a href="../stats/intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stats</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -398,7 +398,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../stats/scatterplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Scatterplot</span></a>
+ <span class="menu-text">Scatter plot</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -447,7 +447,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../stats/exercises.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">World happiness exercises</span></a>
+ <span class="menu-text">World happiness exercise</span></a>
   </div>
 </li>
     </ul>
@@ -460,7 +460,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#world-happiness-exercises" id="toc-world-happiness-exercises" class="nav-link active" data-scroll-target="#world-happiness-exercises">World happiness exercises</a>
+  <li><a href="#world-happiness-exercise" id="toc-world-happiness-exercise" class="nav-link active" data-scroll-target="#world-happiness-exercise">World happiness exercise</a>
   <ul class="collapse">
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#world-happiness-challenges" id="toc-world-happiness-challenges" class="nav-link" data-scroll-target="#world-happiness-challenges">World happiness challenges</a>
@@ -474,6 +474,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#world-happiness-challenge-7" id="toc-world-happiness-challenge-7" class="nav-link" data-scroll-target="#world-happiness-challenge-7">World happiness challenge 7</a></li>
   <li><a href="#world-happiness-challenge-8" id="toc-world-happiness-challenge-8" class="nav-link" data-scroll-target="#world-happiness-challenge-8">World happiness challenge 8</a></li>
   </ul></li>
+  <li><a href="#next-part" id="toc-next-part" class="nav-link" data-scroll-target="#next-part">Next part</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -485,19 +486,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="world-happiness-exercises" class="level1">
-<h1>World happiness exercises</h1>
-<center>
-<img src="..\images/world_happiness.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: white solid 5px">
-</center>
+<section id="world-happiness-exercise" class="level1">
+<h1>World happiness exercise</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/world_happiness.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px; border: white solid 5px"></p>
+</figure>
+</div>
 <p>Please use your “Exercises.R” script for this exercise and the main workshop directory as the working directory. Ensure you are using annotations and code sections to keep the contents clear and separated.</p>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
-<center>
-<img src="..\images/report_2.png" class="img-fluid" style="width:150px; background: white ; border-radius:5px">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/report_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white ; border-radius:5px"></p>
+</figure>
+</div>
 <p>For this exercise we will be looking at the World Happiness Report for 2016. This report is a survey of the state of global happiness.</p>
-<p>Download <a href="https://neof-workshops.github.io/R_j4c0xh/downloads/world_happiness_report_2016.csv">world_happiness_report_2016.csv</a> to the directory “Chapter_15-16”.</p>
+<p>Download <a href="https://neof-workshops.github.io/R_j4c0xh/downloads/world_happiness_report_2016.csv">world_happiness_report_2016.csv</a> to the directory “stats”.</p>
 <p>Source: https://www.kaggle.com/unsdsn/world-happiness?select=2016.csv</p>
 <p>The columns for the data are:</p>
 <ul>
@@ -522,53 +527,75 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Solutions are in the expandable boxes. Try your best to solve each challenge but use the solutions for help if you would like. Even if your method works it can be good to check the solution as there are many ways to do the same thing in R.</p>
 <section id="world-happiness-challenge-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="world-happiness-challenge-1">World happiness challenge 1</h3>
-<center>
-<img src="..\images/smiley_1.png" class="img-fluid" style="width:150px; background: white ; border-radius:25px; border: white 5px solid">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/smiley_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white ; border-radius:25px; border: white 5px solid"></p>
+</figure>
+</div>
 <p>Read in the file “world_happiness_report_2016” as <strong>data frame</strong> called “happy_df”. Ensure <strong>strings</strong> are read in as <strong>factors</strong> and that none of the columns are read in as row names.</p>
-<div class="webex-solution">
-<button>
-World happiness solution 1
-</button>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>World happiness solution 1
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>happy_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Chapter_15-16/world_happiness_report_2016.csv"</span>, </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>happy_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"stats/world_happiness_report_2016.csv"</span>, </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">check.names =</span> <span class="cn">FALSE</span>,</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">stringsAsFactors =</span> <span class="cn">TRUE</span>,</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">sep =</span> <span class="st">","</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                      )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
+</div>
+</div>
 </section>
 <section id="world-happiness-challenge-2" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="world-happiness-challenge-2">World happiness challenge 2</h3>
-<center>
-<img src="..\images/smiley_2.png" class="img-fluid" style="width:150px; background: white ; border-radius:25px; border: white 5px solid">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/smiley_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white ; border-radius:25px; border: white 5px solid"></p>
+</figure>
+</div>
 <p>Answer the following questions using the output from one <strong>function</strong>:</p>
 How many countries are in the region “Western Europe”?
-<div id="radio_MLMUCFUDUH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_MLMUCFUDUH" value=""> <span><strong>0.8179</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MLMUCFUDUH" value=""> <span><strong>7.526</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MLMUCFUDUH" value="answer"> <span><strong>21</strong></span></label>
+<div id="radio_KOUQCFREGB" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KOUQCFREGB" value=""> <span><strong>0.8179</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KOUQCFREGB" value=""> <span><strong>7.526</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KOUQCFREGB" value="answer"> <span><strong>21</strong></span></label>
 </div>
 What is the maximum number in the “Happiness Score” column?
-<div id="radio_VVDBRIPXIF" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_VVDBRIPXIF" value=""> <span><strong>0.8179</strong></span></label><label><input type="radio" autocomplete="off" name="radio_VVDBRIPXIF" value="answer"> <span><strong>7.526</strong></span></label><label><input type="radio" autocomplete="off" name="radio_VVDBRIPXIF" value=""> <span><strong>21</strong></span></label>
+<div id="radio_ZVPGFRNNWS" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ZVPGFRNNWS" value=""> <span><strong>0.8179</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZVPGFRNNWS" value="answer"> <span><strong>7.526</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZVPGFRNNWS" value=""> <span><strong>21</strong></span></label>
 </div>
 What is the minimum value in the “Dystopia Residual” column?
-<div id="radio_PQIUMALEJT" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_PQIUMALEJT" value="answer"> <span><strong>0.8179</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PQIUMALEJT" value=""> <span><strong>7.526</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PQIUMALEJT" value=""> <span><strong>21</strong></span></label>
+<div id="radio_ZGVDKLDOMR" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ZGVDKLDOMR" value="answer"> <span><strong>0.8179</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZGVDKLDOMR" value=""> <span><strong>7.526</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZGVDKLDOMR" value=""> <span><strong>21</strong></span></label>
 </div>
 From the columns “Economy (GDP per Capital)”, “Freedom” , and “Dystopia Residual”, which has the highest mean value?
-<div id="radio_OFWZYVTBDB" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_OFWZYVTBDB" value=""> <span><strong>Economy (GDP per Capital)</strong></span></label><label><input type="radio" autocomplete="off" name="radio_OFWZYVTBDB" value=""> <span><strong>Freedom</strong></span></label><label><input type="radio" autocomplete="off" name="radio_OFWZYVTBDB" value="answer"> <span><strong>Dystopia Residual</strong></span></label>
+<div id="radio_IQEISXWZHC" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_IQEISXWZHC" value=""> <span><strong>Economy (GDP per Capital)</strong></span></label><label><input type="radio" autocomplete="off" name="radio_IQEISXWZHC" value=""> <span><strong>Freedom</strong></span></label><label><input type="radio" autocomplete="off" name="radio_IQEISXWZHC" value="answer"> <span><strong>Dystopia Residual</strong></span></label>
 </div>
 From the columns “Economy (GDP per Capital)”, “Freedom” , and “Dystopia Residual”, which has the lowest mean value?
-<div id="radio_ZBEWKCJVZB" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ZBEWKCJVZB" value=""> <span><strong>Economy (GDP per Capital)</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZBEWKCJVZB" value="answer"> <span><strong>Freedom</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZBEWKCJVZB" value=""> <span><strong>Dystopia Residual</strong></span></label>
+<div id="radio_OTMKFIEEKF" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_OTMKFIEEKF" value=""> <span><strong>Economy (GDP per Capital)</strong></span></label><label><input type="radio" autocomplete="off" name="radio_OTMKFIEEKF" value="answer"> <span><strong>Freedom</strong></span></label><label><input type="radio" autocomplete="off" name="radio_OTMKFIEEKF" value=""> <span><strong>Dystopia Residual</strong></span></label>
 </div>
-<div class="webex-solution">
-<button>
-World happiness solution 2
-</button>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>World happiness solution 2
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(happy_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -615,12 +642,16 @@ World happiness solution 2
 </div>
 </div>
 </div>
+</div>
+</div>
 </section>
 <section id="world-happiness-challenge-3" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="world-happiness-challenge-3">World happiness challenge 3</h3>
-<center>
-<img src="..\images/smiley_7.png" class="img-fluid" style="width:150px; background: white ; border-radius:25px; border: white 5px solid">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/smiley_7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white ; border-radius:25px; border: white 5px solid"></p>
+</figure>
+</div>
 <p>Create the below plot.</p>
 <ul>
 <li>The equation does not have to be in exactly the same position as the below. Just make sure it is all clearly visible, it contains the same text, and it is not on top of any points.</li>
@@ -637,10 +668,18 @@ World happiness solution 2
 </div>
 </div>
 </div>
-<div class="webex-solution">
-<button>
-World happiness solution 3
-</button>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>World happiness solution 3
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Fit linear model of Economy (x) against Family (y)</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>fit_economy_family <span class="ot">&lt;-</span> </span>
@@ -668,77 +707,97 @@ World happiness solution 3
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">levels</span>(happy_df<span class="sc">$</span>Region))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
+</div>
+</div>
 </section>
 <section id="world-happiness-challenge-4" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="world-happiness-challenge-4">World happiness challenge 4</h3>
-<center>
-<img src="..\images/smiley_5.png" class="img-fluid" style="width:150px; background: white ; border-radius:25px; border: white 5px solid">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/smiley_5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white ; border-radius:25px; border: white 5px solid"></p>
+</figure>
+</div>
 <p>It may be a bit awkward to get the right size for the plot in the <strong>“Plots”</strong> pane. Therefore save it as a png file with the following options:</p>
 <ul>
 <li>File name of “Economy_vs_family.png”</li>
 <li>Dimensions of file is 8 inches for height and width</li>
 <li>Resolution of 200dpi</li>
 </ul>
-<div class="webex-solution">
-<button>
-World happiness solution 4
-</button>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>World happiness solution 4
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#PNG command</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> <span class="st">"Chapter_15-16/Economy_vs_family.png"</span>, </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">units =</span> <span class="st">"in"</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">res =</span> <span class="dv">200</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Produce plot</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> happy_df<span class="sc">$</span><span class="st">`</span><span class="at">Economy (GDP per Capita)</span><span class="st">`</span>,</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> happy_df<span class="sc">$</span>Family,</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Comparison of the effect of </span><span class="sc">\n</span><span class="st"> Economy and Family on happiness"</span>,</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Economy (GDP per Capita)"</span>,</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Family"</span>,</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="fu">as.numeric</span>(happy_df<span class="sc">$</span>Region),</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">1.5</span>),</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="dv">1</span>)</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Add abline</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(fit_economy_family, <span class="at">col =</span> <span class="st">"mediumslateblue"</span>)</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co">#Add equation to top right</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="at">x =</span> <span class="fl">0.4</span>, <span class="at">y =</span> <span class="fl">1.1</span>, <span class="at">labels =</span> lm_equation)</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co">#Add the legend</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">"bottomright"</span>,</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>       <span class="at">pch =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nlevels</span>(happy_df<span class="sc">$</span>Region),</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">levels</span>(happy_df<span class="sc">$</span>Region))</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="co">#dev.off</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Fit linear model of Economy (x) against Family (y)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>fit_economy_family <span class="ot">&lt;-</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(Family<span class="sc">~</span><span class="st">`</span><span class="at">Economy (GDP per Capita)</span><span class="st">`</span>, <span class="at">data =</span> happy_df)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Create string for linear equation</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="fu">round</span>(fit_economy_family<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">digits =</span> <span class="dv">4</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">round</span>(fit_economy_family<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">digits =</span> <span class="dv">4</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>lm_equation <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"y = "</span>, m , <span class="st">"x + "</span>, c)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Produce plot</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> happy_df<span class="sc">$</span><span class="st">`</span><span class="at">Economy (GDP per Capita)</span><span class="st">`</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> happy_df<span class="sc">$</span>Family,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Comparison of the effect of </span><span class="sc">\n</span><span class="st"> Economy and Family on happiness"</span>,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Economy (GDP per Capita)"</span>,</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Family"</span>,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="fu">as.numeric</span>(happy_df<span class="sc">$</span>Region),</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">1.5</span>),</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="dv">1</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co">#Add abline</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(fit_economy_family, <span class="at">col =</span> <span class="st">"mediumslateblue"</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="co">#Add equation to top right</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="at">x =</span> <span class="fl">0.4</span>, <span class="at">y =</span> <span class="fl">1.1</span>, <span class="at">labels =</span> lm_equation)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="co">#Add the legend</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">"bottomright"</span>,</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>       <span class="at">pch =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nlevels</span>(happy_df<span class="sc">$</span>Region),</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">levels</span>(happy_df<span class="sc">$</span>Region))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
 </div>
 </div>
 </section>
 <section id="world-happiness-challenge-5" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="world-happiness-challenge-5">World happiness challenge 5</h3>
-<center>
-<img src="..\images/smiley_4.png" class="img-fluid" style="width:150px; background: white ; border-radius:25px; border: white 5px solid">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/smiley_4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white ; border-radius:25px; border: white 5px solid"></p>
+</figure>
+</div>
 <p>Answer the following questions using information on the line graph and the linear model.</p>
 Does the linear model have a positive or negative gradient?
-<div id="radio_UOBMWIIZKC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_UOBMWIIZKC" value="answer"> <span><strong>Positive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_UOBMWIIZKC" value=""> <span><strong>Negative</strong></span></label>
+<div id="radio_VVVVEAPXOE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_VVVVEAPXOE" value="answer"> <span><strong>Positive</strong></span></label><label><input type="radio" autocomplete="off" name="radio_VVVVEAPXOE" value=""> <span><strong>Negative</strong></span></label>
 </div>
 Which variable (Economy or Family) has higher values?
-<div id="radio_RYGVBJTRJW" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_RYGVBJTRJW" value="answer"> <span><strong>Economy</strong></span></label><label><input type="radio" autocomplete="off" name="radio_RYGVBJTRJW" value=""> <span><strong>Family</strong></span></label>
+<div id="radio_WWZBITAZZM" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_WWZBITAZZM" value="answer"> <span><strong>Economy</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WWZBITAZZM" value=""> <span><strong>Family</strong></span></label>
 </div>
 If the value of Economy was 2.1 what would be the predictive value of Family according to the linear model equation?
-<div id="radio_WXLFZHRUNL" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WXLFZHRUNL" value=""> <span><strong>0.582678</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WXLFZHRUNL" value="answer"> <span><strong>1.28968</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WXLFZHRUNL" value=""> <span><strong>3.972274</strong></span></label>
+<div id="radio_XYIAQHVUML" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_XYIAQHVUML" value=""> <span><strong>0.582678</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XYIAQHVUML" value="answer"> <span><strong>1.28968</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XYIAQHVUML" value=""> <span><strong>3.972274</strong></span></label>
 </div>
 Which region appears to have the highest values for Economy and for Family?
-<div id="radio_IPTYVCIBNJ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_IPTYVCIBNJ" value=""> <span><strong>Latin America and Caribbean</strong></span></label><label><input type="radio" autocomplete="off" name="radio_IPTYVCIBNJ" value=""> <span><strong>North America</strong></span></label><label><input type="radio" autocomplete="off" name="radio_IPTYVCIBNJ" value="answer"> <span><strong>Western Europe</strong></span></label>
+<div id="radio_QUNWSYNZAU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_QUNWSYNZAU" value=""> <span><strong>Latin America and Caribbean</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QUNWSYNZAU" value=""> <span><strong>North America</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QUNWSYNZAU" value="answer"> <span><strong>Western Europe</strong></span></label>
 </div>
 </section>
 <section id="world-happiness-challenge-6" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="world-happiness-challenge-6">World happiness challenge 6</h3>
-<center>
-<img src="..\images/smiley_6.png" class="img-fluid" style="width:150px; background: white ; border-radius:25px; border: white 5px solid">
-</center>
-<p>Create the following boxplot.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/smiley_6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white ; border-radius:25px; border: white 5px solid"></p>
+</figure>
+</div>
+<p>Create the below boxplot.</p>
 <ul>
 <li>You can change the the levels with the following code</li>
 </ul>
@@ -758,10 +817,18 @@ Which region appears to have the highest values for Economy and for Family?
 </div>
 </div>
 </div>
-<div class="webex-solution">
-<button>
-World happiness solution 6
-</button>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>World happiness solution 6
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Change level names</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>short_region_names <span class="ot">&lt;-</span> </span>
@@ -777,20 +844,32 @@ World happiness solution 6
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
+</div>
+</div>
 </section>
 <section id="world-happiness-challenge-7" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="world-happiness-challenge-7">World happiness challenge 7</h3>
-<center>
-<img src="..\images/smiley_8.png" class="img-fluid" style="width:150px; background: white ; border-radius:25px; border: white 5px solid">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/smiley_8.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white ; border-radius:25px; border: white 5px solid"></p>
+</figure>
+</div>
 <p>Save the above as a jpeg called “Region_happiness_boxplots.jpg” with a width of 1600 pixels and a height of 750 pixels.</p>
-<div class="webex-solution">
-<button>
-World happiness solution 7
-</button>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>World happiness solution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#jpeg</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">jpeg</span>(<span class="at">filename =</span> <span class="st">"Chapter_15-16/Region_happiness_boxplots.jpg"</span>, <span class="at">units =</span> <span class="st">"px"</span>,</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">jpeg</span>(<span class="at">filename =</span> <span class="st">"stats/Region_happiness_boxplots.jpg"</span>, <span class="at">units =</span> <span class="st">"px"</span>,</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">width =</span> <span class="dv">1600</span>, <span class="at">height =</span> <span class="dv">750</span> )</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Create boxplot</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(<span class="st">`</span><span class="at">Happiness Score</span><span class="st">`</span><span class="sc">~</span>Region, <span class="at">data =</span> happy_df, </span>
@@ -802,22 +881,34 @@ World happiness solution 7
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
+</div>
+</div>
 </section>
 <section id="world-happiness-challenge-8" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="world-happiness-challenge-8">World happiness challenge 8</h3>
-<center>
-<img src="..\images/smiley_3.png" class="img-fluid" style="width:150px; background: white ; border-radius:25px; border: white 5px solid">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/smiley_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white ; border-radius:25px; border: white 5px solid"></p>
+</figure>
+</div>
 <p>Last challenge! Carry out t-tests on the following comparisons for Happiness Score and determine if the means are significantly different.</p>
 <ul>
 <li>West Europe and North America</li>
 <li>West Europe and South Asia</li>
 <li>South Asia and South Eastern Asia</li>
 </ul>
-<div class="webex-solution">
-<button>
-World happiness solution 8
-</button>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>World happiness solution 8
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Subset the data frames to get vectors of our regions of interest</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>WE_happiness <span class="ot">&lt;-</span> happy_df[happy_df<span class="sc">$</span>Region <span class="sc">==</span> <span class="st">"W_Europe"</span>,<span class="st">"Happiness Score"</span>]</span>
@@ -841,9 +932,15 @@ World happiness solution 8
 </div>
 </div>
 </div>
-
-
+</div>
+</div>
 </section>
+</section>
+<section id="next-part" class="level2">
+<h2 class="anchored" data-anchor-id="next-part">Next part</h2>
+<p>Amazing work! If you would like you can now continue onto the final extra part, <a href="../programming/intro.html">programming</a>.</p>
+
+
 </section>
 </section>
 

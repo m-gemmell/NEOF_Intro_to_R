@@ -8,7 +8,7 @@ For more details and even more data please see the following link: <https://www.
 
 Solutions are in the expandable boxes. 
 Try your best to solve each challenge but use the solutions for help if you would like. 
-Even if your method works it can be good to check the solution as there are many ways to do the same thing in R
+Even if your method works it can be good to check the solution as there are many ways to do the same thing in R.
 
 ## Honey bee colony challenges
 

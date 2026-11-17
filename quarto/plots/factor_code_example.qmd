@@ -1,7 +1,5 @@
 # Code example
-<center>
-![](/images/keyboard_bfx.png){style="width:150px; background:white; border-radius:5px"}
-</center>
+![](/images/keyboard_bfx.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
 
 Time for a more practical example with code. We will first create a __character vector__ then create a __factor__ from it with the __function__ `factor()`. We'll then see what we can do with a __factor__.
 ```{r eval=FALSE}

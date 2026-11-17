@@ -313,15 +313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../plots/plots_intro.html" aria-current="page"> 
+    <a class="nav-link active" href="../plots/intro.html" aria-current="page"> 
 <span class="menu-text">Plots</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../stats/stats_overview.html"> 
+    <a class="nav-link" href="../stats/intro.html"> 
 <span class="menu-text">Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../programming/overview.html"> 
+    <a class="nav-link" href="../programming/intro.html"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plots/plots_intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../plots/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Base R Plots</span></a>
   </div>
 </li>
@@ -618,9 +618,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="average-mass-and-length-plot" class="level1">
 <h1>Average mass and length plot</h1>
-<center>
-<img src="..\images/elephant.png" class="img-fluid" style="width:150px; background:white; border-radius:5px">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/elephant.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background:white; border-radius:5px"></p>
+</figure>
+</div>
 <p>Now let’s compare the average weight and length.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Average mass (tonnes)</span><span class="st">`</span>,</span>
@@ -633,41 +635,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <section id="plot-section-zoom" class="level2">
 <h2 class="anchored" data-anchor-id="plot-section-zoom">Plot section zoom</h2>
-<center>
-<img src="..\images/zoom.png" class="img-fluid" style="width:150px; background:white; border-radius:5px">
-</center>
-<p>It is quite hard to see the overall trend in the lower mass animals as they are squashed in a small part of the plot. We can zoom into this part in two different ways</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#First method is to set the x and y limits manually </span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#This allows us to choose the specific part to zoom into</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Average mass (tonnes)</span><span class="st">`</span>,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Average total length (m)</span><span class="st">`</span>,</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">10</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">10</span>))</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#The other method is to subset the data</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#so we only plot the data we want</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> animal_df[animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Average mass (tonnes)</span><span class="st">`</span> <span class="sc">&lt;</span> <span class="dv">10</span>,</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"Average mass (tonnes)"</span>],</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> animal_df[animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Average mass (tonnes)</span><span class="st">`</span> <span class="sc">&lt;</span> <span class="dv">10</span>,</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"Average total length (m)"</span>])</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co">#I personally prefer the x and y limit approach</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/zoom.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background:white; border-radius:5px"></p>
+</figure>
 </div>
+<p>It is quite hard to see the overall trend in the lower mass animals as they are squashed in a small part of the plot. We can zoom into this part in two different ways.</p>
+<p>The first method is to limit the x and y axes, allowing us to choose the part of the plot to zoom into.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Average mass (tonnes)</span><span class="st">`</span>,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Average total length (m)</span><span class="st">`</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">10</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The second method is to subset the data that is plotted.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> animal_df[animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Average mass (tonnes)</span><span class="st">`</span> <span class="sc">&lt;</span> <span class="dv">10</span>,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"Average mass (tonnes)"</span>],</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> animal_df[animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Average mass (tonnes)</span><span class="st">`</span> <span class="sc">&lt;</span> <span class="dv">10</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"Average total length (m)"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>I personally prefer the x and y limit approach.</p>
 </section>
 <section id="colour-points-by-metadata" class="level2">
 <h2 class="anchored" data-anchor-id="colour-points-by-metadata">Colour points by metadata</h2>
-<center>
-<img src="..\images/coloured_points.png" class="img-fluid" style="width:150px; background:white; border-radius:5px">
-</center>
-<p>We can also include the Biom metadata as an aesthetic in the plot</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/coloured_points.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background:white; border-radius:5px"></p>
+</figure>
+</div>
+<p>We can also include the Biom metadata as an aesthetic in the plot.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Plot</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Average mass (tonnes)</span><span class="st">`</span>,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Average total length (m)</span><span class="st">`</span>, </span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="fu">as.numeric</span>(animal_df<span class="sc">$</span>Biom),</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">1</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>     )</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Legend</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">"bottomright"</span>, <span class="at">col =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nlevels</span>(animal_df<span class="sc">$</span>Biom), </span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">levels</span>(animal_df<span class="sc">$</span>Biom), <span class="at">pch =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Plot</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Average mass (tonnes)</span><span class="st">`</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Average total length (m)</span><span class="st">`</span>, </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="fu">as.numeric</span>(animal_df<span class="sc">$</span>Biom),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">1</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>     )</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Legend</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">"bottomright"</span>, <span class="at">col =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nlevels</span>(animal_df<span class="sc">$</span>Biom), </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">levels</span>(animal_df<span class="sc">$</span>Biom), <span class="at">pch =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 

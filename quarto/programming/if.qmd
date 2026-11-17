@@ -1,7 +1,5 @@
 # If statements
-<center>
-![](/images/flow_chart.png){style="width:200px; border-radius:15px; background:white"}
-</center>
+![](/images/flow_chart.png){style="width:200px; border-radius:15px; background:white" fig-align="center"}
 
 __If statements__ allow for different commands to be carried out depending on __if__ a condition is met. 
 
@@ -20,6 +18,8 @@ if (condition) {
 }
 ```
 
+## Modulus with if
+
 I'll show you a coding example using the modulus (`%%`) __operator__.
 ```{r eval=FALSE}
 #Create a scalar
@@ -32,9 +32,10 @@ if (( i %% 2) == 1) {
 }
 ```
 
+## If in loop
+
 You can have an __if statement__ within a __loop__.
 
-__Reminder__: We need to use `print()` within __loops__ to print results to the console.
 ```{r eval=FALSE}
 for (i in 0:9) {
   #If statement determining if the remainder of i/2 is 1
@@ -45,3 +46,7 @@ for (i in 0:9) {
   }
 }
 ```
+
+::: {.callout-note}
+We need to use `print()` within __loops__ to print results to the console.
+:::

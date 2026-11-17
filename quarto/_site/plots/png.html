@@ -313,15 +313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../plots/plots_intro.html" aria-current="page"> 
+    <a class="nav-link active" href="../plots/intro.html" aria-current="page"> 
 <span class="menu-text">Plots</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../stats/stats_overview.html"> 
+    <a class="nav-link" href="../stats/intro.html"> 
 <span class="menu-text">Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../programming/overview.html"> 
+    <a class="nav-link" href="../programming/intro.html"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plots/plots_intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../plots/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Base R Plots</span></a>
   </div>
 </li>
@@ -601,7 +601,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#save-to-png" id="toc-save-to-png" class="nav-link active" data-scroll-target="#save-to-png">Save to png</a></li>
+  <li><a href="#save-to-png" id="toc-save-to-png" class="nav-link active" data-scroll-target="#save-to-png">Save to png</a>
+  <ul class="collapse">
+  <li><a href="#dimensions-of-png" id="toc-dimensions-of-png" class="nav-link" data-scroll-target="#dimensions-of-png">Dimensions of png</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -614,10 +617,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="save-to-png" class="level1">
 <h1>Save to png</h1>
-<center>
-<img src="..\images/display_png.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: 5px solid white">
-</center>
-<p>Let us save the last plot as a png file:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/display_png.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px; border: 5px solid white"></p>
+</figure>
+</div>
+<p>Let us save the last plot as a png file.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> <span class="st">"penguin_species_and_year_against_mass.png"</span>,</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">units =</span> <span class="st">"mm"</span>, <span class="at">width =</span> <span class="dv">50</span>, <span class="at">height =</span> <span class="dv">50</span>, <span class="at">res =</span> <span class="dv">150</span>)</span>
@@ -629,8 +634,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Body mass in grams"</span>)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<section id="dimensions-of-png" class="level2">
+<h2 class="anchored" data-anchor-id="dimensions-of-png">Dimensions of png</h2>
 <p>Looking at the plot we made the width and height way too small. Therefore let us edit the width and height and then run it again.</p>
-<p><strong>Note</strong>: You will need to close and open the file after running the command to see the new plot.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> <span class="st">"penguin_species_and_year_against_mass.png"</span>,</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">units =</span> <span class="st">"mm"</span>, <span class="at">width =</span> <span class="dv">250</span>, <span class="at">height =</span> <span class="dv">250</span>, <span class="at">res =</span> <span class="dv">150</span>)</span>
@@ -642,7 +648,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Body mass in grams"</span>)</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>That overall is much better. But we cannot see all the labels on the x axis. Therefore let us make it wider.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You will need to close and open the file after running the command to see the new plot.</p>
+</div>
+</div>
+<p>That is better. But we cannot see all the labels on the x axis. Therefore, let’s make it wider.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> <span class="st">"penguin_species_and_year_against_mass.png"</span>,</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">units =</span> <span class="st">"mm"</span>, <span class="at">width =</span> <span class="dv">400</span>, <span class="at">height =</span> <span class="dv">250</span>, <span class="at">res =</span> <span class="dv">150</span>)</span>
@@ -654,10 +673,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Body mass in grams"</span>)</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Super! You can save plots in other file formats and there are more options. Check them out with <code>?png</code>.</p>
+<p>Super! You can save plots in other file formats and there are even more options. Check them out with <code>?png</code>.</p>
 <p>I hope you are ready to make more plots with the Penguin data because it is time for some exercises.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

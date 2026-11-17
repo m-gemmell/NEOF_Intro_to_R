@@ -1,0 +1,44 @@
+# Base R Plots
+![](/images/palette.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
+
+R is great for creating plots.
+There are many great packages for creating plots such as [`ggplot2`](https://ggplot2.tidyverse.org/).
+however,  in this part I will show you how to create some plot types with base R.
+
+## Setup
+
+For setup:
+
+1. Create a directory called "plots"
+2. Set the newly created "plots" directory as your working directory
+3. Create a new script within "plots" called "5-Plots.R" to use for this part
+
+## Contents
+
+This part's contents are described below.
+
+### Plots
+![](/images/histogram.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
+
+This part covers the creation and customisation of four different types of plots:
+
+- [Histograms](/plots/histogram.qmd)
+- [Line graphs](/plots/line.qmd)
+- [Scatter plots](/plots/scatter.qmd)
+- [Boxplots](/plots/boxplot.qmd)
+
+### Misc
+
+Between the plot sections are other topics. These are:
+
+- [Previous plots](/plots/prev_plot.qmd): How to view previous plots you created in RStudio
+- [Factors](/plots/factors.qmd): Factors are a class that contains levels
+  - This section explains how they work and why they are useful
+- [Save to png](/plots/png.qmd): Saving plots to png files
+
+### Exercise
+![](/images/penguin.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+
+At the end of this part are [four exercises](/plots/exercises.qmd), one for each plot type you have learnt through this part.
+In each exercises you are tasked to create the displayed plots using a dataset of penguin populations.

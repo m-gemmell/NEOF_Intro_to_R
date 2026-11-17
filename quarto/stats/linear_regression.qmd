@@ -1,7 +1,5 @@
 # Linear equation
-<center>
-![](/images/linear_regression.png){style="width:200px; background:white; border-radius:15px"}
-</center>
+![](/images/linear_regression.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
 
 Linear regression is a method to model the relationship between two __numeric vectors__. Ultimately we want to produce the predictive equation:
 

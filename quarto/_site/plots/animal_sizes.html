@@ -313,15 +313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../plots/plots_intro.html" aria-current="page"> 
+    <a class="nav-link active" href="../plots/intro.html" aria-current="page"> 
 <span class="menu-text">Plots</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../stats/stats_overview.html"> 
+    <a class="nav-link" href="../stats/intro.html"> 
 <span class="menu-text">Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../programming/overview.html"> 
+    <a class="nav-link" href="../programming/intro.html"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plots/plots_intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../plots/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Base R Plots</span></a>
   </div>
 </li>
@@ -618,25 +618,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="animal-sizes-data" class="level1">
 <h1>Animal sizes data</h1>
-<center>
-<img src="..\images/blue_whale.png" class="img-fluid" style="width:200px; background:white; border-radius:5px">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/blue_whale.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background:white; border-radius:5px"></p>
+</figure>
+</div>
 <p>For our scatter plot from real data we will look at the sizes of the largest animals in the world. This data is from: <a href="https://en.Wikipedia.org/wiki/Largest_organisms" class="uri">https://en.Wikipedia.org/wiki/Largest_organisms</a></p>
-<p>The data we will be using will contain the following information:</p>
+<p>The data contains the following information:</p>
 <ul>
 <li>Animal names</li>
 <li>Average mass in tonnes</li>
 <li>Maximum mass in tonnes</li>
 <li>Average total length in metres</li>
-<li>Group, In this case are they Mammals or Reptiles</li>
+<li>Group, in this case whether are they Mammals or Reptiles</li>
 <li>Biom, are they aquatic, semiaquatic, or terrestrial</li>
 </ul>
-<p>Download the <a href="https://neof-workshops.github.io/R_j4c0xh/downloads/animal_sizes.csv">animal_sizes.csv</a> file into your “Chapter_12-14” directory.</p>
+<p>Download the <a href="https://neof-workshops.github.io/R_j4c0xh/downloads/animal_sizes.csv">animal_sizes.csv</a> file into your “plots” directory.</p>
 <section id="read-in-animal-data" class="level2">
 <h2 class="anchored" data-anchor-id="read-in-animal-data">Read in animal data</h2>
-<center>
-<img src="..\images/reading_glasses.png" class="img-fluid" style="width:150px; background:white; border-radius:5px">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/reading_glasses.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background:white; border-radius:5px"></p>
+</figure>
+</div>
 <p>Next, <strong>read</strong> the data into R. We have included a new option: <code>stringsAsFactors = TRUE</code>. This is important for plotting and will be explained more later.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>animal_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"animal_sizes.csv"</span>, </span>
@@ -647,14 +651,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="average-mass-and-max-mass" class="level2">
 <h2 class="anchored" data-anchor-id="average-mass-and-max-mass">Average mass and max mass</h2>
-<center>
-<img src="..\images/hippo.png" class="img-fluid" style="width:150px; background:white; border-radius:5px">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/hippo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background:white; border-radius:5px"></p>
+</figure>
+</div>
 <p>Check the column names with the <strong>function</strong> <code>colnames()</code>. With these column names we can create some quick plots.</p>
-<p>We’ll compare the average and maximum weight</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Average mass (tonnes)</span><span class="st">`</span>,</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Maximum mass (tonnes)</span><span class="st">`</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(animal_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Compare the average and maximum weight with a scatter plot.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Average mass (tonnes)</span><span class="st">`</span>,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> animal_df<span class="sc">$</span><span class="st">`</span><span class="at">Maximum mass (tonnes)</span><span class="st">`</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Average and maximum weight appear to correlate as expected.</p>
 <p>Sometimes a quick and easy plot is all you want. If you’re not going to present a plot then it doesn’t need to be pretty. As long as it is functional it is useful.</p>

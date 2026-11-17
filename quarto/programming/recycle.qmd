@@ -1,9 +1,9 @@
 # Recycle rule
-<center>
-![](/images/recycle.png){style="width:200px; background: white; border-radius:5px"}
-</center>
+![](/images/recycle.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
 
 When two __objects__ of different lengths act upon each other the smaller __object__ will be recycled so each element in the larger __object__ is acted upon.
+
+## Example code
 
 We will demonstrate this with the below example. Run the command below and then read the explanation.
 ```{r eval=FALSE}
@@ -18,12 +18,14 @@ small_vec * large_vec
     - The first `small_vec` __element__ is used to multiply the 1st, 4th, and 7th positions of `large_vec`.
     - The second `small_vec` __element__ is used to multiply the 2nd, 5th, and 8th positions of `large_vec`.
     - The last/third `small_vec` __element__ is used to multiply the 3rd, 6th, and 9th positions of `large_vec`.
-    
+
+## Visual examples
+
 Below is a visual example of the above.
 
-<center>
-![](/images/recycle_rule_example_1.png){style="width:600px; border-radius:5px"}
-</center>
+![](/images/recycle_rule_example_1.png){style="width:600px; border-radius:5px" fig-align="center"}
+
+## Uneven lengths
 
 Depending on the length of the large __vector__ the __elements__ of the smaller __vector__ may be recycled an uneven amount of times. For example:
 
@@ -40,7 +42,9 @@ However, above the warning is the correct output.
  
 Warnings usually mean the code will run fine but R thinks you may have done something wrong which you should check. Errors on the other hand mean the R code did not work.
  
-Below are a few more examples of using the recycle rule:
+## Further examples
+
+Below are a few more examples of using the recycle rule.
 ```{r eval=FALSE}
 #When you multiply one number (scalar) by a numeric vector
 #You are recycling the one number (scalar)

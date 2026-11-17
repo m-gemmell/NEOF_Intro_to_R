@@ -1,7 +1,5 @@
 # Final boxplot
-<center>
-![](/images/penguin_2.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid"}
-</center>
+![](/images/penguin_2.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid" fig-align="center"}
 
 We will now make one final plot for this section. I will not explain what the code is doing. Instead read and run the code to figure it out.
 ```{r eval=FALSE}

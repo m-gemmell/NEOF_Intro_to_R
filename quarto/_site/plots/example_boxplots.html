@@ -313,15 +313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../plots/plots_intro.html" aria-current="page"> 
+    <a class="nav-link active" href="../plots/intro.html" aria-current="page"> 
 <span class="menu-text">Plots</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../stats/stats_overview.html"> 
+    <a class="nav-link" href="../stats/intro.html"> 
 <span class="menu-text">Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../programming/overview.html"> 
+    <a class="nav-link" href="../programming/intro.html"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plots/plots_intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../plots/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Base R Plots</span></a>
   </div>
 </li>
@@ -601,7 +601,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#example-boxplots" id="toc-example-boxplots" class="nav-link active" data-scroll-target="#example-boxplots">Example boxplots</a></li>
+  <li><a href="#example-boxplots" id="toc-example-boxplots" class="nav-link active" data-scroll-target="#example-boxplots">Example boxplots</a>
+  <ul class="collapse">
+  <li><a href="#flipper-length-between-islands" id="toc-flipper-length-between-islands" class="nav-link" data-scroll-target="#flipper-length-between-islands">Flipper length between islands</a></li>
+  <li><a href="#bill-depth-between-islands" id="toc-bill-depth-between-islands" class="nav-link" data-scroll-target="#bill-depth-between-islands">Bill depth between islands</a></li>
+  <li><a href="#bill-length-between-species-and-sex" id="toc-bill-length-between-species-and-sex" class="nav-link" data-scroll-target="#bill-length-between-species-and-sex">Bill length between species and sex</a></li>
+  <li><a href="#factor-for-y-axis" id="toc-factor-for-y-axis" class="nav-link" data-scroll-target="#factor-for-y-axis">Factor for y-axis?</a></li>
+  <li><a href="#numeric-for-x-axis" id="toc-numeric-for-x-axis" class="nav-link" data-scroll-target="#numeric-for-x-axis">Numeric for x-axis?</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -614,27 +621,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="example-boxplots" class="level1">
 <h1>Example boxplots</h1>
-<center>
-<img src="..\images/penguin_3.png" class="img-fluid" style="width:150px; background:white; border-radius:5px; border: white 5px solid">
-</center>
-<p>I will show you some more examples followed by a final nice plot.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/penguin_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background:white; border-radius:5px; border: white 5px solid"></p>
+</figure>
+</div>
+<p>I will show you some more examples on this page.</p>
+<section id="flipper-length-between-islands" class="level2">
+<h2 class="anchored" data-anchor-id="flipper-length-between-islands">Flipper length between islands</h2>
 <p>x axis = island, y axis = flipper length</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(flipper_length_mm<span class="sc">~</span>island, <span class="at">data =</span> penguin_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</section>
+<section id="bill-depth-between-islands" class="level2">
+<h2 class="anchored" data-anchor-id="bill-depth-between-islands">Bill depth between islands</h2>
 <p>x axis = island, y axis = bill depth</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(bill_depth_mm<span class="sc">~</span>island, <span class="at">data =</span> penguin_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</section>
+<section id="bill-length-between-species-and-sex" class="level2">
+<h2 class="anchored" data-anchor-id="bill-length-between-species-and-sex">Bill length between species and sex</h2>
 <p>x axis = bill length, y axis = species and sex</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(bill_length_mm<span class="sc">~</span>species<span class="sc">*</span>sex, <span class="at">data =</span> penguin_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>What happens if we try to plot a <strong>factor</strong> on the x axis?</p>
+</section>
+<section id="factor-for-y-axis" class="level2">
+<h2 class="anchored" data-anchor-id="factor-for-y-axis">Factor for y-axis?</h2>
+<p>What happens if we try to plot a <strong>factor</strong> on the x axis (e.g.&nbsp;<code>island</code>)?</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(island<span class="sc">~</span>species<span class="sc">*</span>sex, <span class="at">data =</span> penguin_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>It does not work as an object with <strong>class</strong> <strong>factor</strong> can not be added to the x axis <strong>object</strong>.</p>
+<p>It does not work as an object with <strong>class</strong> <strong>factor</strong> can not be added to the y axis <strong>object</strong>.</p>
+</section>
+<section id="numeric-for-x-axis" class="level2">
+<h2 class="anchored" data-anchor-id="numeric-for-x-axis">Numeric for x-axis?</h2>
 <p>What about a numeric to the x axis?</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(flipper_length_mm<span class="sc">~</span>year, <span class="at">data =</span> penguin_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -647,6 +670,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This does work! However, a scatter plot would most likely be a lot more suited to plotting this data.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

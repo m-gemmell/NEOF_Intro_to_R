@@ -313,15 +313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../plots/plots_intro.html" aria-current="page"> 
+    <a class="nav-link active" href="../plots/intro.html" aria-current="page"> 
 <span class="menu-text">Plots</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../stats/stats_overview.html"> 
+    <a class="nav-link" href="../stats/intro.html"> 
 <span class="menu-text">Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../programming/overview.html"> 
+    <a class="nav-link" href="../programming/intro.html"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plots/plots_intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../plots/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Base R Plots</span></a>
   </div>
 </li>
@@ -627,10 +627,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <section id="plot-titles" class="level2">
 <h2 class="anchored" data-anchor-id="plot-titles">Plot titles</h2>
-<center>
-<img src="..\images/plot_title.png" class="img-fluid" style="width:150px; background: white; border-radius:5px; border: 5px white solid">
-</center>
-<p>Let’ first add a main title and provide the x and y axis with better titles.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/plot_title.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px; border: 5px white solid"></p>
+</figure>
+</div>
+<p>Let’s first add a main title and provide the x and y axis with better titles.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Produce line plot of Minnesota over time point.</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Add main, x, and y titles</span></span>
@@ -649,10 +651,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="line-colours" class="level2">
 <h2 class="anchored" data-anchor-id="line-colours">Line colours</h2>
-<center>
-<img src="..\images/lines.png" class="img-fluid" style="width:150px; background: white; border-radius:5px; border: 5px white solid">
-</center>
-<p>Next we will colour the lines differently to differentiate the states. We carry this out with the <code>col =</code> options for <code>plot()</code> and <code>lines()</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/lines.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px; border: 5px white solid"></p>
+</figure>
+</div>
+<p>Next we will colour the lines differently to differentiate the states. We’ll carry this out with the <code>col =</code> options for <code>plot()</code> and <code>lines()</code>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Produce line plot of Minnesota over time point.</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Include the colour red for the bars</span></span>
@@ -672,16 +676,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="plot-legend" class="level2">
 <h2 class="anchored" data-anchor-id="plot-legend">Plot legend</h2>
-<center>
-<img src="..\images/legend.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: 5px white solid">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/legend.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px; border: 5px white solid"></p>
+</figure>
+</div>
 <p>We are almost there! The one thing we are missing now is a legend so we can quickly see what colour represents each state.</p>
 <p>This can be carried out by using the <strong>function</strong> <code>legend()</code> after the plot is created. In this case the <strong>function</strong> is run with the following options:</p>
 <ul>
-<li><code>x = "topleft"</code>: The legend will be placed in the top left of the plot.</li>
-<li><code>legend = colnames(bee_colonies_df[,1:4])</code>: This dictates the labels that will be in the legend.</li>
-<li><code>col = c("red","blue","green","purple")</code>: This indicates the matching colours for the labels.</li>
-<li><code>lty = 1</code>: This indicates that the colours will be presented as lines of type 1.</li>
+<li><code>x = "topleft"</code>: The legend will be placed in the top left of the plot</li>
+<li><code>legend = colnames(bee_colonies_df[,1:4])</code>: This dictates the labels that will be in the legend</li>
+<li><code>col = c("red","blue","green","purple")</code>: This indicates the matching colours for the labels</li>
+<li><code>lty = 1</code>: This indicates that the colours will be presented as lines of type 1</li>
 </ul>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">"topleft"</span>,</span>

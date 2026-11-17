@@ -1,7 +1,5 @@
 # Loop types
-<center>
-![](/images/loop.png){style="width:200px; background: white; border-radius:5px"}
-</center>
+![](/images/loop.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
 
 With __loops__ we can carry out the same commands and __functions__ on multiple __elements__ within a 1 dimensional __object__ (__vector__ or __list__) without having to type it out multiple times.
 

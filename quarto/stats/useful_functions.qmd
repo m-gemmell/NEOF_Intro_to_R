@@ -1,7 +1,5 @@
 # Some more useful functions
-<center>
-![](/images/r_toolbox.png){style="width:200px; background:white; border-radius:15px"}
-</center>
+![](/images/r_toolbox.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
 
 ## Summary
 The __function__ `summary()` can give you some quick summary information for each column of a __data frame__.
@@ -32,15 +30,12 @@ Now `summary()` shows how many instances of each species is present in the __dat
 For future cases it may better to use `stringsAsFactors = TRUE` with the `read.csv()` __function__ when we first read in the file.
 
 ## Table
-<center>
-![](/images/table_ikea.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
-</center>
+![](/images/table_ikea.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
 The `table()` __function__ will provide a __vector__ containing the number of instances for each __level__ in a __factor__. This is pretty much what `summary()` did to a __factor__.
 
 However, unlike `summary()` it will also do this for __characters__ and __numerics__.
 
-__Note__: Remember to use the __"Help"__ pane if you are not sure what a __function__ does.
 ```{r eval=FALSE}
 #Table command for columns from fish_df
 table(fish_df$Species)
@@ -76,10 +71,12 @@ barplot(table(random_char_vec))
 
 A few more __functions__ were introduced above. I will let you explore them yourself or you can ask me verbally.
 
+::: {.callout-note}
+Remember to use the __"Help"__ pane if you are not sure what a __function__ does.
+:::
+
 ## Further resources
-<center>
-![](/images/resources.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
-</center>
+![](/images/resources.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
 Below are some further resources you can check that will help if you want to do some other plots and figures.
 

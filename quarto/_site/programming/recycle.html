@@ -69,7 +69,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../programming/loop_types.html" rel="next">
-<link href="../programming/overview.html" rel="prev">
+<link href="../programming/intro.html" rel="prev">
 <link href="..//images//NEOF_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -313,15 +313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../plots/plots_intro.html"> 
+    <a class="nav-link" href="../plots/intro.html"> 
 <span class="menu-text">Plots</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../stats/stats_overview.html"> 
+    <a class="nav-link" href="../stats/intro.html"> 
 <span class="menu-text">Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../programming/overview.html" aria-current="page"> 
+    <a class="nav-link active" href="../programming/intro.html" aria-current="page"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../programming/overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../programming/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basic programming</span></a>
   </div>
 </li>
@@ -438,7 +438,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#recycle-rule" id="toc-recycle-rule" class="nav-link active" data-scroll-target="#recycle-rule">Recycle rule</a></li>
+  <li><a href="#recycle-rule" id="toc-recycle-rule" class="nav-link active" data-scroll-target="#recycle-rule">Recycle rule</a>
+  <ul class="collapse">
+  <li><a href="#example-code" id="toc-example-code" class="nav-link" data-scroll-target="#example-code">Example code</a></li>
+  <li><a href="#visual-examples" id="toc-visual-examples" class="nav-link" data-scroll-target="#visual-examples">Visual examples</a></li>
+  <li><a href="#uneven-lengths" id="toc-uneven-lengths" class="nav-link" data-scroll-target="#uneven-lengths">Uneven lengths</a></li>
+  <li><a href="#further-examples" id="toc-further-examples" class="nav-link" data-scroll-target="#further-examples">Further examples</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -451,10 +457,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="recycle-rule" class="level1">
 <h1>Recycle rule</h1>
-<center>
-<img src="..\images/recycle.png" class="img-fluid" style="width:200px; background: white; border-radius:5px">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/recycle.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px"></p>
+</figure>
+</div>
 <p>When two <strong>objects</strong> of different lengths act upon each other the smaller <strong>object</strong> will be recycled so each element in the larger <strong>object</strong> is acted upon.</p>
+<section id="example-code" class="level2">
+<h2 class="anchored" data-anchor-id="example-code">Example code</h2>
 <p>We will demonstrate this with the below example. Run the command below and then read the explanation.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>small_vec <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span></span>
@@ -471,10 +481,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>The last/third <code>small_vec</code> <strong>element</strong> is used to multiply the 3rd, 6th, and 9th positions of <code>large_vec</code>.</li>
 </ul></li>
 </ul>
+</section>
+<section id="visual-examples" class="level2">
+<h2 class="anchored" data-anchor-id="visual-examples">Visual examples</h2>
 <p>Below is a visual example of the above.</p>
-<center>
-<img src="..\images/recycle_rule_example_1.png" class="img-fluid" style="width:600px; border-radius:5px">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/recycle_rule_example_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:600px; border-radius:5px"></p>
+</figure>
+</div>
+</section>
+<section id="uneven-lengths" class="level2">
+<h2 class="anchored" data-anchor-id="uneven-lengths">Uneven lengths</h2>
 <p>Depending on the length of the large <strong>vector</strong> the <strong>elements</strong> of the smaller <strong>vector</strong> may be recycled an uneven amount of times. For example:</p>
 <ul>
 <li>The smaller <strong>vector</strong> has 3 <strong>elements</strong>.</li>
@@ -487,7 +505,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">3</span> <span class="sc">*</span> <span class="fu">rep</span>(<span class="dv">1</span>,<span class="dv">4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Warnings usually mean the code will run fine but R thinks you may have done something wrong which you should check. Errors on the other hand mean the R code did not work.</p>
-<p>Below are a few more examples of using the recycle rule:</p>
+</section>
+<section id="further-examples" class="level2">
+<h2 class="anchored" data-anchor-id="further-examples">Further examples</h2>
+<p>Below are a few more examples of using the recycle rule.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#When you multiply one number (scalar) by a numeric vector</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#You are recycling the one number (scalar)</span></span>
@@ -510,6 +531,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1340,7 +1362,7 @@ window.onload = function() {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../programming/overview.html" class="pagination-link" aria-label="Basic programming">
+      <a href="../programming/intro.html" class="pagination-link" aria-label="Basic programming">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Basic programming</span>
       </a>          
   </div>

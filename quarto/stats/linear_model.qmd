@@ -1,9 +1,8 @@
 # Linear model
-<center>
-![](/images/lm.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
-</center>
+![](/images/lm.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
-We can fit a linear model with the __function__ `lm()`. We simply provide the column names as a formula ( `y_column_name ~ x_column_name` ) similar to the `boxplot()` __function__.
+We can fit a linear model with the __function__ `lm()`. 
+We provide the column names as a formula ( `y_column_name ~ x_column_name` ) similar to the `boxplot()` __function__.
 
 ```{r eval=FALSE}
 fit <- lm(Weight~v_length, data=bream_df)
@@ -13,6 +12,8 @@ We can now add the linear model as a line to our plot with the __function__ `abl
 ```{r eval=FALSE}
 abline(fit)
 ```
+
+## Add equation to plot
 
 With the line added we also want to add the linear equation to the plot. To do this we need to check the contents of the "fit" __variable__ first so we know what to add.
 ```{r eval=FALSE}

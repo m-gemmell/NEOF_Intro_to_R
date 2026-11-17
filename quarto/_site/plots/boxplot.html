@@ -313,15 +313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../plots/plots_intro.html" aria-current="page"> 
+    <a class="nav-link active" href="../plots/intro.html" aria-current="page"> 
 <span class="menu-text">Plots</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../stats/stats_overview.html"> 
+    <a class="nav-link" href="../stats/intro.html"> 
 <span class="menu-text">Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../programming/overview.html"> 
+    <a class="nav-link" href="../programming/intro.html"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plots/plots_intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../plots/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Base R Plots</span></a>
   </div>
 </li>
@@ -619,15 +619,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="basic-box-plot" class="level1">
 <h1>Basic box plot</h1>
-<center>
-<img src="..\images/boxplot.png" class="img-fluid" style="width:200px; background:white; border-radius:5px">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/boxplot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background:white; border-radius:5px"></p>
+</figure>
+</div>
 <p>Next we are going to make a box plot with some Penguin data from: <a href="https://allisonhorst.github.io/palmerpenguins/" class="uri">https://allisonhorst.github.io/palmerpenguins/</a></p>
 <section id="dataset" class="level2">
 <h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
 <p>This data contains information on individual penguins that were gathered from Palmer Station LTER.</p>
-<p>First download the <a href="https://neof-workshops.github.io/R_j4c0xh/downloads/penguin.tsv">penguin.tsv</a> file into your “Chapter_12-14” directory.</p>
-<p>As you expect the next step is to <strong>read</strong> in the file. This time the file is a tsv (tab separated file) with no row names. We will ensure that columns containing strings are converted to <strong>factors</strong>.</p>
+<p>First download the <a href="https://neof-workshops.github.io/R_j4c0xh/downloads/penguin.tsv">penguin.tsv</a> file into your “plots” directory.</p>
+<p>The next step is to <strong>read</strong> in the file. This time the file is a tsv (tab separated file) with no row names. We will ensure that columns containing strings are converted to <strong>factors</strong>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>penguin_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"penguin.tsv"</span>, </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">check.names =</span> <span class="cn">FALSE</span>,</span>
@@ -637,35 +639,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Each row is a measurement of a penguin. The columns for this <strong>data frame</strong> are:</p>
 <ul>
-<li>species: Species of Penguin</li>
-<li>island: Island the Penguin was found on</li>
-<li>bill_length_mm: The bill length of the Penguin in millimetres</li>
-<li>bill_depth_mm: The bill depth of the Penguin in millimetres</li>
-<li>flipper_length_mm: The flipper length of the Penguin in millimetres</li>
-<li>body_mass_g: Weight of Penguin in grams</li>
-<li>sex: female or male</li>
-<li>year: Year the measurement was carried out in</li>
+<li><strong>species:</strong> Species of Penguin</li>
+<li><strong>island:</strong> Island the Penguin was found on</li>
+<li><strong>bill_length_mm:</strong> The bill length of the Penguin in millimetres</li>
+<li><strong>bill_depth_mm:</strong> The bill depth of the Penguin in millimetres</li>
+<li><strong>flipper_length_mm:</strong> The flipper length of the Penguin in millimetres</li>
+<li><strong>body_mass_g:</strong> Weight of Penguin in grams</li>
+<li><strong>sex:</strong> female or male</li>
+<li><strong>year:</strong> Year the measurement was carried out in</li>
 </ul>
 <p>With all that information we’ll make a nice boxplot to show the body mass against the species.</p>
 </section>
 <section id="body-mass-boxplot" class="level2">
 <h2 class="anchored" data-anchor-id="body-mass-boxplot">Body mass boxplot</h2>
-<center>
-<img src="..\images/penguin_unix.png" class="img-fluid" style="width:150px; background:white; border-radius:5px; border: white 5px solid">
-</center>
-<p>The <strong>function</strong> <code>boxplot()</code> can be used with this. This <strong>function</strong> is different than the others where the first option is <code>yaxis_column_name~xaxis_column_name</code>. This is followed by the option <code>data =</code> where you provide the <strong>data frame</strong>.</p>
-<p>Below is the command for this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/penguin_unix.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background:white; border-radius:5px; border: white 5px solid"></p>
+</figure>
+</div>
+<p>The <strong>function</strong> <code>boxplot()</code> can be used to create boxplots. This <strong>function</strong> is different than the others where the first option is <code>yaxis_column_name~xaxis_column_name</code>. This is followed by the option <code>data =</code> where you provide the <strong>data frame</strong>.</p>
+<p>Below is the command to plot boxplots of body mass between the species.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(body_mass_g<span class="sc">~</span>species, <span class="at">data =</span> penguin_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="split-x-axis-by-two-groupings" class="level2">
 <h2 class="anchored" data-anchor-id="split-x-axis-by-two-groupings">Split x axis by two groupings</h2>
-<center>
-<img src="..\images/boxplot_2_axis_groups.png" class="img-fluid" style="width:150px; background:white; border-radius:5px; border: white 5px solid">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/boxplot_2_axis_groups.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background:white; border-radius:5px; border: white 5px solid"></p>
+</figure>
+</div>
 <p>What if we want to split the 3 box plots by sex?</p>
-<p>We can do that like below:</p>
+<p>We can do that like below.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(body_mass_g<span class="sc">~</span>species<span class="sc">*</span>sex, <span class="at">data =</span> penguin_df,</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"yellow"</span>,<span class="st">"green"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>

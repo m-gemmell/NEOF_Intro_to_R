@@ -8,10 +8,15 @@ penguin_df <- read.csv("Chapter_12-14/penguin.tsv",
                       )
 ```
 
-From the "penguin_df" create the below plot:
+From the "penguin_df" create the below plot.
 
-__Note__: Make sure the x axis is in the same order as below.
+::: {.callout-note}
+Ensure the x axis is in the same order as below.
+:::
+
+
 ```{r eval=TRUE, echo=FALSE, fig.width= 12}
+#| fig-align: center
 #Produce boxplot
 boxplot(flipper_length_mm~sex*species,
         data = penguin_df,
@@ -24,10 +29,11 @@ boxplot(flipper_length_mm~sex*species,
 
 For the last task, save this plot. Details below:
 
-- Save the file as a jpg called "Penguins_species_and_flipper_length_boxplot.jpg" in "Chapter_12-14".
+- Save the file as a jpg called "Penguins_species_and_flipper_length_boxplot.jpg" in the "plots" directory/folder.
 - Save the plot with a width of 300, height of 250, and resolution of 150
 
-`r hide("Line graph solution")`
+::: {.callout-note collapse="true"}
+## Line graph solution
 ```{r eval=FALSE}
 #Start png function
 jpeg(filename = "Chapter_12-14/Penguins_species_and_flipper_length_boxplot.jpg",
@@ -43,4 +49,4 @@ boxplot(flipper_length_mm~sex*species,
 #Save file
 dev.off()
 ```
-`r unhide()`
+:::

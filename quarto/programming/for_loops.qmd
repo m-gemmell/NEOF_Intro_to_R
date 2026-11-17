@@ -8,6 +8,8 @@ for (variable in vector/list) {
 }
 ```
 
+## Print each element
+
 We will run a simple example below. We need the `print()` __function__ so the results are print to the console. If this was not done nothing would be print out as it is a __loop__:
 ```{r eval=FALSE}
 for (i in 1:5) {
@@ -32,7 +34,9 @@ print(i * 10)
 
 Except instead of many commands over many lines we were able to carry it out in one command.
 
-Analogy:
+## Analogy
+
+A possible analogy of for loops is:
 
 - The loop is a circular assembly line.
 - Machines carry out the commands on the provided __variables__.
@@ -40,6 +44,8 @@ Analogy:
 - The machines will carry out the commands on `i`.
 - Once the worker gets the 1st set of results they will put the 2nd __element__ on the assembly line, setting it as `i`.
 - This will repeat till the results from all the __elements__ are returned.
+
+## For loop examples
 
 A few more examples:
 ```{r eval=FALSE}
@@ -69,6 +75,8 @@ for (i in 3:10) {
 #Check out the vector
 fibo_vec
 ```
+
+## Looping over rows or columns
 
 A lot of what we have been doing we could do without __loops__. Where I find __for loops__ handy is when I want to carry out a task on multiple columns or rows.
 

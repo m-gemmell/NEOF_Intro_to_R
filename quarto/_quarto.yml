@@ -23,11 +23,11 @@ website:
     - text: Tips
       href: tips_tricks\intro.qmd
     - text: Plots
-      href: plots\plots_intro.qmd
+      href: plots\intro.qmd
     - text: Stats
-      href: stats\stats_overview.qmd
+      href: stats\intro.qmd
     - text: Programming
-      href: programming\overview.qmd
+      href: programming\intro.qmd
     - text: Appendix
       href: appendix\neof.qmd
     right:
@@ -122,7 +122,7 @@ website:
       contents:
       - href: tips_tricks/variable_names.qmd
       - href: tips_tricks/wide_long.qmd
-    - sections: "RStudio"
+    - section: "RStudio"
       contents:
       - href: tips_tricks/global_options.qmd
       - href: tips_tricks/sweep.qmd
@@ -146,7 +146,7 @@ website:
     style: floating
     align: left
     contents:
-    - href: plots\plots_intro.qmd
+    - href: plots\intro.qmd
     - section: "Histogram"
       contents:
       - href: plots\histogram.qmd
@@ -189,7 +189,7 @@ website:
     style: floating
     align: left
     contents:
-    - href: stats\stats_overview.qmd
+    - href: stats\intro.qmd
     - section: "Linear regression"
       contents:
       - href: stats\linear_regression.qmd
@@ -208,7 +208,7 @@ website:
     style: floating
     align: left
     contents:
-    - href: programming\overview.qmd
+    - href: programming\intro.qmd
     - href: programming\recycle.qmd
     - section: "Loops"
       contents:

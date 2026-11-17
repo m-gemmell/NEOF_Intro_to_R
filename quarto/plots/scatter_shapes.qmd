@@ -1,7 +1,5 @@
 # Scatter plot with shapes
-<center>
-![](/images/scatterplot_colours_shapes.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid"}
-</center>
+![](/images/scatterplot_colours_shapes.png){style="width:150px; background:white; border-radius:5px; border: white 5px solid" fig-align="center"}
 
 Now let us make a nice scatter plot of the animal data with points coloured by Biom and shaped (`pch =`) by Group.
 ```{r eval=FALSE}

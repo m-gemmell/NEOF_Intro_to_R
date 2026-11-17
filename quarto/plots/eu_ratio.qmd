@@ -1,11 +1,11 @@
 # EU population and cities ratio
-<center>
-![](/images/edinburgh.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
-</center>
+![](/images/edinburgh.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
 
-We can quickly check if the countries with the high number of cities also have the high populations by creating a new column equal to population / number of cities. This will give us nice ratios. We can plot the distribution of these ratios in a histogram.
+We can quickly check if countries with high number of cities also have high populations by creating a new column equal to population / number of cities. This will give us nice ratios that we can plot the distribution of in a histogram.
 
-For this histogram we will also add a title to the plot with the option `main = `. Additionally we will choose a different colour. Having different colours and main titles makes it easier for you to instantly know which plot you are looking at.
+For this histogram we will also add a title to the plot with the option `main = `. 
+Additionally, we will choose a different colour. 
+Having different colours and main titles makes it easier for you to instantly know which plot you are looking at.
 
 ```{r eval=FALSE}
 #Create ratio column

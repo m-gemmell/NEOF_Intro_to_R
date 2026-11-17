@@ -1,8 +1,5 @@
 # Basic histogram
-<center>
-![](/images/histogram.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
-</center>
-
+![](/images/histogram.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
 
 A histogram consists of bars showing the frequency of variables present in numbered ranges (bins). This allows you to see an approximate distribution of numerical data.
 

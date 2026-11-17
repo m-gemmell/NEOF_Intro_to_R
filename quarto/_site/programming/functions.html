@@ -313,15 +313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../plots/plots_intro.html"> 
+    <a class="nav-link" href="../plots/intro.html"> 
 <span class="menu-text">Plots</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../stats/stats_overview.html"> 
+    <a class="nav-link" href="../stats/intro.html"> 
 <span class="menu-text">Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../programming/overview.html" aria-current="page"> 
+    <a class="nav-link active" href="../programming/intro.html" aria-current="page"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../programming/overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../programming/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basic programming</span></a>
   </div>
 </li>
@@ -438,7 +438,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#custom-functions" id="toc-custom-functions" class="nav-link active" data-scroll-target="#custom-functions">Custom functions</a></li>
+  <li><a href="#custom-functions" id="toc-custom-functions" class="nav-link active" data-scroll-target="#custom-functions">Custom functions</a>
+  <ul class="collapse">
+  <li><a href="#vat-example" id="toc-vat-example" class="nav-link" data-scroll-target="#vat-example">VAT example</a></li>
+  <li><a href="#multiples-of-5" id="toc-multiples-of-5" class="nav-link" data-scroll-target="#multiples-of-5">Multiples of 5</a></li>
+  <li><a href="#multiple-argumentsoptions" id="toc-multiple-argumentsoptions" class="nav-link" data-scroll-target="#multiple-argumentsoptions">Multiple arguments/options</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -451,9 +456,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="custom-functions" class="level1">
 <h1>Custom functions</h1>
-<center>
-<img src="..\images/custon_function.png" class="img-fluid" style="width:200px; background:white; border-radius:100px">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/custon_function.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background:white; border-radius:100px"></p>
+</figure>
+</div>
 <p>Throughout this course we have used many <strong>functions</strong>. However, you may want a <strong>function</strong> that does not exist. In this case you can create your own.</p>
 <p>The format to create your own <strong>function</strong> is:</p>
 <div class="cell">
@@ -467,7 +474,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>function()</code>: This <strong>function</strong> creates the new <strong>function</strong>.</li>
 <li><code>return()</code>: This specifies what will be returned when we run our new <strong>function</strong>.</li>
 </ul>
-<p>A quick example to add VAT to each number in a <strong>vector</strong>:</p>
+<section id="vat-example" class="level2">
+<h2 class="anchored" data-anchor-id="vat-example">VAT example</h2>
+<p>A quick example to add VAT to each number in a <strong>vector</strong>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Create the function</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>add_vat <span class="ot">&lt;-</span> <span class="cf">function</span>(input_num_vec) {</span>
@@ -478,6 +487,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">add_vat</span>(<span class="fl">0.99</span>)</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">add_vat</span>(<span class="fu">c</span>(<span class="fl">9.99</span>, <span class="fl">8.78</span>, <span class="fl">2.45</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</section>
+<section id="multiples-of-5" class="level2">
+<h2 class="anchored" data-anchor-id="multiples-of-5">Multiples of 5</h2>
 <p>In the below example we will create a <strong>function</strong> that will <strong>return</strong> all numbers that are multiples of 5 from the input <strong>vector</strong>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Create the function</span></span>
@@ -500,6 +512,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="fu">all_mult_5_func</span>(<span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">100</span>, <span class="at">by =</span> <span class="dv">8</span>))</span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="fu">all_mult_5_func</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span> <span class="sc">*</span> <span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</section>
+<section id="multiple-argumentsoptions" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-argumentsoptions">Multiple arguments/options</h2>
 <p>Like with normal <strong>functions</strong> a custom one can be given multiple arguments if built that way. Knowing this we will alter the above <strong>function</strong> so it can <strong>return</strong> all numbers that are multiples of a chosen number.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#When creating the function add in another input/option name</span></span>
@@ -524,9 +539,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co">#As always we can assign the output of a function to a new variable</span></span>
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>multiples_of_6_btwn_1_100 <span class="ot">&lt;-</span> <span class="fu">all_mult_x_func</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">6</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>With all that we are now going to a real dataset in the next session to show the use and applications of these new techniques.</p>
+<p>With all that we are now going to look at a real dataset in the next page to show the use and applications of these new techniques.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -1,15 +1,14 @@
 # Exercises overview
-<center>
-![](/images/penguin.png){style="width:200px; background:white; border-radius:15px"}
-</center>
+![](/images/penguin.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
 
-These exercises will primarily use the "penguin_df" from the theory and practice session.
+These exercises will primarily use the "penguin_df" from the theory and practice.
 
-Please use your "Exercises.R" script for this exercise and the main workshop directory as the working directory. Ensure you are using annotations and code sections to keep the contents clear and separated.
+Please use your "Exercises.R" script for this exercise and the main workshop directory as the working directory. 
+Ensure you are using annotations and code sections to keep the contents clear and separated.
 
-For convenience the code to load the Penguin __data frame__ directory will be:
+For convenience the code to load the Penguin __data frame__ directory is below.
 ```{r eval=FALSE}
-penguin_df <- read.csv("Chapter_12-14/penguin.tsv", 
+penguin_df <- read.csv("plots/penguin.tsv", 
                       check.names = FALSE,
                       stringsAsFactors = TRUE,
                       sep = "\t"

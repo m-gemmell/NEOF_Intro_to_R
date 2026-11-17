@@ -439,5 +439,14 @@
   },
   "tips_tricks/sweep.qmd": {
     "sweep.html": "28d728ee"
+  },
+  "plots/intro.qmd": {
+    "intro.html": "325b4428"
+  },
+  "stats/intro.qmd": {
+    "intro.html": "4bb3ce57"
+  },
+  "programming/intro.qmd": {
+    "intro.html": "b94bb2e3"
   }
 }

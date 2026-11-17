@@ -313,15 +313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../plots/plots_intro.html" aria-current="page"> 
+    <a class="nav-link active" href="../plots/intro.html" aria-current="page"> 
 <span class="menu-text">Plots</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../stats/stats_overview.html"> 
+    <a class="nav-link" href="../stats/intro.html"> 
 <span class="menu-text">Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../programming/overview.html"> 
+    <a class="nav-link" href="../programming/intro.html"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../plots/plots_intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../plots/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Base R Plots</span></a>
   </div>
 </li>
@@ -614,17 +614,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="basic-scatter-plot" class="level1">
 <h1>Basic scatter plot</h1>
-<center>
-<img src="..\images/Scatterplot_2.png" class="img-fluid" style="width:200px; background:white; border-radius:5px; border: white solid 5px">
-</center>
-<p>Scatter plots are a great way to compare two matching variables. To make a scatter plot we use the <code>plot()</code> <strong>function</strong> again. This means a lot of what we went through the last chapter will be helpful for this chapter</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/Scatterplot_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background:white; border-radius:5px; border: white solid 5px"></p>
+</figure>
+</div>
+<p>Scatter plots are a great way to compare two matching variables. To make a scatter plot we can use the <code>plot()</code> <strong>function</strong> again. This means a lot of what we went through the last section will be helpful for this section.</p>
 <p>First we’ll create a simple scatter plot plotting the numbers 1:20 against the same range of numbers times by 2. For this we provide the option <code>type = "p"</code> to indicate we want the data plotted as points.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>, <span class="at">y =</span> (<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>)<span class="sc">*</span><span class="dv">2</span>, <span class="at">type =</span> <span class="st">"p"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>That was a nice linear plot. We’ll make a curve this time.</p>
 <p>In the command we will not include the option <code>type = "p"</code> as this is the default for <code>plot()</code>.</p>
-<p>Additionally we will not provide the option names <code>x =</code> and <code>y =</code>. <strong>Functions</strong> have an order to their options so if you leave out the option names but provide options (in this case <strong>vectors</strong>) it will use the options in the function’s default order. In the case of <code>plot()</code> it will take the first option as <code>x =</code> and the second option as <code>y =</code>. It is common for plotting functions to take x first then y.</p>
+<p>Additionally, we will not provide the option names <code>x =</code> and <code>y =</code>. <strong>Functions</strong> have an order to their options so if you leave out the option names but provide options (in this case <strong>vectors</strong>) it will use the options in the function’s default order. In the case of <code>plot()</code> it will take the first option as <code>x =</code> and the second option as <code>y =</code>. It is common for plotting functions to take x first then y.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>, (<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>)<span class="sc">*</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>

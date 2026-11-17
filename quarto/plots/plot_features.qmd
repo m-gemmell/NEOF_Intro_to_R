@@ -7,11 +7,9 @@ In this page we'll edit the following features of our plot:
 - The plot legend to match our previous changes
 
 ## Plot titles
-<center>
-![](/images/plot_title.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid"}
-</center>
+![](/images/plot_title.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
 
-Let' first add a main title and provide the x and y axis with better titles.
+Let's first add a main title and provide the x and y axis with better titles.
 ```{r eval=FALSE}
 #Produce line plot of Minnesota over time point.
 #Add main, x, and y titles
@@ -29,11 +27,10 @@ lines(y = bee_colonies_df$Pennsylvania, x = bee_colonies_df$time_point)
 ```
 
 ## Line colours
-<center>
-![](/images/lines.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid"}
-</center>
+![](/images/lines.png){style="width:150px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
 
-Next we will colour the lines differently to differentiate the states. We carry this out with the `col = ` options for `plot()` and `lines()`.
+Next we will colour the lines differently to differentiate the states. 
+We'll carry this out with the `col = ` options for `plot()` and `lines()`.
 ```{r eval=FALSE}
 #Produce line plot of Minnesota over time point.
 #Include the colour red for the bars
@@ -52,18 +49,16 @@ lines(y = bee_colonies_df$Pennsylvania, x = bee_colonies_df$time_point, col = "p
 ```
 
 ## Plot legend
-<center>
-![](/images/legend.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid"}
-</center>
+![](/images/legend.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid" fig-align="center"}
 
 We are almost there! The one thing we are missing now is a legend so we can quickly see what colour represents each state.
 
 This can be carried out by using the __function__ `legend()` after the plot is created. In this case the __function__ is run with the following options:
 
-- `x = "topleft"`: The legend will be placed in the top left of the plot.
-- `legend = colnames(bee_colonies_df[,1:4])`: This dictates the labels that will be in the legend.
-- `col = c("red","blue","green","purple")`: This indicates the matching colours for the labels.
-- `lty = 1`: This indicates that the colours will be presented as lines of type 1.
+- `x = "topleft"`: The legend will be placed in the top left of the plot
+- `legend = colnames(bee_colonies_df[,1:4])`: This dictates the labels that will be in the legend
+- `col = c("red","blue","green","purple")`: This indicates the matching colours for the labels
+- `lty = 1`: This indicates that the colours will be presented as lines of type 1
 
 ```{r eval=FALSE}
 legend(x = "topleft",

@@ -1,19 +1,14 @@
-# World happiness exercises
-
-<center>
-![](/images/world_happiness.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px"}
-</center>
+# World happiness exercise
+![](/images/world_happiness.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
 Please use your "Exercises.R" script for this exercise and the main workshop directory as the working directory. Ensure you are using annotations and code sections to keep the contents clear and separated.
 
 ## Data
-<center>
-![](/images/report_2.png){style="width:150px; background: white ; border-radius:5px"}
-</center>
+![](/images/report_2.png){style="width:150px; background: white ; border-radius:5px" fig-align="center"}
 
 For this exercise we will be looking at the World Happiness Report for 2016. This report is a survey of the state of global happiness.
 
-Download [world_happiness_report_2016.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/world_happiness_report_2016.csv) to the directory "Chapter_15-16".
+Download [world_happiness_report_2016.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/world_happiness_report_2016.csv) to the directory "stats".
 
 Source: https://www.kaggle.com/unsdsn/world-happiness?select=2016.csv
 
@@ -42,26 +37,23 @@ Try your best to solve each challenge but use the solutions for help if you woul
 Even if your method works it can be good to check the solution as there are many ways to do the same thing in R.
 
 ### World happiness challenge 1 {-}
-<center>
-![](/images/smiley_1.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid"}
-</center>
+![](/images/smiley_1.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid" fig-align="center"}
 
 Read in the file "world_happiness_report_2016" as __data frame__ called "happy_df". Ensure __strings__ are read in as __factors__ and that none of the columns are read in as row names.
 
-`r hide("World happiness solution 1")`
+::: {.callout-note collapse="true"}
+## World happiness solution 1
 ```{r eval=TRUE}
-happy_df <- read.csv("Chapter_15-16/world_happiness_report_2016.csv", 
+happy_df <- read.csv("stats/world_happiness_report_2016.csv", 
                       check.names = FALSE,
                       stringsAsFactors = TRUE,
                       sep = ","
                       )
 ```
-`r unhide()`
+:::
 
 ### World happiness challenge 2 {-}
-<center>
-![](/images/smiley_2.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid"}
-</center>
+![](/images/smiley_2.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid" fig-align="center"}
 
 Answer the following questions using the output from one __function__:
 
@@ -90,16 +82,15 @@ opts_p <- c("__Economy (GDP per Capital)__", answer="__Freedom__", "__Dystopia R
 ```
 From the columns "Economy (GDP per Capital)", "Freedom" , and "Dystopia Residual", which has the lowest mean value? `r longmcq(opts_p)`
 
-`r hide("World happiness solution 2")`
+::: {.callout-note collapse="true"}
+## World happiness solution 2
 ```{r eval=TRUE}
 summary(happy_df)
 ```
-`r unhide()`
+:::
 
 ### World happiness challenge 3 {-}
-<center>
-![](/images/smiley_7.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid"}
-</center>
+![](/images/smiley_7.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid" fig-align="center"}
 
 Create the below plot.
 
@@ -141,7 +132,8 @@ legend(x = "bottomright",
        legend = levels(happy_df$Region))
 ```
 
-`r hide("World happiness solution 3")`
+::: {.callout-note collapse="true"}
+## World happiness solution 3
 ```{r eval=FALSE}
 #Fit linear model of Economy (x) against Family (y)
 fit_economy_family <- 
@@ -168,12 +160,11 @@ legend(x = "bottomright",
        pch = 1:nlevels(happy_df$Region),
        legend = levels(happy_df$Region))
 ```
-`r unhide()`
+:::
+
 
 ### World happiness challenge 4 {-}
-<center>
-![](/images/smiley_5.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid"}
-</center>
+![](/images/smiley_5.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid" fig-align="center"}
 
 It may be a bit awkward to get the right size for the plot in the __"Plots"__ pane. Therefore save it as a png file with the following options:
 
@@ -181,11 +172,16 @@ It may be a bit awkward to get the right size for the plot in the __"Plots"__ pa
 - Dimensions of file is 8 inches for height and width
 - Resolution of 200dpi
 
-`r hide("World happiness solution 4")`
+::: {.callout-note collapse="true"}
+## World happiness solution 4
 ```{r eval=FALSE}
-#PNG command
-png(filename = "Chapter_15-16/Economy_vs_family.png", 
-    units = "in", height = 8, width = 8, res = 200)
+#Fit linear model of Economy (x) against Family (y)
+fit_economy_family <- 
+  lm(Family~`Economy (GDP per Capita)`, data = happy_df)
+#Create string for linear equation
+c <- round(fit_economy_family$coefficients[1], digits = 4)
+m <- round(fit_economy_family$coefficients[2], digits = 4)
+lm_equation <- paste0("y = ", m , "x + ", c)
 #Produce plot
 plot(x = happy_df$`Economy (GDP per Capita)`,
      y = happy_df$Family,
@@ -203,15 +199,11 @@ text(x = 0.4, y = 1.1, labels = lm_equation)
 legend(x = "bottomright",
        pch = 1:nlevels(happy_df$Region),
        legend = levels(happy_df$Region))
-#dev.off
-dev.off()
 ```
-`r unhide()`
+:::
     
 ### World happiness challenge 5 {-}
-<center>
-![](/images/smiley_4.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid"}
-</center>
+![](/images/smiley_4.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid" fig-align="center"}
 
 Answer the following questions using information on the line graph and the linear model.
 
@@ -237,11 +229,9 @@ opts_p <- c("__Latin America and Caribbean__", "__North America__", answer="__We
 Which region appears to have the highest values for Economy and for Family? `r longmcq(opts_p)`
 
 ### World happiness challenge 6 {-}
-<center>
-![](/images/smiley_6.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid"}
-</center>
+![](/images/smiley_6.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid" fig-align="center"}
 
-Create the following boxplot.
+Create the below boxplot.
 
 - You can change the the levels with the following code
 
@@ -268,7 +258,8 @@ boxplot(`Happiness Score`~Region, data = happy_df,
 )
 ```
 
-`r hide("World happiness solution 6")`
+::: {.callout-note collapse="true"}
+## World happiness solution 6
 ```{r eval=FALSE}
 #Change level names
 short_region_names <- 
@@ -283,19 +274,18 @@ boxplot(`Happiness Score`~Region, data = happy_df,
         main = "Happiness scores across regions"
 )
 ```
-`r unhide()`
+:::
 
 ### World happiness challenge 7 {-}
-<center>
-![](/images/smiley_8.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid"}
-</center>
+![](/images/smiley_8.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid" fig-align="center"}
 
 Save the above as a jpeg called "Region_happiness_boxplots.jpg" with a width of 1600 pixels and a height of 750 pixels.
 
-`r hide("World happiness solution 7")`
+::: {.callout-note collapse="true"}
+## World happiness solution 
 ```{r eval=FALSE}
 #jpeg
-jpeg(filename = "Chapter_15-16/Region_happiness_boxplots.jpg", units = "px",
+jpeg(filename = "stats/Region_happiness_boxplots.jpg", units = "px",
      width = 1600, height = 750 )
 #Create boxplot
 boxplot(`Happiness Score`~Region, data = happy_df, 
@@ -306,12 +296,10 @@ boxplot(`Happiness Score`~Region, data = happy_df,
 #dev.off
 dev.off()
 ```
-`r unhide()`
+:::
 
 ### World happiness challenge 8 {-}
-<center>
-![](/images/smiley_3.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid"}
-</center>
+![](/images/smiley_3.png){style="width:150px; background: white ; border-radius:25px; border: white 5px solid" fig-align="center"}
 
 Last challenge! Carry out t-tests on the following comparisons for Happiness Score and determine if the means are significantly different.
 
@@ -319,7 +307,8 @@ Last challenge! Carry out t-tests on the following comparisons for Happiness Sco
 - West Europe and South Asia
 - South Asia and South Eastern Asia
 
-`r hide("World happiness solution 8")`
+::: {.callout-note collapse="true"}
+## World happiness solution 8
 ```{r eval=TRUE}
 #Subset the data frames to get vectors of our regions of interest
 WE_happiness <- happy_df[happy_df$Region == "W_Europe","Happiness Score"]
@@ -338,4 +327,9 @@ region_happiness_pvalues <- c(WE_NA = WE_NA_ttest$p.value,
 #I.e. the means are significantly different
 region_happiness_pvalues < 0.05
 ```
-`r unhide()`
+:::
+
+## Next part
+
+Amazing work!
+If you would like you can now continue onto the final extra part, [programming](/programming/intro.qmd).

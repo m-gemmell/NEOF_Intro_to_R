@@ -1,0 +1,7 @@
+# Basic programming
+![](/images/programming.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
+
+In this part we will be look at some basic programming with R. This will involve [__loops__](/programming/loop_types.qmd), [__if__ statements](/programming/if.qmd), and creating your own [__functions__](/programming/functions.qmd).
+
+Create and use the directory "programming" as the working directory for this part. 
+Additionally, create a new script called "7-Programming.R" to use.

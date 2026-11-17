@@ -11,26 +11,64 @@ For this part create a directory called "tips_and_tricks" in your main directory
 Then create a script called "4-Handy_tips.R". 
 Remember to use annotations (`#`) and code sections (`####`)!
 
-## Sections & pages
+## Sections
 
 Below is an overview of the contents of this part.
 
-- [R conventions](tips_tricks/variable_names.qmd): Conventions on variable names and wide vs long coding
-- [RStudio] 
-- [Multiplication table](tips_tricks/multiplication_table.qmd): 
-    - href: tips_tricks/tab_complete.qmd
-    - section: "Example datasets"
-      contents:
-      - href: tips_tricks/tea.qmd
-      - href: tips_tricks/english_speakers.qmd
-    - href: tips_tricks/identical.qmd
-    - href: tips_tricks/shortcuts.qmd
-    - href: tips_tricks/mcqs.qmd
-    - section: "Exercises"
-      contents:
-      - href: tips_tricks/handy_exercises.qmd
+### R conventions
+![](/images/nametag.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
-I'll first introduce you to some R conventions and then some useful abilities of RStudio.
+The first part introduces you to 2 different conventions for R coding:
+
+- [Variable names](tips_tricks/variable_names.qmd): Different styles for naming variables
+- [Wide vs Long](/tips_tricks/wide_long.qmd): Whether you prefer having your code over one line (wide) or over multiple lines (long)
+
+### RStudio
+![](/images/global.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+RStudio has a variety of options and buttons. We'll cover the below topics:
+
+- [Global options](/tips_tricks/global_options.qmd): A quick introduction to the global options allowing customisation of RStudio's appearance and hoe it functions
+- [Sweep](/tips_tricks/sweep.qmd): The sweep buttons allow you to clear the text in your console and to clear the variables in your environment
+
+### Multiplication table
+![](/images/multiplication.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+
+We'll create a <u id='data_frame_tooltip'>__data frame__</u> containing a [multiplication table](/tips_tricks/multiplication_table.qmd). This acts as a reminder of various skills and knowledge you have learnt up to this point.
+
+### Tab complete
+![](/images/tab.png){style="width:150px; border-radius:5px; background:white; border:10px white solid" fig-align="center"}
+
+It is highly beneficial to use the tab key to [tab complete](/tips_tricks/tab_complete.qmd) your code.
+In R this can be used to auto-complete file names/paths, variable names, function names, and the options of functions.
+
+### Example datasets
+![](/images/tea.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
+
+This part looks at 2 different example <u id='data_frame_tooltip'>__data frames__</u> to learn some new skills.
+
+- [Tea](/tips_tricks/tea.qmd): A dataset of the annual consumption of tea per capita
+  - This will introduce the `gsub()` <u id='function_tooltip'>__function__</u> to substitute strings
+- [English speakers across the world](/tips_tricks/english_speakers.qmd): A dataset showing the number of English speakers in countries
+  - This will include how you can deal with missing data by replacing NAs and removing unwanted rows
+
+### Identical & shortcuts
+![](/images/identikeys.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+The next 2 pages are:
+
+[Identical](/tips_tricks/identical.qmd): The `identical()` <u id='function_tooltip'>__function__</u> indicates whether 2 objects are identical
+[Shortcuts](/tips_tricks/shortcuts.qmd): An introduction to keyboard shortcuts you can use in RStudio
+
+### Recap & exercises
+![](/images/question_bubble_blue.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+At the end of the course you'll reinforce the skills and knowledge you have learnt with:
+
+- [Recap MCQs](/tips_tricks/mcqs.qmd): Multiple choice questions to act as a recap of this part
+- [Exercises](/tips_tricks/handy_exercises.qmd): Two exercises using the [tea](/tips_tricks/tea_exercise.qmd) & [english speakers across the world](/tips_tricks/english_exercise.qmd) datasets
+  - There is also one additional [extra exercise](/tips_tricks/extra_exercise.qmd)
 
 ```{r, echo=FALSE}
 #Tippy tooltips

@@ -8,10 +8,14 @@ penguin_df <- read.csv("Chapter_12-14/penguin.tsv",
                       )
 ```
 
-From the "penguin_df" create the below plot:
+From the "penguin_df" create the below plot.
 
-__Note__: The colour of the bars are "blue".
+::: {.callout-note}
+The colour of the bars are "blue".
+:::
+
 ```{r eval=TRUE, echo=FALSE}
+#| fig-align: center
 #Create data frame with only the Penguins from Torgersen
 penguins_torgensen_df <- penguin_df[penguin_df$island == "Torgersen",]
 #Create a column with body mass in kilograms
@@ -25,7 +29,8 @@ hist(penguins_torgensen_df$body_mass_kg,
      col = "blue")
 ```
 
-`r hide("Histogram solution")`
+::: {.callout-note collapse="true"}
+## Histogram solution
 ```{r eval=FALSE}
 #Create data frame with only the Penguins from Torgersen
 penguins_torgensen_df <- penguin_df[penguin_df$island == "Torgersen",]
@@ -39,4 +44,4 @@ hist(penguins_torgensen_df$body_mass_kg,
      ylab = "frequency",
      col = "blue")
 ```
-`r unhide()`
+:::

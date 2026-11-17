@@ -12,6 +12,7 @@ From the "penguin_df" create the below plot:
 
 __Note__: You can check what numbers refer to what shape for `pch =` at: http://www.sthda.com/english/wiki/r-plot-pch-symbols-the-different-point-shapes-available-in-r
 ```{r eval=TRUE, echo=FALSE}
+#| fig-align: center
 #Create data frame with only the Penguins from 2009
 penguin_2009_df <- penguin_df[penguin_df$year == "2009",]
 #Produce plot

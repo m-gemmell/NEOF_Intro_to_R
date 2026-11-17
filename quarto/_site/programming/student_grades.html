@@ -312,15 +312,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../plots/plots_intro.html"> 
+    <a class="nav-link" href="../plots/intro.html"> 
 <span class="menu-text">Plots</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../stats/stats_overview.html"> 
+    <a class="nav-link" href="../stats/intro.html"> 
 <span class="menu-text">Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../programming/overview.html" aria-current="page"> 
+    <a class="nav-link active" href="../programming/intro.html" aria-current="page"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -370,7 +370,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../programming/overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../programming/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basic programming</span></a>
   </div>
 </li>
@@ -460,16 +460,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="student-grades-example" class="level1">
 <h1>Student grades example</h1>
-<center>
-<img src="..\images/grades.png" class="img-fluid" style="width:200px; background:white; border-radius:15px">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/grades.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background:white; border-radius:5px"></p>
+</figure>
+</div>
 <p>In this section we are going to go through analysing datasets of student grades.</p>
 <section id="the-student-grades-data" class="level2">
 <h2 class="anchored" data-anchor-id="the-student-grades-data">The student grades data</h2>
-<center>
-<img src="..\images/data.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: white solid 5px">
-</center>
-<p>Download the five following files into your directory “Chapter_17-18”.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/data.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px; border: white solid 5px"></p>
+</figure>
+</div>
+<p>Download the five following files into your directory “programming”.</p>
 <ul>
 <li><a href="https://neof-workshops.github.io/R_j4c0xh/downloads/student_grades_group_A.tsv">student_grades_group_A.tsv</a></li>
 <li><a href="https://neof-workshops.github.io/R_j4c0xh/downloads/student_grades_group_B.tsv">student_grades_group_B.tsv</a></li>
@@ -488,23 +492,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>reading score</strong>: The student’s reading score.</li>
 <li><strong>writing score</strong>: The student’s writing score.</li>
 </ul>
-<p>Source of data: https://www.kaggle.com/spscientist/students-performance-in-exams</p>
+<p>Source of data: <a href="https://www.kaggle.com/spscientist/students-performance-in-exams" class="uri">https://www.kaggle.com/spscientist/students-performance-in-exams</a></p>
 </section>
 <section id="analysis-script" class="level2">
 <h2 class="anchored" data-anchor-id="analysis-script">Analysis script</h2>
-<center>
-<img src="..\images/hashtag2.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: white solid 5px">
-</center>
-<p>Before carrying on I would suggest to set your working directory into the directory “Chapter_17-18”.</p>
-<p>Now create a new R Script and save it as “student_grades.R” in the “Chapter_17-18” directory. It is useful to have your scripts close to their relevant data.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/hashtag2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px; border: white solid 5px"></p>
+</figure>
+</div>
+<p>Before carrying on I would suggest to set your working directory into the directory “programming”.</p>
+<p>Now create a new R Script and save it as “8-student_grades.R” in the “programming” directory. It is useful to have your scripts close to their relevant data.</p>
 <p>Ensure you use annotations and code sections to keep your script organised and tidy.</p>
-<p>One extra tip: I normally like to keep a <code>setwd()</code> command at the top of my R Scripts so the script will set itself to the correct working directory. I copy the relevant command from the <strong>console</strong> after I set the working directory via the RSudio interface.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I normally like to keep a <code>setwd()</code> command at the top of my R Scripts so the script will set itself to the correct working directory. I copy the relevant command from the <strong>console</strong> after I set the working directory via the RSudio interface.</p>
+</div>
+</div>
 </section>
 <section id="reading-in-and-preprocessing-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="reading-in-and-preprocessing-the-data">Reading in and preprocessing the data</h2>
-<center>
-<img src="..\images/r_read.png" class="img-fluid" style="width:200px; border-radius:15px; background:white">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/r_read.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; border-radius:15px; background:white"></p>
+</figure>
+</div>
 <p>We are going to first read in the data and carry out some changes to it. First we’ll carry this out on just the group A data.</p>
 <p>Read in the group A TSV (tab separated value) file:</p>
 <div class="cell">
@@ -556,7 +576,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Great we have created code to <strong>read</strong> in our file and preprocess the <strong>data frame</strong>. We have checked the output and know it produces the <strong>data frame</strong> in the format we want.</p>
 <p>We could copy and paste the code four times and change the relevant <strong>variable names</strong> to <strong>read</strong> in groups B-E. This would be pretty annoying and time consuming though.</p>
 <p>Instead let us create a <strong>function</strong> to do this for us. This will mostly use the same code above with <strong>variable names</strong> changed. There are a few changes though especially for the “group_name”” column creation.</p>
-<p><strong>Note</strong>: The <strong>variable names</strong> used within the <strong>function</strong> should not be the same as any you are using outside the <strong>function</strong>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <strong>variable names</strong> used within the <strong>function</strong> should not be the same as any you are using outside the <strong>function</strong>.</p>
+</div>
+</div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Function name: "read_and_preprocess"</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Input: file_name</span></span>
@@ -581,7 +613,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(df)</span>
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>We have created the _<strong>function</strong>. Now to run it with all our files:</p>
+<p>We have created the <strong>function</strong>. Now to run it with all our files:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#We can specify the option name</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#This is useful when we have lots of options</span></span>
@@ -595,12 +627,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="combining-the-data-frames" class="level2">
 <h2 class="anchored" data-anchor-id="combining-the-data-frames">Combining the data frames</h2>
-<center>
-<img src="..\images/combine.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: white solid 5px">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/combine.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background: white; border-radius:5px; border: white solid 5px"></p>
+</figure>
+</div>
 <p>A lot of the time we have multiple files but we want all the data to be in one <strong>data frame</strong>.</p>
 <p>The first step is to create a <strong>list</strong> containing our <strong>data frames</strong>. A <strong>list</strong> is just like a <strong>vector</strong> except it can hold heterogeneous data (multiple classes) whilst a <strong>vector</strong> can only contain homogeneous data (one class).</p>
-<p>We will use this so we can <strong>loop</strong> over our <strong>data frames</strong>. There is more to <strong>lists</strong>, if you would like to see more check out: https://rc2e.com/datastructures#intro-DataStructures</p>
+<p>We will use this so we can <strong>loop</strong> over our <strong>data frames</strong>. There is more to <strong>lists</strong>, if you would like to see more check out: <a href="https://rc2e.com/datastructures#intro-DataStructures" class="uri">https://rc2e.com/datastructures#intro-DataStructures</a></p>
 <p>We’ll start with creating our <strong>list</strong> then using a <strong>for loop</strong> to print out the first 3 rows of each <strong>data frame</strong>. To create a <strong>list</strong> of <strong>data frames</strong> we use the <strong>function</strong> <code>list()</code> just like we would with <code>c()</code>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Create list</span></span>
@@ -639,9 +673,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="saving-the-data-frame" class="level2">
 <h2 class="anchored" data-anchor-id="saving-the-data-frame">Saving the data frame</h2>
-<center>
-<img src="..\images/r_save.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: white solid 5px">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/r_save.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:150px; background: white; border-radius:5px; border: white solid 5px"></p>
+</figure>
+</div>
 <p>You can write the new <strong>data frame</strong> to a text file. This is good if you want to use the file outside of R.</p>
 <p>What if you want to save a R <strong>object</strong> so you can use it later without having to run all the script you used to create it or <strong>reading</strong> in a file you created?</p>
 <p>You can use the <code>save()</code> function:</p>
@@ -660,9 +696,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="scaling-grading" class="level2">
 <h2 class="anchored" data-anchor-id="scaling-grading">Scaling &amp; Grading</h2>
-<center>
-<img src="..\images/letter_grades.png" class="img-fluid" style="width:200px; border-radius:15px; background:white">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/letter_grades.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; border-radius:5px; background:white; border: white solid 5px"></p>
+</figure>
+</div>
 <p>We currently have the base scores (%) for the students but not their letter grade (A,B,C, or F in this case).</p>
 <p>Before we provide the grades we are going to scale each student’s results. There are complicated ways to do this but we will get the mean score for each topic (math, writing, and reading). For each score below the mean we will minus 5 and for each score above will will add 5. Scores equal to the mean will not be affected.</p>
 <div class="cell">
@@ -742,9 +780,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="some-quick-plots" class="level2">
 <h2 class="anchored" data-anchor-id="some-quick-plots">Some quick plots</h2>
-<center>
-<img src="..\images/bar_chart.png" class="img-fluid" style="width:200px; background:white; border-radius:15px">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/bar_chart.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background:white; border-radius:5px"></p>
+</figure>
+</div>
 <p>Below are some quick plots with their code.</p>
 <p>First let us see the distribution of grades for the three topics:</p>
 <div class="cell">
@@ -846,15 +886,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="tips-for-creating-your-own-loops-and-functions" class="level2">
 <h2 class="anchored" data-anchor-id="tips-for-creating-your-own-loops-and-functions">Tips for creating your own loops and functions</h2>
-<center>
-<img src="..\images/tip_box.png" class="img-fluid" style="width:200px; background:white; border-radius:10px">
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images/tip_box.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:200px; background:white; border-radius:5px; border: white solid 5px"></p>
+</figure>
+</div>
 <p>Before you go here are some quick tips.</p>
 <ul>
-<li>Create the code outside the <strong>loop/function</strong> to begin with.</li>
-<li>Test with a small <strong>object</strong> to start (e.g.&nbsp;a part of a <strong>data frame</strong>).</li>
-<li>Keep backups of code.</li>
-<li>If you encounter errors try running your code step by step to determine where the error is.</li>
+<li>Create the code outside the <strong>loop/function</strong> to begin with</li>
+<li>Test with a small <strong>object</strong> to start (e.g.&nbsp;a part of a <strong>data frame</strong>)</li>
+<li>Keep backups of code</li>
+<li>If you encounter errors try running your code step by step to determine where the error is</li>
 <li>It can useful to run the code inside your <strong>loop/function</strong> by setting the <strong>loop/function variable</strong> (e.g.&nbsp;<code>i &lt;- 1</code>)</li>
 </ul>
 

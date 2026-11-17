@@ -313,15 +313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Tips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../plots/plots_intro.html"> 
+    <a class="nav-link" href="../plots/intro.html"> 
 <span class="menu-text">Plots</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../stats/stats_overview.html"> 
+    <a class="nav-link" href="../stats/intro.html"> 
 <span class="menu-text">Stats</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../programming/overview.html" aria-current="page"> 
+    <a class="nav-link active" href="../programming/intro.html" aria-current="page"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../programming/overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../programming/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basic programming</span></a>
   </div>
 </li>
@@ -438,7 +438,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#while-loops" id="toc-while-loops" class="nav-link active" data-scroll-target="#while-loops">While loops</a></li>
+  <li><a href="#while-loops" id="toc-while-loops" class="nav-link active" data-scroll-target="#while-loops">While loops</a>
+  <ul class="collapse">
+  <li><a href="#example-while-loop" id="toc-example-while-loop" class="nav-link" data-scroll-target="#example-while-loop">Example while loop</a></li>
+  <li><a href="#infinite-loop" id="toc-infinite-loop" class="nav-link" data-scroll-target="#infinite-loop">Infinite loop</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -451,13 +455,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="while-loops" class="level1">
 <h1>While loops</h1>
-<p>I do not use <strong>while loops</strong> often so we will only briefly go over them. A <strong>while loop</strong> will loop over a series of commands until a condition is no longer met. Conditions will either be TRUE or FALSE (logical).</p>
+<p>I do not use <strong>while loops</strong> often so we will only briefly go over them. A <strong>while loop</strong> will loop over a series of commands until a condition is no longer met. Conditions will either be <code>TRUE</code> or <code>FALSE</code> (logical).</p>
 <p>The format of a <strong>while loop</strong>:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (condition) {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  command<span class="sc">/</span>s</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<section id="example-while-loop" class="level2">
+<h2 class="anchored" data-anchor-id="example-while-loop">Example while loop</h2>
 <p>Below is an example:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="dv">1</span></span>
@@ -470,7 +476,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>i</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>In this case 1 is being added to <code>i</code> in each loop. The loop keeps going till <code>i</code> is no longer less than 10. Therefore, at the end of the <strong>while loop</strong> <code>i</code> is equal to 10.</p>
-<p>One final point on <strong>while loops</strong>. You can make a <strong>while loop</strong> so the condition will always be met. If this is the case the <strong>while loop</strong> will never finish and you’ll need to use “ESC” in the console to stop the <strong>while loop</strong>. An example is below which you should not run:</p>
+</section>
+<section id="infinite-loop" class="level2">
+<h2 class="anchored" data-anchor-id="infinite-loop">Infinite loop</h2>
+<p>One final point on <strong>while loops</strong>. You can make a <strong>while loop</strong> so the condition will always be met. If this is the case the <strong>while loop</strong> will never finish and you’ll need to use “ESC” in the console to stop the <strong>while loop</strong>. An example is below which you should not run.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="dv">1</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (i <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
@@ -483,6 +492,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

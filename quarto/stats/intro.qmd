@@ -1,0 +1,8 @@
+# Stats
+![](/images/basic_stats.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
+
+In this part we'll learn how to carry out some basic stats. This will involve [linear regressions](/stats/linear_regression.qmd) and some [t-tests](/stats/t_test.qmd).
+
+Create and use the directory "stats" as the working directory for this chapter. Additionally create a new script called "6-Stats.R" for this chapter.
+
+Before we continue just a reminder to use [annotations](/foundations/script_editor.qmd#annotations) and [code sections](/objects/code_sections.qmd).

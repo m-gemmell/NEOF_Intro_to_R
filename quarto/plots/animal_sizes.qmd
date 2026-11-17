@@ -1,25 +1,21 @@
 # Animal sizes data
-<center>
-![](/images/blue_whale.png){style="width:200px; background:white; border-radius:5px"}
-</center>
+![](/images/blue_whale.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
 
 For our scatter plot from real data we will look at the sizes of the largest animals in the world. This data is from: <https://en.Wikipedia.org/wiki/Largest_organisms>
 
-The data we will be using will contain the following information:
+The data contains the following information:
 
 - Animal names
 - Average mass in tonnes
 - Maximum mass in tonnes
 - Average total length in metres
-- Group, In this case are they Mammals or Reptiles
+- Group, in this case whether are they Mammals or Reptiles
 - Biom, are they aquatic, semiaquatic, or terrestrial
 
-Download the [animal_sizes.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/animal_sizes.csv) file into your "Chapter_12-14" directory.
+Download the [animal_sizes.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/animal_sizes.csv) file into your "plots" directory.
 
 ## Read in animal data
-<center>
-![](/images/reading_glasses.png){style="width:150px; background:white; border-radius:5px"}
-</center>
+![](/images/reading_glasses.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
 
 Next, __read__ the data into R. We have included a new option: `stringsAsFactors = TRUE`. This is important for plotting and will be explained more later.
 
@@ -31,13 +27,15 @@ animal_df <- read.csv("animal_sizes.csv",
 ``` 
 
 ## Average mass and max mass
-<center>
-![](/images/hippo.png){style="width:150px; background:white; border-radius:5px"}
-</center>
+![](/images/hippo.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
 
 Check the column names with the __function__ `colnames()`. With these column names we can create some quick plots.
 
-We'll compare the average and maximum weight
+```{r, eval=FALSE}
+colnames(animal_df)
+```
+
+Compare the average and maximum weight with a scatter plot.
 ```{r eval=FALSE}
 plot(x = animal_df$`Average mass (tonnes)`,
      y = animal_df$`Maximum mass (tonnes)`)
@@ -45,4 +43,5 @@ plot(x = animal_df$`Average mass (tonnes)`,
 
 Average and maximum weight appear to correlate as expected.
 
-Sometimes a quick and easy plot is all you want. If you're not going to present a plot then it doesn't need to be pretty. As long as it is functional it is useful.  
+Sometimes a quick and easy plot is all you want. If you're not going to present a plot then it doesn't need to be pretty. 
+As long as it is functional it is useful.  

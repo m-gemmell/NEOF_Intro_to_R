@@ -1,12 +1,11 @@
-# Scatterplot
-<center>
-![](/images/Scatterplot_2.png){style="width:200px; background:white; border-radius:5px"}
-</center>
+# Scatter plot
+![](/images/Scatterplot_2.png){style="width:200px; background:white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
-Before we carry out the linear regression we'll create a scatterplot of the two __vectors__ we want to compare. For the first instance we will compare __Height__ to __Length1__ (vertical length).
+Before we carry out the linear regression we'll create a scatter plot of the two __vectors__ we want to compare. For the first instance we will compare __Height__ to __Length1__ (vertical length).
 
 In fact before we do, let's change the column name "Length1" to "v_length" so it is a bit more intuitive for us. Whilst we are at it we'll change the other length column names.
 ```{r eval=FALSE}
+#Change column names for vertical, diameter, and cross length
 colnames(bream_df)[3:5] <- c("v_length", "d_length", "c_length")
 ```
 
