@@ -35,8 +35,6 @@ str(parks_t_df)
 ```
 
 ::: {.callout-note}
-I've included many ways to subset columns as reminders. Normally I wouldn't have so many different ways in one command.
-
 We are using "_" instead of spaces in our column names as R doesn't particularly like spaces in column names. We will see how to use spaces later.
 :::
 

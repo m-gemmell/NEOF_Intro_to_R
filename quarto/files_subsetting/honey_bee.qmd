@@ -45,7 +45,7 @@ bee_colonies_2017_2018_df <- tail(bee_colonies_df, n = 8)
 ### Honey bee colony challenge 3 {-}
 ![](/images/bee_4.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
-For each month in 2017 & 2018 print out the phrase "The number of colonies in Minnesota for \<Year> was \<Value>.
+For each month in 2017 & 2018 print out the phrase "The number of colonies in Minnesota for \<Year> was \<Value>"".
 
 - For example, the first phrase will be "The number of colonies in Minnesota for 2017-Q1 was 27000".
 - This can be done with one line of code using the `paste()` <u id='function_tooltip'>function</u>.

@@ -52,7 +52,6 @@ Starfish <- c(3,3,7)
 Now let us create the <u id='data_frame_tooltip'>__data frame__</u>.
 
 ```{r eval=FALSE}
-#Using the function data.frame to create a data frame
 beach_df <- data.frame(Crab,Oystercatcher,Starfish)
 ```
 

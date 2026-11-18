@@ -16,7 +16,7 @@ More info can be found in the following link: <https://www.kaggle.com/datasets/j
 Use `read.csv()` to __read__ in the file. We'll set the option `row.names = 1` again but also include the option `sep = "\t"`. This option specifies the columns are separated (`sep`) by tabs (`"\t"`).
 
 ```{r eval=FALSE}
-global_eco_footprint <- read.csv("Global_eco_footprint.tsv", 
+global_eco_footprint_df <- read.csv("Global_eco_footprint.tsv", 
                         row.names = 1, sep = "\t")
 ```
 

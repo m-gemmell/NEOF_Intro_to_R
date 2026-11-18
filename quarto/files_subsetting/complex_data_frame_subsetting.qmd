@@ -103,7 +103,7 @@ Is so, why?
 ![](/images/transpose_table){style="width:300px; background:white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
 Before we learn how to __write__ data to a file I will introduce one more <u id='data_frame_tooltip'>__data frame__</u> associated <u id='function_tooltip'>__function__</u>. 
-`t()` which stands for transpose:
+`t()` which stands for transpose.
 ```{r eval=FALSE}
 parks_df[3:5]
 t(parks_df[,3:5])

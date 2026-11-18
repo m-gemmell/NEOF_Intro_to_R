@@ -73,7 +73,7 @@ Below describes what structure your resulting subsetted object will be based on 
     - This occurs as each column is in essence a <u id='vector_tooltip'>__vector__</u>
     - E.g. `parks_df[1:10,2]`
 - <u id='data_frame_tooltip'>__Data frame__</u>:
-    - Indexing so you get multiple values from a row or multiple rows
+    - Indexing so you get multiple values from a row or multiple columns
     - Subsetting a <u id='data_frame_tooltip'>__data frame__</u> like this provides you with a <u id='data_frame_tooltip'>__data frame__</u>
     - E.g. `parks_df[3,2:4]` or `parks_df[3:4,2:4]`
 

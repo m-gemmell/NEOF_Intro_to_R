@@ -21,7 +21,7 @@ Change the following for later.
 4. Ensure "Show code completion:" is set to "Manually (Tab)"
 5. Click "Apply" at the bottom followed by "OK".
 
-This will be useful for [tab completion](/tips_tricks/tab_completion.qmd) which we will cover shortly.
+This will be useful for [tab completion](/tips_tricks/tab_complete.qmd) which we will cover shortly.
 
 ![](/images/RStudio_manual_tab.png){style="width:750px; border-radius:5px" fig-align="center"}
 

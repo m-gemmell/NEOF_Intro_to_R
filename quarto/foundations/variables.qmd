@@ -35,7 +35,7 @@ However, <u id='variable_tooltip'>**Variable**</u> names:
 - Cannot share the same name as a command or <u id='function_tooltip'>__function__</u> in R
 - Are case sensitive
   - The <u id='variable_tooltip'>__variable__</u> name `BB` is different to the <u id='variable_tooltip'>__variable__</u> name `bb` which is different again to `bB`
-  - I find it easiest to keep __<u id='variable_tooltip'>variable</u> names__ in lower case (more info in [R conventions page](/tips_tricks/conventions.qmd))
+  - I find it easiest to keep __<u id='variable_tooltip'>variable</u> names__ in lower case (more info in [variable names convention page](/tips_tricks/variable_names.qmd))
 
 :::
 

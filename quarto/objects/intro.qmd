@@ -10,7 +10,7 @@ There are two major R terminologies to learn to fully understand __R objects__, 
 ![](/images/category.png){style="width:200px; background: white; border-radius:5px; border: white 5px solid" fig-align="center"}
 
 A R <u id='class_tooltip'>__Class__</u> refers to the type of data.
-There are six basic <u id='class_tooltip'>__classes__</u> in R (Also known as the __atomic <u id='class_tooltip'>classes</u>__). 
+There are six basic <u id='class_tooltip'>__classes__</u> in R (also known as the __atomic <u id='class_tooltip'>classes</u>__). 
 These materials cover:
 
 - [**Numerics**](/objects/numeric.qmd): Numbers

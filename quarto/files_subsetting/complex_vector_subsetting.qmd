@@ -50,6 +50,7 @@ even_seq > 3
 even_seq[even_seq  > 2]
 odd_seq[odd_seq <= 1 ]
 long_seq <- long_seq[long_seq < 50]
+long_seq
 ```
 
 ::: {.callout-tip}
@@ -61,7 +62,7 @@ If it is difficult to deduce what the above commands are doing you can run the p
 
 We will quickly look at a new <u id='operator_tooltip'>__operator__</u>, `%%`. This is the modulus <u id='operator_tooltip'>__operator__</u>, it divides two numbers and gives the remainder of the division.
 
-With the modulus <u id='operator_tooltip'>__operator__</u>, <u id='logical_tooltip'>logical</u> expressions, and subsetting we can extract even or odd numbers from a <u id='vector_tooltip'>__vector__</u>:
+With the modulus <u id='operator_tooltip'>__operator__</u>, <u id='logical_tooltip'>logical</u> expressions, and subsetting we can extract even or odd numbers from a <u id='vector_tooltip'>__vector__</u>.
 ```{r eval=FALSE}
 #First some basic modulus examples
 2%%2

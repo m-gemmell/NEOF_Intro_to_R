@@ -10,13 +10,14 @@ In this page we will look at conventions for __<u id='variable_tooltip'>variable
 ![](/images/rules.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
 __<u id='variable_tooltip'>Variable</u> names__ have certain rules that must be followed. 
-We covered these in the [variabel asisgnment page](/foundations/variables.qmd) but below is a reminder:
+We covered these in the [variable assignment page](/foundations/variables.qmd) but below is a reminder:
 
-- Must start with a letter.
-- Cannot contain spaces.
-- Cannot start with a number.
-- Cannot share the same name as a command or <u id='function_tooltip'>function</u> in R.
-- They are case sensitive. The <u id='variable_tooltip'>__variable__</u> name `BB` is different to the <u id='variable_tooltip'>__variable__</u> name `bb` which is different again to `bB`.
+- Must start with a letter
+- Cannot contain spaces
+- Cannot start with a number
+- Cannot share the same name as a command or <u id='function_tooltip'>function</u> in R
+- They are case sensitive
+    - The <u id='variable_tooltip'>__variable__</u> name `BB` is different to the <u id='variable_tooltip'>__variable__</u> name `bb` which is different again to `bB`
 
 ## Naming styles
 
@@ -26,9 +27,7 @@ Below are three commonly used naming conventions for R.
 Look through them and choose your favourite to use.
 
 ### Snake case
-<center>
-![](/images/snake_case.png){style="width:200px; background:white; border-radius:15px"}
-</center>
+![](/images/snake_case.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
 
 Snake case is my preferred naming convention and the one used in these materials. 
 It consists of using lower case letters with underscores (`_`) between words. 
@@ -45,9 +44,7 @@ this_is_snake_case
 ``` 
 
 ### Period separated
-<center>
-![](/images/period_separated.png){style="width:200px; background:white; border-radius:15px"}
-</center>
+![](/images/period_separated.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
 
 Period separated is almost identical to snake case. All you need to do is swap the underscores (`_`) with periods (`.`). Below are some examples of names in the period separated style.
 
@@ -61,9 +58,7 @@ this.is.period.separated
 ``` 
 
 ### Camel case
-<center>
-![](/images/camelCase.png){style="width:200px; background:white; border-radius:15px"}
-</center>
+![](/images/camelCase.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
 
 Camel case has no symbols to separate words. Instead after the first word every word starts with an upper case. Below are some examples of names in Camel Case. 
 

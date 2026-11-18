@@ -4,7 +4,7 @@
 You've learnt how to assign objects to variables, the different object classes, and how objects are structured.
 In this part you'll learn how to subset vectors and data frames, and how this can be used to manipulate R objects.
 
-However, another essentially set of skills in R is how to get data into and out of R with reading and writing.
+However, another essential set of skills in R is how to get data into and out of R with reading and writing.
 
 ## Directory and file setup
 
@@ -12,7 +12,7 @@ Please carry out the below setup instructions before moving onto the next page.
 
 - Make a directory/folder called "files_and_subsetting" within your main directory/folder for this workshop
 - Download the file [Liverpool_beaches.csv](https://neof-workshops.github.io/R_j4c0xh/downloads/Liverpool_beaches.csv) into "files_and_subsetting"
-- Set your working directory to this new directory ([set working directory](http://localhost:3406/foundations/directories.html#commands))
+- Set your working directory to this new directory ([set working directory](/foundations/directories.qmd#commands))
   - You will stay here till the [exercises](/files_subsetting/exercises.qmd)
 - Create a new R script file called __"3-Files_and_subsetting.r"__ for this part's scripts
 
@@ -28,9 +28,9 @@ The first section of this part will involve **reading** in files into R as <u id
 This will include:
 
 - [Viewing](/files_subsetting/viewing.qmd) the contents of files
-- [Reading in a csv file](files_subsetting/read_csv.qmd)
-- [Reading in a tsv](files_subsetting/read_tsv.qmd)
-- A quick intro on how to [read in excel files](files_subsetting/read_xl.qmd)
+- [Reading in a csv file](/files_subsetting/read_csv.qmd)
+- [Reading in a tsv](/files_subsetting/read_tsv.qmd)
+- A quick intro on how to [read in excel files](/files_subsetting/read_xl.qmd)
 
 ### Subsetting
 ![](/images/R_square_bracket.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}

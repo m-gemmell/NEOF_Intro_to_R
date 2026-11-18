@@ -13,7 +13,8 @@ There are many types of file suffixes, including:
 - .tsv: Tab Separated Value
 - .txt: Text file
 - .zip: Compressed file/directory
-- .mp3: MPEG-1 Audio Layer III
+- .png: Image file
+- .mp3: Music file
 
 An important note of file suffixes is that they are arbitrary.
 If you change the suffix of a zipped file from .zip to .banana it is still a zip file.

@@ -52,7 +52,7 @@ mammals
 You can use <u id='operator_tooltip'>__operators__</u> and <u id='function_tooltip'>__functions__</u> on a <u id='vector_tooltip'>__vector__</u>. 
 When you do each <u id='scalar_tooltip'>__scalar__</u> within the <u id='vector_tooltip'>__vector__</u> will be acted upon.
 ```{r eval=FALSE}
-#Minus 1 form all element
+#Minus 1 from all elements
 number_vec - 1
 #Multiple all elements by 2
 number_vec * 2
@@ -71,7 +71,7 @@ summary(number_vec)
 ## Comparisons
 ![](/images/comparisons.png){style="width:150px; background: white; border-radius:5px" fig-align="center"}
 
-We can also test the values within <u id='vector_tooltip'>__vectors__</u>:
+We can also test the values within <u id='vector_tooltip'>__vectors__</u>.
 ```{r eval=FALSE}
 #Provides vector of logical values for each element
 aquatic == "Whale"

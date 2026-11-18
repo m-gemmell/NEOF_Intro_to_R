@@ -1,7 +1,7 @@
 # Recap MCQs
 ![](/images/question_bubble_blue.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
-Superb! You've almost complete the course materials ([plots](/plots/plots_intro.qmd), [stats](/stats/stats_overview.qmd), and [programming](/programming/overview.qmd) are optional) with only the below MCQs then some exercise to complete.
+Superb! You've almost complete the course materials ([plots](/plots/intro.qmd), [stats](/stats/intro.qmd), and [programming](/programming/intro.qmd) are optional) with only the below MCQs then some exercise to complete.
 
 Please ensure you are saving your scripts regularly.
 

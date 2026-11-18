@@ -1,7 +1,7 @@
 # Handy tips & tricks
-![](/images/magic.png){style="width:200px; border-radius:15px; background:white" fig-align="center"}
+![](/images/magic.png){style="width:200px; border-radius:5px; background:white; border: white solid 5px" fig-align="center"}
 
-Welcome to the final part of the workshops, Handy tips & tricks! 
+Welcome to the final part of the workshop, Handy tips & tricks! 
 This part will include coding to reinforce what you have learnt up to this point. 
 There will also be plenty of new handy <u id='function_tooltip'>__functions__</u> and some more concepts to learn.
 
@@ -20,7 +20,7 @@ Below is an overview of the contents of this part.
 
 The first part introduces you to 2 different conventions for R coding:
 
-- [Variable names](tips_tricks/variable_names.qmd): Different styles for naming variables
+- [Variable names](/tips_tricks/variable_names.qmd): Different styles for naming variables
 - [Wide vs Long](/tips_tricks/wide_long.qmd): Whether you prefer having your code over one line (wide) or over multiple lines (long)
 
 ### RStudio
@@ -28,7 +28,7 @@ The first part introduces you to 2 different conventions for R coding:
 
 RStudio has a variety of options and buttons. We'll cover the below topics:
 
-- [Global options](/tips_tricks/global_options.qmd): A quick introduction to the global options allowing customisation of RStudio's appearance and hoe it functions
+- [Global options](/tips_tricks/global_options.qmd): A quick introduction to the global options allowing customisation of RStudio's appearance and how it functions
 - [Sweep](/tips_tricks/sweep.qmd): The sweep buttons allow you to clear the text in your console and to clear the variables in your environment
 
 ### Multiplication table
@@ -58,8 +58,8 @@ This part looks at 2 different example <u id='data_frame_tooltip'>__data frames_
 
 The next 2 pages are:
 
-[Identical](/tips_tricks/identical.qmd): The `identical()` <u id='function_tooltip'>__function__</u> indicates whether 2 objects are identical
-[Shortcuts](/tips_tricks/shortcuts.qmd): An introduction to keyboard shortcuts you can use in RStudio
+- [Identical](/tips_tricks/identical.qmd): The `identical()` <u id='function_tooltip'>__function__</u> indicates whether 2 objects are identical
+- [Shortcuts](/tips_tricks/shortcuts.qmd): An introduction to keyboard shortcuts you can use in RStudio
 
 ### Recap & exercises
 ![](/images/question_bubble_blue.png){style="width:150px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}

@@ -117,7 +117,7 @@ Below are commands to get the answers for the MCQs.
 I will let you decipher them yourself.
 ```{r eval=FALSE}
 #Question 1: Which region has no roosts?
-col_names_logical_vec <- bat_t_df["All_Bat_Species",] == 0
+col_names_logical_vec <- bat_t_df["Regions",] == 0
 colnames(bat_t_df)[col_names_logical_vec]
 ```
 ```{r eval=FALSE}

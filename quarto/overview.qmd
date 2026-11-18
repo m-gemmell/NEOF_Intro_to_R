@@ -35,7 +35,7 @@ The [Files & subsetting part](/files_subsetting/intro.qmd) demonstrates how to g
 
 The part includes:
 
-- [**Reading from a file**](/files_subsetting/viewing.qmd): Reading data from a file and create and R object from it
+- [**Reading from a file**](/files_subsetting/viewing.qmd): Reading data from a file and create a R object from it
 - [**Subsetting**](/files_subsetting/foundation_vector_subsetting.qmd): Subsetting a `data.frame` with indexxes
 - [**Writing to a file**](/files_subsetting/writing.qmd): Writing data from a R object into a file
 

@@ -36,7 +36,7 @@ Run the commands you currently have in your __script editor__.
 
 The __script editor__ is unaffected with only the cursor moving if you used the cursor method. What is actually happening is that your commands are being copied to the __console window__ and are being run there.
 
-I would encourage to primarily use the script editor to write your code. It is brilliant for editing, reusing, and documenting your code.
+I would encourage you to primarily use the script editor to write your code. It is brilliant for editing, reusing, and documenting your code.
 
 
 ## Annotations
@@ -48,16 +48,16 @@ Be a mate, annotate.
 
 Edit the contents of your __script editor__ so it looks like the below. Then run all the lines.
 
-::: {.callout-tip}
-If you have selected the __script editor__ you can use __"Ctrl"__ + __"a"__ to highlight all.
-:::
-
 ```{r eval=FALSE}
 #Command 1
 2 + 2
 #Command 2
 4 - 1
 ``` 
+
+::: {.callout-tip}
+If you have selected the __script editor__ you can use __"Ctrl"__ + __"a"__ to highlight all.
+:::
 
 ## Saving scripts
 ![](/images/r_save.png){style="width:150px; background: white; border-radius:5px" fig-align="center"}
@@ -68,6 +68,8 @@ Finally, one of the best aspects of using the __script editor__ is that you can 
     `r icons::icon_style(icons::fontawesome("save", style="solid"), fill = "#648fff")`
     ) on the toolbar of the __source window__
 - To save as, go to the RStudio toolbar and click __"File"__ > __"Save As..."__
+
+Save you current script as "1-Foundations.R" and then close it.
 
 ## Open a saved script
 ![](/images/bottle_opener.png){style="width:125px; border-radius:5px; background:white" fig-align="center"}
@@ -82,6 +84,8 @@ You can open a previously saved script in 2 main ways:
     - Click __"File"__
     - Click __"Open file"__
     - With the popup browser navigate to the location of the script and open it
+
+Open your script "1-Foundations.R".
 
 ## New script
 You can have multiple scripts open at one time and switch between these scripts with the tabs at the top of the __script editor window__.

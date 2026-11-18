@@ -9,7 +9,7 @@ Most of the time you will only need to know if your data is __numeric__ and you 
 The exception being if you are working with decimals and your decimals are not showing up. 
 This probably means that your __object__ has the __<u id='integer_tooltip'>integer</u> <u id='class_tooltip'>class</u>__.
 
-In this page and other commands will contain more annotations describing what they do.
+In this page and others commands will contain more annotations describing what they do.
 
 ::: {.callout-tip}
 Remember you can copy and paste old script.
