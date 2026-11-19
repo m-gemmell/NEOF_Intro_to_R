@@ -19,7 +19,7 @@ Below are the steps for one method.
 ::: {.callout-note collapse="true" title="Load df and create kg and lb columns"}
 First ensure you have the "tea_df" loaded (remember your working directory will need to be in the correct location first). Also it needs to be preprocessed with the `gsub()` function.
 ```{r eval=FALSE}
-tea_df <- read.csv("Chapter_10-11/tea_consumption.csv", check.names=FALSE)
+tea_df <- read.csv("tips_and_tricks/tea_consumption.csv", check.names=FALSE)
 tea_df$lb <- tea_df$KG_LB_annual_per_capita
 tea_df$lb <- gsub(pattern = ".*_", replacement = "", tea_df$lb)
 colnames(tea_df)[3] <- "kg"

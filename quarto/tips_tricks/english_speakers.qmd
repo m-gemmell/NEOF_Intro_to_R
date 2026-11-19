@@ -80,7 +80,7 @@ The main things that matter are:
 3. You can read and understand your own code (annotation helps). There is little point in code you cannot read. You will most likely need to debug code you write (I know I do). Write code in a way that you know you will be able to read. If this means doing little parts over multiple lines then do it that way.
 
 We will come back to the <u id='data_frame_tooltip'>__data frames__</u> "tea_df" and "english_complete_datasets_df" for the exercises. 
-But let us go onto 2 more topics: the `identical()` functions and keyboard shortcuts.
+But let us go onto 2 more topics: the `identical()` function and keyboard shortcuts.
 
 ```{r, echo=FALSE}
 #Tippy tooltips

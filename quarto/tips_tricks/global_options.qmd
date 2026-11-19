@@ -1,7 +1,7 @@
 # Global options
 ![](/images/global.png){style="width:200px; background: white; border-radius:5px; border: white solid 5px" fig-align="center"}
 
-RStudio has many useful features which we have not covered. Let us remedy this and cover a few, strtaing with the global options.
+RStudio has many useful features which we have not covered. Let us remedy this and cover a few, starting with the global options.
 
 To get to the RStudio Global Options click "Tools" in the RStudio Toolbar, then from the drop down menu click "Global Options.." . You should see something similar to the below:
 

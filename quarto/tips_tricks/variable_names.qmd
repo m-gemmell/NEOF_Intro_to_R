@@ -22,9 +22,14 @@ We covered these in the [variable assignment page](/foundations/variables.qmd) b
 ## Naming styles
 
 On top of these rules there are a few naming styles that are recommended. 
-It is very good to choose one naming style and stick with it always. 
+It is very good to choose one naming style and stick with it (unless you have a reason not to). 
 Below are three commonly used naming conventions for R. 
 Look through them and choose your favourite to use.
+
+::: {.callout-important}
+Don't run any of the code in this page.
+Trying to run variable names that don't exist will produce errors in R.
+:::
 
 ### Snake case
 ![](/images/snake_case.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}

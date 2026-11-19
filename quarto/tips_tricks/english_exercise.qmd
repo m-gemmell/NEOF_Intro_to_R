@@ -97,8 +97,7 @@ english_100mil_df["Total",1:4] <- colSums(english_100mil_df[1:7,1:4])
 
 ::: {.callout-note collapse="true" title=""}
 ## Total fraction of english speakers
-When creating the Total row we added up the fractions of each country to get its fraction values.
-This produced the wrong value so we need to correctly create the total fraction of english speakers.
+We need to correctly create the total fraction of english speakers.
 ```{r eval=FALSE}
 english_100mil_df["Total","Fraction of population that are English speakers"] <- 
   english_100mil_df["Total","Total English speakers"] /
@@ -110,7 +109,7 @@ english_100mil_df["Total","Fraction of population that are English speakers"] <-
 ## Write the data as a file
 ```{r eval=FALSE}
 write.table(x = english_100mil_df, 
-            file = "Chapter_10-11/English_top_7_populated_countries.csv", 
+            file = "tips_and_tricks/English_top_7_populated_countries.csv", 
             col.names=NA,
             quote = TRUE, 
             sep = ",")

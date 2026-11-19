@@ -1,7 +1,7 @@
 # Tea
 ![](/images/tea.png){style="width:200px; background:white; border-radius:5px" fig-align="center"}
 
-We will have a quick look at the "tea_df". 
+We will have a quick look at "tea_df". 
 This data shows the annual consumption of tea per capita with a rank based on the highest to lowest consumers.
 
 View the <u id='data_frame_tooltip'>__data frame__</u> and you'll see that the third column has the annual per capita consumption in kilograms (KG) and pounds (LB) with the two values separated by a "_", not ideal. 
@@ -85,7 +85,7 @@ str(tea_df)
 ## gsub() and sub()
 ![](/images/banana.png){style="width:150px; background:white; border-radius:5px" fig-align="center"}
 
-We've used `gsub()` alt now, but what does gsub actually stand for.
+We've used `gsub()` a lot now, but what does gsub actually stand for?
 The g stands for global and the sub for substitution. 
 This means it will replace all (i.e. global) occurrences of the pattern in the string.
 See the below example.
